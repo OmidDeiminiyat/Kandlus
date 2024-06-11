@@ -1,6 +1,6 @@
 {
-    "name": "PollenTals APP",
-    "short_name": "PTA",
+    "name": "Kandlus APP",
+    "short_name": "KAPP",
     "description": "Et sej Pollen tals App",
     
     "icons": [
@@ -12,17 +12,12 @@
     ],
     "screenshots": [
       {
-        "src": "assets/image/screenshot-1.png",
-        "sizes": "1125x2436",
+        "src": "assets/image/Screenshot-No-2.png",
+        "sizes": "1242x894",
         "type": "image/png"
       },
       {
-        "src": "assets/image/screenshot-2.png",
-        "sizes": "1242x2688",
-        "type": "image/png"
-      },
-      {
-        "src": "assets/image/screenshot-3.png",
+        "src": "assets/image/Screenshot.png",
         "sizes": "768x1024",
         "type": "image/png"
       }
