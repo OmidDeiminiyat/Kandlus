@@ -12,3 +12,8 @@
 %hoverStyle {
     box-shadow: -2px 1px 21px 0px rgba(0,0,0,0.75);
 }
+
+%borderBox{
+    border: 1px dotted $box-border;
+    border-radius: 30px;
+}
