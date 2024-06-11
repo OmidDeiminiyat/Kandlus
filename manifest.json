@@ -21,6 +21,11 @@
     ],
     "screenshots": [
       {
+        "src": "assets/images/Screenshot-4.png",
+        "sizes": "1280x720",
+        "type": "image/png"
+      },
+      {
         "src": "assets/images/Screenshot-No-3.png",
         "sizes": "1280x720",
         "type": "image/png"
