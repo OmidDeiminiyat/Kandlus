@@ -1,0 +1,80 @@
+#landingMain{
+    background-color: $landingBackground;
+
+    .firstSectionLand{
+        width:80%;
+        margin-left: 10%;
+        padding-top: 6%;
+        @include flexible(center);
+
+        .firstrDic{
+            article{
+                header{
+                    h1{
+                        color: $ribonIcone;
+                    }
+                    p{
+                       color: $body;
+                    }
+                }
+
+                .vertical {
+                    @include flexible(center);
+                    background-color: $landingBox;
+                    border-radius: 21px;
+                    position: absolute;
+                    margin-left: 15%;
+                    @media(max-width:600px) {
+                        position: relative;
+                        margin: 0;
+                    }
+                    span{
+                        @include flexible(center);
+                        padding-left: 10px;
+                       
+                        h3{
+                            font-size: 24px;
+                            color: $ribonIcone;
+                        }
+                    }
+                    .vertical-line {
+                        border-left: 2px dotted $box-border; 
+                        height: 70px; 
+                       
+                    }
+                }
+                ul {
+                    list-style: disc;
+                    margin-top: 35%;
+                    @media(max-width:600px){
+                        margin-top: 10%;
+                    }
+                }
+                button{
+                    @include Button(10px 20px 10px 20px);
+                    background-color: $ribonIcone;
+                    margin-bottom: 6%;
+                    &:hover > a{
+                        color: $body;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $main-text;
+                       
+                    }
+                }
+            }
+            
+        }
+        .secondrDiv{
+            figure{
+                img{
+                    width: 60%;
+                }
+            }
+            @media(max-width:600px) {
+                display: none;
+            }
+        }
+    }   
+}

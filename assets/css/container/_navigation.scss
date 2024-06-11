@@ -1,0 +1,220 @@
+@import "../helper/variable";
+@import "../helper/mixin";
+@import "../helper/animation";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.menuIcone {
+    display: none;
+}
+#MobileNav {
+    display: none;
+}
+/* Ribbon style */
+#ribbon {
+    background-color: $Butoon;
+    text-align: center;
+    @include flexible(center);
+
+}
+#ribbon p {
+    margin: 0 60px 10px 0;
+    color: $body;
+    padding: 0;
+    
+}
+.material-symbols-outlined {
+   color: $ribonIcone; 
+   margin: 0;
+   padding: 0;
+   position: relative;
+   bottom: -6px;
+}
+
+/* Navigation style */
+
+#navigation {
+    @include flexible(space-between);
+    color: $primary-text;
+    width: 90%;
+    margin-left: 5%;
+    hgroup {
+        h3{
+            margin: 0;
+            text-align: center;
+            font-family: "Playfair Display", serif;
+        }
+        h5{
+            @extend h3;
+        }
+    }
+    .firstList {
+        @include flexible(0);
+        list-style: none;
+        background-color: $box-background; 
+        border-radius: 30px;
+        li {
+            margin: 0 20px 0 0;
+            padding: 6px 10px 6px 10px;
+            cursor: pointer;
+            &:hover {
+                color: $hoverText;
+            }
+            a{
+                color: $primary-text;
+                text-decoration: none;
+                &:hover{
+                    color: $hoverText;
+                }
+            }
+        }
+
+
+    }
+}
+ 
+
+#navigation .firstList .secondList:checked > #navigation .firstList ul {
+display: block;
+}
+
+#navigation .firstList ul {
+    list-style: none;
+    position: absolute;
+}
+#navigation #logSign {
+    @include flexible(0);
+    list-style: none;
+}
+#navigation #logSign li {
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+#navigation #logSign .ButLogin{
+    @include Button(0 10px 10px 10px);
+    position: relative;    
+}
+
+#navigation .firstList .secondList {
+    display: none;
+    background-color: $box-background; 
+}
+
+.Titles {
+    text-align: center;
+    margin-top: 90px;
+    color: $main-text; 
+}
+.Titles p:nth-child(1) {
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+}
+.Titles p:nth-child(2) a {
+    color: $main-text; 
+    text-decoration: none;
+}
+.Titles p:nth-child(2) a:hover{
+    color: $hgroup;
+}
+
+/* Header Style */
+#header header {
+    height: 400px;
+    background-image: url('../images/Astrology/Service/pages/Astrology_service.jpeg');
+    background-size: cover;
+    opacity: 0.8;
+}
+#LandingHeader header {
+    height: 600px;
+    
+    background-size: cover;
+    opacity: 0.8;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+    #navigation {
+        display: none;
+    }
+    .menuIcone {   
+        @include flexible(end);
+        cursor: pointer;
+        #close {
+            display: none;
+        }
+    }
+    /* Ribbon Style */
+    #ribbon {
+        #nexOne{
+            display: none;
+           }
+        }
+    
+    #MobileNav {
+        display: none;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        color: $primary-text;
+        width: 60%;
+        margin-left: 5%;
+        background-color: $box-background; 
+        hgroup {
+            h3{
+                margin: 0;
+                text-align: center;
+                font-family: "Playfair Display", serif;
+            }
+            h5{
+                margin: 0;
+                text-align: center;
+                font-family: "Playfair Display", serif;
+            }
+        }
+    }
+    .firstList {
+        list-style: none;
+        li {
+            margin: 0 20px 0 0;
+            padding: 6px 10px 6px 10px;
+            cursor: pointer;
+            &:hover {
+                color: $hoverText;
+            }
+            a{
+                color: $primary-text;
+                text-decoration: none;
+                &:hover{
+                    color: $hoverText;
+                }
+            }
+        }
+        .mobList {
+            display: none;
+            background-color: $box-background; 
+            list-style: none;
+            li{
+                &:hover{
+                    color: $main-text;
+                }
+            }
+        }
+       
+    }
+
+    #logSign {
+
+        li {
+            margin: 0;
+            cursor: pointer;
+            list-style: none;
+            width: 50%;
+        }
+    .ButLogin{
+            @include Button(0 10px 10px 10px);
+            position: relative;    
+            a{
+                color: $body;
+                text-decoration: none;
+                
+            }
+        }
+   }
+} 
