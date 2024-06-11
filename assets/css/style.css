@@ -1298,3 +1298,41 @@ hr {
     display: none;
   }
 }
+
+#musicSection {
+  position: relative;
+  width: 80%;
+  height: 220px;
+  margin-left: 10%;
+  background-color: #ccc4bd;
+  border-radius: 30px;
+}
+@media (max-width: 600px) {
+  #musicSection {
+    width: 100%;
+    margin: 0;
+  }
+}
+#musicSection .mainMusic {
+  position: absolute;
+  background-color: #dad7cd;
+  width: 80%;
+  height: 160px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: 0;
+  margin: 30px 0 0 10%;
+}
+@media (max-width: 600px) {
+  #musicSection .mainMusic {
+    width: 90%;
+    margin: 30px 0 0 5%;
+  }
+}
+#musicSection .mainMusic img {
+  width: 30%;
+}
+#musicSection .mainMusic .audio {
+  margin-left: 30px;
+}/*# sourceMappingURL=style.css.map */

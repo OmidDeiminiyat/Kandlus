@@ -78,3 +78,36 @@
         }
     }   
 }
+#musicSection{
+    position: relative;
+    width: 80%;
+    height: 220px;
+    margin-left: 10%;
+    background-color: $landingBox;
+    border-radius: 30px;
+    @media(max-width:600px) {
+        width: 100%;
+        margin: 0;
+    }
+    .mainMusic{
+        position: absolute;
+        background-color: $landingBackground;
+        width: 80%;
+        height: 160px;
+        border: 1px solid black;
+        @include flexible(0);
+        margin: 30px 0 0 10%;
+        @media(max-width:600px) {
+            width: 90%;
+            margin: 30px 0 0 5%;
+        }
+        img{
+            width: 30%;
+        }
+        .audio {
+            margin-left: 30px;
+        }
+        
+
+    }
+}
