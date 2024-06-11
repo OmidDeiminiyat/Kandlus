@@ -2,11 +2,20 @@
     "name": "Kandlus APP",
     "short_name": "KAPP",
     "description": "Astrology, blog and videos",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#4BA598",
+    "theme_color": "#F5D45B",
     
     "icons": [
       {
         "src": "assets/images/Kandlus.png",
         "sizes": "360x360",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/images/Kandlus-logo.png",
+        "sizes": "512x512",
         "type": "image/png"
       }
     ],
@@ -21,11 +30,6 @@
         "sizes": "768x1024",
         "type": "image/png"
       }
-    ],
-    
-    "start_url": "/index.html",
-    "display": "standalone",
-    "background_color": "#4BA598",
-    "theme_color": "#F5D45B"
+    ]
   }
   
