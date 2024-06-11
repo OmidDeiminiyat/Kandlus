@@ -1,8 +1,6 @@
-.myDiv {
-  border: 1px solid red;
-  width: 1244px;
-  height: 2688px;
+body {
+  background-color: #4BA598;
 }
-.myDiv h1 {
+body .myDiv h1 {
   color: 0;
 }

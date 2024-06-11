@@ -9,8 +9,6 @@ self.addEventListener('install', function(event) {
                 '/',
                 '/index.html',
                 '/assets/css/style.css',
-                '/assets/js/map.js',
-                '/assets/js/vities.js',
                 '/assets/js/script.js'
             ]);
         })

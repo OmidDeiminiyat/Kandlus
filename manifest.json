@@ -1,23 +1,23 @@
 {
     "name": "Kandlus APP",
     "short_name": "KAPP",
-    "description": "Et sej Pollen tals App",
+    "description": "Astrology, blog and videos",
     
     "icons": [
       {
-        "src": "assets/image/Birk.png",
+        "src": "assets/images/Kandlus.png",
         "sizes": "360x360",
         "type": "image/png"
       }
     ],
     "screenshots": [
       {
-        "src": "assets/image/Screenshot-No-2.png",
+        "src": "assets/images/Screenshot-No-2.png",
         "sizes": "1242x894",
         "type": "image/png"
       },
       {
-        "src": "assets/image/Screenshot.png",
+        "src": "assets/images/Screenshot.png",
         "sizes": "768x1024",
         "type": "image/png"
       }
