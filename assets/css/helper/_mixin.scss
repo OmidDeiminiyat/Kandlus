@@ -1,0 +1,37 @@
+@mixin button-styles($background, $color, $padding: 9px 21px 9px 21px) {
+    background: $background;
+    color: $color;
+    padding: $padding;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      background: darken($background, 10%);
+    }
+  }
+
+  @mixin Button($padding){
+    background-color: $Butoon;
+    border-radius: 30px;
+    color: $body; 
+    padding: $padding;
+    border: none;
+    cursor: pointer;
+    &:hover{
+      background-color: $hoverText;
+      color: $primary-text;
+    }
+  }
+
+@mixin desplayStyle($grid-template-columns){
+    display: grid;
+    grid-template-columns: $grid-template-columns;
+    gap: 1rem;
+  }
+
+@mixin flexible($justify) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+}

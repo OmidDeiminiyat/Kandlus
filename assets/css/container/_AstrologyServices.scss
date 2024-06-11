@@ -1,0 +1,159 @@
+body {
+    background-color: $body;
+}
+
+#All_sec {
+    @include flexible(0);
+    gap: 1rem;
+    width: 80%;
+    margin: 1% 0% 1% 10%;
+  
+
+    #sideBar {
+        width: 30%;
+        margin: 0;
+        @include desplayStyle(1fr);
+
+        .articles {
+            text-align: center;
+            color: $main-paraf;
+            h3 {
+                @extend %textNeed;
+            }
+           .dataArticle {
+            background-color: $darkBox;
+            padding: 6px 0 6px 0;
+            margin: 6px 0 6px 0;
+            cursor: pointer;
+            span {
+                margin: 0 6px 0 6px;
+            }
+           }
+        }
+        .Video {
+            border: 1px solid $box-border;
+            background-color: $darkBox;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            h3{
+                color: $primary-text;
+                text-align: center;
+            }
+            h4 {
+                color: $hgroup;
+                text-align: center;
+            }
+            button {
+               width: 30%;
+               margin-left: 35%;
+                @include Button(6px 12px 6px 12px);
+            }
+        }
+
+
+
+
+     }
+     .right-s {
+        width: 100%;
+        h2 {
+            color: $hgroup;
+            font-size: 1.5vw;
+            text-align: center;
+        }
+        .DivFig {
+            @include desplayStyle(1fr 1fr 1fr 1fr);
+            figure {
+               margin: 0;
+               padding: 0;
+                width: 90%;
+                height: 20vw;
+                border: 1px $box-border;
+                background-color: $box-background;
+                border-radius: 30px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $box-hover;
+                }
+                img {
+                    width: 80%;
+                    min-height: 12vw;
+                    max-height: 12vw;
+                    filter: hue-rotate(90deg) brightness(1000%);
+                    margin: 5% 0 0 10%;
+                }
+                hr {
+                    @extend %BreakLine;
+                    margin-bottom: 0;
+                }
+                figcaption {
+                    margin: 0;
+                    padding: 0;
+                    h3{
+                        color: $primary-text;
+                            text-align: center;
+                    }
+                    p{
+                        @extend h3;
+                     }
+                }
+            }
+        }
+     }
+ }
+
+@media (max-width:600px) {
+
+    #All_sec {
+       @include desplayStyle(1fr);
+       .right-s {
+        h2{
+            font-size: 4vw;
+        }
+        .DivFig {
+            @include desplayStyle(1fr 1fr);
+            figure {
+                height: 250px;
+                img {
+                    min-height: 110px;
+                    max-height: 110px;
+                }
+            }
+        }
+       } 
+
+       #sideBar {
+        width: 100%;
+        @include desplayStyle(1fr);
+      
+       }
+    }
+}
+
+// Design for tablet
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    #All_sec {
+        @include desplayStyle(1fr);
+        .right-s {
+       
+         .DivFig {
+             @include desplayStyle(1fr 1fr 1fr);
+             figure {
+                 height: 250px;
+                 img {
+                     min-height: 110px;
+                     max-height: 110px;
+                 }
+             }
+         }
+        } 
+        #sideBar {
+            width: 100%;
+            @include desplayStyle(1fr 1fr);
+           }
+    }
+}

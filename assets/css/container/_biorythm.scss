@@ -1,0 +1,370 @@
+
+/* Biorythm design */
+.widthAds {
+    width: 100%;
+    height: 90px;
+    border: 1px solid white;
+    margin: 30px 0 30px 0;
+}
+.left-side {
+    width: 80%;
+}
+
+
+#underMain {
+    #PersonalBirth {
+        #Nemuerology {
+            padding: 0;
+            margin: 0;
+         }
+    }
+    
+
+}
+ #bioInside {
+    padding: 0;
+    margin: 0;
+    @include desplayStyle(1fr 1fr);
+ }
+
+#underMain figure img {
+width: 100%;
+}
+#underMain figcaption, #PersonalBirth figcaption, #Nemuerology figcaption {
+    text-align: center;
+}
+#underMain figcaption p, #PersonalBirth figcaption p, #Nemuerology figcaption p {
+    font-size: 1vw;
+    color: $main-paraf;
+}
+#underMain h4 {
+    margin-top: 30px;
+    font-size: 2vw;
+    cursor: pointer;
+    color: $hgroup; 
+
+}
+#PersonalBirth h4, #Nemuerology h4 {
+    margin-top: 30px;
+    font-size: 1vw;
+    cursor: pointer;
+    color: $hgroup; 
+}
+.ButHoro:hover {
+    background-color: $Butoon;
+}
+.ButHoro:hover .ti-arrow-right {
+    color: red;
+}
+
+#displayBio {
+    padding: 0;
+    margin: 0;
+    display: none;
+    grid-template-columns: 1fr;
+ }
+ #displayNumber {
+    padding: 0;
+    margin: 0;
+   @include desplayStyle(1fr);
+ }
+
+ #Numero {
+    padding: 0;
+    margin: 0;
+    display: none;
+    grid-template-columns: 1fr;
+ }
+
+ #displayThird {
+    padding: 0;
+    margin: 0;
+    display: none;
+    grid-template-columns: 1fr;
+ }
+ #dispNum, #NumeroDip, #ascend {
+    padding: 20px 0 30px 0;
+    margin: 0;
+    display: none;
+    grid-template-columns: 1fr;
+    border: 1px solid $box-border; 
+    text-align: center;
+    background-color: $boxbackground; 
+    border-radius: 30px;
+ }
+ #dispNum h4, #NumeroDip h4, #ascend h4 {
+    font-size: 2vw;
+ }
+ .numCaption {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: $main-paraf;
+}
+.letBeCaption {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: $main-paraf; 
+}
+.numCaption h5, .letBeCaption h5 {
+    font-size:1.5vw;
+    margin: 0;
+    padding: 0;
+}
+.numCaption h6, .letBeCaption h6 {
+    font-size: 1vw;
+}
+.numCaption p, .letBeCaption p {
+    max-width: 60%;
+    margin-left: 20%;
+}
+.letBeCaption h3{
+    color: $Butoon; 
+}
+#newForm select {
+        width: 90px;
+        padding: 0.5em;
+        font-size: 1em;
+        border: 1px solid #CCCCCC;
+        border-radius: 3px;
+        background-color: #fff;
+        color: #333333;
+        appearance: none; 
+        cursor: pointer;
+        box-sizing: border-box;
+}
+
+
+
+
+
+.circleDay {
+    color: red;
+}
+.citcleNight {
+    color: $main-paraf;  
+}
+.newColor {
+    color: $hgroup; 
+}
+.dividedInside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.predeicted {
+    max-width: 90%;
+    margin-left: 5%;
+}
+
+
+
+.right-side {
+    width: 24%;
+    
+}
+#bioInside {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.myButton {
+    background-color: $Butoon; 
+    padding: 10px 30px 10px 30px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+.myButton:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 14px 0px rgba(232,215,127,1);
+}
+
+#firstChart, #secondChart, #newChart {
+    background-color: $main-text; 
+    margin: 3% 0 0 10%;
+   width:100%;max-width:80%;
+}
+.myCaption {
+    border: 1px solid $box-border; 
+    background-color: $boxbackground; 
+}
+
+.myCaption form label {
+    color: $main-paraf; 
+}
+
+
+.figCaptureIn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: $main-paraf; 
+}
+.figCaptureIn h5, .newStyle h5 {
+    font-size: 1vw;
+}
+.newStyle {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: $main-paraf; 
+}
+#finalData h4 {
+    text-align: center;
+}
+
+/* three under the main section */
+.threeUnder {
+    @include desplayStyle(1fr 1fr);
+    background-color: $box-background;
+    border-radius: 30px;
+}
+
+.threeUnder img {
+width: 100%;
+}
+.threeUnder div:nth-child(1) {
+    width: 70%;
+    border: 1px solid $box-border; 
+    border-radius: 30px;
+    background-image: url('../images/Astrology/Aquarius-new.png');
+    background-size: cover;
+}
+.threeUnder div:nth-child(2) {
+    width: 130%;
+    margin-left: -30%;
+    a{
+        text-decoration: none;
+    }
+}
+
+.threeUnder h1 {
+    color: $hgroup;
+    padding: 0;
+    margin: 0;
+}
+.threeUnder h4{
+    color:$hgroup;
+    padding: 0;
+    margin: 0 0 6px 0;
+}
+.threeUnder p {
+    color: $main-paraf;  
+    text-align: left;
+    max-width: 70%;
+    padding: 0;
+    margin: 0;
+}
+
+.inseideFigure {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: 30px 0 0 0;
+   padding: 0;
+   cursor: pointer;
+}
+.inseideFigure h3 {
+    color: $main-text;
+}
+
+.inseideFigure img{
+width: 25%;
+height: 25%;
+}
+.breakLine {
+    border: none;
+    border-top: 2px dotted $box-border; 
+    margin: 20px 0;
+}
+.myImages {
+    width: 25%;
+    height: 120px;
+    border: 1px solid $box-border; 
+    border-radius: 30px;
+    background-image: url('../images/Astrology/Numbers.jpg');
+   background-size: cover;
+}
+
+hr {
+    border: none;
+    border-top: 2px dotted $main-paraf; 
+    height: 0;
+    width: 50%;
+    margin-bottom: 60px;
+  }
+  
+  #displayNumber p, #Numero p, #figAscendant p {
+    color: $main-text;
+    padding: 10px 0 10px 0;
+    margin: 30px 0 30px 0;
+}
+#displayNumber img, #Numero img, #figAscendant img{
+    width: 20%;
+    margin-left: 40%;
+}
+
+/* Ascendant start */
+#Ascentandt {
+    display: none;
+}
+
+
+/* Mobile design */
+@media (max-width: 600px) {
+    .left-side {
+        width: 100%;
+    }
+    #bioInside {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+     }
+
+
+        #underMain figcaption p, #PersonalBirth p .figCaptureIn p, .newStyle p {
+            font-size: 3vw;
+            color: $main-paraf;
+        }
+        #underMain h4, #PersonalBirth h4 {
+            margin-top: 30px;
+            font-size: 4vw;
+            color: $hgroup;
+            
+        }
+        #firstChart, #secondChart, #newChart {
+            margin: 6% 0 10% 0;
+           width: 100%;
+           max-width: 100%;
+        }
+        .figCaptureIn h5, .newStyle h5 {
+            font-size: 2.5vw;
+        }
+
+        .threeUnder {
+            width: 100%;
+            @include desplayStyle(1fr);
+            margin: 0;
+            padding: 0;
+            .rightSideImage{
+                display: none;
+            }
+
+            div:nth-child(2) {
+                width: 100%;
+                margin: 0;
+                a{
+                    text-decoration: none;
+                }
+                figcaption {
+                    width: 70%;
+                }
+                .myImages {
+                    width: 30%;
+                }
+               
+            }
+        }
+}
+
+// Tablet design
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+
+}

@@ -1,0 +1,218 @@
+
+
+
+
+/* Horoscop resault design */
+
+#HorosResult {
+    display: none;
+    width: 80%;
+
+}
+#HorosMenu {
+    background-color: $box-border; 
+    width: 40%;
+}
+#HorosMenu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 6px 0 6px 0;
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: $primary-text; 
+}
+#HorosMenu li {
+padding: 0 12px 0 12px;
+}
+#HorosMenu li:hover {
+    background-color: $buttum-hover; 
+    color: $body;
+}
+#HorosMenu.dropDown {
+    display: grid;
+    grid-template-columns: 1fr;
+    display: none;
+} 
+#HorosMenu li .firstPercen {
+    width: 1000px;
+    border: 1px solid;
+}
+
+#HorosMenu li:nth-child(3):hover > .dropDown {
+    display: block;
+    position: absolute;
+    margin: 10px 0 0 -60px;
+  }
+
+  #clicMe {
+    position: relative;
+}
+#getTest {
+    display: none;
+    position: absolute; 
+}
+#getTest li {
+   width: 100px;
+   text-align: center;
+}
+#getTest li:hover {
+    background-color: $buttum-hover; 
+    color: $body; 
+}
+.picked {
+    background-color: $buttum-hover;
+    color: $body;
+}
+#clicMe:hover #getTest {
+    display: block;
+}
+#article h2 {
+    color: $hgroup;
+    font-size: 2vw;
+}
+.paraf h4 {
+    color: $hgroup;
+}
+.paraf p {
+    color: $main-text;
+}
+.color1 {
+    width: 30px;
+    height: 30px;
+}
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+}
+.charts #myChart{
+    margin: 30px 0 0 0;
+    padding: 0;
+}
+#Second-article {
+    display: none;
+}
+
+.yearSpan {
+    border: 6px solid rgba(9, 9, 9, 0.223);
+   background-color: rgba(15, 14, 14, 0.187);
+   position: absolute;
+   max-width: 100%;
+   
+}
+.yearSpanTwo {
+    border: 6px solid $line-loader; 
+   background-color: $line-loader; 
+   position: relative;
+   animation-name: myLine;
+   animation-duration: 6s;
+   max-width: 50%;
+}
+@keyframes myLine { 0%{width: 0%; } 100%{width: 100%;} }
+
+
+.paraf div{
+    margin-top: 60px;
+}
+
+
+.main-content {
+    width: 95%;
+}
+
+#article {
+    width: 90%;
+}
+
+
+ /* Mobile Design */
+ @media (max-width: 600px) {
+    .main-section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .main-section h2 {
+        color: $hgroup; 
+        font-size: 3vw;
+        text-align: center;
+        }
+
+    .DivFig {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .DivFig figure img {
+        width: 80%;
+        max-height: 27vw;
+        min-height: 27vw;
+        filter: hue-rotate(90deg) brightness(1000%);
+        margin: 5% 0 0 10%;
+    }
+
+    .DivFig figure {
+        
+        height: 50vw;
+        border: 1px $box-border; 
+        background-color: $box-background; 
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    
+#HorosResult {
+    display: none;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+#HorosResult img{
+    width: 100%;
+}
+
+    #article h2 {
+        font-size: 3vw;
+    }
+    #HorosMenu {
+        background-color: $box-border; 
+        width: 100%;
+    }
+    .charts {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        
+    }
+
+  
+}
+
+/* Tablet design */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .DivFig {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .DivFig figure {
+        height: 27vw;
+        border: 1px $box-border;
+        background-color: $box-background;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    .DivFig figure img {
+        width: 80%;
+        max-height: 15vw;
+        min-height: 15vw;
+        filter: hue-rotate(90deg) brightness(1000%);
+        margin: 5% 0 0 10%;
+    }
+    
+}
