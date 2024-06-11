@@ -1,0 +1,68 @@
+@import "../helper/variable";
+@import "../helper/mixin";
+@import "../helper/animation";
+@import "../helper/placeholder";
+#MainFooter{
+    @include desplayStyle(1fr 1fr 1fr 1fr);
+    background-color: $box-background;
+    text-align: center;
+    color: $main-paraf;
+    padding-bottom: 21px;
+    .firstFoot {
+       
+        img:nth-child(1){
+            width: 60%;
+        }
+        img:nth-child(n+2){
+            width: 40px;
+            cursor: pointer;
+        }
+    }
+    .secondFoot {
+
+        .break {
+            @extend %BreakLine;
+        }
+        p{
+            a{
+                color: $main-paraf;
+                text-decoration: none;
+                &:hover{
+                    color: $hoverText;
+                }
+            }
+        }
+    }
+    .thirdFoot {
+        @extend .secondFoot;
+    }
+    .forthFoot {
+        @extend .secondFoot;
+        form {
+            input{
+                margin: 6px 0 6px 0;
+            }
+            input[type=email] {
+                width: 80%;
+                height: 25px;
+                border-radius: 30px;
+                border: none;
+            }
+            input[type=button] {
+                @include Button(10px 30px 10px 30px);
+            }
+        }
+    }
+}
+
+#Privecy {
+    display: flex;
+    justify-content: center;
+    color: $main-paraf;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+    #MainFooter{
+        @include desplayStyle(1fr 1fr);
+    }
+}

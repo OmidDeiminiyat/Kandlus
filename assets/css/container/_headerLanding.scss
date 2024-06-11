@@ -1,0 +1,85 @@
+// Header design
+
+#headerDesign {
+    @include desplayStyle(1fr 1fr 1fr);
+    @media(max-width:600px) {
+        @include desplayStyle(1fr);
+    }
+
+    #leftSides{
+        article{
+            width: 80%;
+            margin: 30% 0 0 20%;
+            @media(max-width:600px){
+            margin: 6% 0 0 10%;
+            }
+            h1{
+                color: $hgroup;
+                font-size: 30px;
+                text-align: center;
+            }
+            p{
+                color: $main-paraf;
+            }
+            button{
+                @include Button(6px 15px 7px 15px);
+            }
+        }
+
+    }
+
+    #Centers {
+        img{
+            width: 100%;
+            border-radius: 30px;
+            margin-top: 20%;
+            cursor: pointer;
+            &:hover{
+               @extend %hoverStyle;
+            }
+        }
+        @media(max-width:600px) {
+            display: none;
+        }
+    }
+
+
+
+    #rightSides{
+        #numberTwo {
+                margin-left: 90px;
+                @media(max-width:600px){
+                    display: none;
+                }
+         }
+        figure{
+          @include flexible(center);
+          margin: 60px 0 60px 0;
+          padding: 0;
+          cursor: pointer;
+          &:hover > img{
+            @extend %hoverStyle;
+         }
+            img{
+                width: 6vw;
+                min-height: 6vw;
+                border-radius: 50%;
+                @media(max-width:600px){
+                width: 11vw;
+                }
+            }
+            figcaption{
+                max-width: 60%;
+                h3{
+                    color: $hgroup;
+                    margin: 0;
+                }
+                p{
+                    color: $main-paraf;
+                    margin: 0;
+                    
+                }
+            }
+        }   
+    }
+}

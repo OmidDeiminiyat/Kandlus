@@ -1,6 +1,1300 @@
-body {
-  background-color: #4BA598;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@keyframes fadeIn {
+  from {
+    margin-left: -300px;
+  }
+  to {
+    margin-left: 0;
+  }
 }
-body .myDiv h1 {
-  color: 0;
+@keyframes slideIn {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: -300px;
+  }
+}
+.menuIcone {
+  display: none;
+}
+
+#MobileNav {
+  display: none;
+}
+
+/* Ribbon style */
+#ribbon {
+  background-color: #FECFA7;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#ribbon p {
+  margin: 0 60px 10px 0;
+  color: #23201D;
+  padding: 0;
+}
+
+.material-symbols-outlined {
+  color: #9A5C23;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: -6px;
+}
+
+/* Navigation style */
+#navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ffffff;
+  width: 90%;
+  margin-left: 5%;
+}
+#navigation hgroup h3, #navigation hgroup #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #navigation hgroup p, #navigation hgroup h5 {
+  margin: 0;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+#navigation .firstList {
+  display: flex;
+  flex-direction: row;
+  justify-content: 0;
+  list-style: none;
+  background-color: #332f2b;
+  border-radius: 30px;
+}
+#navigation .firstList li {
+  margin: 0 20px 0 0;
+  padding: 6px 10px 6px 10px;
+  cursor: pointer;
+}
+#navigation .firstList li:hover {
+  color: #c8b19a;
+}
+#navigation .firstList li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#navigation .firstList li a:hover {
+  color: #c8b19a;
+}
+
+#navigation .firstList .secondList:checked > #navigation .firstList ul {
+  display: block;
+}
+
+#navigation .firstList ul {
+  list-style: none;
+  position: absolute;
+}
+
+#navigation #logSign {
+  display: flex;
+  flex-direction: row;
+  justify-content: 0;
+  list-style: none;
+}
+
+#navigation #logSign li {
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+
+#navigation #logSign .ButLogin {
+  background-color: #FECFA7;
+  border-radius: 30px;
+  color: #23201D;
+  padding: 0 10px 10px 10px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+#navigation #logSign .ButLogin:hover {
+  background-color: #c8b19a;
+  color: #ffffff;
+}
+
+#navigation .firstList .secondList {
+  display: none;
+  background-color: #332f2b;
+}
+
+.Titles {
+  text-align: center;
+  margin-top: 90px;
+  color: #CAC3BC;
+}
+
+.Titles p:nth-child(1) {
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.Titles p:nth-child(2) a {
+  color: #CAC3BC;
+  text-decoration: none;
+}
+
+.Titles p:nth-child(2) a:hover {
+  color: #c9a56e;
+}
+
+/* Header Style */
+#header header {
+  height: 400px;
+  background-image: url("../images/Astrology/Service/pages/Astrology_service.jpeg");
+  background-size: cover;
+  opacity: 0.8;
+}
+
+#LandingHeader header {
+  height: 600px;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  #navigation {
+    display: none;
+  }
+  .menuIcone {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    cursor: pointer;
+  }
+  .menuIcone #close {
+    display: none;
+  }
+  /* Ribbon Style */
+  #ribbon #nexOne {
+    display: none;
+  }
+  #MobileNav {
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    color: #ffffff;
+    width: 60%;
+    margin-left: 5%;
+    background-color: #332f2b;
+  }
+  #MobileNav hgroup h3, #MobileNav hgroup #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #MobileNav hgroup p, #MobileNav #navigation hgroup h5, #navigation #MobileNav hgroup h5 {
+    margin: 0;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+  }
+  #MobileNav hgroup h5 {
+    margin: 0;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+  }
+  .firstList {
+    list-style: none;
+  }
+  .firstList li {
+    margin: 0 20px 0 0;
+    padding: 6px 10px 6px 10px;
+    cursor: pointer;
+  }
+  .firstList li:hover {
+    color: #c8b19a;
+  }
+  .firstList li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .firstList li a:hover {
+    color: #c8b19a;
+  }
+  .firstList .mobList {
+    display: none;
+    background-color: #332f2b;
+    list-style: none;
+  }
+  .firstList .mobList li:hover {
+    color: #CAC3BC;
+  }
+  #logSign li {
+    margin: 0;
+    cursor: pointer;
+    list-style: none;
+    width: 50%;
+  }
+  #logSign .ButLogin {
+    background-color: #FECFA7;
+    border-radius: 30px;
+    color: #23201D;
+    padding: 0 10px 10px 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  }
+  #logSign .ButLogin:hover {
+    background-color: #c8b19a;
+    color: #ffffff;
+  }
+  #logSign .ButLogin a {
+    color: #23201D;
+    text-decoration: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    margin-left: -300px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: -300px;
+  }
+}
+#All_sec .right-s .DivFig figure hr, #MainFooter .secondFoot .break, #MainFooter .forthFoot .break, #MainFooter .thirdFoot .break {
+  border: 1px dotted #FECFA7;
+  width: 60%;
+}
+
+#headerDesign #rightSides figure:hover > img, #headerDesign #Centers img:hover {
+  box-shadow: -2px 1px 21px 0px rgba(0, 0, 0, 0.75);
+}
+
+#MainFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  background-color: #332f2b;
+  text-align: center;
+  color: #CAC3BC;
+  padding-bottom: 21px;
+}
+#MainFooter .firstFoot img:nth-child(1) {
+  width: 60%;
+}
+#MainFooter .firstFoot img:nth-child(n+2) {
+  width: 40px;
+  cursor: pointer;
+}
+#MainFooter .secondFoot p a, #MainFooter .forthFoot p a, #MainFooter .thirdFoot p a {
+  color: #CAC3BC;
+  text-decoration: none;
+}
+#MainFooter .secondFoot p a:hover, #MainFooter .forthFoot p a:hover, #MainFooter .thirdFoot p a:hover {
+  color: #c8b19a;
+}
+#MainFooter .forthFoot form input {
+  margin: 6px 0 6px 0;
+}
+#MainFooter .forthFoot form input[type=email] {
+  width: 80%;
+  height: 25px;
+  border-radius: 30px;
+  border: none;
+}
+#MainFooter .forthFoot form input[type=button] {
+  background-color: #FECFA7;
+  border-radius: 30px;
+  color: #23201D;
+  padding: 10px 30px 10px 30px;
+  border: none;
+  cursor: pointer;
+}
+#MainFooter .forthFoot form input[type=button]:hover {
+  background-color: #c8b19a;
+  color: #ffffff;
+}
+
+#Privecy {
+  display: flex;
+  justify-content: center;
+  color: #CAC3BC;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  #MainFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+#All_sec .right-s .DivFig figure hr, #MainFooter .secondFoot .break, #MainFooter .thirdFoot .break, #MainFooter .forthFoot .break {
+  border: 1px dotted #FECFA7;
+  width: 60%;
+}
+
+#headerDesign #rightSides figure:hover > img, #headerDesign #Centers img:hover {
+  box-shadow: -2px 1px 21px 0px rgba(0, 0, 0, 0.75);
+}
+
+@keyframes fadeIn {
+  from {
+    margin-left: -300px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: -300px;
+  }
+}
+body {
+  background-color: #23201D;
+}
+
+#All_sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: 0;
+  gap: 1rem;
+  width: 80%;
+  margin: 1% 0% 1% 10%;
+}
+#All_sec #sideBar {
+  width: 30%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+#All_sec #sideBar .articles {
+  text-align: center;
+  color: #CAC3BC;
+}
+#All_sec #sideBar .articles h3, #All_sec #sideBar .articles .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #sideBar .articles p, #All_sec #sideBar .articles #navigation hgroup h5, #navigation hgroup #All_sec #sideBar .articles h5 {
+  color: #CAC3BC;
+}
+#All_sec #sideBar .articles .dataArticle {
+  background-color: #181411;
+  padding: 6px 0 6px 0;
+  margin: 6px 0 6px 0;
+  cursor: pointer;
+}
+#All_sec #sideBar .articles .dataArticle span {
+  margin: 0 6px 0 6px;
+}
+#All_sec #sideBar .Video {
+  border: 1px solid #5C4228;
+  background-color: #181411;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+#All_sec #sideBar .Video h3, #All_sec #sideBar .Video .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #sideBar .Video p, #All_sec #sideBar .Video #navigation hgroup h5, #navigation hgroup #All_sec #sideBar .Video h5 {
+  color: #ffffff;
+  text-align: center;
+}
+#All_sec #sideBar .Video h4 {
+  color: #c9a56e;
+  text-align: center;
+}
+#All_sec #sideBar .Video button {
+  width: 30%;
+  margin-left: 35%;
+  background-color: #FECFA7;
+  border-radius: 30px;
+  color: #23201D;
+  padding: 6px 12px 6px 12px;
+  border: none;
+  cursor: pointer;
+}
+#All_sec #sideBar .Video button:hover {
+  background-color: #c8b19a;
+  color: #ffffff;
+}
+#All_sec .right-s {
+  width: 100%;
+}
+#All_sec .right-s h2 {
+  color: #c9a56e;
+  font-size: 1.5vw;
+  text-align: center;
+}
+#All_sec .right-s .DivFig {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+#All_sec .right-s .DivFig figure {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  height: 20vw;
+  border: 1px #5C4228;
+  background-color: #332f2b;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#All_sec .right-s .DivFig figure:hover {
+  background-color: #5F564E;
+}
+#All_sec .right-s .DivFig figure img {
+  width: 80%;
+  min-height: 12vw;
+  max-height: 12vw;
+  filter: hue-rotate(90deg) brightness(1000%);
+  margin: 5% 0 0 10%;
+}
+#All_sec .right-s .DivFig figure hr {
+  margin-bottom: 0;
+}
+#All_sec .right-s .DivFig figure figcaption {
+  margin: 0;
+  padding: 0;
+}
+#All_sec .right-s .DivFig figure figcaption h3, #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #navigation hgroup h5, #navigation hgroup #All_sec .right-s .DivFig figure figcaption h5 {
+  color: #ffffff;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  #All_sec {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  #All_sec .right-s h2 {
+    font-size: 4vw;
+  }
+  #All_sec .right-s .DivFig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  #All_sec .right-s .DivFig figure {
+    height: 250px;
+  }
+  #All_sec .right-s .DivFig figure img {
+    min-height: 110px;
+    max-height: 110px;
+  }
+  #All_sec #sideBar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  #All_sec {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  #All_sec .right-s .DivFig {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  #All_sec .right-s .DivFig figure {
+    height: 250px;
+  }
+  #All_sec .right-s .DivFig figure img {
+    min-height: 110px;
+    max-height: 110px;
+  }
+  #All_sec #sideBar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+/* Biorythm design */
+.widthAds {
+  width: 100%;
+  height: 90px;
+  border: 1px solid white;
+  margin: 30px 0 30px 0;
+}
+
+.left-side {
+  width: 80%;
+}
+
+#underMain #PersonalBirth #Nemuerology {
+  padding: 0;
+  margin: 0;
+}
+
+#bioInside {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+#underMain figure img {
+  width: 100%;
+}
+
+#underMain figcaption, #PersonalBirth figcaption, #Nemuerology figcaption {
+  text-align: center;
+}
+
+#underMain figcaption p, #PersonalBirth figcaption p, #Nemuerology figcaption p {
+  font-size: 1vw;
+  color: #CAC3BC;
+}
+
+#underMain h4 {
+  margin-top: 30px;
+  font-size: 2vw;
+  cursor: pointer;
+  color: #c9a56e;
+}
+
+#PersonalBirth h4, #Nemuerology h4 {
+  margin-top: 30px;
+  font-size: 1vw;
+  cursor: pointer;
+  color: #c9a56e;
+}
+
+.ButHoro:hover {
+  background-color: #FECFA7;
+}
+
+.ButHoro:hover .ti-arrow-right {
+  color: red;
+}
+
+#displayBio {
+  padding: 0;
+  margin: 0;
+  display: none;
+  grid-template-columns: 1fr;
+}
+
+#displayNumber {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#Numero {
+  padding: 0;
+  margin: 0;
+  display: none;
+  grid-template-columns: 1fr;
+}
+
+#displayThird {
+  padding: 0;
+  margin: 0;
+  display: none;
+  grid-template-columns: 1fr;
+}
+
+#dispNum, #NumeroDip, #ascend {
+  padding: 20px 0 30px 0;
+  margin: 0;
+  display: none;
+  grid-template-columns: 1fr;
+  border: 1px solid #5C4228;
+  text-align: center;
+  background-color: #4B443F;
+  border-radius: 30px;
+}
+
+#dispNum h4, #NumeroDip h4, #ascend h4 {
+  font-size: 2vw;
+}
+
+.numCaption {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #CAC3BC;
+}
+
+.letBeCaption {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #CAC3BC;
+}
+
+.numCaption h5, .letBeCaption h5 {
+  font-size: 1.5vw;
+  margin: 0;
+  padding: 0;
+}
+
+.numCaption h6, .letBeCaption h6 {
+  font-size: 1vw;
+}
+
+.numCaption p, .letBeCaption p {
+  max-width: 60%;
+  margin-left: 20%;
+}
+
+.letBeCaption h3, .letBeCaption #navigation hgroup h5, #navigation hgroup .letBeCaption h5, .letBeCaption #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption .letBeCaption p {
+  color: #FECFA7;
+}
+
+#newForm select {
+  width: 90px;
+  padding: 0.5em;
+  font-size: 1em;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333333;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.circleDay {
+  color: red;
+}
+
+.citcleNight {
+  color: #CAC3BC;
+}
+
+.newColor {
+  color: #c9a56e;
+}
+
+.dividedInside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.predeicted {
+  max-width: 90%;
+  margin-left: 5%;
+}
+
+.right-side {
+  width: 24%;
+}
+
+#bioInside {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.myButton {
+  background-color: #FECFA7;
+  padding: 10px 30px 10px 30px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.myButton:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 14px 0px rgb(232, 215, 127);
+}
+
+#firstChart, #secondChart, #newChart {
+  background-color: #CAC3BC;
+  margin: 3% 0 0 10%;
+  width: 100%;
+  max-width: 80%;
+}
+
+.myCaption {
+  border: 1px solid #5C4228;
+  background-color: #4B443F;
+}
+
+.myCaption form label {
+  color: #CAC3BC;
+}
+
+.figCaptureIn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #CAC3BC;
+}
+
+.figCaptureIn h5, .newStyle h5 {
+  font-size: 1vw;
+}
+
+.newStyle {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #CAC3BC;
+}
+
+#finalData h4 {
+  text-align: center;
+}
+
+/* three under the main section */
+.threeUnder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: #332f2b;
+  border-radius: 30px;
+}
+
+.threeUnder img {
+  width: 100%;
+}
+
+.threeUnder div:nth-child(1) {
+  width: 70%;
+  border: 1px solid #5C4228;
+  border-radius: 30px;
+  background-image: url("../images/Astrology/Aquarius-new.png");
+  background-size: cover;
+}
+
+.threeUnder div:nth-child(2) {
+  width: 130%;
+  margin-left: -30%;
+}
+.threeUnder div:nth-child(2) a {
+  text-decoration: none;
+}
+
+.threeUnder h1 {
+  color: #c9a56e;
+  padding: 0;
+  margin: 0;
+}
+
+.threeUnder h4 {
+  color: #c9a56e;
+  padding: 0;
+  margin: 0 0 6px 0;
+}
+
+.threeUnder p {
+  color: #CAC3BC;
+  text-align: left;
+  max-width: 70%;
+  padding: 0;
+  margin: 0;
+}
+
+.inseideFigure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.inseideFigure h3, .inseideFigure #navigation hgroup h5, #navigation hgroup .inseideFigure h5, .inseideFigure #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption .inseideFigure p {
+  color: #CAC3BC;
+}
+
+.inseideFigure img {
+  width: 25%;
+  height: 25%;
+}
+
+.breakLine {
+  border: none;
+  border-top: 2px dotted #5C4228;
+  margin: 20px 0;
+}
+
+.myImages {
+  width: 25%;
+  height: 120px;
+  border: 1px solid #5C4228;
+  border-radius: 30px;
+  background-image: url("../images/Astrology/Numbers.jpg");
+  background-size: cover;
+}
+
+hr {
+  border: none;
+  border-top: 2px dotted #CAC3BC;
+  height: 0;
+  width: 50%;
+  margin-bottom: 60px;
+}
+
+#displayNumber p, #Numero p, #figAscendant p {
+  color: #CAC3BC;
+  padding: 10px 0 10px 0;
+  margin: 30px 0 30px 0;
+}
+
+#displayNumber img, #Numero img, #figAscendant img {
+  width: 20%;
+  margin-left: 40%;
+}
+
+/* Ascendant start */
+#Ascentandt {
+  display: none;
+}
+
+/* Mobile design */
+@media (max-width: 600px) {
+  .left-side {
+    width: 100%;
+  }
+  #bioInside {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  #underMain figcaption p, #PersonalBirth p .figCaptureIn p, .newStyle p {
+    font-size: 3vw;
+    color: #CAC3BC;
+  }
+  #underMain h4, #PersonalBirth h4 {
+    margin-top: 30px;
+    font-size: 4vw;
+    color: #c9a56e;
+  }
+  #firstChart, #secondChart, #newChart {
+    margin: 6% 0 10% 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .figCaptureIn h5, .newStyle h5 {
+    font-size: 2.5vw;
+  }
+  .threeUnder {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  .threeUnder .rightSideImage {
+    display: none;
+  }
+  .threeUnder div:nth-child(2) {
+    width: 100%;
+    margin: 0;
+  }
+  .threeUnder div:nth-child(2) a {
+    text-decoration: none;
+  }
+  .threeUnder div:nth-child(2) figcaption {
+    width: 70%;
+  }
+  .threeUnder div:nth-child(2) .myImages {
+    width: 30%;
+  }
+}
+/* Horoscop resault design */
+#HorosResult {
+  display: none;
+  width: 80%;
+}
+
+#HorosMenu {
+  background-color: #5C4228;
+  width: 40%;
+}
+
+#HorosMenu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6px 0 6px 0;
+  width: 100%;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+#HorosMenu li {
+  padding: 0 12px 0 12px;
+}
+
+#HorosMenu li:hover {
+  background-color: #FED1A7;
+  color: #23201D;
+}
+
+#HorosMenu.dropDown {
+  display: grid;
+  grid-template-columns: 1fr;
+  display: none;
+}
+
+#HorosMenu li .firstPercen {
+  width: 1000px;
+  border: 1px solid;
+}
+
+#HorosMenu li:nth-child(3):hover > .dropDown {
+  display: block;
+  position: absolute;
+  margin: 10px 0 0 -60px;
+}
+
+#clicMe {
+  position: relative;
+}
+
+#getTest {
+  display: none;
+  position: absolute;
+}
+
+#getTest li {
+  width: 100px;
+  text-align: center;
+}
+
+#getTest li:hover {
+  background-color: #FED1A7;
+  color: #23201D;
+}
+
+.picked {
+  background-color: #FED1A7;
+  color: #23201D;
+}
+
+#clicMe:hover #getTest {
+  display: block;
+}
+
+#article h2 {
+  color: #c9a56e;
+  font-size: 2vw;
+}
+
+.paraf h4 {
+  color: #c9a56e;
+}
+
+.paraf p {
+  color: #CAC3BC;
+}
+
+.color1 {
+  width: 30px;
+  height: 30px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+  margin: 0;
+}
+
+.charts #myChart {
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+
+#Second-article {
+  display: none;
+}
+
+.yearSpan {
+  border: 6px solid rgba(9, 9, 9, 0.223);
+  background-color: rgba(15, 14, 14, 0.187);
+  position: absolute;
+  max-width: 100%;
+}
+
+.yearSpanTwo {
+  border: 6px solid #8E6845;
+  background-color: #8E6845;
+  position: relative;
+  animation-name: myLine;
+  animation-duration: 6s;
+  max-width: 50%;
+}
+
+@keyframes myLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.paraf div {
+  margin-top: 60px;
+}
+
+.main-content {
+  width: 95%;
+}
+
+#article {
+  width: 90%;
+}
+
+/* Mobile Design */
+@media (max-width: 600px) {
+  .main-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .main-section h2 {
+    color: #c9a56e;
+    font-size: 3vw;
+    text-align: center;
+  }
+  .DivFig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .DivFig figure img {
+    width: 80%;
+    max-height: 27vw;
+    min-height: 27vw;
+    filter: hue-rotate(90deg) brightness(1000%);
+    margin: 5% 0 0 10%;
+  }
+  .DivFig figure {
+    height: 50vw;
+    border: 1px #5C4228;
+    background-color: #332f2b;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  #HorosResult {
+    display: none;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  #HorosResult img {
+    width: 100%;
+  }
+  #article h2 {
+    font-size: 3vw;
+  }
+  #HorosMenu {
+    background-color: #5C4228;
+    width: 100%;
+  }
+  .charts {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+/* Tablet design */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .DivFig {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .DivFig figure {
+    height: 27vw;
+    border: 1px #5C4228;
+    background-color: #332f2b;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .DivFig figure img {
+    width: 80%;
+    max-height: 15vw;
+    min-height: 15vw;
+    filter: hue-rotate(90deg) brightness(1000%);
+    margin: 5% 0 0 10%;
+  }
+}
+#headerDesign {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  #headerDesign {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+#headerDesign #leftSides article {
+  width: 80%;
+  margin: 30% 0 0 20%;
+}
+@media (max-width: 600px) {
+  #headerDesign #leftSides article {
+    margin: 6% 0 0 10%;
+  }
+}
+#headerDesign #leftSides article h1 {
+  color: #c9a56e;
+  font-size: 30px;
+  text-align: center;
+}
+#headerDesign #leftSides article p {
+  color: #CAC3BC;
+}
+#headerDesign #leftSides article button {
+  background-color: #FECFA7;
+  border-radius: 30px;
+  color: #23201D;
+  padding: 6px 15px 7px 15px;
+  border: none;
+  cursor: pointer;
+}
+#headerDesign #leftSides article button:hover {
+  background-color: #c8b19a;
+  color: #ffffff;
+}
+#headerDesign #Centers img {
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 20%;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  #headerDesign #Centers {
+    display: none;
+  }
+}
+#headerDesign #rightSides #numberTwo {
+  margin-left: 90px;
+}
+@media (max-width: 600px) {
+  #headerDesign #rightSides #numberTwo {
+    display: none;
+  }
+}
+#headerDesign #rightSides figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 60px 0 60px 0;
+  padding: 0;
+  cursor: pointer;
+}
+#headerDesign #rightSides figure img {
+  width: 6vw;
+  min-height: 6vw;
+  border-radius: 50%;
+}
+@media (max-width: 600px) {
+  #headerDesign #rightSides figure img {
+    width: 11vw;
+  }
+}
+#headerDesign #rightSides figure figcaption {
+  max-width: 60%;
+}
+#headerDesign #rightSides figure figcaption h3, #headerDesign #rightSides figure figcaption #navigation hgroup h5, #navigation hgroup #headerDesign #rightSides figure figcaption h5, #headerDesign #rightSides #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig #headerDesign #rightSides figure figcaption p {
+  color: #c9a56e;
+  margin: 0;
+}
+#headerDesign #rightSides figure figcaption p {
+  color: #CAC3BC;
+  margin: 0;
+}
+
+#landingMain {
+  background-color: #dad7cd;
+}
+#landingMain .firstSectionLand {
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#landingMain .firstSectionLand .firstrDic article header h1 {
+  color: #9A5C23;
+}
+#landingMain .firstSectionLand .firstrDic article header p {
+  color: #23201D;
+}
+#landingMain .firstSectionLand .firstrDic article .vertical {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #ccc4bd;
+  border-radius: 21px;
+  position: absolute;
+  margin-left: 15%;
+}
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article .vertical {
+    position: relative;
+    margin: 0;
+  }
+}
+#landingMain .firstSectionLand .firstrDic article .vertical span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 10px;
+}
+#landingMain .firstSectionLand .firstrDic article .vertical span h3, #landingMain .firstSectionLand .firstrDic article .vertical span #navigation hgroup h5, #navigation hgroup #landingMain .firstSectionLand .firstrDic article .vertical span h5, #landingMain .firstSectionLand .firstrDic article .vertical span #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #landingMain .firstSectionLand .firstrDic article .vertical span p {
+  font-size: 24px;
+  color: #9A5C23;
+}
+#landingMain .firstSectionLand .firstrDic article .vertical .vertical-line {
+  border-left: 2px dotted #5C4228;
+  height: 70px;
+}
+#landingMain .firstSectionLand .firstrDic article ul {
+  list-style: disc;
+  margin-top: 35%;
+}
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article ul {
+    margin-top: 10%;
+  }
+}
+#landingMain .firstSectionLand .firstrDic article button {
+  background-color: #FECFA7;
+  border-radius: 30px;
+  color: #23201D;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #9A5C23;
+  margin-bottom: 6%;
+}
+#landingMain .firstSectionLand .firstrDic article button:hover {
+  background-color: #c8b19a;
+  color: #ffffff;
+}
+#landingMain .firstSectionLand .firstrDic article button:hover > a {
+  color: #23201D;
+}
+#landingMain .firstSectionLand .firstrDic article button a {
+  text-decoration: none;
+  color: #CAC3BC;
+}
+#landingMain .firstSectionLand .secondrDiv figure img {
+  width: 60%;
+}
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .secondrDiv {
+    display: none;
+  }
 }

@@ -1,3 +1,7 @@
+@import "../helper/placeholder";
+@import "../helper/animation";
+@import "../helper/mixin";
+@import "../helper/variable";
 body {
     background-color: $body;
 }
@@ -18,7 +22,7 @@ body {
             text-align: center;
             color: $main-paraf;
             h3 {
-                @extend %textNeed;
+                color: $main-paraf;
             }
            .dataArticle {
             background-color: $darkBox;
