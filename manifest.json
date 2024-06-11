@@ -9,6 +9,11 @@
     
     "icons": [
       {
+        "src": "assets/images/Kandlus144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
         "src": "assets/images/Kandlus.png",
         "sizes": "360x360",
         "type": "image/png"
