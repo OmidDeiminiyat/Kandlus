@@ -28,6 +28,7 @@
       {
         "src": "assets/images/Screenshot-4.png",
         "sizes": "1920x1080",
+        "for_factor": "wide",
         "type": "image/png"
       },
       {
