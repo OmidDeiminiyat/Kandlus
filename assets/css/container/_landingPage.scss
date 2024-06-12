@@ -3,10 +3,14 @@
 
     .firstSectionLand{
         width:80%;
-        margin-left: 10%;
+        margin-left: 20%;
         padding-top: 6%;
         @include flexible(center);
-
+        @media(max-width:600px){
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+        }
         .firstrDic{
             article{
                 header{
@@ -40,7 +44,6 @@
                     .vertical-line {
                         border-left: 2px dotted $box-border; 
                         height: 70px; 
-
                     }
                 }
                 ul {
@@ -48,7 +51,9 @@
                     margin-top: 35%;
                     @media(max-width:600px){
                         margin-top: 10%;
+                        text-align: left;
                     }
+
                 }
                 button{
                     @include Button(10px 20px 10px 20px);
@@ -120,25 +125,39 @@
 }
 
 #videos {
-    width: 70%;
-    margin: 6% 0 0 15%;
+    width: 96%;
+    margin: 6% 0 0 2%;
     padding: 20px 0 60px 0;
+    position: relative;
     @media(max-width:600px) {
          width: 100%;
         margin: 0; 
     }
+    .video-background{
+        width: 100%;
+    }
     .insideVideos {
+        position: absolute;
+        top: 2%;
         @include flexible(none);
         @media(max-width:600px) {
             @include desplayStyle(1fr);
+            position: relative;
+            margin-top: -25%;
         }
         .rightVideo{
             @media(max-width:600px) {
-                margin: 0;
+                display: none;
             }
            img{
-            width: 100%;
-            height: 500px;
+            width: 70%;
+            height: 320px;
+            opacity: 0.6;
+            margin: 15% 0 0 15%;
+            cursor: pointer;
+            &:hover{
+                opacity: 1;
+            }
             @media(max-width:600px) {
                 margin: 0;
             }
@@ -146,20 +165,30 @@
         }
 
         .fourVideos {
-            h4{
+            text-align: center;
+            h1{
                 color: $ribonIcone;
             }
-            a{
-                color: $body;
-                text-decoration: none;
-                &:hover{
-                    color: $hoverText;
+            p{
+                a{
+                    color: $main-text;
+                    text-decoration: none;
+                    &:hover{
+                        color: $buttum-hover;
+                    }
                 }
             }
             .fourFigure{
-                width: 90%;
+                width: 100%;
+                min-height: 270px;
+                cursor: pointer;
+                h4{
+                    color: $ribonIcone;
+                }
                @extend %borderBox;
                text-align: center;
+               background-image: url('../../../assets/images/Astrology/Aquarius-new.png');
+               background-size: cover;
                @media(max-width:600px) {
                 width: 100%;
                 margin: 0;
@@ -167,8 +196,16 @@
                img{
                 width: 100%;
                 max-height: 200px;
+                
                }
-
+               figcaption{
+                margin-top: 100%;
+              
+                .views{
+                    color: $main-text;
+                    bottom: 0;
+                   }
+               }
             }
             .captionVideos{
                 @include desplayStyle(1fr 1fr);
@@ -176,6 +213,67 @@
             }
         }
     }
+}
+
+#Sprituality {
+    background-color: $landingBox;
+    width: 96%;
+    margin-left: 2%;
+    @media (max-width:600px){
+        width: 100%;
+        margin-left: 0;
+    }
+    .MainSpritual {
+        width: 80%;
+        margin-left: 15%;
+        @include flexible(none);
+        @media (max-width:600px){
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+        }
+        .rightSpirit{
+            width: 100%;
+            h3{
+                color: $ribonIcone;
+            }
+            ul{
+                @media (max-width:600px){
+                   padding: 0;
+                   margin-top: 10%;
+                }
+                li{
+                    list-style: none;
+                    margin-top: 15px;
+                    a{
+                        color: $body;
+                        text-decoration: none;
+                        &:hover{
+                            color: $ribonIcone;
+                        }
+                    }
+                }
+                .spiritLine{
+                    border: 1px dotted $ribonIcone;
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .leftSpritual{
+            width: 100%;
+            @media (max-width:600px){
+                display: none;
+            }
+            .insideImage{
+                background-image: url('../../../assets/images/Astrology/Aquarius-new.png');
+                background-size: cover; 
+                width: 60%;
+                height: 400px;
+                @extend %borderBox;
+            }
+        }
+    }  
 }
 
 
@@ -186,5 +284,5 @@
      max-height: 844px;
      overflow: auto;
  }
-     */
+*/
      

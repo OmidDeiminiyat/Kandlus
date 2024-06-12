@@ -14,6 +14,9 @@
     background-color: $Butoon;
     text-align: center;
     @include flexible(center);
+    @media(max-width:600px) {
+        display: none;
+    }
 
 }
 #ribbon p {

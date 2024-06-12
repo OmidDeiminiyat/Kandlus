@@ -15,6 +15,14 @@
     margin-left: -300px;
   }
 }
+@keyframes changeImage {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .menuIcone {
   display: none;
 }
@@ -30,6 +38,11 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  #ribbon {
+    display: none;
+  }
 }
 
 #ribbon p {
@@ -260,6 +273,14 @@
     margin-left: -300px;
   }
 }
+@keyframes changeImage {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 #All_sec .right-s .DivFig figure hr, #MainFooter .secondFoot .break, #MainFooter .forthFoot .break, #MainFooter .thirdFoot .break {
   border: 1px dotted #FECFA7;
   width: 60%;
@@ -269,7 +290,7 @@
   box-shadow: -2px 1px 21px 0px rgba(0, 0, 0, 0.75);
 }
 
-#videos .insideVideos .fourVideos .fourFigure {
+#Sprituality .MainSpritual .leftSpritual .insideImage, #videos .insideVideos .fourVideos .fourFigure {
   border: 1px dotted #5C4228;
   border-radius: 30px;
 }
@@ -341,7 +362,7 @@
   box-shadow: -2px 1px 21px 0px rgba(0, 0, 0, 0.75);
 }
 
-#videos .insideVideos .fourVideos .fourFigure {
+#Sprituality .MainSpritual .leftSpritual .insideImage, #videos .insideVideos .fourVideos .fourFigure {
   border: 1px dotted #5C4228;
   border-radius: 30px;
 }
@@ -360,6 +381,14 @@
   }
   to {
     margin-left: -300px;
+  }
+}
+@keyframes changeImage {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 body {
@@ -1134,6 +1163,63 @@ hr {
     margin: 5% 0 0 10%;
   }
 }
+@media (max-width: 600px) {
+  #LandingHeader {
+    display: none;
+  }
+}
+
+#myMobileHeader {
+  margin: 0;
+  padding: 0;
+}
+#myMobileHeader .mobHead {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 500px;
+  background-image: url("../../../assets/images/Astrology/Aquarius-new.png");
+  background-size: cover;
+}
+#myMobileHeader .secondmobHead {
+  position: relative;
+  margin-top: -500px;
+  padding: 0;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+#myMobileHeader .secondmobHead hgroup {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+}
+#myMobileHeader .secondmobHead hgroup h1 {
+  color: #c9a56e;
+  margin-top: 100%;
+}
+#myMobileHeader .secondmobHead hgroup button {
+  background-color: #FECFA7;
+  border-radius: 30px;
+  color: #23201D;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin: 0 0 0 35%;
+}
+#myMobileHeader .secondmobHead hgroup button:hover {
+  background-color: #c8b19a;
+  color: #ffffff;
+}
+#myMobileHeader .secondmobHead hgroup button a {
+  text-decoration: none;
+  color: #23201D;
+}
+
 #headerDesign {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1225,15 +1311,22 @@ hr {
 }
 
 #landingMain {
-  background-color: #dad7cd;
+  background-color: #D9D9D9;
 }
 #landingMain .firstSectionLand {
   width: 80%;
-  margin-left: 10%;
+  margin-left: 20%;
   padding-top: 6%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
 }
 #landingMain .firstSectionLand .firstrDic article header h1 {
   color: #9A5C23;
@@ -1245,7 +1338,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #ccc4bd;
+  background-color: #CEBEB1;
   border-radius: 21px;
   position: absolute;
   margin-left: 15%;
@@ -1277,6 +1370,7 @@ hr {
 @media (max-width: 600px) {
   #landingMain .firstSectionLand .firstrDic article ul {
     margin-top: 10%;
+    text-align: left;
   }
 }
 #landingMain .firstSectionLand .firstrDic article button {
@@ -1314,7 +1408,7 @@ hr {
   width: 80%;
   height: 220px;
   margin: 6% 0 0 10%;
-  background-color: #ccc4bd;
+  background-color: #CEBEB1;
   border-radius: 30px;
 }
 @media (max-width: 600px) {
@@ -1325,7 +1419,7 @@ hr {
 }
 #musicSection .mainMusic {
   position: absolute;
-  background-color: #dad7cd;
+  background-color: #D9D9D9;
   width: 80%;
   height: 160px;
   border: 1px solid black;
@@ -1359,9 +1453,10 @@ hr {
 }
 
 #videos {
-  width: 70%;
-  margin: 6% 0 0 15%;
+  width: 96%;
+  margin: 6% 0 0 2%;
   padding: 20px 0 60px 0;
+  position: relative;
 }
 @media (max-width: 600px) {
   #videos {
@@ -1369,7 +1464,12 @@ hr {
     margin: 0;
   }
 }
+#videos .video-background {
+  width: 100%;
+}
 #videos .insideVideos {
+  position: absolute;
+  top: 2%;
   display: flex;
   flex-direction: row;
   justify-content: none;
@@ -1379,35 +1479,53 @@ hr {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    position: relative;
+    margin-top: -25%;
   }
 }
 @media (max-width: 600px) {
   #videos .insideVideos .rightVideo {
-    margin: 0;
+    display: none;
   }
 }
 #videos .insideVideos .rightVideo img {
-  width: 100%;
-  height: 500px;
+  width: 70%;
+  height: 320px;
+  opacity: 0.6;
+  margin: 15% 0 0 15%;
+  cursor: pointer;
+}
+#videos .insideVideos .rightVideo img:hover {
+  opacity: 1;
 }
 @media (max-width: 600px) {
   #videos .insideVideos .rightVideo img {
     margin: 0;
   }
 }
-#videos .insideVideos .fourVideos h4 {
+#videos .insideVideos .fourVideos {
+  text-align: center;
+}
+#videos .insideVideos .fourVideos h1 {
   color: #9A5C23;
 }
-#videos .insideVideos .fourVideos a {
-  color: #23201D;
+#videos .insideVideos .fourVideos p a {
+  color: #CAC3BC;
   text-decoration: none;
 }
-#videos .insideVideos .fourVideos a:hover {
-  color: #c8b19a;
+#videos .insideVideos .fourVideos p a:hover {
+  color: #FED1A7;
 }
 #videos .insideVideos .fourVideos .fourFigure {
-  width: 90%;
+  width: 100%;
+  min-height: 270px;
+  cursor: pointer;
   text-align: center;
+  background-image: url("../../../assets/images/Astrology/Aquarius-new.png");
+  background-size: cover;
+}
+#videos .insideVideos .fourVideos .fourFigure h4 {
+  color: #9A5C23;
 }
 @media (max-width: 600px) {
   #videos .insideVideos .fourVideos .fourFigure {
@@ -1419,11 +1537,86 @@ hr {
   width: 100%;
   max-height: 200px;
 }
+#videos .insideVideos .fourVideos .fourFigure figcaption {
+  margin-top: 100%;
+}
+#videos .insideVideos .fourVideos .fourFigure figcaption .views {
+  color: #CAC3BC;
+  bottom: 0;
+}
 #videos .insideVideos .fourVideos .captionVideos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   gap: 1rem;
+}
+
+#Sprituality {
+  background-color: #CEBEB1;
+  width: 96%;
+  margin-left: 2%;
+}
+@media (max-width: 600px) {
+  #Sprituality {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+#Sprituality .MainSpritual {
+  width: 80%;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+}
+@media (max-width: 600px) {
+  #Sprituality .MainSpritual {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+#Sprituality .MainSpritual .rightSpirit {
+  width: 100%;
+}
+#Sprituality .MainSpritual .rightSpirit h3, #Sprituality .MainSpritual .rightSpirit #navigation hgroup h5, #navigation hgroup #Sprituality .MainSpritual .rightSpirit h5, #Sprituality .MainSpritual .rightSpirit #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #Sprituality .MainSpritual .rightSpirit p {
+  color: #9A5C23;
+}
+@media (max-width: 600px) {
+  #Sprituality .MainSpritual .rightSpirit ul {
+    padding: 0;
+    margin-top: 10%;
+  }
+}
+#Sprituality .MainSpritual .rightSpirit ul li {
+  list-style: none;
+  margin-top: 15px;
+}
+#Sprituality .MainSpritual .rightSpirit ul li a {
+  color: #23201D;
+  text-decoration: none;
+}
+#Sprituality .MainSpritual .rightSpirit ul li a:hover {
+  color: #9A5C23;
+}
+#Sprituality .MainSpritual .rightSpirit ul .spiritLine {
+  border: 1px dotted #9A5C23;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#Sprituality .MainSpritual .leftSpritual {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  #Sprituality .MainSpritual .leftSpritual {
+    display: none;
+  }
+}
+#Sprituality .MainSpritual .leftSpritual .insideImage {
+  background-image: url("../../../assets/images/Astrology/Aquarius-new.png");
+  background-size: cover;
+  width: 60%;
+  height: 400px;
 }
 
 /*
@@ -1433,4 +1626,4 @@ hr {
      max-height: 844px;
      overflow: auto;
  }
-     *//*# sourceMappingURL=style.css.map */
+*/
