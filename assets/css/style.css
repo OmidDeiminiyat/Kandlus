@@ -1163,6 +1163,9 @@ hr {
     margin: 5% 0 0 10%;
   }
 }
+#LandingHeader header {
+  height: 100%;
+}
 @media (max-width: 600px) {
   #LandingHeader {
     display: none;
@@ -1170,8 +1173,14 @@ hr {
 }
 
 #myMobileHeader {
+  display: none;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 600px) {
+  #myMobileHeader {
+    display: block;
+  }
 }
 #myMobileHeader .mobHead {
   position: relative;
@@ -1224,6 +1233,7 @@ hr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+  width: 100%;
 }
 @media (max-width: 600px) {
   #headerDesign {
@@ -1234,7 +1244,7 @@ hr {
 }
 #headerDesign #leftSides article {
   width: 80%;
-  margin: 30% 0 0 20%;
+  margin: 20% 0 0 20%;
 }
 @media (max-width: 600px) {
   #headerDesign #leftSides article {
@@ -1243,11 +1253,12 @@ hr {
 }
 #headerDesign #leftSides article h1 {
   color: #c9a56e;
-  font-size: 30px;
+  font-size: 4vw;
   text-align: center;
 }
 #headerDesign #leftSides article p {
   color: #CAC3BC;
+  font-size: 1.5vw;
 }
 #headerDesign #leftSides article button {
   background-color: #FECFA7;
@@ -1264,7 +1275,7 @@ hr {
 #headerDesign #Centers img {
   width: 100%;
   border-radius: 30px;
-  margin-top: 20%;
+  margin-top: 10%;
   cursor: pointer;
 }
 @media (max-width: 600px) {
@@ -1284,7 +1295,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 60px 0 60px 0;
+  margin: 90px 0 60px 0;
   padding: 0;
   cursor: pointer;
 }
@@ -1302,20 +1313,25 @@ hr {
   max-width: 70%;
 }
 #headerDesign #rightSides figure figcaption h3, #headerDesign #rightSides figure figcaption #navigation hgroup h5, #navigation hgroup #headerDesign #rightSides figure figcaption h5, #headerDesign #rightSides #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig #headerDesign #rightSides figure figcaption p {
+  font-size: 1.5vw;
   color: #c9a56e;
   margin: 0;
 }
 #headerDesign #rightSides figure figcaption p {
   color: #CAC3BC;
   margin: 0;
+  font-size: 1vw;
 }
 
 #landingMain {
   background-color: #D9D9D9;
+  margin: 0;
+  padding: 0;
+  top: 0;
 }
 #landingMain .firstSectionLand {
   width: 80%;
-  margin-left: 20%;
+  margin-left: 10%;
   padding-top: 6%;
   display: flex;
   flex-direction: row;
@@ -1330,9 +1346,11 @@ hr {
 }
 #landingMain .firstSectionLand .firstrDic article header h1 {
   color: #9A5C23;
+  font-size: 1.5vw;
 }
 #landingMain .firstSectionLand .firstrDic article header p {
   color: #23201D;
+  font-size: 1vw;
 }
 #landingMain .firstSectionLand .firstrDic article .vertical {
   display: flex;
@@ -1342,6 +1360,7 @@ hr {
   border-radius: 21px;
   position: absolute;
   margin-left: 15%;
+  width: 30vw;
 }
 @media (max-width: 600px) {
   #landingMain .firstSectionLand .firstrDic article .vertical {
@@ -1356,8 +1375,11 @@ hr {
   padding-left: 10px;
 }
 #landingMain .firstSectionLand .firstrDic article .vertical span h3, #landingMain .firstSectionLand .firstrDic article .vertical span #navigation hgroup h5, #navigation hgroup #landingMain .firstSectionLand .firstrDic article .vertical span h5, #landingMain .firstSectionLand .firstrDic article .vertical span #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #landingMain .firstSectionLand .firstrDic article .vertical span p {
-  font-size: 24px;
+  font-size: 1.5vw;
   color: #9A5C23;
+}
+#landingMain .firstSectionLand .firstrDic article .vertical span p {
+  font-size: 1vw;
 }
 #landingMain .firstSectionLand .firstrDic article .vertical .vertical-line {
   border-left: 2px dotted #5C4228;
@@ -1367,17 +1389,21 @@ hr {
   list-style: disc;
   margin-top: 35%;
 }
+#landingMain .firstSectionLand .firstrDic article ul li p {
+  font-size: 1vw;
+}
 @media (max-width: 600px) {
   #landingMain .firstSectionLand .firstrDic article ul {
     margin-top: 10%;
     text-align: left;
+    font-size: 3.5vw;
   }
 }
 #landingMain .firstSectionLand .firstrDic article button {
   background-color: #FECFA7;
   border-radius: 30px;
   color: #23201D;
-  padding: 10px 20px 10px 20px;
+  padding: 1vw 2vw 1vw 2vw;
   border: none;
   cursor: pointer;
   background-color: #9A5C23;
@@ -1393,9 +1419,10 @@ hr {
 #landingMain .firstSectionLand .firstrDic article button a {
   text-decoration: none;
   color: #CAC3BC;
+  font-size: 1vw;
 }
 #landingMain .firstSectionLand .secondrDiv figure img {
-  width: 60%;
+  width: 30vw;
 }
 @media (max-width: 600px) {
   #landingMain .firstSectionLand .secondrDiv {
@@ -1483,14 +1510,17 @@ hr {
     margin-top: -25%;
   }
 }
+#videos .insideVideos .rightVideo {
+  width: 100%;
+}
 @media (max-width: 600px) {
   #videos .insideVideos .rightVideo {
     display: none;
   }
 }
 #videos .insideVideos .rightVideo img {
-  width: 70%;
-  height: 320px;
+  width: 30vw;
+  height: 30vw;
   opacity: 0.6;
   margin: 15% 0 0 15%;
   cursor: pointer;
@@ -1508,17 +1538,19 @@ hr {
 }
 #videos .insideVideos .fourVideos h1 {
   color: #9A5C23;
+  font-size: 2vw;
 }
 #videos .insideVideos .fourVideos p a {
   color: #CAC3BC;
   text-decoration: none;
+  font-size: 1.3vw;
 }
 #videos .insideVideos .fourVideos p a:hover {
   color: #FED1A7;
 }
 #videos .insideVideos .fourVideos .fourFigure {
   width: 100%;
-  min-height: 270px;
+  min-height: 16vw;
   cursor: pointer;
   text-align: center;
   background-image: url("../../../assets/images/Astrology/Aquarius-new.png");
@@ -1526,6 +1558,7 @@ hr {
 }
 #videos .insideVideos .fourVideos .fourFigure h4 {
   color: #9A5C23;
+  font-size: 1.3vw;
 }
 @media (max-width: 600px) {
   #videos .insideVideos .fourVideos .fourFigure {
@@ -1581,6 +1614,10 @@ hr {
 }
 #Sprituality .MainSpritual .rightSpirit h3, #Sprituality .MainSpritual .rightSpirit #navigation hgroup h5, #navigation hgroup #Sprituality .MainSpritual .rightSpirit h5, #Sprituality .MainSpritual .rightSpirit #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #Sprituality .MainSpritual .rightSpirit p {
   color: #9A5C23;
+  font-size: 2vw;
+}
+#Sprituality .MainSpritual .rightSpirit p {
+  font-size: 1.3vw;
 }
 @media (max-width: 600px) {
   #Sprituality .MainSpritual .rightSpirit ul {
@@ -1595,6 +1632,7 @@ hr {
 #Sprituality .MainSpritual .rightSpirit ul li a {
   color: #23201D;
   text-decoration: none;
+  font-size: 1.2vw;
 }
 #Sprituality .MainSpritual .rightSpirit ul li a:hover {
   color: #9A5C23;
@@ -1616,7 +1654,7 @@ hr {
   background-image: url("../../../assets/images/Astrology/Aquarius-new.png");
   background-size: cover;
   width: 60%;
-  height: 400px;
+  height: 30vw;
 }
 
 /*
@@ -1626,4 +1664,4 @@ hr {
      max-height: 844px;
      overflow: auto;
  }
-*/
+*//*# sourceMappingURL=style.css.map */

@@ -1,9 +1,12 @@
 #landingMain{
     background-color: $landingBackground;
+    margin: 0;
+    padding: 0;
+    top: 0;
 
     .firstSectionLand{
         width:80%;
-        margin-left: 20%;
+        margin-left: 10%;
         padding-top: 6%;
         @include flexible(center);
         @media(max-width:600px){
@@ -16,9 +19,11 @@
                 header{
                     h1{
                         color: $ribonIcone;
+                        font-size: 1.5vw;
                     }
                     p{
                        color: $body;
+                       font-size: 1vw
                     }
                 }
 
@@ -28,6 +33,7 @@
                     border-radius: 21px;
                     position: absolute;
                     margin-left: 15%;
+                    width: 30vw;
                     @media(max-width:600px) {
                         position: relative;
                         margin: 0;
@@ -37,8 +43,11 @@
                         padding-left: 10px;
                        
                         h3{
-                            font-size: 24px;
+                            font-size: 1.5vw;
                             color: $ribonIcone;
+                        }
+                        p{
+                            font-size: 1vw;
                         }
                     }
                     .vertical-line {
@@ -49,14 +58,20 @@
                 ul {
                     list-style: disc;
                     margin-top: 35%;
+                    li{
+                        p{
+                            font-size: 1vw;
+                        }
+                    }
                     @media(max-width:600px){
                         margin-top: 10%;
                         text-align: left;
+                        font-size: 3.5vw;
                     }
 
                 }
                 button{
-                    @include Button(10px 20px 10px 20px);
+                    @include Button(1vw 2vw 1vw 2vw);
                     background-color: $ribonIcone;
                     margin-bottom: 6%;
                     &:hover > a{
@@ -65,7 +80,7 @@
                     a{
                         text-decoration: none;
                         color: $main-text;
-                       
+                       font-size: 1vw;
                     }
                 }
             }
@@ -74,7 +89,7 @@
         .secondrDiv{
             figure{
                 img{
-                    width: 60%;
+                    width: 30vw;
                 }
             }
             @media(max-width:600px) {
@@ -146,12 +161,13 @@
             margin-top: -25%;
         }
         .rightVideo{
+            width: 100%;
             @media(max-width:600px) {
                 display: none;
             }
            img{
-            width: 70%;
-            height: 320px;
+            width: 30vw;
+            height: 30vw;
             opacity: 0.6;
             margin: 15% 0 0 15%;
             cursor: pointer;
@@ -168,11 +184,13 @@
             text-align: center;
             h1{
                 color: $ribonIcone;
+                font-size: 2vw;
             }
             p{
                 a{
                     color: $main-text;
                     text-decoration: none;
+                    font-size: 1.3vw;
                     &:hover{
                         color: $buttum-hover;
                     }
@@ -180,10 +198,11 @@
             }
             .fourFigure{
                 width: 100%;
-                min-height: 270px;
+                min-height: 16vw;
                 cursor: pointer;
                 h4{
                     color: $ribonIcone;
+                    font-size: 1.3vw
                 }
                @extend %borderBox;
                text-align: center;
@@ -236,6 +255,10 @@
             width: 100%;
             h3{
                 color: $ribonIcone;
+                font-size: 2vw;
+            }
+            p{
+                font-size: 1.3vw;
             }
             ul{
                 @media (max-width:600px){
@@ -248,6 +271,7 @@
                     a{
                         color: $body;
                         text-decoration: none;
+                        font-size: 1.2vw;
                         &:hover{
                             color: $ribonIcone;
                         }
@@ -269,7 +293,7 @@
                 background-image: url('../../../assets/images/Astrology/Aquarius-new.png');
                 background-size: cover; 
                 width: 60%;
-                height: 400px;
+                height: 30vw;
                 @extend %borderBox;
             }
         }
