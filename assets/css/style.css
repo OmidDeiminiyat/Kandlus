@@ -1323,6 +1323,31 @@ hr {
   font-size: 1vw;
 }
 
+#downNav {
+  display: none;
+}
+@media (max-width: 600px) {
+  #downNav {
+    display: block;
+  }
+}
+#downNav .navIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#downNav .navIcons span {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#downNav .navIcons span p {
+  margin: 0;
+  padding: 0;
+  color: #CAC3BC;
+  font-size: 2.5vw;
+}
+
 #landingMain {
   background-color: #D9D9D9;
   margin: 0;
