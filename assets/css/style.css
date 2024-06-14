@@ -1326,6 +1326,7 @@ hr {
 #downNav {
   background-color: #181411;
   display: none;
+  padding-bottom: 10px;
 }
 @media (max-width: 600px) {
   #downNav {

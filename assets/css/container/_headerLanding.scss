@@ -142,6 +142,7 @@
 #downNav {
     background-color: $darkBox;
     display: none;
+    padding-bottom: 10px;
     @media (max-width:600px) {
         display: block;
         position: fixed;
