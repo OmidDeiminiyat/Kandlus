@@ -182,7 +182,7 @@
         @media(max-width:600px) {
             @include desplayStyle(1fr);
             position: relative;
-            margin-top: -25%;
+            margin-top: -22%;
         }
         .rightVideo{
             width: 100%;
@@ -298,13 +298,13 @@
                 color: $ribonIcone;
                 font-size: 2vw;
                 @media(max-width:600px){
-                    font-size: 4vw;
+                    font-size: 5vw;
                 }
             }
             p{
                 font-size: 1.3vw;
                 @media(max-width:600px){
-                    font-size: 2.2vw;
+                    font-size: 3vw;
                 }
             }
             ul{
@@ -320,7 +320,7 @@
                         text-decoration: none;
                         font-size: 1.2vw;
                         @media(max-width:600px){
-                            font-size: 2.2vw;
+                            font-size: 3vw;
                         }
                         &:hover{
                             color: $ribonIcone;
@@ -351,12 +351,12 @@
 }
 
 
-
+/*
  .findSize {
      border: 1px solid red;
      width: 390px;
      max-height: 844px;
      overflow: auto;
  }
-
+*/
      

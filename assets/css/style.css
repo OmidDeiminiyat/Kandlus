@@ -1324,11 +1324,15 @@ hr {
 }
 
 #downNav {
+  background-color: #181411;
   display: none;
 }
 @media (max-width: 600px) {
   #downNav {
     display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 }
 #downNav .navIcons {
@@ -1578,7 +1582,7 @@ hr {
     grid-template-columns: 1fr;
     gap: 1rem;
     position: relative;
-    margin-top: -25%;
+    margin-top: -22%;
   }
 }
 #videos .insideVideos .rightVideo {
@@ -1704,7 +1708,7 @@ hr {
 }
 @media (max-width: 600px) {
   #Sprituality .MainSpritual .rightSpirit h3, #Sprituality .MainSpritual .rightSpirit #navigation hgroup h5, #navigation hgroup #Sprituality .MainSpritual .rightSpirit h5, #Sprituality .MainSpritual .rightSpirit #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #Sprituality .MainSpritual .rightSpirit p {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 }
 #Sprituality .MainSpritual .rightSpirit p {
@@ -1712,7 +1716,7 @@ hr {
 }
 @media (max-width: 600px) {
   #Sprituality .MainSpritual .rightSpirit p {
-    font-size: 2.2vw;
+    font-size: 3vw;
   }
 }
 @media (max-width: 600px) {
@@ -1732,7 +1736,7 @@ hr {
 }
 @media (max-width: 600px) {
   #Sprituality .MainSpritual .rightSpirit ul li a {
-    font-size: 2.2vw;
+    font-size: 3vw;
   }
 }
 #Sprituality .MainSpritual .rightSpirit ul li a:hover {
@@ -1758,9 +1762,11 @@ hr {
   height: 30vw;
 }
 
-.findSize {
-  border: 1px solid red;
-  width: 390px;
-  max-height: 844px;
-  overflow: auto;
-}
+/*
+ .findSize {
+     border: 1px solid red;
+     width: 390px;
+     max-height: 844px;
+     overflow: auto;
+ }
+*/

@@ -140,12 +140,17 @@
 }
 
 #downNav {
+    background-color: $darkBox;
     display: none;
     @media (max-width:600px) {
         display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
     .navIcons {
         @include flexible(space-between);
+       
         span{
             margin: 0;
             padding: 0;
