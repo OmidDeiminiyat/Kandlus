@@ -150,7 +150,8 @@
     }
     .navIcons {
         @include flexible(space-between);
-       
+       width: 80%;
+       margin-left: 10%;
         span{
             margin: 0;
             padding: 0;
