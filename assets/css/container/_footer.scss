@@ -2,12 +2,16 @@
 @import "../helper/mixin";
 @import "../helper/animation";
 @import "../helper/placeholder";
+
 #MainFooter{
     @include desplayStyle(1fr 1fr 1fr 1fr);
     background-color: $box-background;
     text-align: center;
     color: $main-paraf;
     padding-bottom: 21px;
+    @media (max-width:600px) {
+        @include desplayStyle(1fr 1fr);
+    }
     .firstFoot {
         img:nth-child(1){
             width: 60%;
@@ -58,10 +62,4 @@
     display: flex;
     justify-content: center;
     color: $main-paraf;
-}
-
-@media only screen and (min-width: 500px) and (max-width: 1000px) {
-    #MainFooter{
-        @include desplayStyle(1fr 1fr);
-    }
 }

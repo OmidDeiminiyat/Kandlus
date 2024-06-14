@@ -304,6 +304,13 @@
   color: #CAC3BC;
   padding-bottom: 21px;
 }
+@media (max-width: 600px) {
+  #MainFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
 #MainFooter .firstFoot img:nth-child(1) {
   width: 60%;
 }
@@ -346,13 +353,6 @@
   color: #CAC3BC;
 }
 
-@media only screen and (min-width: 500px) and (max-width: 1000px) {
-  #MainFooter {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-}
 #All_sec .right-s .DivFig figure hr, #MainFooter .secondFoot .break, #MainFooter .thirdFoot .break, #MainFooter .forthFoot .break {
   border: 1px dotted #FECFA7;
   width: 60%;
@@ -1348,9 +1348,19 @@ hr {
   color: #9A5C23;
   font-size: 1.5vw;
 }
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article header h1 {
+    font-size: 4vw;
+  }
+}
 #landingMain .firstSectionLand .firstrDic article header p {
   color: #23201D;
   font-size: 1vw;
+}
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article header p {
+    font-size: 2vw;
+  }
 }
 #landingMain .firstSectionLand .firstrDic article .vertical {
   display: flex;
@@ -1365,7 +1375,8 @@ hr {
 @media (max-width: 600px) {
   #landingMain .firstSectionLand .firstrDic article .vertical {
     position: relative;
-    margin: 0;
+    margin: 0 0 0 5%;
+    width: 90%;
   }
 }
 #landingMain .firstSectionLand .firstrDic article .vertical span {
@@ -1378,8 +1389,18 @@ hr {
   font-size: 1.5vw;
   color: #9A5C23;
 }
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article .vertical span h3, #landingMain .firstSectionLand .firstrDic article .vertical span #navigation hgroup h5, #navigation hgroup #landingMain .firstSectionLand .firstrDic article .vertical span h5, #landingMain .firstSectionLand .firstrDic article .vertical span #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #landingMain .firstSectionLand .firstrDic article .vertical span p {
+    font-size: 4vw;
+  }
+}
 #landingMain .firstSectionLand .firstrDic article .vertical span p {
   font-size: 1vw;
+}
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article .vertical span p {
+    font-size: 3vw;
+  }
 }
 #landingMain .firstSectionLand .firstrDic article .vertical .vertical-line {
   border-left: 2px dotted #5C4228;
@@ -1391,6 +1412,11 @@ hr {
 }
 #landingMain .firstSectionLand .firstrDic article ul li p {
   font-size: 1vw;
+}
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article ul li p {
+    font-size: 2.3vw;
+  }
 }
 @media (max-width: 600px) {
   #landingMain .firstSectionLand .firstrDic article ul {
@@ -1413,6 +1439,21 @@ hr {
   background-color: #c8b19a;
   color: #ffffff;
 }
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article button {
+    background-color: #FECFA7;
+    border-radius: 30px;
+    color: #23201D;
+    padding: 1.5vw 3vw 1.5vw 3vw;
+    border: none;
+    cursor: pointer;
+    background-color: #9A5C23;
+  }
+  #landingMain .firstSectionLand .firstrDic article button:hover {
+    background-color: #c8b19a;
+    color: #ffffff;
+  }
+}
 #landingMain .firstSectionLand .firstrDic article button:hover > a {
   color: #23201D;
 }
@@ -1420,6 +1461,11 @@ hr {
   text-decoration: none;
   color: #CAC3BC;
   font-size: 1vw;
+}
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article button a {
+    font-size: 2.4vw;
+  }
 }
 #landingMain .firstSectionLand .secondrDiv figure img {
   width: 30vw;
@@ -1540,10 +1586,20 @@ hr {
   color: #9A5C23;
   font-size: 2vw;
 }
+@media (max-width: 600px) {
+  #videos .insideVideos .fourVideos h1 {
+    font-size: 4vw;
+  }
+}
 #videos .insideVideos .fourVideos p a {
   color: #CAC3BC;
   text-decoration: none;
   font-size: 1.3vw;
+}
+@media (max-width: 600px) {
+  #videos .insideVideos .fourVideos p a {
+    font-size: 2.5vw;
+  }
 }
 #videos .insideVideos .fourVideos p a:hover {
   color: #FED1A7;
@@ -1559,6 +1615,11 @@ hr {
 #videos .insideVideos .fourVideos .fourFigure h4 {
   color: #9A5C23;
   font-size: 1.3vw;
+}
+@media (max-width: 600px) {
+  #videos .insideVideos .fourVideos .fourFigure h4 {
+    font-size: 3vw;
+  }
 }
 @media (max-width: 600px) {
   #videos .insideVideos .fourVideos .fourFigure {
@@ -1616,8 +1677,18 @@ hr {
   color: #9A5C23;
   font-size: 2vw;
 }
+@media (max-width: 600px) {
+  #Sprituality .MainSpritual .rightSpirit h3, #Sprituality .MainSpritual .rightSpirit #navigation hgroup h5, #navigation hgroup #Sprituality .MainSpritual .rightSpirit h5, #Sprituality .MainSpritual .rightSpirit #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #Sprituality .MainSpritual .rightSpirit p {
+    font-size: 4vw;
+  }
+}
 #Sprituality .MainSpritual .rightSpirit p {
   font-size: 1.3vw;
+}
+@media (max-width: 600px) {
+  #Sprituality .MainSpritual .rightSpirit p {
+    font-size: 2.2vw;
+  }
 }
 @media (max-width: 600px) {
   #Sprituality .MainSpritual .rightSpirit ul {
@@ -1633,6 +1704,11 @@ hr {
   color: #23201D;
   text-decoration: none;
   font-size: 1.2vw;
+}
+@media (max-width: 600px) {
+  #Sprituality .MainSpritual .rightSpirit ul li a {
+    font-size: 2.2vw;
+  }
 }
 #Sprituality .MainSpritual .rightSpirit ul li a:hover {
   color: #9A5C23;
@@ -1657,11 +1733,9 @@ hr {
   height: 30vw;
 }
 
-/*
- .findSize {
-     border: 1px solid red;
-     width: 390px;
-     max-height: 844px;
-     overflow: auto;
- }
-*//*# sourceMappingURL=style.css.map */
+.findSize {
+  border: 1px solid red;
+  width: 390px;
+  max-height: 844px;
+  overflow: auto;
+}

@@ -15,15 +15,22 @@
             text-align: center;
         }
         .firstrDic{
+        
             article{
                 header{
                     h1{
                         color: $ribonIcone;
                         font-size: 1.5vw;
+                        @media(max-width:600px) {
+                            font-size: 4vw;
+                        }
                     }
                     p{
                        color: $body;
-                       font-size: 1vw
+                       font-size: 1vw;
+                       @media(max-width:600px) {
+                        font-size: 2vw;
+                    }
                     }
                 }
 
@@ -36,7 +43,8 @@
                     width: 30vw;
                     @media(max-width:600px) {
                         position: relative;
-                        margin: 0;
+                        margin: 0 0 0 5%;
+                        width: 90%;
                     }
                     span{
                         @include flexible(center);
@@ -45,9 +53,15 @@
                         h3{
                             font-size: 1.5vw;
                             color: $ribonIcone;
+                            @media(max-width:600px) {
+                                font-size: 4vw;
+                            }
                         }
                         p{
                             font-size: 1vw;
+                            @media(max-width:600px) {
+                                font-size:3vw;
+                            }
                         }
                     }
                     .vertical-line {
@@ -61,6 +75,9 @@
                     li{
                         p{
                             font-size: 1vw;
+                            @media(max-width:600px) {
+                                font-size: 2.3vw;
+                            }
                         }
                     }
                     @media(max-width:600px){
@@ -74,6 +91,10 @@
                     @include Button(1vw 2vw 1vw 2vw);
                     background-color: $ribonIcone;
                     margin-bottom: 6%;
+                    @media(max-width:600px) {
+                        @include Button(1.5vw 3vw 1.5vw 3vw);
+                        background-color: $ribonIcone;
+                    }
                     &:hover > a{
                         color: $body;
                     }
@@ -81,6 +102,9 @@
                         text-decoration: none;
                         color: $main-text;
                        font-size: 1vw;
+                       @media(max-width:600px) {
+                        font-size: 2.4vw;
+                    }
                     }
                 }
             }
@@ -185,12 +209,18 @@
             h1{
                 color: $ribonIcone;
                 font-size: 2vw;
+                @media(max-width:600px) {
+                    font-size: 4vw;
+                }
             }
             p{
                 a{
                     color: $main-text;
                     text-decoration: none;
                     font-size: 1.3vw;
+                    @media(max-width:600px){
+                        font-size: 2.5vw;
+                    }
                     &:hover{
                         color: $buttum-hover;
                     }
@@ -202,7 +232,10 @@
                 cursor: pointer;
                 h4{
                     color: $ribonIcone;
-                    font-size: 1.3vw
+                    font-size: 1.3vw;
+                    @media(max-width:600px){
+                        font-size: 3vw;
+                    }
                 }
                @extend %borderBox;
                text-align: center;
@@ -229,10 +262,18 @@
             .captionVideos{
                 @include desplayStyle(1fr 1fr);
                 gap: 1rem;
+
             }
+
+
+            
+
+            
         }
     }
 }
+
+
 
 #Sprituality {
     background-color: $landingBox;
@@ -256,9 +297,15 @@
             h3{
                 color: $ribonIcone;
                 font-size: 2vw;
+                @media(max-width:600px){
+                    font-size: 4vw;
+                }
             }
             p{
                 font-size: 1.3vw;
+                @media(max-width:600px){
+                    font-size: 2.2vw;
+                }
             }
             ul{
                 @media (max-width:600px){
@@ -272,6 +319,9 @@
                         color: $body;
                         text-decoration: none;
                         font-size: 1.2vw;
+                        @media(max-width:600px){
+                            font-size: 2.2vw;
+                        }
                         &:hover{
                             color: $ribonIcone;
                         }
@@ -301,12 +351,12 @@
 }
 
 
-/*
+
  .findSize {
      border: 1px solid red;
      width: 390px;
      max-height: 844px;
      overflow: auto;
  }
-*/
+
      
