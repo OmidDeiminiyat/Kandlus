@@ -139,30 +139,3 @@
     }
 }
 
-#downNav {
-    background-color: $darkBox;
-    display: none;
-    padding-bottom: 10px;
-    @media (max-width:600px) {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-    .navIcons {
-        @include flexible(space-between);
-       width: 80%;
-       margin-left: 10%;
-        span{
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            p{
-                margin: 0;
-                padding: 0; 
-                color: $main-paraf;
-                font-size: 2.5vw;
-            }
-        }
-    }
-}

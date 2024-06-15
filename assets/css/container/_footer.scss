@@ -3,6 +3,19 @@
 @import "../helper/animation";
 @import "../helper/placeholder";
 
+.AppFooter{
+    display: block;
+    @media(max-width:600px) {
+        
+     }
+}
+
+.desctipFooter{
+    
+ @media(max-width:600px) {
+    display: none;
+ }
+}
 #MainFooter{
     @include desplayStyle(1fr 1fr 1fr 1fr);
     background-color: $box-background;
@@ -10,9 +23,15 @@
     color: $main-paraf;
     padding-bottom: 21px;
     @media (max-width:600px) {
+        @include desplayStyle(1fr);
+    }
+    .twins{
         @include desplayStyle(1fr 1fr);
     }
     .firstFoot {
+        @media (max-width:600px) {
+            display: none;
+        }
         img:nth-child(1){
             width: 60%;
         }
@@ -43,11 +62,11 @@
         @extend .secondFoot;
         form {
             input{
-                margin: 6px 0 6px 0;
+                margin: 9px 0 9px 0;
             }
             input[type=email] {
                 width: 80%;
-                height: 25px;
+                height: 2rem;
                 border-radius: 30px;
                 border: none;
             }
@@ -58,8 +77,38 @@
     }
 }
 
+
 #Privecy {
     display: flex;
     justify-content: center;
     color: $main-paraf;
+}
+
+#downNav {
+    background-color: $darkBox;
+    display: none;
+
+    @media (max-width:600px) {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+    }
+    .navIcons {
+        @include flexible(space-between);
+       width: 80%;
+       margin-left: 10%;
+        span{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            p{
+                margin: 0;
+                padding: 0; 
+                color: $main-paraf;
+                font-size: 2.5vw;
+            }
+        }
+    }
 }

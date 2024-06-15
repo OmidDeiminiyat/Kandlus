@@ -23,6 +23,14 @@
     opacity: 0;
   }
 }
+@keyframes videoImage {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .menuIcone {
   display: none;
 }
@@ -281,6 +289,14 @@
     opacity: 0;
   }
 }
+@keyframes videoImage {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #All_sec .right-s .DivFig figure hr, #MainFooter .secondFoot .break, #MainFooter .forthFoot .break, #MainFooter .thirdFoot .break {
   border: 1px dotted #FECFA7;
   width: 60%;
@@ -295,6 +311,15 @@
   border-radius: 30px;
 }
 
+.AppFooter {
+  display: block;
+}
+@media (max-width: 600px) {
+  .desctipFooter {
+    display: none;
+  }
+}
+
 #MainFooter {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -307,8 +332,18 @@
 @media (max-width: 600px) {
   #MainFooter {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
+  }
+}
+#MainFooter .twins {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  #MainFooter .firstFoot {
+    display: none;
   }
 }
 #MainFooter .firstFoot img:nth-child(1) {
@@ -326,11 +361,11 @@
   color: #c8b19a;
 }
 #MainFooter .forthFoot form input {
-  margin: 6px 0 6px 0;
+  margin: 9px 0 9px 0;
 }
 #MainFooter .forthFoot form input[type=email] {
   width: 80%;
-  height: 25px;
+  height: 2rem;
   border-radius: 30px;
   border: none;
 }
@@ -351,6 +386,38 @@
   display: flex;
   justify-content: center;
   color: #CAC3BC;
+}
+
+#downNav {
+  background-color: #181411;
+  display: none;
+}
+@media (max-width: 600px) {
+  #downNav {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+  }
+}
+#downNav .navIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 10%;
+}
+#downNav .navIcons span {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#downNav .navIcons span p {
+  margin: 0;
+  padding: 0;
+  color: #CAC3BC;
+  font-size: 2.5vw;
 }
 
 #All_sec .right-s .DivFig figure hr, #MainFooter .secondFoot .break, #MainFooter .thirdFoot .break, #MainFooter .forthFoot .break {
@@ -389,6 +456,14 @@
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes videoImage {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
   }
 }
 body {
@@ -1323,38 +1398,6 @@ hr {
   font-size: 1vw;
 }
 
-#downNav {
-  background-color: #181411;
-  display: none;
-  padding-bottom: 10px;
-}
-@media (max-width: 600px) {
-  #downNav {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-}
-#downNav .navIcons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 80%;
-  margin-left: 10%;
-}
-#downNav .navIcons span {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-#downNav .navIcons span p {
-  margin: 0;
-  padding: 0;
-  color: #CAC3BC;
-  font-size: 2.5vw;
-}
-
 #landingMain {
   background-color: #D9D9D9;
   margin: 0;
@@ -1378,21 +1421,11 @@ hr {
 }
 #landingMain .firstSectionLand .firstrDic article header h1 {
   color: #9A5C23;
-  font-size: 1.5vw;
-}
-@media (max-width: 600px) {
-  #landingMain .firstSectionLand .firstrDic article header h1 {
-    font-size: 4vw;
-  }
+  font-size: 1.5rem;
 }
 #landingMain .firstSectionLand .firstrDic article header p {
   color: #23201D;
-  font-size: 1vw;
-}
-@media (max-width: 600px) {
-  #landingMain .firstSectionLand .firstrDic article header p {
-    font-size: 2.7vw;
-  }
+  font-size: 1rem;
 }
 #landingMain .firstSectionLand .firstrDic article .vertical {
   display: flex;
@@ -1407,8 +1440,8 @@ hr {
 @media (max-width: 600px) {
   #landingMain .firstSectionLand .firstrDic article .vertical {
     position: relative;
-    margin: 0 0 0 5%;
-    width: 90%;
+    margin: 0 0 0 2%;
+    width: 96%;
   }
 }
 #landingMain .firstSectionLand .firstrDic article .vertical span {
@@ -1418,21 +1451,11 @@ hr {
   padding-left: 10px;
 }
 #landingMain .firstSectionLand .firstrDic article .vertical span h3, #landingMain .firstSectionLand .firstrDic article .vertical span #navigation hgroup h5, #navigation hgroup #landingMain .firstSectionLand .firstrDic article .vertical span h5, #landingMain .firstSectionLand .firstrDic article .vertical span #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #landingMain .firstSectionLand .firstrDic article .vertical span p {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   color: #9A5C23;
 }
-@media (max-width: 600px) {
-  #landingMain .firstSectionLand .firstrDic article .vertical span h3, #landingMain .firstSectionLand .firstrDic article .vertical span #navigation hgroup h5, #navigation hgroup #landingMain .firstSectionLand .firstrDic article .vertical span h5, #landingMain .firstSectionLand .firstrDic article .vertical span #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #landingMain .firstSectionLand .firstrDic article .vertical span p {
-    font-size: 4vw;
-  }
-}
 #landingMain .firstSectionLand .firstrDic article .vertical span p {
-  font-size: 1vw;
-}
-@media (max-width: 600px) {
-  #landingMain .firstSectionLand .firstrDic article .vertical span p {
-    font-size: 3vw;
-  }
+  font-size: 1rem;
 }
 #landingMain .firstSectionLand .firstrDic article .vertical .vertical-line {
   border-left: 2px dotted #5C4228;
@@ -1443,18 +1466,13 @@ hr {
   margin-top: 35%;
 }
 #landingMain .firstSectionLand .firstrDic article ul li p {
-  font-size: 1vw;
-}
-@media (max-width: 600px) {
-  #landingMain .firstSectionLand .firstrDic article ul li p {
-    font-size: 3vw;
-  }
+  font-size: 1rem;
 }
 @media (max-width: 600px) {
   #landingMain .firstSectionLand .firstrDic article ul {
     margin-top: 10%;
     text-align: left;
-    font-size: 3.5vw;
+    font-size: 1rem;
   }
 }
 #landingMain .firstSectionLand .firstrDic article button {
@@ -1492,12 +1510,7 @@ hr {
 #landingMain .firstSectionLand .firstrDic article button a {
   text-decoration: none;
   color: #CAC3BC;
-  font-size: 1vw;
-}
-@media (max-width: 600px) {
-  #landingMain .firstSectionLand .firstrDic article button a {
-    font-size: 2.4vw;
-  }
+  font-size: 1rem;
 }
 #landingMain .firstSectionLand .secondrDiv figure img {
   width: 30vw;
@@ -1508,53 +1521,47 @@ hr {
   }
 }
 
-#musicSection {
-  position: relative;
-  width: 80%;
-  height: 220px;
-  margin: 6% 0 0 10%;
-  background-color: #CEBEB1;
-  border-radius: 30px;
-}
-@media (max-width: 600px) {
-  #musicSection {
-    width: 100%;
-    margin: 0;
-  }
-}
-#musicSection .mainMusic {
-  position: absolute;
+#MainMusicPlayer {
+  width: 96%;
+  margin-left: 2%;
   background-color: #D9D9D9;
-  width: 80%;
-  height: 160px;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: 0;
-  margin: 30px 0 0 10%;
+  text-align: center;
 }
-@media (max-width: 600px) {
-  #musicSection .mainMusic {
-    width: 90%;
-    margin: 30px 0 0 5%;
-  }
+#MainMusicPlayer hgroup h1 {
+  font-size: 2rem;
+  color: #9A5C23;
 }
-#musicSection .mainMusic img {
-  width: 30%;
+#MainMusicPlayer hgroup p {
+  width: 70%;
+  margin-left: 15%;
+  color: #23201D;
 }
-#musicSection .mainMusic .audio {
-  margin-left: 30px;
+#MainMusicPlayer button {
+  background-color: #FECFA7;
+  border-radius: 30px;
+  color: #23201D;
+  padding: 9px 9px 9px 9px;
+  border: none;
+  cursor: pointer;
+  min-width: 8rem;
+  background-color: #9A5C23;
 }
-#musicSection .mainMusic .audio h1 {
-  font-size: 1.5vw;
+#MainMusicPlayer button:hover {
+  background-color: #c8b19a;
+  color: #ffffff;
 }
-@media (max-width: 600px) {
-  #musicSection .mainMusic .audio h1 {
-    font-size: 3vw;
-  }
+#MainMusicPlayer button:hover > a {
+  color: #23201D;
 }
-#musicSection .mainMusic .audio audio {
-  margin-left: -30px;
+#MainMusicPlayer button a {
+  text-decoration: none;
+  color: #CAC3BC;
+  font-size: 1rem;
+}
+#MainMusicPlayer .StartPlayer {
+  background-color: rgba(248, 245, 245, 0.464);
+  width: 60%;
+  margin: 3% 0 0 20%;
 }
 
 #videos {
@@ -1605,6 +1612,7 @@ hr {
 }
 #videos .insideVideos .rightVideo img:hover {
   opacity: 1;
+  animation: videoImage 2s;
 }
 @media (max-width: 600px) {
   #videos .insideVideos .rightVideo img {
@@ -1616,22 +1624,12 @@ hr {
 }
 #videos .insideVideos .fourVideos h1 {
   color: #9A5C23;
-  font-size: 2vw;
-}
-@media (max-width: 600px) {
-  #videos .insideVideos .fourVideos h1 {
-    font-size: 4vw;
-  }
+  font-size: 2rem;
 }
 #videos .insideVideos .fourVideos p a {
   color: #CAC3BC;
   text-decoration: none;
-  font-size: 1.3vw;
-}
-@media (max-width: 600px) {
-  #videos .insideVideos .fourVideos p a {
-    font-size: 2.5vw;
-  }
+  font-size: 1rem;
 }
 #videos .insideVideos .fourVideos p a:hover {
   color: #FED1A7;
@@ -1646,12 +1644,7 @@ hr {
 }
 #videos .insideVideos .fourVideos .fourFigure h4 {
   color: #9A5C23;
-  font-size: 1.3vw;
-}
-@media (max-width: 600px) {
-  #videos .insideVideos .fourVideos .fourFigure h4 {
-    font-size: 3vw;
-  }
+  font-size: 1.1rem;
 }
 @media (max-width: 600px) {
   #videos .insideVideos .fourVideos .fourFigure {
@@ -1707,20 +1700,10 @@ hr {
 }
 #Sprituality .MainSpritual .rightSpirit h3, #Sprituality .MainSpritual .rightSpirit #navigation hgroup h5, #navigation hgroup #Sprituality .MainSpritual .rightSpirit h5, #Sprituality .MainSpritual .rightSpirit #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #Sprituality .MainSpritual .rightSpirit p {
   color: #9A5C23;
-  font-size: 2vw;
-}
-@media (max-width: 600px) {
-  #Sprituality .MainSpritual .rightSpirit h3, #Sprituality .MainSpritual .rightSpirit #navigation hgroup h5, #navigation hgroup #Sprituality .MainSpritual .rightSpirit h5, #Sprituality .MainSpritual .rightSpirit #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #Sprituality .MainSpritual .rightSpirit p {
-    font-size: 5vw;
-  }
+  font-size: 2rem;
 }
 #Sprituality .MainSpritual .rightSpirit p {
-  font-size: 1.3vw;
-}
-@media (max-width: 600px) {
-  #Sprituality .MainSpritual .rightSpirit p {
-    font-size: 3vw;
-  }
+  font-size: 1.1rem;
 }
 @media (max-width: 600px) {
   #Sprituality .MainSpritual .rightSpirit ul {
@@ -1735,12 +1718,7 @@ hr {
 #Sprituality .MainSpritual .rightSpirit ul li a {
   color: #23201D;
   text-decoration: none;
-  font-size: 1.2vw;
-}
-@media (max-width: 600px) {
-  #Sprituality .MainSpritual .rightSpirit ul li a {
-    font-size: 3vw;
-  }
+  font-size: 1rem;
 }
 #Sprituality .MainSpritual .rightSpirit ul li a:hover {
   color: #9A5C23;
@@ -1772,4 +1750,4 @@ hr {
      max-height: 844px;
      overflow: auto;
  }
-*/
+*//*# sourceMappingURL=style.css.map */
