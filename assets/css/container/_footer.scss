@@ -4,9 +4,9 @@
 @import "../helper/placeholder";
 
 .AppFooter{
-    display: block;
+    display: none;
     @media(max-width:600px) {
-        
+        display: block;
      }
 }
 
@@ -103,6 +103,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            cursor: pointer;
             p{
                 margin: 0;
                 padding: 0; 

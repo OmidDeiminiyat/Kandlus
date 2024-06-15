@@ -312,8 +312,14 @@
 }
 
 .AppFooter {
-  display: block;
+  display: none;
 }
+@media (max-width: 600px) {
+  .AppFooter {
+    display: block;
+  }
+}
+
 @media (max-width: 600px) {
   .desctipFooter {
     display: none;
@@ -412,6 +418,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  cursor: pointer;
 }
 #downNav .navIcons span p {
   margin: 0;
@@ -1563,6 +1570,12 @@ hr {
   width: 60%;
   margin: 3% 0 0 20%;
 }
+@media (max-width: 600px) {
+  #MainMusicPlayer .StartPlayer {
+    width: 90%;
+    margin: 3% 0 0 5%;
+  }
+}
 
 #videos {
   width: 96%;
@@ -1741,6 +1754,35 @@ hr {
   background-size: cover;
   width: 60%;
   height: 30vw;
+}
+
+#CetegoriesPage {
+  display: none;
+}
+#CetegoriesPage figure {
+  margin: 0;
+}
+#CetegoriesPage h1 {
+  text-align: center;
+  color: #9A5C23;
+}
+#CetegoriesPage .singleCategory {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+  margin: 0;
+}
+#CetegoriesPage .singleCategory a {
+  text-decoration: none;
+}
+#CetegoriesPage .singleCategory a img {
+  width: 100%;
+}
+#CetegoriesPage .singleCategory a h1 {
+  position: relative;
+  top: -21rem;
+  font-size: 2.1rem;
 }
 
 /*

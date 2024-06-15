@@ -54,3 +54,17 @@ headerDesign.style.display ='grid';
     MobileView.style.display = 'none';
     title.style.display='block';
     }
+
+
+    // Open pages by mobile navigation 
+    const categoryPage = document.getElementById('CetegoriesPage');
+    const allInOne = document.getElementById('allInOne');
+    function CategoriesPage(){
+        categoryPage.style.display = 'grid';
+        allInOne.style.display ='none';
+    }
+
+    function GoHome(){
+        categoryPage.style.display = 'none';
+        allInOne.style.display ='block';
+    }

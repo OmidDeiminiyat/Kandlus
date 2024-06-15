@@ -10,6 +10,7 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <div class="findSize">
+<span id="allInOne" >
 <body>
     <section id="ribbon">
         <p id="FullMoon"><span class="material-symbols-outlined"> brightness_3 </span>Next full moon: Friday 21.03.2024 </p>
@@ -155,7 +156,7 @@
                 </figure>
             </div>
         </section>
-        <hr>
+        <hr class="fullHr">
         <section id="MainMusicPlayer">
             <hgroup>
                 <h1>Listen to solfeggio frequency library</h1>
@@ -165,12 +166,12 @@
                 <button><a href="">Playlist</a></button>
                 <button><a href="">Read benefits</a></button>
             </div>
-            <div class="StartPlayer" >
+        <div class="StartPlayer" >
         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
         <div class="elfsight-app-5062a4ae-ceb5-4ce0-8300-ba19b718d628" data-elfsight-app-lazy></div>
         </div>
         </section>
-
+        <hr>
         <section id="videos">
             <video autoplay muted loop class="video-background">
                 <source src="assets/media/ufo_crash_in_desert.mp4 (720p).mp4" type="video/mp4">
@@ -341,11 +342,42 @@
         </div>
     </footer>
     </section>
+</span>
+    <section id="CetegoriesPage">
+        <h1>Pick a category</h1>
+        <div class="singleCategory">
+            <a href="">
+                <figure>
+                <img src="assets/images/Astrology/Aquarius-new.png" alt="">
+                <h1>Articles</h1>
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                <img src="assets/images/Astrology/Aquarius-new.png" alt="">
+                <h1>Videos</h1>
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                <img src="assets/images/Astrology/Aquarius-new.png" alt="">
+                <h1>Astrology</h1>
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                <img src="assets/images/Astrology/Aquarius-new.png" alt="">
+                <h1>Solfeggio frequency</h1>
+                </figure>
+            </a>
+         </div>
+       </section>
+
     <span id="Privecy">&#169; <span id="getYear"> 2024 </span>  All Rights Reserved - Kandlus</span>
   <section id="downNav">
     <div class="navIcons">
-       <span><i class="material-symbols-outlined"> home </i><p>Home</p></span>
-        <span><i class="material-symbols-outlined"> category </i><p>Category</p></span>
+       <span onclick="GoHome()"><i class="material-symbols-outlined"> home </i><p>Home</p></span>
+        <span onclick="CategoriesPage()"  ><i class="material-symbols-outlined"> category </i><p>Category</p></span>
         <span><i class="material-symbols-outlined"> library_books </i><p>Library</p></span>
         <span><i class="material-symbols-outlined">search </i><p>Search</p></span>
         <span><i class="material-symbols-outlined"> layers </i><p>Pages</p></span>
