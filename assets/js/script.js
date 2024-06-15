@@ -59,12 +59,57 @@ headerDesign.style.display ='grid';
     // Open pages by mobile navigation 
     const categoryPage = document.getElementById('CetegoriesPage');
     const allInOne = document.getElementById('allInOne');
+    const searchPage = document.getElementById('searchPage');
     function CategoriesPage(){
         categoryPage.style.display = 'grid';
         allInOne.style.display ='none';
+        searchPage.style.display = 'none';
     }
 
     function GoHome(){
         categoryPage.style.display = 'none';
         allInOne.style.display ='block';
+        searchPage.style.display = 'none';
     }
+
+    function SearchPage(){
+        categoryPage.style.display = 'none';
+        allInOne.style.display ='none';
+        searchPage.style.display = 'block';
+    }
+
+
+    // Search for mobile
+    const searchBar = document.getElementById("search-bar");
+    const resultsList = document.getElementById("results");
+
+    function filterData(searchTerm) {
+     
+      const data = ["Apple is good fruit", "After life is nothing matbe i dont know", "Apple and Banana has a red color, maybe orange", "Orange is now a esphire bu what? ", "Mango is not a movie name, Django was a movie name", "Grape, i dont know what you talked about"];
+    
+  
+      const filteredResults = data.filter(item => item.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+      resultsList.innerHTML = "";
+    
+      if (filteredResults.length > 0) {
+        let linkStyle = `<ul>`
+        filteredResults.forEach((item, index) => {
+            linkStyle += `<li><a href=""><span class="material-symbols-outlined"> movie </span> ${item}</a><li><hr class="WidthHr>`
+        });
+        linkStyle += `</ul>`
+        resultsList.innerHTML = linkStyle;
+      
+      } else {
+        // Display "No results found" message
+        const noResults = document.createElement("li");
+        noResults.textContent = "No results found";
+        resultsList.appendChild(noResults);
+      }
+    }
+    
+    searchBar.addEventListener("input", (event) => {
+      const searchTerm = event.target.value;
+      filterData(searchTerm);
+    });
+    

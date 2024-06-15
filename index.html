@@ -342,6 +342,7 @@
         </div>
     </footer>
     </section>
+    <span id="Privecy">&#169; <span id="getYear"> 2024 </span>  All Rights Reserved - Kandlus</span>
 </span>
     <section id="CetegoriesPage">
         <h1>Pick a category</h1>
@@ -372,14 +373,21 @@
             </a>
          </div>
        </section>
-
-    <span id="Privecy">&#169; <span id="getYear"> 2024 </span>  All Rights Reserved - Kandlus</span>
+       <!-- Search page -->
+        <section id="searchPage">
+            <h1>Search</h1>
+            <p>Search is based on all categories</p>
+       <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Enter your search">
+        <div id="results"></div>
+        </div>
+        </section>
   <section id="downNav">
     <div class="navIcons">
        <span onclick="GoHome()"><i class="material-symbols-outlined"> home </i><p>Home</p></span>
         <span onclick="CategoriesPage()"  ><i class="material-symbols-outlined"> category </i><p>Category</p></span>
         <span><i class="material-symbols-outlined"> library_books </i><p>Library</p></span>
-        <span><i class="material-symbols-outlined">search </i><p>Search</p></span>
+        <span onclick="SearchPage()" ><i class="material-symbols-outlined">search </i><p>Search</p></span>
         <span><i class="material-symbols-outlined"> layers </i><p>Pages</p></span>
     </div>
   </section>

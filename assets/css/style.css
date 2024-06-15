@@ -948,14 +948,6 @@ body {
   background-size: cover;
 }
 
-hr {
-  border: none;
-  border-top: 2px dotted #CAC3BC;
-  height: 0;
-  width: 50%;
-  margin-bottom: 60px;
-}
-
 #displayNumber p, #Numero p, #figAscendant p {
   color: #CAC3BC;
   padding: 10px 0 10px 0;
@@ -1781,8 +1773,52 @@ hr {
 }
 #CetegoriesPage .singleCategory a h1 {
   position: relative;
-  top: -21rem;
-  font-size: 2.1rem;
+  top: -11rem;
+  font-size: 2rem;
+}
+
+#searchPage {
+  display: none;
+  width: 90%;
+  margin-left: 5%;
+  height: 40rem;
+}
+#searchPage h1 {
+  color: #c9a56e;
+}
+#searchPage p {
+  color: #CAC3BC;
+}
+#searchPage .search-container input {
+  width: 100%;
+  border-radius: 6px;
+  height: 1.7rem;
+  background-color: #332f2b;
+  border: none;
+  color: #CAC3BC;
+}
+#searchPage .search-container #results {
+  color: #CAC3BC;
+}
+#searchPage .search-container #results ul {
+  margin: 0;
+  padding: 0;
+}
+#searchPage .search-container #results ul li {
+  list-style: none;
+  margin: 4px 0 2px 0;
+}
+#searchPage .search-container #results ul li a {
+  color: #CAC3BC;
+  text-decoration: none;
+  cursor: pointer;
+}
+#searchPage .search-container #results ul li a:hover {
+  color: #c9a56e;
+}
+#searchPage .search-container #results ul .WidthHr {
+  min-width: 100%;
+  border: 1px dotted #FECFA7;
 }
 
 /*
