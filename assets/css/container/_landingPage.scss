@@ -1,7 +1,7 @@
 #landingMain{
     background-color: $landingBackground;
     margin: 0;
-    padding: 0;
+    padding: 0 0 21px 0;
     top: 0;
 
     .firstSectionLand{
@@ -255,6 +255,7 @@
     background-color: $landingBox;
     width: 96%;
     margin-left: 2%;
+    padding-bottom: 12px;
     @media (max-width:600px){
         width: 100%;
         margin-left: 0;
@@ -389,6 +390,10 @@
             }
         }
     }
+}
+.fullHr{
+    border: 1px dotted $ribonIcone;
+    width: 60%;
 }
 /*
  .findSize {
