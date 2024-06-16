@@ -143,7 +143,7 @@ function prevSlide() {
 }
 
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    autoSlideInterval = setInterval(nextSlide, 6000); // Change slide every 3 seconds
 }
 
 function stopAutoSlide() {
