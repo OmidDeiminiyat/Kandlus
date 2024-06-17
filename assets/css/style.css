@@ -1741,14 +1741,15 @@ body {
 #videos .insideVideos .fourVideos h1 {
   color: #9A5C23;
   font-size: 2rem;
+  margin: 0;
 }
 #videos .insideVideos .fourVideos p a {
-  color: #CAC3BC;
+  color: #23201D;
   text-decoration: none;
   font-size: 1rem;
 }
 #videos .insideVideos .fourVideos p a:hover {
-  color: #FED1A7;
+  color: #c9a56e;
 }
 #videos .insideVideos .fourVideos .fourFigure {
   width: 90%;
