@@ -1664,8 +1664,31 @@ body {
   }
 }
 #videos #MobileImg {
+  display: none;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+#videos #MobileImg:hover .playButt {
+  color: #CAC3BC;
+  animation: colorChange 1s;
+}
+@media (max-width: 600px) {
+  #videos #MobileImg {
+    display: block;
+  }
+}
+#videos #MobileImg .playButt {
+  position: absolute;
+  display: flex;
+  top: 42%;
+  font-size: 4rem;
+  margin-left: 42%;
+  cursor: pointer;
+}
+#videos #MobileImg .playButt:hover {
+  color: #CAC3BC;
+  animation: colorChange 1s;
 }
 #videos #MobileImg img {
   width: 100%;
@@ -1684,7 +1707,7 @@ body {
     grid-template-columns: 1fr;
     gap: 1rem;
     position: relative;
-    margin-top: -22%;
+    margin: 0;
   }
 }
 #videos .insideVideos .rightVideo {

@@ -163,9 +163,31 @@
             display: none;
         }
     }
+
     #MobileImg {
+        display: none;
         margin: 0;
         padding: 0;
+        position: relative;
+        &:hover .playButt{
+            color: $main-paraf;
+                animation: colorChange 1s;
+        }
+        @media(max-width:600px){
+            display: block;
+        }
+        .playButt{
+            position: absolute;
+            display: flex;
+            top: 42%;
+            font-size: 4rem;
+            margin-left: 42%;
+            cursor: pointer;
+            &:hover {
+                color: $main-paraf;
+                animation: colorChange 1s;
+            }
+        }
         img{
             width: 100%;
         }
@@ -178,7 +200,7 @@
         @media(max-width:600px) {
             @include desplayStyle(1fr);
             position: relative;
-            margin-top: -22%;
+            margin: 0;
         }
         .rightVideo{
             width: 80%;
