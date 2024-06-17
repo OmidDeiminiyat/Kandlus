@@ -35,6 +35,7 @@
                     position: absolute;
                     margin-left: 15%;
                     width: 30vw;
+                   
                     @media(max-width:600px) {
                         position: relative;
                         margin: 0 0 0 2%;
@@ -151,24 +152,36 @@
     margin: 6% 0 0 2%;
     padding: 20px 0 60px 0;
     position: relative;
+
     @media(max-width:600px) {
          width: 100%;
         margin: 0; 
     }
     .video-background{
         width: 100%;
+        @media(max-width:600px) {
+            display: none;
+        }
+    }
+    #MobileImg {
+        margin: 0;
+        padding: 0;
+        img{
+            width: 100%;
+        }
     }
     .insideVideos {
         position: absolute;
         top: 2%;
-        @include flexible(none);
+        width: 100%;
+        @include flexible(space-between);
         @media(max-width:600px) {
             @include desplayStyle(1fr);
             position: relative;
             margin-top: -22%;
         }
         .rightVideo{
-            width: 100%;
+            width: 80%;
             @media(max-width:600px) {
                 display: none;
             }
@@ -189,7 +202,9 @@
         }
 
         .fourVideos {
+            width: 100%;
             text-align: center;
+            
             h1{
                 color: $ribonIcone;
                 font-size: 2rem;
@@ -206,17 +221,30 @@
                 }
             }
             .fourFigure{
-                width: 100%;
-                min-height: 16vw; 
+                width: 90%;
+                justify-items: center;
+                height: 100%; 
                 cursor: pointer;
-                h4{
-                    color: $ribonIcone;
-                    font-size: 1.1rem;
-                }
+                margin: 0;
+                padding: 0;
                @extend %borderBox;
                text-align: center;
                background-image: url('../../../assets/images/Astrology/Aquarius-new.png');
                background-size: cover;
+               &:hover {
+                box-shadow: 1px -1px 16px 2px rgba(109, 108, 108, 0.75);
+                animation: boxShadow 1s;
+               } 
+               &:hover h4{
+                color: $main-paraf;
+                animation: colorChange 1s;
+               }
+               
+
+               h4{
+                color: $ribonIcone;
+                font-size: 1.1rem;
+            }
                @media(max-width:600px) {
                 width: 100%;
                 margin: 0;
@@ -228,7 +256,10 @@
                }
                figcaption{
                 margin-top: 100%;
-              
+                h4{
+                    position: relative;
+                   
+                }
                 .views{
                     color: $main-text;
                     bottom: 0;
@@ -236,9 +267,16 @@
                }
             }
             .captionVideos{
-                @include desplayStyle(1fr 1fr);
+                @include desplayStyle(1fr 1fr 1fr);
                 gap: 1rem;
-
+                @media (max-width:600px) {
+                    @include desplayStyle(1fr 1fr);
+                    width: 100%;
+                    overflow-y: auto;
+                    :nth-child(n+3) {
+                        display: none;
+                    }
+                }
             }
 
 

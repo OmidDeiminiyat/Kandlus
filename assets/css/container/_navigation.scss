@@ -34,7 +34,11 @@
 }
 
 /* Navigation style */
-
+.scrolled{
+    background-color: $body;
+    top: 0;
+    width: 100%;
+}
 #navigation {
     @include flexible(space-between);
     color: $primary-text;
@@ -126,12 +130,15 @@ display: block;
     background-size: cover;
     opacity: 0.8;
 }
-#LandingHeader header {
-    height: 600px;
-    
-    background-size: cover;
-    opacity: 0.8;
+#LandingHeader {
+    header {
+        height: 600px;
+        background-size: cover;
+        opacity: 0.8;
+    }
 }
+
+
 
 @media only screen and (min-width: 500px) and (max-width: 1000px) {
     #navigation {

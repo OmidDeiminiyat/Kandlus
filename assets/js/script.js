@@ -117,7 +117,7 @@ headerDesign.style.display ='grid';
    
 
 
-    let currentSlide = 0;
+let currentSlide = 0;
 let autoSlideInterval;
 
 function showSlide(index) {
@@ -143,7 +143,7 @@ function prevSlide() {
 }
 
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 6000); // Change slide every 3 seconds
+    autoSlideInterval = setInterval(nextSlide, 6000); // Change slide every 6 seconds
 }
 
 function stopAutoSlide() {
@@ -159,4 +159,4 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.addEventListener('mouseleave', startAutoSlide);
 });
 
-    
+

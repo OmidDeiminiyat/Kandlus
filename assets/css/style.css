@@ -31,6 +31,22 @@
     opacity: 1;
   }
 }
+@keyframes boxShadow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 1px -1px 16px 2px rgba(109, 108, 108, 0.75);
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: #9A5C23;
+  }
+  100% {
+    color: #CAC3BC;
+  }
+}
 .menuIcone {
   display: none;
 }
@@ -68,6 +84,12 @@
 }
 
 /* Navigation style */
+.scrolled {
+  background-color: #23201D;
+  top: 0;
+  width: 100%;
+}
+
 #navigation {
   display: flex;
   flex-direction: row;
@@ -297,6 +319,22 @@
     opacity: 1;
   }
 }
+@keyframes boxShadow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 1px -1px 16px 2px rgba(109, 108, 108, 0.75);
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: #9A5C23;
+  }
+  100% {
+    color: #CAC3BC;
+  }
+}
 #All_sec .right-s .DivFig figure hr, #MainFooter .secondFoot .break, #MainFooter .forthFoot .break, #MainFooter .thirdFoot .break {
   border: 1px dotted #FECFA7;
   width: 60%;
@@ -474,6 +512,22 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes boxShadow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 1px -1px 16px 2px rgba(109, 108, 108, 0.75);
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: #9A5C23;
+  }
+  100% {
+    color: #CAC3BC;
   }
 }
 body {
@@ -1604,12 +1658,25 @@ body {
 #videos .video-background {
   width: 100%;
 }
+@media (max-width: 600px) {
+  #videos .video-background {
+    display: none;
+  }
+}
+#videos #MobileImg {
+  margin: 0;
+  padding: 0;
+}
+#videos #MobileImg img {
+  width: 100%;
+}
 #videos .insideVideos {
   position: absolute;
   top: 2%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: none;
+  justify-content: space-between;
 }
 @media (max-width: 600px) {
   #videos .insideVideos {
@@ -1621,7 +1688,7 @@ body {
   }
 }
 #videos .insideVideos .rightVideo {
-  width: 100%;
+  width: 80%;
 }
 @media (max-width: 600px) {
   #videos .insideVideos .rightVideo {
@@ -1645,6 +1712,7 @@ body {
   }
 }
 #videos .insideVideos .fourVideos {
+  width: 100%;
   text-align: center;
 }
 #videos .insideVideos .fourVideos h1 {
@@ -1660,12 +1728,23 @@ body {
   color: #FED1A7;
 }
 #videos .insideVideos .fourVideos .fourFigure {
-  width: 100%;
-  min-height: 16vw;
+  width: 90%;
+  justify-items: center;
+  height: 100%;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
   text-align: center;
   background-image: url("../../../assets/images/Astrology/Aquarius-new.png");
   background-size: cover;
+}
+#videos .insideVideos .fourVideos .fourFigure:hover {
+  box-shadow: 1px -1px 16px 2px rgba(109, 108, 108, 0.75);
+  animation: boxShadow 1s;
+}
+#videos .insideVideos .fourVideos .fourFigure:hover h4 {
+  color: #CAC3BC;
+  animation: colorChange 1s;
 }
 #videos .insideVideos .fourVideos .fourFigure h4 {
   color: #9A5C23;
@@ -1684,15 +1763,30 @@ body {
 #videos .insideVideos .fourVideos .fourFigure figcaption {
   margin-top: 100%;
 }
+#videos .insideVideos .fourVideos .fourFigure figcaption h4 {
+  position: relative;
+}
 #videos .insideVideos .fourVideos .fourFigure figcaption .views {
   color: #CAC3BC;
   bottom: 0;
 }
 #videos .insideVideos .fourVideos .captionVideos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   gap: 1rem;
+}
+@media (max-width: 600px) {
+  #videos .insideVideos .fourVideos .captionVideos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    overflow-y: auto;
+  }
+  #videos .insideVideos .fourVideos .captionVideos :nth-child(n+3) {
+    display: none;
+  }
 }
 
 #Sprituality {
@@ -1854,4 +1948,4 @@ body {
      max-height: 844px;
      overflow: auto;
  }
-*//*# sourceMappingURL=style.css.map */
+*/
