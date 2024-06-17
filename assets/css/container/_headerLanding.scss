@@ -3,9 +3,15 @@
     header{
         height: 100%;
     }
-    @media (max-width:600px) {
-        display: none;
-    }
+     @media (max-width:600px) {
+         display: none;
+     }
+}
+.menuIcone {
+    position: absolute;
+    z-index: 1000;
+    left: 90%;
+   
 }
 
 #myMobileHeader{
@@ -76,6 +82,7 @@
     width: 100%;
     @media(max-width:600px) {
         @include desplayStyle(1fr);
+        display: none;
     }
 
     #leftSides{

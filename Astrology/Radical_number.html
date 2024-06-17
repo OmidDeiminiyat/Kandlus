@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numerology Table</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <section id="ribbon">
+        <p id="FullMoon"><span class="material-symbols-outlined"> brightness_3 </span>Next full moon: Friday 21.03.2024 </p>
+        <p id="nexOne"><span class="material-symbols-outlined"> brightness_3 </span>Next full moon: Friday 21.03.2024 </p>
+    </section>
+   <section id="header">
+    <header>
+        <nav id="navigation">
+            <hgroup>
+                <h3>Kandlus</h3>
+                <h5>Lost civilization of man</h5>
+            </hgroup>
+            <ul class="firstList">
+                <li onclick="GoHome()"><i class="material-symbols-outlined"> home </i> Home </li>
+                <li class="CateList mobCate"><i class="material-symbols-outlined"> category </i> Categories
+                    <ul class="secondList mobList">
+                        <li><a href="Astrology/astrology_service.html">Astrology</a></li>
+                        <li><a href="../Blog/blogs.html">Blogs</a></li>
+                        <li><a href="../Videos/video.html">Video</a></li>
+                        <li><a href="../podcast/podcast.html">Solfeggio frequency</a></li>
+                    </ul>
+                </li>
+                <li> <i class="material-symbols-outlined"> library_books </i> <a href="">Library</a></li>
+                <li onclick="SearchPage()"><i class="material-symbols-outlined">search </i> Search</li>
+                <li><i class="material-symbols-outlined"> layers </i> Pages</li>
+            </ul>
+            <ul id="logSign">
+                <li class="ButLogin"> <span class="material-symbols-outlined"> person </span> Log in/Sign Up</li>
+            </ul>
+        </nav>
+        <!-- Navigation for mobile -->
+         <span class="menuIcone">
+            <i onclick="openIt()" id="open" class="material-symbols-outlined">menu </i>
+            <i onclick="closeIt()" id="close" class="material-symbols-outlined"> menu_open</i>
+         </span>
+       
+        <nav id="MobileNav">
+            <hgroup>
+                <h3>Kandlus</h3>
+                <h5>Lost civilization of man</h5>
+            </hgroup>
+            <ul class="firstList">
+                <li><a href="">Home</a></li>
+                <li class="CateList mobCate">Categories
+                    <ul class="secondList mobList">
+                        <li><a href="astrology_service.html">Astrology</a></li>
+                        <li><a href="../Blog/blogs.html">Blogs</a></li>
+                        <li><a href="../Videos/video.html">Video</a></li>
+                        <li><a href="../podcast/podcast.html">Solfeggio frequency</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Subscription</a></li>
+            </ul>
+            <ul id="logSign">
+                <li class="ButLogin"> <span class="material-symbols-outlined"> person </span><a href=""> Log in/Sign Up </a></li>
+            </ul>
+        </nav>
+        <hgroup id="title" class="Titles">
+            <p>Biorythm</p>
+            <p><a href="../index.html">Home</a>/ <a href="#">Biorythm</a></p>
+        </hgroup>
+       
+    </header>
+   </section>
+    <main>
+        <section id="All_sec">
+            <div class="left-side">
+    
+                 <!-- The same as biorythm use for personal day number -->
+                 <aside id="PersonalBirth" class="bg-grey">
+    
+                    <figure id="displayNumber">
+                        <img src="../assets/images/icons/Celestial look (10).png" alt="">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae itaque repellat veritatis perferendis corporis ullam delectus, beatae obcaecati, 
+                            quidem omnis error laboriosam atque numquam dolor voluptatum laudantium perspiciatis dicta? Eius.
+                        </p>
+                         
+                        <figcaption id="myCaption" class="myCaption" >
+                            <h4>Fill up table below  </h4><br>
+                            <form id="newForm">
+                                <div>
+                                    <label for="Gender">Select your radical numberr:</label>
+                                    <select name="Gender" id="RadicalNumber">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                </div><br>
+                               
+                                <button class="myButton" type="submit" >
+                                    <i class="ti-arrow-right mr-5"></i> Click to continue
+                                </button>
+                            </form>
+                        </figcaption>
+                    </figure>
+             
+                    <figure id="dispNum">
+                        <span id="NumberResault">
+                        </span>
+                    </figure>
+                    
+                </aside>
+                <!-- Ascendant start  -->
+                 
+                 <div class="widthAds" style="width: 100%;">
+                    ads
+                </div>
+
+                <section class="threeUnder" >
+                    <div class="rightSideImage">
+                       
+                    </div>
+                    <div>
+                        <h1>Realated astrology service</h1>
+                        <a href="Numerology.html">
+                        <figure class="inseideFigure">
+                            
+                            <figcaption>
+                                <h3>Personal day number</h3>
+                                <h4>Ranked by users:</h4>
+                                <p>Enter your date of birth to find out your personal number for today</p>
+                            </figcaption>
+                           <span class="myImages" ></span>
+                        </figure></a> <hr class="breakLine" >
+                        
+                        <figure onclick="Numerology()" class="inseideFigure">
+                            <figcaption>
+                                <h3>Numerology</h3>
+                                <h4>Ranked by users:</h4>
+                                <p>Enter your name, date of birth and time to analyze the numbers related to you</p>
+                            </figcaption>
+                           <span class="myImages" ></span>
+                        </figure> <hr class="breakLine" >
+                        <figure class="inseideFigure">
+                            <figcaption>
+                                <h3>Ascendant report</h3>
+                                <h4>Ranked by users:</h4>
+                                <p>Learn more about your social personality, physical body, and style.</p>
+                            </figcaption>
+                           <span class="myImages" ></span>
+                        </figure> <hr class="breakLine" >
+                    </div>
+                </section>
+            </div>
+            <div class="right-side" id="sideBar" >
+                <!-- Ads here -->
+                <img style="width: 100%;" src="../assets/images/Astrology/ads.jpg" alt="">
+                <span class="Video">
+                    <h3>Watch latest video on Kandlus</h3>
+                    <h4>Title of the video</h4>
+                    <button>Watch now</button>
+                </span>
+                <section class="articles">
+                    <h3>Related articles</h3><hr class="break">
+                    <article class="dataArticle">
+                        <h5>Article title, fo t hdfhfhghgfv </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos qui odio tenetur aliquam commodi aspernatur atque nihil?</p>
+                        <div>
+                            <span><i class="material-symbols-outlined">visibility</i> 90 </span> 
+                            <span><i class="material-symbols-outlined"> edit_note </i> Omid </span>
+                        </div>
+                    </article>
+    
+                    <article class="dataArticle">
+                        <h5>Article title, fo t hdfhfhghgfv </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos qui odio tenetur aliquam commodi aspernatur atque nihil?</p>
+                        <div>
+                            <span><i class="material-symbols-outlined">visibility</i> 90 </span> 
+                            <span><i class="material-symbols-outlined"> edit_note </i> Omid </span>
+                        </div>
+                    </article>
+    
+                    <article class="dataArticle">
+                        <h5>Article title, fo t hdfhfhghgfv </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos qui odio tenetur aliquam commodi aspernatur atque nihil?</p>
+                        <div>
+                            <span><i class="material-symbols-outlined">visibility</i> 90 </span> 
+                            <span><i class="material-symbols-outlined"> edit_note </i> Omid </span>
+                        </div>
+                    </article>
+                </section>
+                    <!-- Ads -->
+                    <img style="width: 100%;" src="../assets/images/Astrology/ads.jpg" alt="">
+            </div>
+        </section>
+    </main>
+       <!-- footer start -->
+ <footer id="MainFooter">
+    <div class="firstFoot">
+        <figure>
+            <img src="../assets/images/icons/kandlus.png" alt="">
+            <figcaption>
+                <p>Are you looking for the realities of this unknown world?
+                     Or you want to spend a few minutes reading entertaining topics? 
+                     We are here for you
+                </p>
+            </figcaption>
+            <img src="../assets/images/icons/youtube.png" alt="">
+            <img src="../assets/images/icons/facebook-2.png" alt="">
+            <img src="../assets/images/icons/instagram.png" alt="">
+        </figure>
+    </div>
+    <div class="forthFoot">
+        <h3>Newsletter</h3><hr class="break">
+        <form>
+            <input type="email" id="email" placeholder="Your email" required>
+            <div>
+            <input type="radio" id="Term"> <label for="Term">I agree with terms and conditions</label>
+           </div>
+            <input type="button" id="submit" value="Submit">
+        </form>
+    </div>
+    <div class="secondFoot">
+        <h3> Terms & Policy </h3><hr class="break">
+        <p><a href="">Privacy policy</a></p>
+        <p><a href="">Cookie policy</a></p>
+        <p><a href="">Terms of service</a></p>
+        <p><a href="">Contact</a></p>
+    </div>
+    <div class="thirdFoot">
+        <h3>Trend tags</h3><hr class="break">
+        <p><a href="">Sprituality</a></p>
+        <p><a href="">Ancient civilization</a></p>
+        <p><a href="">Ancient Aliens</a></p>
+        <p><a href="">Mysterious discoveries</a></p>
+        <p><a href="">Decoding</a></p>
+    </div>
+</footer>
+    <script src="../assets/js/RadicalNumber.js"></script>
+    <script src="../assets/js/MyScript.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

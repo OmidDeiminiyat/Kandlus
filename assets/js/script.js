@@ -26,57 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// open Navbar for mobile
 
 
-function openIt() {
-    const openIt = document.getElementById('open');
-const closeIt = document.getElementById('close');
-const MobileView = document.getElementById('MobileNav');
-const title = document.getElementById('title');
-const headerDesign = document.getElementById('headerDesign');
-headerDesign.style.display ='none';
-openIt.style.display = 'none';
-closeIt.style.display = 'block';
-MobileView.style.display = 'grid';
-title.style.display='none';
-}
-
-function closeIt() {
-    const openIt = document.getElementById('open');
-const closeIt = document.getElementById('close');
-const MobileView = document.getElementById('MobileNav');
-const title = document.getElementById('title');
-const headerDesign = document.getElementById('headerDesign');
-headerDesign.style.display ='grid';
-    openIt.style.display = 'block';
-    closeIt.style.display = 'none';
-    MobileView.style.display = 'none';
-    title.style.display='block';
-    }
-
-
-    // Open pages by mobile navigation 
-    const categoryPage = document.getElementById('CetegoriesPage');
-    const allInOne = document.getElementById('allInOne');
-    const searchPage = document.getElementById('searchPage');
-    function CategoriesPage(){
-        categoryPage.style.display = 'grid';
-        allInOne.style.display ='none';
-        searchPage.style.display = 'none';
-    }
-
-    function GoHome(){
-        categoryPage.style.display = 'none';
-        allInOne.style.display ='block';
-        searchPage.style.display = 'none';
-    }
-
-    function SearchPage(){
-        categoryPage.style.display = 'none';
-        allInOne.style.display ='none';
-        searchPage.style.display = 'block';
-    }
 
 
     // Search for mobile
@@ -160,3 +111,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+    // Open pages by mobile navigation 
+    const categoryPage = document.getElementById('CetegoriesPage');
+    const allInOne = document.getElementById('allInOne');
+    const searchPage = document.getElementById('searchPage');
+    const MobileView = document.getElementById('MobileNav');
+    function CategoriesPage(){
+        categoryPage.style.display = 'grid';
+        allInOne.style.display ='none';
+        searchPage.style.display = 'none';
+    }
+
+    function GoHome(){
+        allInOne.style.display ='block';
+        searchPage.style.display = 'none';
+    }
+
+    function SearchPage(){
+        const openIt = document.getElementById('open');
+        const closeIt = document.getElementById('close');
+        const Til = document.getElementById('title');
+        allInOne.style.display ='none';
+        searchPage.style.display = 'block';
+        MobileView.style.display = 'none';
+        openIt.style.display = 'block';
+    closeIt.style.display = 'none';
+    Til.style.display = 'none';
+    }

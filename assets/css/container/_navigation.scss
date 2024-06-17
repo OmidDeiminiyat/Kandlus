@@ -3,6 +3,7 @@
 @import "../helper/animation";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+
 .menuIcone {
     display: none;
 }
@@ -108,8 +109,10 @@ display: block;
 
 .Titles {
     text-align: center;
-    margin-top: 90px;
     color: $main-text; 
+    position: absolute;
+    width: 50%;
+    margin: 20% 0 0 25%;
 }
 .Titles p:nth-child(1) {
     font-size: 30px;
@@ -124,12 +127,18 @@ display: block;
 }
 
 /* Header Style */
-#header header {
-    height: 400px;
-    background-image: url('../images/Astrology/Service/pages/Astrology_service.jpeg');
-    background-size: cover;
-    opacity: 0.8;
+#header {
+    top: 0;
+    header {
+        height: 400px;
+        background-image: url('../images/Astrology/Service/pages/Astrology_service.jpeg');
+        background-size: cover;
+        opacity: 0.8;
+        top: 0;
+    }
 }
+
+
 #LandingHeader {
     header {
         height: 600px;
@@ -140,7 +149,7 @@ display: block;
 
 
 
-@media only screen and (min-width: 500px) and (max-width: 1000px) {
+@media(max-width:600px) {
     #navigation {
         display: none;
     }
@@ -164,8 +173,10 @@ display: block;
         gap: 1rem;
         color: $primary-text;
         width: 60%;
-        margin-left: 5%;
+        margin: 5% 0 0 5%;
         background-color: $box-background; 
+        position: absolute;
+        z-index: 1000;
         hgroup {
             h3{
                 margin: 0;

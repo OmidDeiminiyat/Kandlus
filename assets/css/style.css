@@ -169,8 +169,10 @@
 
 .Titles {
   text-align: center;
-  margin-top: 90px;
   color: #CAC3BC;
+  position: absolute;
+  width: 50%;
+  margin: 20% 0 0 25%;
 }
 
 .Titles p:nth-child(1) {
@@ -188,11 +190,15 @@
 }
 
 /* Header Style */
+#header {
+  top: 0;
+}
 #header header {
   height: 400px;
   background-image: url("../images/Astrology/Service/pages/Astrology_service.jpeg");
   background-size: cover;
   opacity: 0.8;
+  top: 0;
 }
 
 #LandingHeader header {
@@ -201,7 +207,7 @@
   opacity: 0.8;
 }
 
-@media only screen and (min-width: 500px) and (max-width: 1000px) {
+@media (max-width: 600px) {
   #navigation {
     display: none;
   }
@@ -224,8 +230,10 @@
     gap: 1rem;
     color: #ffffff;
     width: 60%;
-    margin-left: 5%;
+    margin: 5% 0 0 5%;
     background-color: #332f2b;
+    position: absolute;
+    z-index: 1000;
   }
   #MobileNav hgroup h3, #MobileNav hgroup #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #MobileNav hgroup p, #MobileNav #navigation hgroup h5, #navigation #MobileNav hgroup h5 {
     margin: 0;
@@ -1303,6 +1311,12 @@ body {
   }
 }
 
+.menuIcone {
+  position: absolute;
+  z-index: 1000;
+  left: 90%;
+}
+
 #myMobileHeader {
   display: none;
   margin: 0;
@@ -1388,6 +1402,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    display: none;
   }
 }
 #headerDesign #leftSides article {
@@ -1972,4 +1987,4 @@ body {
      max-height: 844px;
      overflow: auto;
  }
-*/
+*//*# sourceMappingURL=style.css.map */

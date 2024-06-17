@@ -10,7 +10,7 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <div class="findSize">
-<span id="allInOne" >
+
 <body>
     <section id="ribbon">
         <p id="FullMoon"><span class="material-symbols-outlined"> brightness_3 </span>Next full moon: Friday 21.03.2024 </p>
@@ -27,7 +27,7 @@
                 <li><a href="">Home</a></li>
                 <li class="CateList">Categories
                     <ul class="secondList">
-                        <li><a href="astrology_service.html">Astrology</a></li>
+                        <li><a href="Astrology/astrology_service.html">Astrology</a></li>
                         <li><a href="../Blog/blogs.html">Blogs</a></li>
                         <li><a href="../Videos/video.html">Video</a></li>
                         <li><a href="../podcast/podcast.html">Solfeggio frequency</a></li>
@@ -40,34 +40,37 @@
                 <li class="ButLogin"> <span class="material-symbols-outlined"> person </span> Log in/Sign Up</li>
             </ul>
         </nav>
+    </header>
+</section>
         <!-- Navigation for mobile -->
          <span class="menuIcone">
             <i onclick="openIt()" id="open" class="material-symbols-outlined">menu </i>
             <i onclick="closeIt()" id="close" class="material-symbols-outlined"> menu_open</i>
-         </span>
-       
+         </span>      
         <nav id="MobileNav">
             <hgroup>
                 <h3>Kandlus</h3>
                 <h5>Lost civilization of man</h5>
             </hgroup>
             <ul class="firstList">
-                <li><a href="">Home</a></li>
-                <li class="CateList mobCate">Categories
+                <li onclick="GoHome()"><i class="material-symbols-outlined"> home </i> Home </li>
+                <li class="CateList mobCate"><i class="material-symbols-outlined"> category </i> Categories
                     <ul class="secondList mobList">
-                        <li><a href="astrology_service.html">Astrology</a></li>
+                        <li><a href="Astrology/astrology_service.html">Astrology</a></li>
                         <li><a href="../Blog/blogs.html">Blogs</a></li>
                         <li><a href="../Videos/video.html">Video</a></li>
                         <li><a href="../podcast/podcast.html">Solfeggio frequency</a></li>
                     </ul>
                 </li>
-                <li><a href="">Contact us</a></li>
-                <li><a href="">Subscription</a></li>
+                <li> <i class="material-symbols-outlined"> library_books </i> <a href="">Library</a></li>
+                <li onclick="SearchPage()"><i class="material-symbols-outlined">search </i> Search</li>
+                <li><i class="material-symbols-outlined"> layers </i> Pages</li>
             </ul>
             <ul id="logSign">
                 <li class="ButLogin"> <span class="material-symbols-outlined"> person </span><a href=""> Log in/Sign Up </a></li>
             </ul>
         </nav>
+        <span id="allInOne" > 
         <section id="headerDesign">
             <div id="leftSides" >
                 <article>
@@ -106,8 +109,7 @@
 
             </div>
         </section>
-    </header>
-   </section>
+   
    <!-- Header for mobile -->
    <section id="myMobileHeader">
     
@@ -377,36 +379,7 @@
     </footer>
     </section>
     <span id="Privecy">&#169; <span id="getYear"> 2024 </span>  All Rights Reserved - Kandlus</span>
-</span>
-    <section id="CetegoriesPage">
-        <h1>Pick a category</h1>
-        <div class="singleCategory">
-            <a href="">
-                <figure>
-                <img src="assets/images/Astrology/Aquarius-new.png" alt="">
-                <h1>Articles</h1>
-                </figure>
-            </a>
-            <a href="">
-                <figure>
-                <img src="assets/images/Astrology/Aquarius-new.png" alt="">
-                <h1>Videos</h1>
-                </figure>
-            </a>
-            <a href="">
-                <figure>
-                <img src="assets/images/Astrology/Aquarius-new.png" alt="">
-                <h1>Astrology</h1>
-                </figure>
-            </a>
-            <a href="">
-                <figure>
-                <img src="assets/images/Astrology/Aquarius-new.png" alt="">
-                <h1>Solfeggio frequency</h1>
-                </figure>
-            </a>
-         </div>
-       </section>
+</span>  
        <!-- Search page -->
         <section id="searchPage">
             <h1>Search</h1>
@@ -416,7 +389,7 @@
         <div id="results"></div>
         </div>
         </section>
-  <section id="downNav">
+  <!-- <section id="downNav">
     <div class="navIcons">
        <span onclick="GoHome()"><i class="material-symbols-outlined"> home </i><p>Home</p></span>
         <span onclick="CategoriesPage()"  ><i class="material-symbols-outlined"> category </i><p>Category</p></span>
@@ -424,8 +397,9 @@
         <span onclick="SearchPage()" ><i class="material-symbols-outlined">search </i><p>Search</p></span>
         <span><i class="material-symbols-outlined"> layers </i><p>Pages</p></span>
     </div>
-  </section>
+  </section> -->
     <script src="../assets/js/MyScript.js"></script>
    <script src="../assets/js/script.js"></script>
+   <script src="../assets/js/landingNav.js"></script>
 </body>
 </html>
