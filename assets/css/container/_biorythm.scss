@@ -25,6 +25,30 @@
     padding: 0;
     margin: 0;
     @include desplayStyle(1fr 1fr);
+
+    .myCaption{
+        h4{
+            font-size: 1.8rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+ }
+ .myCaption {
+    border: 1px solid $box-border;
+    background-color: $boxbackground; 
+    h4{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    form{
+        label{
+            color: $main-paraf;
+        }
+    }
  }
 
 #underMain figure img {
@@ -67,6 +91,10 @@ width: 100%;
     padding: 0;
     margin: 0;
    @include desplayStyle(1fr);
+   p{
+    font-size: 1.2rem;
+    text-align: center;
+   }
  }
 
  #Numero {
@@ -99,24 +127,39 @@ width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     color: $main-paraf;
+    h5{
+        font-size:1.2rem;
+        margin: 0;
+        padding: 0;
+    }
+    h6{
+        font-size: 1.1rem;
+    }
+    p{
+        max-width: 60%;
+        margin-left: 20%;
+        font-size: 1.1rem;
+    }
 }
 .letBeCaption {
     display: grid;
     grid-template-columns: 1fr;
     color: $main-paraf; 
+    h5{
+        font-size:1.2rem;
+        margin: 0;
+        padding: 0;
+    }
+    h6{
+        font-size: 1.1rem;
+    }
+    p{
+        max-width: 60%;
+        margin-left: 20%;
+        font-size: 1.1rem;
+    }
 }
-.numCaption h5, .letBeCaption h5 {
-    font-size:1.5vw;
-    margin: 0;
-    padding: 0;
-}
-.numCaption h6, .letBeCaption h6 {
-    font-size: 1vw;
-}
-.numCaption p, .letBeCaption p {
-    max-width: 60%;
-    margin-left: 20%;
-}
+
 .letBeCaption h3{
     color: $Butoon; 
 }
@@ -148,14 +191,20 @@ width: 100%;
 }
 .dividedInside {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
+
 .predeicted {
     max-width: 90%;
     margin-left: 5%;
 }
 
-
+#insidAscend {
+    h5{
+        font-size: 1.2rem;
+        margin-top: 3px;
+    }
+}
 
 .right-side {
     width: 24%;
@@ -182,15 +231,6 @@ width: 100%;
     margin: 3% 0 0 10%;
    width:100%;max-width:80%;
 }
-.myCaption {
-    border: 1px solid $box-border; 
-    background-color: $boxbackground; 
-}
-
-.myCaption form label {
-    color: $main-paraf; 
-}
-
 
 .figCaptureIn {
     display: grid;
@@ -289,7 +329,7 @@ height: 25%;
 //     width: 50%;
 //     margin-bottom: 60px;
 //   }
-  
+
   #displayNumber p, #Numero p, #figAscendant p {
     color: $main-text;
     padding: 10px 0 10px 0;

@@ -71,7 +71,7 @@ let newNums = `<h4>Here is your personal day number</h4><br>
 <figcaption class="numCaption">
 <div> <h5>Your personal number of today is: <span class="circleDay" >${AllNumberDay.response.number} </span> </h5></div> 
 <div><h3>Master: <span class="circleDay" >${AllNumberDay.response.master} </span> </h3></div>
-<div><h6>Meaning of your personal number:</h6> <p>${AllNumberDay.response.meaning} </p> </div>
+<div><h6>Meaning of your personal number:</h6> <h6>${AllNumberDay.response.meaning} </h6> </div>
 </figcaption>`
 
 DayNumber.innerHTML = newNums;

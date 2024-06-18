@@ -112,7 +112,7 @@ display: block;
     color: $main-text; 
     position: absolute;
     width: 50%;
-    margin: 20% 0 0 25%;
+    margin: 3% 0 0 25%;
 }
 .Titles p:nth-child(1) {
     font-size: 30px;
@@ -135,6 +135,9 @@ display: block;
         background-size: cover;
         opacity: 0.8;
         top: 0;
+        @media(max-width:600px) {
+            height: 150px;
+        }
     }
 }
 
