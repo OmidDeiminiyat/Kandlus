@@ -68,7 +68,7 @@ for (i = 0; i < coll.length; i++) {
 
 
 function pages(recived) {
-  const sendTo = "http://127.0.0.1:5500/Astrology/" + recived;
+  const sendTo = "../Astrology/" + recived;
 window.location.href = sendTo;
 }
 
