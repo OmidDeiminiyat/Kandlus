@@ -1,0 +1,55 @@
+
+#headerSeaction{
+    @include desplayStyle(1fr 1fr);
+    width: 90%;
+    margin-left: 5%;
+    .rightSide{
+        width: 100%;
+        background-color: $boxbackground;
+        figure{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            img{
+                width: 100%;
+            }
+            h3{
+                color: $hgroup;
+            }
+            p{
+                color: $main-paraf;
+            }
+        }
+    }
+
+
+
+
+
+    .leftSide{
+        @include desplayStyle(1fr);
+            .ThreeArticle{
+                @include desplayStyle(1fr 1fr);
+                background-color: $boxbackground;
+                hgroup{
+                    h3{
+                        color: $hgroup;
+                    }
+                    p{
+                        color: $main-paraf;
+                        
+                    }
+                    .views{
+                        color: $main-paraf;
+                        
+                    }
+                }
+                header{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+    }
+}

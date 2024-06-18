@@ -2278,3 +2278,53 @@ spinner6
   filter: blur(10px);
   animation: rotate 2s linear infinite;
 }
+
+#headerSeaction {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 90%;
+  margin-left: 5%;
+}
+#headerSeaction .rightSide {
+  width: 100%;
+  background-color: #4B443F;
+}
+#headerSeaction .rightSide figure {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#headerSeaction .rightSide figure img {
+  width: 100%;
+}
+#headerSeaction .rightSide figure h3, #headerSeaction .rightSide figure #navigation hgroup h5, #navigation hgroup #headerSeaction .rightSide figure h5, #headerSeaction .rightSide #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig #headerSeaction .rightSide figure figcaption p {
+  color: #c9a56e;
+}
+#headerSeaction .rightSide figure p {
+  color: #CAC3BC;
+}
+#headerSeaction .leftSide {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+#headerSeaction .leftSide .ThreeArticle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: #4B443F;
+}
+#headerSeaction .leftSide .ThreeArticle hgroup h3, #headerSeaction .leftSide .ThreeArticle #navigation hgroup h5, #navigation #headerSeaction .leftSide .ThreeArticle hgroup h5, #headerSeaction .leftSide .ThreeArticle hgroup #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #headerSeaction .leftSide .ThreeArticle hgroup p {
+  color: #c9a56e;
+}
+#headerSeaction .leftSide .ThreeArticle hgroup p {
+  color: #CAC3BC;
+}
+#headerSeaction .leftSide .ThreeArticle hgroup .views {
+  color: #CAC3BC;
+}
+#headerSeaction .leftSide .ThreeArticle header img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
