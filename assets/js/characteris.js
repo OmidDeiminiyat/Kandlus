@@ -93,7 +93,7 @@ letArray.forEach((element, index) => {
 <div><h5>Verbal location: <span class="newColor" >${element.verbal_location} </span>  </div>
 </div>
 <div class="predeicted"><h5>Personalised prediction: <span class="newColor" >${element.personalised_prediction} </span>  </div>
-</figcaption><hr>`
+</figcaption><hr class="brLine">`
 });
 insideCountiner += `</span>`
 leadData.innerHTML = insideCountiner;

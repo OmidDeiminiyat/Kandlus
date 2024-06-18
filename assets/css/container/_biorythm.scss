@@ -48,6 +48,38 @@
         label{
             color: $main-paraf;
         }
+        input{
+            border-radius: 30px;
+            border: none;
+            height: 21px;
+            background-color: #33333361;
+            color: $main-paraf;
+        }
+        input[type=time] {
+            width: 40px;
+            
+        }
+        #Gender{
+            border: none;
+            border-radius: 30px;
+            width: 21%;
+            background-color: #33333300;
+            color: $main-paraf;
+        }
+        #countries {
+            border: none;
+            border-radius: 30px;
+            background-color: #33333300;
+            color: $main-paraf;
+            width: 33%;
+        }
+        #timezone{
+            border: none;
+            border-radius: 30px;
+            background-color: #33333300;
+            color: $main-paraf;
+            width: 33%;
+        }
     }
  }
 
@@ -220,6 +252,7 @@ width: 100%;
     padding: 10px 30px 10px 30px;
     border-radius: 30px;
     margin-bottom: 30px;
+    border: none;
 }
 .myButton:hover {
     cursor: pointer;
@@ -232,13 +265,36 @@ width: 100%;
    width:100%;max-width:80%;
 }
 
-.figCaptureIn {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    color: $main-paraf; 
+#finalData {
+    background-color: $box-background;
+    .figCaptureIn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: $main-paraf; 
+        h5{
+            font-size: 1.2rem;
+            margin: 12px 0 12px 0;
+        }
+        @media (max-width:600px) {
+            grid-template-columns: 1fr;
+        }
+    }
 }
-.figCaptureIn h5, .newStyle h5 {
-    font-size: 1vw;
+
+.newStyle { h5 {
+    font-size: 1.2rem;
+    margin: 9px 0 9px 0;
+    }
+    .dividedInside {
+        h5{
+            font-size: 1.2rem;
+        }
+    }
+    .predeicted{
+        h5{
+            font-size: 1.2rem;
+        }
+    }
 }
 .newStyle {
     display: grid;
@@ -344,7 +400,11 @@ height: 25%;
 #Ascentandt {
     display: none;
 }
-
+.brLine{
+    border: 1px dotted $ribonIcone;
+    width: 50%;
+    margin-bottom: 30px;
+}
 
 /* Mobile design */
 @media (max-width: 600px) {

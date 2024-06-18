@@ -754,6 +754,37 @@ body {
 .myCaption form label {
   color: #CAC3BC;
 }
+.myCaption form input {
+  border-radius: 30px;
+  border: none;
+  height: 21px;
+  background-color: rgba(51, 51, 51, 0.3803921569);
+  color: #CAC3BC;
+}
+.myCaption form input[type=time] {
+  width: 40px;
+}
+.myCaption form #Gender {
+  border: none;
+  border-radius: 30px;
+  width: 21%;
+  background-color: rgba(51, 51, 51, 0);
+  color: #CAC3BC;
+}
+.myCaption form #countries {
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(51, 51, 51, 0);
+  color: #CAC3BC;
+  width: 33%;
+}
+.myCaption form #timezone {
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(51, 51, 51, 0);
+  color: #CAC3BC;
+  width: 33%;
+}
 
 #underMain figure img {
   width: 100%;
@@ -936,6 +967,7 @@ body {
   padding: 10px 30px 10px 30px;
   border-radius: 30px;
   margin-bottom: 30px;
+  border: none;
 }
 
 .myButton:hover {
@@ -950,14 +982,33 @@ body {
   max-width: 80%;
 }
 
-.figCaptureIn {
+#finalData {
+  background-color: #332f2b;
+}
+#finalData .figCaptureIn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: #CAC3BC;
 }
+#finalData .figCaptureIn h5 {
+  font-size: 1.2rem;
+  margin: 12px 0 12px 0;
+}
+@media (max-width: 600px) {
+  #finalData .figCaptureIn {
+    grid-template-columns: 1fr;
+  }
+}
 
-.figCaptureIn h5, .newStyle h5 {
-  font-size: 1vw;
+.newStyle h5 {
+  font-size: 1.2rem;
+  margin: 9px 0 9px 0;
+}
+.newStyle .dividedInside h5 {
+  font-size: 1.2rem;
+}
+.newStyle .predeicted h5 {
+  font-size: 1.2rem;
 }
 
 .newStyle {
@@ -1066,6 +1117,12 @@ body {
 /* Ascendant start */
 #Ascentandt {
   display: none;
+}
+
+.brLine {
+  border: 1px dotted #9A5C23;
+  width: 50%;
+  margin-bottom: 30px;
 }
 
 /* Mobile design */

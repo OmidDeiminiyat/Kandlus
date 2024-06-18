@@ -91,7 +91,7 @@ letArray.forEach((element, index) => {
 <div><h5>Strength in percentage: <span class="newColor" >${element.strength_in_percentage} % </span> </div>
 </div>
 <div class="predeicted"><h5>Meaning: <span class="newColor" >${element.meaning} </span>  </div>
-</figcaption><hr>`
+</figcaption><hr class="brLine">`
 });
 insideCountiner += `</span>`
 leadData.innerHTML = insideCountiner;
