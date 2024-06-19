@@ -3,9 +3,15 @@
     @include desplayStyle(1fr 1fr);
     width: 90%;
     margin-left: 5%;
+    @media(max-width:600px) {
+        @include desplayStyle(1fr);
+    }
     .rightSide{
         width: 100%;
         background-color: $boxbackground;
+        a{
+            text-decoration: none;
+        }
         figure{
             margin: 0;
             padding: 0;
@@ -19,18 +25,21 @@
             p{
                 color: $main-paraf;
             }
+            .views{
+                color: $main-paraf;
+                
+            }
         }
     }
 
-
-
-
-
     .leftSide{
         @include desplayStyle(1fr);
+            a{
+                text-decoration: none;
             .ThreeArticle{
                 @include desplayStyle(1fr 1fr);
                 background-color: $boxbackground;
+                margin-bottom: 3px;
                 hgroup{
                     h3{
                         color: $hgroup;
@@ -51,5 +60,6 @@
                     }
                 }
             }
+        }
     }
 }

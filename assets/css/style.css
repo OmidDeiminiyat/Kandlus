@@ -2286,9 +2286,19 @@ spinner6
   width: 90%;
   margin-left: 5%;
 }
+@media (max-width: 600px) {
+  #headerSeaction {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
 #headerSeaction .rightSide {
   width: 100%;
   background-color: #4B443F;
+}
+#headerSeaction .rightSide a {
+  text-decoration: none;
 }
 #headerSeaction .rightSide figure {
   margin: 0;
@@ -2304,27 +2314,34 @@ spinner6
 #headerSeaction .rightSide figure p {
   color: #CAC3BC;
 }
+#headerSeaction .rightSide figure .views {
+  color: #CAC3BC;
+}
 #headerSeaction .leftSide {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
-#headerSeaction .leftSide .ThreeArticle {
+#headerSeaction .leftSide a {
+  text-decoration: none;
+}
+#headerSeaction .leftSide a .ThreeArticle {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   background-color: #4B443F;
+  margin-bottom: 3px;
 }
-#headerSeaction .leftSide .ThreeArticle hgroup h3, #headerSeaction .leftSide .ThreeArticle #navigation hgroup h5, #navigation #headerSeaction .leftSide .ThreeArticle hgroup h5, #headerSeaction .leftSide .ThreeArticle hgroup #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #headerSeaction .leftSide .ThreeArticle hgroup p {
+#headerSeaction .leftSide a .ThreeArticle hgroup h3, #headerSeaction .leftSide a .ThreeArticle #navigation hgroup h5, #navigation #headerSeaction .leftSide a .ThreeArticle hgroup h5, #headerSeaction .leftSide a .ThreeArticle hgroup #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #headerSeaction .leftSide a .ThreeArticle hgroup p {
   color: #c9a56e;
 }
-#headerSeaction .leftSide .ThreeArticle hgroup p {
+#headerSeaction .leftSide a .ThreeArticle hgroup p {
   color: #CAC3BC;
 }
-#headerSeaction .leftSide .ThreeArticle hgroup .views {
+#headerSeaction .leftSide a .ThreeArticle hgroup .views {
   color: #CAC3BC;
 }
-#headerSeaction .leftSide .ThreeArticle header img {
+#headerSeaction .leftSide a .ThreeArticle header img {
   width: 100%;
   height: 100%;
 }/*# sourceMappingURL=style.css.map */
