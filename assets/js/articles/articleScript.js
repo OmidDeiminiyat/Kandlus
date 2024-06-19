@@ -11,11 +11,15 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
      //console.log(NewReciData); // Do something with the fetched data
     firstArticle(NewReciData)
     threeColumn(NewReciData)
+    homeSingle(NewReciData)
+    homeThree(NewReciData)
   })
   .catch(error => {
     console.error('Error fetching data:', error);
   });
   
+
+
   function firstArticle(data) {
     const firstArticle = document.getElementById('rightSide');
     firstArticle.innerHTML=''

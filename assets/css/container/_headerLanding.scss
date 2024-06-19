@@ -109,15 +109,34 @@
     }
 
     #Centers {
-        img{
-            width: 100%;
-            border-radius: 30px;
-            margin-top: 10%;
-            cursor: pointer;
-            &:hover{
-               @extend %hoverStyle;
+        a{
+            color: $main-paraf;
+            text-decoration: none;
+            figure{
+                img{
+                    width: 27vw;
+                    border-radius: 30px;
+                    margin-top: 10%;
+                    
+                    cursor: pointer;
+                    &:hover{
+                       @extend %hoverStyle;
+                    }
+                }
+                p{
+                    position: relative;
+                    top: -150px;
+                    width: 70%;
+                    text-align: center;
+                    margin-left: 15%;
+                    font-size: 1.5vw;
+                    &:hover{
+                        color: $hgroup;
+                    }
+                }
             }
         }
+        
         @media(max-width:600px) {
             display: none;
         }
@@ -126,43 +145,46 @@
 
 
     #rightSides{
-        #numberTwo {
-                margin-left: 90px;
-                @media(max-width:600px){
-                    display: none;
-                }
-         }
-        figure{
-          @include flexible(center);
-          margin: 90px 0 60px 0;
-          padding: 0;
-          cursor: pointer;
-          &:hover > img{
-            @extend %hoverStyle;
-         }
-            img{
-                width: 6vw;
-                min-height: 6vw;
-                border-radius: 50%;
-                @media(max-width:600px){
-                width: 12vw;
-                }
+        a{
+            text-decoration: none;
+            #numberTwo {
+                    margin-left: 90px;
+                    @media(max-width:600px){
+                        display: none;
+                    }
             }
-            figcaption{
-                max-width: 70%;
-                h3{
-                    font-size: 1.5vw;
-                    color: $hgroup;
-                    margin: 0;
-                }
-                p{
-                    color: $main-paraf;
-                    margin: 0;
-                    font-size: 1vw;
-                    
-                }
+            figure{
+            @include flexible(center);
+            margin: 90px 0 60px 0;
+            padding: 0;
+            cursor: pointer;
+            &:hover > img{
+                @extend %hoverStyle;
             }
-        }   
+                img{
+                    width: 6vw;
+                    min-height: 6vw;
+                    border-radius: 50%;
+                    @media(max-width:600px){
+                    width: 12vw;
+                    }
+                }
+                figcaption{
+                    max-width: 70%;
+                    h3{
+                        font-size: 1.5vw;
+                        color: $hgroup;
+                        margin: 0;
+                    }
+                    p{
+                        color: $main-paraf;
+                        margin: 0;
+                        font-size: 1vw;
+                        
+                    }
+                }
+            }   
+        }    
     }
 }
 

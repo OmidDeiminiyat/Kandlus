@@ -353,7 +353,7 @@
   width: 60%;
 }
 
-#headerDesign #rightSides figure:hover > img, #headerDesign #Centers img:hover {
+#headerDesign #rightSides a figure:hover > img, #headerDesign #Centers a figure img:hover {
   box-shadow: -2px 1px 21px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -486,7 +486,7 @@
   width: 60%;
 }
 
-#headerDesign #rightSides figure:hover > img, #headerDesign #Centers img:hover {
+#headerDesign #rightSides a figure:hover > img, #headerDesign #Centers a figure img:hover {
   box-shadow: -2px 1px 21px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -1531,26 +1531,44 @@ body {
   background-color: #c8b19a;
   color: #ffffff;
 }
-#headerDesign #Centers img {
-  width: 100%;
+#headerDesign #Centers a {
+  color: #CAC3BC;
+  text-decoration: none;
+}
+#headerDesign #Centers a figure img {
+  width: 27vw;
   border-radius: 30px;
   margin-top: 10%;
   cursor: pointer;
+}
+#headerDesign #Centers a figure p {
+  position: relative;
+  top: -150px;
+  width: 70%;
+  text-align: center;
+  margin-left: 15%;
+  font-size: 1.5vw;
+}
+#headerDesign #Centers a figure p:hover {
+  color: #c9a56e;
 }
 @media (max-width: 600px) {
   #headerDesign #Centers {
     display: none;
   }
 }
-#headerDesign #rightSides #numberTwo {
+#headerDesign #rightSides a {
+  text-decoration: none;
+}
+#headerDesign #rightSides a #numberTwo {
   margin-left: 90px;
 }
 @media (max-width: 600px) {
-  #headerDesign #rightSides #numberTwo {
+  #headerDesign #rightSides a #numberTwo {
     display: none;
   }
 }
-#headerDesign #rightSides figure {
+#headerDesign #rightSides a figure {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1558,25 +1576,25 @@ body {
   padding: 0;
   cursor: pointer;
 }
-#headerDesign #rightSides figure img {
+#headerDesign #rightSides a figure img {
   width: 6vw;
   min-height: 6vw;
   border-radius: 50%;
 }
 @media (max-width: 600px) {
-  #headerDesign #rightSides figure img {
+  #headerDesign #rightSides a figure img {
     width: 12vw;
   }
 }
-#headerDesign #rightSides figure figcaption {
+#headerDesign #rightSides a figure figcaption {
   max-width: 70%;
 }
-#headerDesign #rightSides figure figcaption h3, #headerDesign #rightSides figure figcaption #navigation hgroup h5, #navigation hgroup #headerDesign #rightSides figure figcaption h5, #headerDesign #rightSides #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig #headerDesign #rightSides figure figcaption p {
+#headerDesign #rightSides a figure figcaption h3, #headerDesign #rightSides a figure figcaption #navigation hgroup h5, #navigation hgroup #headerDesign #rightSides a figure figcaption h5, #headerDesign #rightSides a #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig #headerDesign #rightSides a figure figcaption p {
   font-size: 1.5vw;
   color: #c9a56e;
   margin: 0;
 }
-#headerDesign #rightSides figure figcaption p {
+#headerDesign #rightSides a figure figcaption p {
   color: #CAC3BC;
   margin: 0;
   font-size: 1vw;
