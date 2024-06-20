@@ -1,10 +1,11 @@
 
 #headerSeaction{
     @include desplayStyle(1fr 1fr);
-    width: 90%;
-    margin-left: 5%;
+    @extend %articleVide;
     @media(max-width:600px) {
         @include desplayStyle(1fr);
+        width: 100%;
+        margin-left: 0;
     }
     .rightSide{
         width: 100%;
@@ -59,6 +60,101 @@
                         height: 100%;
                     }
                 }
+            }
+        }
+    }
+}
+.dividLine {
+    @extend %articleVide;
+    height: 60px;
+    background-color: $boxbackground;
+    text-align: center;
+    @media(max-width:600px) {
+        width: 100%;
+        margin-left: 0;
+    }
+    h1{
+        color: $hgroup;
+    }
+} 
+#secondSection {
+    @extend %articleVide;
+    background-color: $boxbackground;
+    @media(max-width:600px) {
+        width: 100%;
+        margin-left: 0;
+    }
+    .fourElements{
+        @include desplayStyle(1fr 1fr 1fr 1fr);
+        width: 94%;
+        margin-left: 3%;
+        @media(max-width:600px) {
+            @include desplayStyle(1fr);
+        }
+        figure{
+            margin: 0; 
+            border: 1px solid $ribonIcone;
+            background-color: $body;
+            border-radius: 30px;
+            img{
+                width: 100%;
+                border-radius: 30px;
+            }
+            figcaption{
+                text-align: center;
+                h3{
+                    color: $hgroup;
+                }
+                p{
+                    color: $main-paraf;
+                }
+                a{
+                    color: $buttum-hover;
+                    text-decoration: none;
+                    &:hover{
+                        color: $ribonIcone;
+                    }
+                }
+            }
+        }
+    }
+}
+.AncientLine{
+    @extend %articleVide;
+    height: 60px;
+    text-align: center;
+    @media(max-width:600px) {
+        width: 100%;
+        margin-left: 0;
+    }
+    h1{
+        color: $hgroup;
+    }
+}
+#AncientCivilization{
+    @include desplayStyle(1fr 1fr);
+    @extend %articleVide;
+    @media(max-width:600px) {
+        @include desplayStyle(1fr);
+        width: 100%;
+        margin-left: 0;
+    }
+    .TwoAncient{
+        @include desplayStyle(1fr 1fr);
+        background-color: $boxbackground;
+        figure{
+            margin: 0;
+            img{
+                width: 100%;
+                height: 100%
+            }
+        }
+        article{
+            hgroup{
+                    @extend %h3Article;
+                    .views{
+                        color: $main-paraf;
+                    }
             }
         }
     }

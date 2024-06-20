@@ -17,3 +17,17 @@
     border: 1px dotted $box-border;
     border-radius: 30px;
 }
+
+%articleVide{
+    width: 90%;
+    margin-left: 5%;
+}
+%h3Article {
+    h3{
+        color: $hgroup;
+        }
+        p{
+            color: $main-paraf;
+        }
+    }
+        

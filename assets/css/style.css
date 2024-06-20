@@ -362,6 +362,18 @@
   border-radius: 30px;
 }
 
+#AncientCivilization, .AncientLine, #secondSection, .dividLine, #headerSeaction {
+  width: 90%;
+  margin-left: 5%;
+}
+
+#AncientCivilization .TwoAncient article hgroup h3, #AncientCivilization .TwoAncient article hgroup #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #AncientCivilization .TwoAncient article hgroup p, #AncientCivilization .TwoAncient article #All_sec .right-s .DivFig figure figcaption hgroup p, #AncientCivilization .TwoAncient article hgroup #navigation hgroup h5, #navigation hgroup #AncientCivilization .TwoAncient article hgroup h5, #AncientCivilization .TwoAncient article #navigation hgroup hgroup h5 {
+  color: #c9a56e;
+}
+#AncientCivilization .TwoAncient article hgroup p {
+  color: #CAC3BC;
+}
+
 .AppFooter {
   display: none;
 }
@@ -493,6 +505,18 @@
 #Sprituality .MainSpritual .leftSpritual .insideImage, #videos .insideVideos .fourVideos .fourFigure {
   border: 1px dotted #5C4228;
   border-radius: 30px;
+}
+
+#AncientCivilization, .AncientLine, #secondSection, .dividLine, #headerSeaction {
+  width: 90%;
+  margin-left: 5%;
+}
+
+#AncientCivilization .TwoAncient article hgroup h3, #AncientCivilization .TwoAncient article hgroup #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #AncientCivilization .TwoAncient article hgroup p, #AncientCivilization .TwoAncient article #All_sec .right-s .DivFig figure figcaption hgroup p, #AncientCivilization .TwoAncient article hgroup #navigation hgroup h5, #navigation hgroup #AncientCivilization .TwoAncient article hgroup h5, #AncientCivilization .TwoAncient article #navigation hgroup hgroup h5 {
+  color: #c9a56e;
+}
+#AncientCivilization .TwoAncient article hgroup p {
+  color: #CAC3BC;
 }
 
 @keyframes fadeIn {
@@ -2301,14 +2325,14 @@ spinner6
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  width: 90%;
-  margin-left: 5%;
 }
 @media (max-width: 600px) {
   #headerSeaction {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    width: 100%;
+    margin-left: 0;
   }
 }
 #headerSeaction .rightSide {
@@ -2362,4 +2386,114 @@ spinner6
 #headerSeaction .leftSide a .ThreeArticle header img {
   width: 100%;
   height: 100%;
+}
+
+.dividLine {
+  height: 60px;
+  background-color: #4B443F;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .dividLine {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.dividLine h1 {
+  color: #c9a56e;
+}
+
+#secondSection {
+  background-color: #4B443F;
+}
+@media (max-width: 600px) {
+  #secondSection {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+#secondSection .fourElements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 94%;
+  margin-left: 3%;
+}
+@media (max-width: 600px) {
+  #secondSection .fourElements {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+#secondSection .fourElements figure {
+  margin: 0;
+  border: 1px solid #9A5C23;
+  background-color: #23201D;
+  border-radius: 30px;
+}
+#secondSection .fourElements figure img {
+  width: 100%;
+  border-radius: 30px;
+}
+#secondSection .fourElements figure figcaption {
+  text-align: center;
+}
+#secondSection .fourElements figure figcaption h3, #secondSection .fourElements figure figcaption #navigation hgroup h5, #navigation hgroup #secondSection .fourElements figure figcaption h5, #secondSection .fourElements #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig #secondSection .fourElements figure figcaption p {
+  color: #c9a56e;
+}
+#secondSection .fourElements figure figcaption p {
+  color: #CAC3BC;
+}
+#secondSection .fourElements figure figcaption a {
+  color: #FED1A7;
+  text-decoration: none;
+}
+#secondSection .fourElements figure figcaption a:hover {
+  color: #9A5C23;
+}
+
+.AncientLine {
+  height: 60px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .AncientLine {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.AncientLine h1 {
+  color: #c9a56e;
+}
+
+#AncientCivilization {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  #AncientCivilization {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+#AncientCivilization .TwoAncient {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: #4B443F;
+}
+#AncientCivilization .TwoAncient figure {
+  margin: 0;
+}
+#AncientCivilization .TwoAncient figure img {
+  width: 100%;
+  height: 100%;
+}
+#AncientCivilization .TwoAncient article hgroup .views {
+  color: #CAC3BC;
 }/*# sourceMappingURL=style.css.map */
