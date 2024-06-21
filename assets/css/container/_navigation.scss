@@ -224,7 +224,10 @@ display: block;
     }
 
     #logSign {
-
+        img{
+            width: 50%;
+            margin-left: 25%;
+        }
         li {
             margin: 0;
             cursor: pointer;

@@ -64,6 +64,10 @@
         }
     }
 }
+.spiritLine{
+    @include spiritLine(60%);
+   margin-top: 30px;
+}
 .dividLine {
     @extend %articleVide;
     height: 60px;

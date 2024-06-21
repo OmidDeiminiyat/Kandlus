@@ -35,3 +35,14 @@
   flex-direction: row;
   justify-content: $justify;
 }
+
+@mixin sprituality($colors, $width, $margin) {
+  background-color: $colors;
+    width: $width;
+    margin-left: $margin;
+}
+@mixin spiritLine($width) {
+  border: 1px dotted $ribonIcone;
+  width: $width;
+  margin-bottom: 30px;
+}

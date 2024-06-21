@@ -5,7 +5,10 @@ const closeIt = document.getElementById('close');
 const MobileView = document.getElementById('MobileNav');
 
 const headerDesign = document.getElementById('headerDesign');
-headerDesign.style.display ='none';
+if (headerDesign) {
+    headerDesign.style.display ='none';
+}
+
 openIt.style.display = 'none';
 closeIt.style.display = 'block';
 MobileView.style.display = 'grid';
@@ -17,7 +20,9 @@ const closeIt = document.getElementById('close');
 const MobileView = document.getElementById('MobileNav');
 
 const headerDesign = document.getElementById('headerDesign');
-headerDesign.style.display ='none';
+if (headerDesign) {
+    headerDesign.style.display ='none';
+}
     openIt.style.display = 'block';
     closeIt.style.display = 'none';
     MobileView.style.display = 'none';
