@@ -5,6 +5,9 @@
         @include desplayStyle(1fr 1fr);
         .rightArt{
             figure{
+                img{
+                    width: 60vw;
+                }
                 h1{
                     color: $hgroup;
                     @extend %textNeed;
@@ -38,6 +41,7 @@
                 blockquote{
                     padding: 10px;
                     background-color: $boxbackground;
+                    border-radius: 30px;
                     p{
                         font-family: 'Merriweather', serif;
                         font-size: 1.2em;
@@ -54,7 +58,7 @@
                     border: 1px solid $box-border;
                     padding: 6px 15px 6px 15px;
                     margin: 0 6px 0 6px;
-                    background-color: $boxbackground;
+                    background-color: $tags;
                     border-radius: 30px;
                     text-decoration: none;
                     color: $main-paraf;
@@ -64,6 +68,80 @@
                     }
                 }
             }
+            .insideartImg{
+                width: 80%;
+                margin: 0 0 5% 5%;
+                img{
+                    border-radius: 30px;
+                    margin-bottom: 0;
+                    width: 50vw;
+                }
+                figcaption{
+                    p{
+                        color: $hgroup;
+                        margin-top: 0;
+                        font-family: "Playfair Display", serif;
+                    }
+                }
+            }
+            ul{
+                font-size: 16px; /* Adjust as needed */
+                font-family: 'Roboto', sans-serif; 
+                li{
+                    color: $main-paraf;
+                }
+            }
+
+            .donation{
+                background-color: $tags;
+                border: 1px solid $box-border;
+                margin-top: 30px;
+                @include flexible(center);
+                figure{
+                    img{
+                        width: 70%;
+                    }
+                }
+                article {
+                    margin-top: 30px;
+                    header{
+                        p{
+                            color: $hgroup;
+                            width: 80%;
+                        }
+                    }
+                    button{
+                        @include Button(12px 21px 12px 21px);
+                    }
+                }
+            }
+            .realtedPost{
+                @include flexible(center);
+                background-color: $boxbackground;
+                figure {
+                    img{
+                        width: 100%;
+                    }
+                }
+                article {
+                    header{
+                        text-align: center;
+                        h1{
+                           color: $hgroup;
+                           font-family: "Playfair Display", serif;
+                        }
+                        p{
+                            color: $main-paraf;
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+
+        .leftArt{
+
         }
     }
 }

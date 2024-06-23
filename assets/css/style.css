@@ -584,7 +584,7 @@
   }
 }
 body {
-  background-color: #23201D;
+  background-color: #181411;
 }
 
 #All_sec {
@@ -2372,6 +2372,9 @@ spinner6
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+#main_article .divideSection .rightArt figure img {
+  width: 60vw;
+}
 #main_article .divideSection .rightArt figure h1 {
   color: #c9a56e;
 }
@@ -2400,6 +2403,7 @@ spinner6
 #main_article .divideSection .rightArt .main_article_body blockquote {
   padding: 10px;
   background-color: #4B443F;
+  border-radius: 30px;
 }
 #main_article .divideSection .rightArt .main_article_body blockquote p {
   font-family: "Merriweather", serif;
@@ -2414,7 +2418,7 @@ spinner6
   border: 1px solid #5C4228;
   padding: 6px 15px 6px 15px;
   margin: 0 6px 0 6px;
-  background-color: #4B443F;
+  background-color: #2C2520;
   border-radius: 30px;
   text-decoration: none;
   color: #CAC3BC;
@@ -2423,7 +2427,76 @@ spinner6
   background-color: #FED1A7;
   color: #23201D;
 }
-
+#main_article .divideSection .rightArt .insideartImg {
+  width: 80%;
+  margin: 0 0 5% 5%;
+}
+#main_article .divideSection .rightArt .insideartImg img {
+  border-radius: 30px;
+  margin-bottom: 0;
+  width: 50vw;
+}
+#main_article .divideSection .rightArt .insideartImg figcaption p {
+  color: #c9a56e;
+  margin-top: 0;
+  font-family: "Playfair Display", serif;
+}
+#main_article .divideSection .rightArt ul {
+  font-size: 16px; /* Adjust as needed */
+  font-family: "Roboto", sans-serif;
+}
+#main_article .divideSection .rightArt ul li {
+  color: #CAC3BC;
+}
+#main_article .divideSection .rightArt .donation {
+  background-color: #2C2520;
+  border: 1px solid #5C4228;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#main_article .divideSection .rightArt .donation figure img {
+  width: 70%;
+}
+#main_article .divideSection .rightArt .donation article {
+  margin-top: 30px;
+}
+#main_article .divideSection .rightArt .donation article header p {
+  color: #c9a56e;
+  width: 80%;
+}
+#main_article .divideSection .rightArt .donation article button {
+  background-color: #FECFA7;
+  border-radius: 30px;
+  color: #23201D;
+  padding: 12px 21px 12px 21px;
+  border: none;
+  cursor: pointer;
+}
+#main_article .divideSection .rightArt .donation article button:hover {
+  background-color: #c8b19a;
+  color: #ffffff;
+}
+#main_article .divideSection .rightArt .realtedPost {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #4B443F;
+}
+#main_article .divideSection .rightArt .realtedPost figure img {
+  width: 100%;
+}
+#main_article .divideSection .rightArt .realtedPost article header {
+  text-align: center;
+}
+#main_article .divideSection .rightArt .realtedPost article header h1 {
+  color: #c9a56e;
+  font-family: "Playfair Display", serif;
+}
+#main_article .divideSection .rightArt .realtedPost article header p {
+  color: #CAC3BC;
+}
 #headerSeaction {
   display: grid;
   grid-template-columns: 1fr 1fr;
