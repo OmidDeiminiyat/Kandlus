@@ -611,7 +611,7 @@ body {
   color: #CAC3BC;
 }
 #All_sec #sideBar .articles .dataArticle {
-  background-color: #181411;
+  background-color: #2C2520;
   padding: 6px 0 6px 0;
   margin: 6px 0 6px 0;
   cursor: pointer;
@@ -2367,13 +2367,31 @@ spinner6
 #main_article {
   margin-top: 30px;
 }
+@media (max-width: 600px) {
+  #main_article {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 #main_article .divideSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+@media (max-width: 600px) {
+  #main_article .divideSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
 #main_article .divideSection .rightArt figure img {
   width: 60vw;
+}
+@media (max-width: 600px) {
+  #main_article .divideSection .rightArt figure img {
+    width: 100%;
+  }
 }
 #main_article .divideSection .rightArt figure h1 {
   color: #c9a56e;
@@ -2431,10 +2449,21 @@ spinner6
   width: 80%;
   margin: 0 0 5% 5%;
 }
+@media (max-width: 600px) {
+  #main_article .divideSection .rightArt .insideartImg {
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
+}
 #main_article .divideSection .rightArt .insideartImg img {
   border-radius: 30px;
   margin-bottom: 0;
   width: 50vw;
+}
+@media (max-width: 600px) {
+  #main_article .divideSection .rightArt .insideartImg img {
+    width: 100%;
+  }
 }
 #main_article .divideSection .rightArt .insideartImg figcaption p {
   color: #c9a56e;
@@ -2459,8 +2488,18 @@ spinner6
 #main_article .divideSection .rightArt .donation figure img {
   width: 70%;
 }
+@media (max-width: 600px) {
+  #main_article .divideSection .rightArt .donation figure img {
+    width: 100px;
+  }
+}
 #main_article .divideSection .rightArt .donation article {
   margin-top: 30px;
+}
+@media (max-width: 600px) {
+  #main_article .divideSection .rightArt .donation article {
+    margin-top: 0;
+  }
 }
 #main_article .divideSection .rightArt .donation article header p {
   color: #c9a56e;
@@ -2478,14 +2517,30 @@ spinner6
   background-color: #c8b19a;
   color: #ffffff;
 }
+@media (max-width: 600px) {
+  #main_article .divideSection .rightArt .donation article button {
+    margin-bottom: 6px;
+  }
+}
 #main_article .divideSection .rightArt .realtedPost {
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: #4B443F;
 }
+@media (max-width: 600px) {
+  #main_article .divideSection .rightArt .realtedPost figure {
+    margin: 0;
+    padding: 0;
+  }
+}
 #main_article .divideSection .rightArt .realtedPost figure img {
   width: 100%;
+}
+@media (max-width: 600px) {
+  #main_article .divideSection .rightArt .realtedPost figure img {
+    height: 100%;
+  }
 }
 #main_article .divideSection .rightArt .realtedPost article header {
   text-align: center;
@@ -2497,6 +2552,62 @@ spinner6
 #main_article .divideSection .rightArt .realtedPost article header p {
   color: #CAC3BC;
 }
+@media (max-width: 600px) {
+  #main_article .divideSection .rightArt .realtedPost article header .singlePost {
+    margin-bottom: 15px;
+  }
+}
+#main_article .divideSection .leftArt .Video {
+  border: 1px solid #5C4228;
+  background-image: url("../../../assets/images/videos/Latest-video-on-Kandlus.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+#main_article .divideSection .leftArt .Video h3, #main_article .divideSection .leftArt .Video #navigation hgroup h5, #navigation hgroup #main_article .divideSection .leftArt .Video h5, #main_article .divideSection .leftArt .Video #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #main_article .divideSection .leftArt .Video p {
+  color: #ffffff;
+  text-align: center;
+}
+#main_article .divideSection .leftArt .Video h4 {
+  color: #c9a56e;
+  text-align: center;
+}
+#main_article .divideSection .leftArt .Video button {
+  width: 30%;
+  margin-left: 35%;
+  background-color: #FECFA7;
+  border-radius: 30px;
+  color: #23201D;
+  padding: 6px 12px 6px 12px;
+  border: none;
+  cursor: pointer;
+}
+#main_article .divideSection .leftArt .Video button:hover {
+  background-color: #c8b19a;
+  color: #ffffff;
+}
+#main_article .divideSection .leftArt .articles {
+  text-align: center;
+  color: #CAC3BC;
+}
+#main_article .divideSection .leftArt .articles h3, #main_article .divideSection .leftArt .articles #navigation hgroup h5, #navigation hgroup #main_article .divideSection .leftArt .articles h5, #main_article .divideSection .leftArt .articles #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #main_article .divideSection .leftArt .articles p {
+  color: #CAC3BC;
+}
+#main_article .divideSection .leftArt .articles .dataArticle {
+  background-color: #2C2520;
+  padding: 6px 0 6px 0;
+  margin: 6px 0 6px 0;
+  cursor: pointer;
+}
+#main_article .divideSection .leftArt .articles .dataArticle span {
+  margin: 0 6px 0 6px;
+}
+
 #headerSeaction {
   display: grid;
   grid-template-columns: 1fr 1fr;

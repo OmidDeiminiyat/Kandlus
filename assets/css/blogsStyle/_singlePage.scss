@@ -1,12 +1,23 @@
 #main_article{
     @extend %articleVide;
     margin-top: 30px;
+    @media(max-width:600px) {
+        width: 100%;
+       margin-left: 0;
+       
+    }
     .divideSection{
         @include desplayStyle(1fr 1fr);
+        @media(max-width:600px) {
+            @include desplayStyle(1fr);
+        }
         .rightArt{
             figure{
                 img{
                     width: 60vw;
+                    @media(max-width:600px) {
+                        width: 100%;
+                    }
                 }
                 h1{
                     color: $hgroup;
@@ -71,10 +82,17 @@
             .insideartImg{
                 width: 80%;
                 margin: 0 0 5% 5%;
+                @media(max-width:600px) {
+                    width: 100%;
+                    margin: 0 0 5% 0;
+                }
                 img{
                     border-radius: 30px;
                     margin-bottom: 0;
                     width: 50vw;
+                    @media(max-width:600px) {
+                        width: 100%;
+                    }
                 }
                 figcaption{
                     p{
@@ -100,10 +118,16 @@
                 figure{
                     img{
                         width: 70%;
+                        @media(max-width:600px) {
+                            width: 100px;
+                        }
                     }
                 }
                 article {
                     margin-top: 30px;
+                    @media(max-width:600px) {
+                        margin-top: 0;
+                    }
                     header{
                         p{
                             color: $hgroup;
@@ -112,6 +136,9 @@
                     }
                     button{
                         @include Button(12px 21px 12px 21px);
+                        @media(max-width:600px) {
+                            margin-bottom: 6px;
+                        }
                     }
                 }
             }
@@ -119,8 +146,15 @@
                 @include flexible(center);
                 background-color: $boxbackground;
                 figure {
+                    @media(max-width:600px) {
+                        margin: 0;
+                        padding: 0;
+                    }
                     img{
                         width: 100%;
+                        @media(max-width:600px) {
+                            height: 100%;
+                        }
                     }
                 }
                 article {
@@ -133,7 +167,11 @@
                         p{
                             color: $main-paraf;
                         }
-                        
+                       .singlePost{
+                        @media(max-width:600px) {
+                            margin-bottom: 15px;
+                        }
+                       } 
                     }
                 }
             }
@@ -141,7 +179,47 @@
 
 
         .leftArt{
-
+            .Video{
+                border: 1px solid $box-border;
+                background-image: url('../../../assets/images/videos/Latest-video-on-Kandlus.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+                h3{
+                    color: $primary-text;
+                    text-align: center;
+                }
+                h4 {
+                    color: $hgroup;
+                    text-align: center;
+                }
+                button {
+                   width: 30%;
+                   margin-left: 35%;
+                    @include Button(6px 12px 6px 12px);
+                }
+            }
+            .articles {
+                text-align: center;
+                color: $main-paraf;
+                h3 {
+                    color: $main-paraf;
+                }
+               .dataArticle {
+                background-color: $tags;
+                padding: 6px 0 6px 0;
+                margin: 6px 0 6px 0;
+                cursor: pointer;
+                span {
+                    margin: 0 6px 0 6px;
+                }
+               }
+            }
         }
     }
 }
