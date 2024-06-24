@@ -2418,6 +2418,9 @@ spinner6
   line-height: 1.6;
   margin: 20px;
 }
+#main_article .divideSection .rightArt .main_article_body a {
+  color: #D9D9D9;
+}
 #main_article .divideSection .rightArt .main_article_body blockquote {
   padding: 10px;
   background-color: #4B443F;
