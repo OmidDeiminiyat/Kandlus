@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (filteredResults.length > 0) {
         let linkStyle = `<ul>`
         filteredResults.forEach((item, index) => {
-            linkStyle += `<li><a href=""><span class="material-symbols-outlined"> movie </span> ${item}</a><li><hr class="WidthHr>`
+            linkStyle += `<li><a href=""><span class="material-symbols-outlined"> movie </span> ${item}</a><li>`
         });
         linkStyle += `</ul>`
         resultsList.innerHTML = linkStyle;
@@ -130,13 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function SearchPage(){
-        const openIt = document.getElementById('open');
-        const closeIt = document.getElementById('close');
-        const Til = document.getElementById('title');
         allInOne.style.display ='none';
         searchPage.style.display = 'block';
-        MobileView.style.display = 'none';
-        openIt.style.display = 'block';
-    closeIt.style.display = 'none';
-    Til.style.display = 'none';
     }
