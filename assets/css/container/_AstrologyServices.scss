@@ -2,15 +2,13 @@
 @import "../helper/animation";
 @import "../helper/mixin";
 @import "../helper/variable";
-body {
-    background-color: $darkBox;
-}
+
 
 #All_sec {
     @include flexible(0);
     gap: 1rem;
     width: 90%;
-    margin: 1% 0% 1% 5%;
+    margin: 6% 0% 1% 5%;
     padding: 0;
 
     #sideBar {
@@ -52,8 +50,8 @@ body {
                 text-align: center;
             }
             button {
-               width: 30%;
-               margin-left: 35%;
+               width: 50%;
+               margin-left: 25%;
                 @include Button(6px 12px 6px 12px);
             }
         }
@@ -88,7 +86,7 @@ body {
                 }
                 hr {
                     @extend %BreakLine;
-                    margin-bottom: 0;
+                    margin: 0 0 0 20%;
                 }
                 figcaption {
                     margin: 0;

@@ -304,20 +304,13 @@
     text-decoration: none;
   }
 }
-.main-header {
-  background-color: #D9D9D9;
-}
-
-.top-bar {
-  background-color: #D9D9D9;
-}
-
-footer {
-  background-color: #D9D9D9;
-}
-
 .logo-mobile {
   text-align: center;
+}
+@media (max-width: 600px) {
+  .logo-mobile a {
+    font-size: 27px;
+  }
 }
 
 @keyframes fadeIn {
@@ -599,17 +592,13 @@ footer {
     color: #CAC3BC;
   }
 }
-body {
-  background-color: #181411;
-}
-
 #All_sec {
   display: flex;
   flex-direction: row;
   justify-content: 0;
   gap: 1rem;
   width: 90%;
-  margin: 1% 0% 1% 5%;
+  margin: 6% 0% 1% 5%;
   padding: 0;
 }
 #All_sec #sideBar {
@@ -654,8 +643,8 @@ body {
   text-align: center;
 }
 #All_sec #sideBar .Video button {
-  width: 30%;
-  margin-left: 35%;
+  width: 50%;
+  margin-left: 25%;
   background-color: #FECFA7;
   border-radius: 30px;
   color: #23201D;
@@ -701,7 +690,7 @@ body {
   margin: 5% 0 0 10%;
 }
 #All_sec .right-s .DivFig figure hr {
-  margin-bottom: 0;
+  margin: 0 0 0 20%;
 }
 #All_sec .right-s .DivFig figure figcaption {
   margin: 0;

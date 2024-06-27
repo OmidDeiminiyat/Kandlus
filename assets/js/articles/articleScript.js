@@ -63,8 +63,6 @@ threemyRow += `</div>`
 firstArticle.innerHTML = threemyRow;
   }
 
-
-
 function limitTextTo50Words(text) {
     const words = text.split(/\s+/);
     const limitedText = words.slice(0, 15).join(' ');

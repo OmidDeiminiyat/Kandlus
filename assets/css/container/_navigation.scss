@@ -247,15 +247,13 @@ display: block;
 } 
 
 
-.main-header {
-    background-color: $landingBackground;
-}
-.top-bar {
-    background-color: $landingBackground;
-}
-footer {
-    background-color: $landingBackground;
-}
 .logo-mobile {
     text-align: center;
+    a{
+        @media(max-width:600px) {
+            font-size: 27px;
+        }
+    }
+    
+    
 }
