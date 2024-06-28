@@ -57,10 +57,11 @@ padding: 0 12px 0 12px;
 #getTest li {
    width: 100px;
    text-align: center;
+   background-color: $box-border; 
 }
 #getTest li:hover {
-    background-color: $buttum-hover; 
-    color: $body; 
+    background-color: $box-border; 
+    color: $hoverText; 
 }
 .picked {
     background-color: $buttum-hover;
@@ -77,7 +78,7 @@ padding: 0 12px 0 12px;
     color: $hgroup;
 }
 .paraf p {
-    color: $main-text;
+    color: $body;
 }
 .color1 {
     width: 30px;
@@ -189,7 +190,10 @@ padding: 0 12px 0 12px;
         
     }
 
-  
+    #article {
+        width: 90%;
+        margin: 5% 0 0 5%;
+    }
 }
 
 /* Tablet design */

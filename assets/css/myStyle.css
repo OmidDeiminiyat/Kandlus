@@ -755,6 +755,10 @@
     gap: 1rem;
   }
 }
+.improvCont {
+  margin-top: 30px;
+}
+
 /* Biorythm design */
 .widthAds {
   width: 100%;
@@ -786,44 +790,68 @@
   font-size: 1.2rem;
 }
 
-.myCaption {
+#PersonalBirth #displayNumber {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+#PersonalBirth #displayNumber p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: rgba(51, 51, 51, 0.8);
+  width: 90%;
+  margin-left: 5%;
+}
+#PersonalBirth #displayNumber .myCaption {
   border: 1px solid #5C4228;
   background-color: #4B443F;
 }
-.myCaption h4 {
-  font-size: 1.8rem;
+#PersonalBirth #displayNumber .myCaption h4 {
+  font-size: 30px;
 }
-.myCaption p {
+@media (max-width: 600px) {
+  #PersonalBirth #displayNumber .myCaption h4 {
+    font-size: 20px;
+  }
+}
+#PersonalBirth #displayNumber .myCaption p {
   font-size: 1.2rem;
 }
-.myCaption form label {
+#PersonalBirth #displayNumber .myCaption form {
+  width: 50%;
+  margin-left: 25%;
+  text-align: left;
+}
+#PersonalBirth #displayNumber .myCaption form label {
   color: #CAC3BC;
 }
-.myCaption form input {
+#PersonalBirth #displayNumber .myCaption form input {
   border-radius: 30px;
   border: none;
   height: 21px;
   background-color: rgba(51, 51, 51, 0.3803921569);
   color: #CAC3BC;
 }
-.myCaption form input[type=time] {
+#PersonalBirth #displayNumber .myCaption form input[type=time] {
   width: 40px;
 }
-.myCaption form #Gender {
+#PersonalBirth #displayNumber .myCaption form #Gender {
   border: none;
   border-radius: 30px;
   width: 21%;
   background-color: rgba(51, 51, 51, 0);
   color: #CAC3BC;
 }
-.myCaption form #countries {
+#PersonalBirth #displayNumber .myCaption form #countries {
   border: none;
   border-radius: 30px;
   background-color: rgba(51, 51, 51, 0);
   color: #CAC3BC;
   width: 33%;
 }
-.myCaption form #timezone {
+#PersonalBirth #displayNumber .myCaption form #timezone {
   border: none;
   border-radius: 30px;
   background-color: rgba(51, 51, 51, 0);
@@ -873,16 +901,9 @@
   grid-template-columns: 1fr;
 }
 
-#displayNumber {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-#displayNumber p {
-  font-size: 1.2rem;
-  text-align: center;
+.newNumber {
+  width: 90%;
+  margin-left: 5%;
 }
 
 #Numero {
@@ -1068,9 +1089,9 @@
 
 /* three under the main section */
 .threeUnder {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   background-color: #332f2b;
   border-radius: 30px;
 }
@@ -1089,7 +1110,6 @@
 
 .threeUnder div:nth-child(2) {
   width: 130%;
-  margin-left: -30%;
 }
 .threeUnder div:nth-child(2) a {
   text-decoration: none;
@@ -1118,7 +1138,6 @@
 .inseideFigure {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin: 30px 0 0 0;
   padding: 0;
   cursor: pointer;
@@ -1126,6 +1145,10 @@
 
 .inseideFigure h3, .inseideFigure #navigation hgroup h5, #navigation hgroup .inseideFigure h5, .inseideFigure #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption .inseideFigure p {
   color: #CAC3BC;
+}
+
+.inseideFigure figcaption {
+  margin-left: 10px;
 }
 
 .inseideFigure img {
@@ -1140,11 +1163,25 @@
 }
 
 .myImages {
-  width: 25%;
+  max-width: 30%;
+  min-width: 30%;
   height: 120px;
   border: 1px solid #5C4228;
   border-radius: 30px;
-  background-image: url("../images/Astrology/Numbers.jpg");
+}
+
+#mi-1 {
+  background-image: url("../images/Astrology/Service/Biorythm.png");
+  background-size: cover;
+}
+
+#mi-2 {
+  background-image: url("../images/Astrology/Service/Numerology.png");
+  background-size: cover;
+}
+
+#mi-3 {
+  background-image: url("../images/Astrology/Service/Ascendant.png");
   background-size: cover;
 }
 
@@ -1210,7 +1247,9 @@
   }
   .threeUnder div:nth-child(2) {
     width: 100%;
-    margin: 0;
+  }
+  .threeUnder div:nth-child(2) h1 {
+    text-align: center;
   }
   .threeUnder div:nth-child(2) a {
     text-decoration: none;
@@ -1219,7 +1258,9 @@
     width: 70%;
   }
   .threeUnder div:nth-child(2) .myImages {
-    width: 30%;
+    width: 20%;
+    margin: 0;
+    right: 0;
   }
 }
 /* Horoscop resault design */
@@ -1283,11 +1324,12 @@
 #getTest li {
   width: 100px;
   text-align: center;
+  background-color: #5C4228;
 }
 
 #getTest li:hover {
-  background-color: #FED1A7;
-  color: #23201D;
+  background-color: #5C4228;
+  color: #c8b19a;
 }
 
 .picked {
@@ -1309,7 +1351,7 @@
 }
 
 .paraf p {
-  color: #CAC3BC;
+  color: #23201D;
 }
 
 .color1 {
@@ -1420,6 +1462,10 @@
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
+  }
+  #article {
+    width: 90%;
+    margin: 5% 0 0 5%;
   }
 }
 /* Tablet design */

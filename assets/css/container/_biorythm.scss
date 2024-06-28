@@ -35,53 +35,76 @@
         }
     }
  }
- .myCaption {
-    border: 1px solid $box-border;
-    background-color: $boxbackground; 
-    h4{
-        font-size: 1.8rem;
-    }
-    p{
+
+
+ #PersonalBirth {
+    #displayNumber {
+        padding: 0;
+        margin: 0;
+       @include desplayStyle(1fr);
+       p{
         font-size: 1.2rem;
-    }
-    form{
-        label{
-            color: $main-paraf;
-        }
-        input{
-            border-radius: 30px;
-            border: none;
-            height: 21px;
-            background-color: #33333361;
-            color: $main-paraf;
-        }
-        input[type=time] {
-            width: 40px;
-            
-        }
-        #Gender{
-            border: none;
-            border-radius: 30px;
-            width: 21%;
-            background-color: #33333300;
-            color: $main-paraf;
-        }
-        #countries {
-            border: none;
-            border-radius: 30px;
-            background-color: #33333300;
-            color: $main-paraf;
-            width: 33%;
-        }
-        #timezone{
-            border: none;
-            border-radius: 30px;
-            background-color: #33333300;
-            color: $main-paraf;
-            width: 33%;
-        }
+        text-align: center;
+        color: #333333cc;
+        width: 90%;
+        margin-left: 5%;
+       }
+        .myCaption {
+            border: 1px solid $box-border;
+            background-color: $boxbackground; 
+            h4{
+                font-size: 30px;
+                @media(max-width:600px){
+                    font-size: 20px;
+                }
+            }
+            p{
+                font-size: 1.2rem;
+            }
+            form{
+                width: 50%;
+                margin-left: 25%;
+                text-align: left;
+                label{
+                    color: $main-paraf;
+                }
+                input{
+                    border-radius: 30px;
+                    border: none;
+                    height: 21px;
+                    background-color: #33333361;
+                    color: $main-paraf;
+                }
+                input[type=time] {
+                    width: 40px;
+                    
+                }
+                #Gender{
+                    border: none;
+                    border-radius: 30px;
+                    width: 21%;
+                    background-color: #33333300;
+                    color: $main-paraf;
+                }
+                #countries {
+                    border: none;
+                    border-radius: 30px;
+                    background-color: #33333300;
+                    color: $main-paraf;
+                    width: 33%;
+                }
+                #timezone{
+                    border: none;
+                    border-radius: 30px;
+                    background-color: #33333300;
+                    color: $main-paraf;
+                    width: 33%;
+                }
+            }
+         }
     }
  }
+
 
 #underMain figure img {
 width: 100%;
@@ -119,14 +142,11 @@ width: 100%;
     display: none;
     grid-template-columns: 1fr;
  }
- #displayNumber {
-    padding: 0;
-    margin: 0;
-   @include desplayStyle(1fr);
-   p{
-    font-size: 1.2rem;
-    text-align: center;
-   }
+
+ .newNumber{
+    width: 90%;
+    margin-left: 5%;
+   
  }
 
  #Numero {
@@ -307,7 +327,7 @@ width: 100%;
 
 /* three under the main section */
 .threeUnder {
-    @include desplayStyle(1fr 1fr);
+    @include flexible(center);
     background-color: $box-background;
     border-radius: 30px;
 }
@@ -324,7 +344,6 @@ width: 100%;
 }
 .threeUnder div:nth-child(2) {
     width: 130%;
-    margin-left: -30%;
     a{
         text-decoration: none;
     }
@@ -351,7 +370,7 @@ width: 100%;
 .inseideFigure {
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
+    
    margin: 30px 0 0 0;
    padding: 0;
    cursor: pointer;
@@ -359,7 +378,9 @@ width: 100%;
 .inseideFigure h3 {
     color: $main-text;
 }
-
+.inseideFigure figcaption{
+    margin-left: 10px;
+}
 .inseideFigure img{
 width: 25%;
 height: 25%;
@@ -370,12 +391,26 @@ height: 25%;
     margin: 20px 0;
 }
 .myImages {
-    width: 25%;
+    max-width: 30%;
+    min-width: 30%;
     height: 120px;
     border: 1px solid $box-border; 
     border-radius: 30px;
-    background-image: url('../images/Astrology/Numbers.jpg');
-   background-size: cover;
+   
+    
+  
+}
+#mi-1{
+    background-image: url('../images/Astrology/Service/Biorythm.png');
+    background-size: cover;
+}
+#mi-2{
+    background-image: url('../images/Astrology/Service/Numerology.png');
+    background-size: cover;
+}
+#mi-3{
+    background-image: url('../images/Astrology/Service/Ascendant.png');
+    background-size: cover;
 }
 
 // hr {
@@ -447,8 +482,11 @@ height: 25%;
             }
 
             div:nth-child(2) {
+                
                 width: 100%;
-                margin: 0;
+                h1{
+                    text-align: center;
+                }
                 a{
                     text-decoration: none;
                 }
@@ -456,7 +494,9 @@ height: 25%;
                     width: 70%;
                 }
                 .myImages {
-                    width: 30%;
+                    width: 20%;
+                    margin: 0;
+                    right: 0;
                 }
                
             }
