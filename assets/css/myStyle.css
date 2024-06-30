@@ -1557,7 +1557,7 @@
 }
 #myMobileHeader .secondmobHead hgroup h1 {
   color: #c9a56e;
-  margin-top: 100%;
+  margin-top: 60%;
 }
 #myMobileHeader .secondmobHead hgroup button {
   background-color: #FECFA7;
@@ -1758,6 +1758,11 @@
   list-style: disc;
   margin-top: 35%;
 }
+@media (max-width: 600px) {
+  #landingMain .firstSectionLand .firstrDic article ul {
+    margin-left: 20px;
+  }
+}
 #landingMain .firstSectionLand .firstrDic article ul li p {
   font-size: 1rem;
 }
@@ -1787,7 +1792,7 @@
     background-color: #FECFA7;
     border-radius: 30px;
     color: #23201D;
-    padding: 1.5vw 3vw 1.5vw 3vw;
+    padding: 9px 9px 9px 9px;
     border: none;
     cursor: pointer;
     background-color: #9A5C23;

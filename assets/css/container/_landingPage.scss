@@ -62,6 +62,9 @@
                 ul {
                     list-style: disc;
                     margin-top: 35%;
+                    @media(max-width:600px) {
+                        margin-left: 20px;
+                    }
                     li{
                         p{
                             font-size: 1rem;
@@ -79,7 +82,7 @@
                     background-color: $ribonIcone;
                     margin-bottom: 6%;
                     @media(max-width:600px) {
-                        @include Button(1.5vw 3vw 1.5vw 3vw);
+                        @include Button(9px 9px 9px 9px);
                         background-color: $ribonIcone;
                     }
                     &:hover > a{
