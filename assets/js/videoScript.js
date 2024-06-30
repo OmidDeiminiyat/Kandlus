@@ -103,7 +103,7 @@ function sendNewData(JustRecived) {
     <article class="col-md-3 mb-sm-3 wow fadeIn animated">
         <figure class="mb-15 mainImg">
             <a href="SinglePageVid.html?id=${RecivedSecondData.seo}">
-                <img src="http://via.placeholder.com/900x670" alt="" >
+                <img src="../assets/images/videos/longImg/${RecivedSecondData.image}" alt="" >
             </a>
         </figure>
         <h6 class="post-title font-weight-bold mb-10">
@@ -164,7 +164,7 @@ function SinglePageLast(lastInSingleP) {
       insideRowThird += `<article class="col-md-3 mb-sm-3 wow fadeIn animated">
       <figure class="mb-15 mainImg">
           <a href="SinglePageVid.html?id=${SendMyData.seo}">
-              <img src="http://via.placeholder.com/900x670" alt="" style="height:300px;" >
+              <img src="../assets/images/videos/longImg/${SendMyData.image}" alt="" style="height:300px;" >
           </a>
       </figure>
       <h6 class="post-title font-weight-bold mb-10">
@@ -206,7 +206,7 @@ NextData.slice(4, NextLimit).forEach((NextRecivedData, index) => {
     NextLanding += `<article class="col-md-3 mb-sm-3 wow fadeIn animated">
     <figure class="mb-15 mainImg">
         <a href="SinglePageVid.html?id=${NextRecivedData.seo}">
-            <img src="http://via.placeholder.com/900x670" alt="" style="height:300px;" >
+            <img src="../assets/images/videos/longImg/${NextRecivedData.image}" alt="" style="height:300px;" >
         </a>
     </figure>
     <h6 class="post-title font-weight-bold mb-10">

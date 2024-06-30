@@ -43,7 +43,7 @@ recivedCateData.slice(0, dataLimit).forEach((newData, index) => {
     newSpan += `<article class="col-md-3 mb-sm-3 wow fadeIn animated">
     <figure class="mb-15 mainImg">
         <a href="singlePageVid.html?id=${newData.seo}">
-            <img src="http://via.placeholder.com/900x670" alt="" >
+            <img src="../assets/images/videos/longImg/${newData.image}" alt="" >
         </a>
     </figure>
     <h6 class="post-title font-weight-bold mb-10">
@@ -97,7 +97,7 @@ function justTest(secondRow) {
         newmainSpan += `    <article class="col-md-3 mb-sm-3 wow fadeIn animated">
         <figure class="mb-15 mainImg">
             <a href="video.html?id=${getOne.seo} ">
-                <img src="http://via.placeholder.com/900x670" alt="" >
+                <img src="../assets/images/videos/longImg/${getOne.image}" alt="" >
             </a>
         </figure>
         <h6 class="post-title font-weight-bold mb-10">
@@ -154,7 +154,7 @@ function secondFetch() {
             thirdBe += `    <article class="col-md-3 mb-sm-3 wow fadeIn animated">
             <figure class="mb-15 mainImg">
                 <a href="singlePageVide.html?id=${goThree.seo}">
-                    <img src="http://via.placeholder.com/900x670" alt="">
+                    <img src="../assets/images/videos/longImg/${goThree.image}" alt="">
                 </a>
             </figure>
             <h6 class="post-title font-weight-bold mb-10">

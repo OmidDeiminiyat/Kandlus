@@ -1,0 +1,31 @@
+.mainImg img {
+	height: 300px;
+}
+@media (max-width: 600px) {
+	.wow {
+		text-align: center;
+		margin-top: 20px;
+	}
+	.mainImg img {
+	height: 500px;
+	width: 80%;
+}
+.homeImage img {
+	width: 80%;
+    height: 700px;
+}
+}
+.homeImage img {
+    height: 400px;
+    margin-bottom: 10px;
+}
+#SecondRandom {
+    margin-bottom: 10px;
+}
+
+#singlePost {
+text-align: center;
+}
+.testimage img {
+    width: 100%;
+}
