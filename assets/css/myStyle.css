@@ -810,6 +810,8 @@
 }
 #PersonalBirth #displayNumber .myCaption h4 {
   font-size: 30px;
+  width: 60%;
+  margin-left: 20%;
 }
 @media (max-width: 600px) {
   #PersonalBirth #displayNumber .myCaption h4 {
@@ -820,12 +822,24 @@
   font-size: 1.2rem;
 }
 #PersonalBirth #displayNumber .myCaption form {
+  text-align: center;
   width: 50%;
   margin-left: 25%;
-  text-align: left;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  #PersonalBirth #displayNumber .myCaption form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 #PersonalBirth #displayNumber .myCaption form label {
   color: #CAC3BC;
+  margin: 0;
 }
 #PersonalBirth #displayNumber .myCaption form input {
   border-radius: 30px;
@@ -833,9 +847,11 @@
   height: 21px;
   background-color: rgba(51, 51, 51, 0.3803921569);
   color: #CAC3BC;
+  width: 100px;
+  margin: 0 auto;
 }
 #PersonalBirth #displayNumber .myCaption form input[type=time] {
-  width: 40px;
+  width: 80px;
 }
 #PersonalBirth #displayNumber .myCaption form #Gender {
   border: none;
@@ -857,6 +873,10 @@
   background-color: rgba(51, 51, 51, 0);
   color: #CAC3BC;
   width: 33%;
+}
+#PersonalBirth #displayNumber .myCaption form button {
+  width: 140px;
+  margin: 0 auto;
 }
 
 #underMain figure img {

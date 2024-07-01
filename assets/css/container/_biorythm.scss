@@ -35,8 +35,6 @@
         }
     }
  }
-
-
  #PersonalBirth {
     #displayNumber {
         padding: 0;
@@ -54,6 +52,8 @@
             background-color: $boxbackground; 
             h4{
                 font-size: 30px;
+                width: 60%;
+                margin-left: 20%;
                 @media(max-width:600px){
                     font-size: 20px;
                 }
@@ -62,11 +62,17 @@
                 font-size: 1.2rem;
             }
             form{
+                text-align: center;
                 width: 50%;
                 margin-left: 25%;
-                text-align: left;
+                margin-bottom: 30px;
+                @include desplayStyle(1fr 1fr);
+               @media(max-width:600px){
+                @include desplayStyle(1fr);
+               }
                 label{
                     color: $main-paraf;
+                    margin: 0;
                 }
                 input{
                     border-radius: 30px;
@@ -74,9 +80,11 @@
                     height: 21px;
                     background-color: #33333361;
                     color: $main-paraf;
+                    width: 100px;
+                    margin: 0 auto;
                 }
                 input[type=time] {
-                    width: 40px;
+                    width: 80px;
                     
                 }
                 #Gender{
@@ -99,6 +107,10 @@
                     background-color: #33333300;
                     color: $main-paraf;
                     width: 33%;
+                }
+                button{
+                    width: 140px;
+                        margin: 0 auto;
                 }
             }
          }
