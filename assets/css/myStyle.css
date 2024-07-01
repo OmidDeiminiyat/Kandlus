@@ -2893,6 +2893,15 @@ spinner6
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
+@media (max-width: 600px) {
+  #ThreeCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 80%;
+    margin-left: 10%;
+  }
+}
 #ThreeCards figure {
   background-image: url("../../../assets/images/podcast/Lights-Backgrounds.jpg");
   background-size: cover;

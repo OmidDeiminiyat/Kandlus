@@ -2,6 +2,11 @@
     margin-top: 60px;
     width: 100%;
     @include desplayStyle(1fr 1fr 1fr);
+    @media(max-width:600px) {
+        @include desplayStyle(1fr);
+        width: 80%;
+        margin-left: 10%;
+    }
     figure{
         background-image: url('../../../assets/images/podcast/Lights-Backgrounds.jpg');
         background-size: cover;
