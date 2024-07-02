@@ -934,6 +934,7 @@
 #PersonalBirth #displayNumber .myCaption form input[type=time] {
   min-width: 80px;
   max-width: 80px;
+  text-align: center;
 }
 #PersonalBirth #displayNumber .myCaption form #Gender {
   border: 1px solid #8E6845;
@@ -949,11 +950,10 @@
   width: 42%;
 }
 #PersonalBirth #displayNumber .myCaption form #timezone {
-  border: none;
+  border: 1px solid #8E6845;
   border-radius: 30px;
-  background-color: rgba(51, 51, 51, 0);
   color: #23201D;
-  width: 33%;
+  width: 42%;
 }
 #PersonalBirth #displayNumber .myCaption form button {
   width: 160px;
@@ -1151,7 +1151,7 @@
   color: #CAC3BC;
 }
 .letBeCaption h5 {
-  font-size: 1.2rem;
+  font-size: 21px;
   margin: 0;
   padding: 0;
 }
@@ -1166,6 +1166,7 @@
 
 .letBeCaption h3, .letBeCaption #navigation hgroup h5, #navigation hgroup .letBeCaption h5, .letBeCaption #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption .letBeCaption p {
   color: #FECFA7;
+  font-size: 21px;
 }
 
 #newForm select {
@@ -1397,6 +1398,7 @@
 .brLine {
   border: 1px dotted #9A5C23;
   width: 50%;
+  margin-left: 25%;
   margin-bottom: 30px;
 }
 

@@ -134,7 +134,7 @@
                 input[type=time] {
                     min-width: 80px;
                     max-width: 80px;
-                    
+                    text-align: center;
                 }
                 #Gender{
                     border: 1px solid $line-loader;
@@ -150,11 +150,10 @@
                     width: 42%;
                 }
                 #timezone{
-                    border: none;
+                    border: 1px solid $line-loader;
                     border-radius: 30px;
-                    background-color: #33333300;
                     color: $body;
-                    width: 33%;
+                    width: 42%;
                 }
                 button{
                     width: 160px;
@@ -337,7 +336,7 @@ width: 100%;
     grid-template-columns: 1fr;
     color: $main-paraf; 
     h5{
-        font-size:1.2rem;
+        font-size: 21px;
         margin: 0;
         padding: 0;
     }
@@ -353,6 +352,7 @@ width: 100%;
 
 .letBeCaption h3{
     color: $Butoon; 
+    font-size: 21px;
 }
 #newForm select {
         width: 90px;
@@ -579,6 +579,7 @@ height: 25%;
 .brLine{
     border: 1px dotted $ribonIcone;
     width: 50%;
+    margin-left: 25%;
     margin-bottom: 30px;
 }
 

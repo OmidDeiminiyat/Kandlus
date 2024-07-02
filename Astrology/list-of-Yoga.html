@@ -319,7 +319,7 @@
         <div class="container improvCont">
             <div class="archive-header">
                 <div class="breadcrumb font-small">
-                    <a href="index.html">Home</a>
+                    <a href="../index.html">Home</a>
                     <span></span> Personal yoga practice
                 </div>
                 <h2 class="font-weight-bold"><span class="font-family-normal">Personal yoga practice</span></h2>
@@ -343,8 +343,13 @@
                     <aside id="PersonalBirth" class="bg-grey">
        
                        <figure id="displayNumber">
-                           <p>
-                            <a href="">What is personal yoga practice ?</a><br> 
+                        <h5><a href="https://kandlus.net/Astrology/list-of-Yoga.html">What is personal yoga practice?</a></h4>
+                            <span onclick="firstHideParaf()" class="material-symbols-outlined" id="first-arrow">
+                                arrow_drop_down
+                                </span> <span onclick="firstHideParaf()" class="material-symbols-outlined" id="second-arrow">
+                                    arrow_right
+                                    </span>
+                            <p id="hidden_p">
                              With this service, you can assess your needs and limitations and
                              start your unique yoga practice.
                            </p>
@@ -359,20 +364,16 @@
                                            <option value="F">Fmale</option>
                                        </select>
                                    </div><br>
-                                   <div>
+
                                        <label for="name">What is your birth name</label> 
                                        <input type="text" id="name" required>
-                                       </div><br>
-                                   <div>
+                                     <br>
                                    <label for="pBirth">Insert your birth day</label> 
                                    <input type="date" id="pBirth" required>
-                                   </div><br>
-                                   <div>
+                                   <br>
                                    <label for="timeBirth">Insert your birth time</label> 
                                    <input type="time" id="timeBirth" required>
-                                   </div><br>
-   
-                                   <div>
+                                   <br>
                                    <label for="countries">Country of birth:</label>
                                    <select id="countries" name="countries">
                                        <option value="34.5553,69.2075">Afghanistan</option>
@@ -496,9 +497,9 @@
                                        <option value="35.9078,127.7669">South Korea</option>
                                        <option value="40.7128,-74.0060">New York</option>
                                        <option value="34.0522,-118.2437">Los Angeles</option>
-                                   </select></div> <br>
-                                   <div>
-                                       <label for="timezone">Select Time Zone:</label>
+                                   </select><br>
+                                   
+        <label for="timezone">Select Time Zone:</label>
        <select id="timezone" name="timezone">
            <option value="-11">(UTC-11:00) Midway Island</option>
            <option value="-11">(UTC-11:00) Pago Pago</option>
@@ -628,10 +629,9 @@
            <option value="+12">(GMT+12:00) Marshall Is.</option>
            <option value="+12">(GMT+12:00) Auckland</option>
            <option value="+13">(GMT+13:00) Nuku'alofa</option>
-       </select>
-                                   </div><br> 
+       </select> <br> 
                                    <button class="myButton" type="submit" >
-                                       <i class="ti-arrow-right mr-5"></i> Click to continue
+                                       <i class="ti-arrow-right mr-5"></i>Continue
                                    </button>
                                </form>
                            </figcaption>

@@ -56,17 +56,17 @@ function character(Radical) {
     console.log(LetData.response);
     
     resRac.innerHTML = ''
-    let insideElement = `<h4>Here is your Radical number resault</h4><br>
+    let insideElement = `<h4>Here is your Radical number resault</h4><hr class="brLine">
     <figcaption class="letBeCaption">
-    <div><h3> Content: <h5><span class="citcleNight" >${LetData.response.content} </span></h3> </h5></div><hr>
-    <div><h3> Fasting: <h5><span class="citcleNight" >${LetData.response.fasting} </span></h3> </h5></div> <hr>
-    <div><h3>Favotite gayatri mantra: <h5> <span class="citcleNight" >${LetData.response.fav_gayatri_mantra} </span> </h3></div><hr>
-    <div><h3>Favotite lord:<h5> <span class="citcleNight" >${LetData.response.fav_lord} </span> </h3></h5></div><hr>
-    <div><h3>Favotite mantra:<h5> <span class="citcleNight" >${LetData.response.fav_mantra} </span> </h3></h5></div><hr>
-    <div><h3>Graha mantra:<h5> <span class="citcleNight" >${LetData.response.graha_mantra} </span> </h3></h5></div><hr>
-    <div><h3>Personality:<h5> <span class="citcleNight" >${LetData.response.personality} </span> </h3></h5></div><hr>
+    <div><h3> Content: <h5><span class="citcleNight" >${LetData.response.content} </span></h3> </h5></div><hr class="brLine">
+    <div><h3> Fasting: <h5><span class="citcleNight" >${LetData.response.fasting} </span></h3> </h5></div> <hr class="brLine">
+    <div><h3>Favotite gayatri mantra: <h5> <span class="citcleNight" >${LetData.response.fav_gayatri_mantra} </span> </h3></div><hr class="brLine">
+    <div><h3>Favotite lord:<h5> <span class="citcleNight" >${LetData.response.fav_lord} </span> </h3></h5></div><hr class="brLine">
+    <div><h3>Favotite mantra:<h5> <span class="citcleNight" >${LetData.response.fav_mantra} </span> </h3></h5></div><hr class="brLine">
+    <div><h3>Graha mantra:<h5> <span class="citcleNight" >${LetData.response.graha_mantra} </span> </h3></h5></div><hr class="brLine">
+    <div><h3>Personality:<h5> <span class="citcleNight" >${LetData.response.personality} </span> </h3></h5></div><hr class="brLine">
     <div><h3>Yantra:<h5> <span class="citcleNight" >${LetData.response.yantra} </span> </h3></h5></div>
-        </figcaption> <hr>`
+        </figcaption> <hr class="brLine">`
 
     resRac.innerHTML = insideElement;
 
