@@ -43,7 +43,7 @@
        @include desplayStyle(1fr);
 
        p{
-        font-size: 1.2rem;
+        font-size: 15px;
         text-align: center;
         color: #333333cc;
         width: 90%;
@@ -91,12 +91,14 @@
                     width: 100%;
                     margin: 0 auto;
                     @media(max-width:600px){
-                        width: 60%;
+                        min-width: 60%;
+                        max-width: 60%;
                         margin-left: 20%;
                     }
                 }
                 input[type=time] {
-                    width: 80px;
+                    min-width: 80px;
+                    max-width: 80px;
                     
                 }
                 #Gender{
