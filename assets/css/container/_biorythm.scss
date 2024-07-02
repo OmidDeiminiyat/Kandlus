@@ -121,9 +121,8 @@
                 }
                 input{
                     border-radius: 21px;
-                    border: none;
-                    height: 25px;
-                    background-color: #928d8d61;
+                    border: 1px solid $line-loader;
+                    height: 35px;
                     color: $body;
                     width: 100%;
                     margin: 0 auto;
@@ -138,17 +137,16 @@
                     
                 }
                 #Gender{
-                    border: none;
+                    border: 1px solid $line-loader;
                     border-radius: 30px;
-                    width: 21%;
-                    background-color: #33333300;
-                    color: $main-paraf;
+                    width: 100px;
+                    height: 35px;
+                    color: $body;
                 }
                 #countries {
-                    border: none;
+                    border: 1px solid $line-loader;
                     border-radius: 30px;
-                    background-color: #33333300;
-                    color: $main-paraf;
+                    color: $body;
                     width: 42%;
                 }
                 #timezone{

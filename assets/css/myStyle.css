@@ -919,9 +919,8 @@
 }
 #PersonalBirth #displayNumber .myCaption form input {
   border-radius: 21px;
-  border: none;
-  height: 25px;
-  background-color: rgba(146, 141, 141, 0.3803921569);
+  border: 1px solid #8E6845;
+  height: 35px;
   color: #23201D;
   width: 100%;
   margin: 0 auto;
@@ -937,17 +936,16 @@
   max-width: 80px;
 }
 #PersonalBirth #displayNumber .myCaption form #Gender {
-  border: none;
+  border: 1px solid #8E6845;
   border-radius: 30px;
-  width: 21%;
-  background-color: rgba(51, 51, 51, 0);
-  color: #CAC3BC;
+  width: 100px;
+  height: 35px;
+  color: #23201D;
 }
 #PersonalBirth #displayNumber .myCaption form #countries {
-  border: none;
+  border: 1px solid #8E6845;
   border-radius: 30px;
-  background-color: rgba(51, 51, 51, 0);
-  color: #CAC3BC;
+  color: #23201D;
   width: 42%;
 }
 #PersonalBirth #displayNumber .myCaption form #timezone {
