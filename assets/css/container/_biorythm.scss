@@ -27,11 +27,16 @@
     @include desplayStyle(1fr 1fr);
 
     .myCaption{
+        width: 80%;
+        margin-left: 10%;
         h4{
-            font-size: 1.8rem;
+            font-size: 30px;
         }
         p{
-            font-size: 1.2rem;
+            display: none;
+            font-size: 15px;
+            color: black;
+            animation: hiddenParaf 2s ease-in-out;
         }
     }
  }
@@ -41,7 +46,37 @@
         padding: 0 0 30px 0;
         margin: 0;
        @include desplayStyle(1fr);
-
+       #first-arrow{
+        text-align: center;
+        display: none;
+        cursor: pointer;
+        margin: -20px 0 10px 0;
+    }
+        #second-arrow{
+            text-align: center;
+            cursor: pointer;
+            margin:  -20px 0 10px 0;
+        }
+       h5{
+        text-align: center;
+        &:hover {
+            color: $ribonIcone;
+        }
+        a{
+            font-size: 30px;
+            text-align: center;
+            color: $hgroup;
+            margin: 0;
+            padding: 0;
+            @media(max-width:600px){
+                font-size: 20px;
+            }
+        }
+       }
+       #hidden_p {
+        display: none;
+        animation: hiddenParaf 2s ease-in-out;
+       }
        p{
         font-size: 15px;
         text-align: center;
@@ -70,14 +105,16 @@
                 font-size: 1.2rem;
             }
             form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 text-align: center;
                 width: 90%;
                 margin-left: 5%;
                 margin-bottom: 30px;
-                @include desplayStyle(1fr 1fr);
-               @media(max-width:600px){
-                @include desplayStyle(1fr);
-               }
+               display: flex;
+              
                 label{
                     color: $ribonIcone;
                     margin: 0;
@@ -93,7 +130,6 @@
                     @media(max-width:600px){
                         min-width: 60%;
                         max-width: 60%;
-                        margin-left: 20%;
                     }
                 }
                 input[type=time] {
@@ -113,7 +149,7 @@
                     border-radius: 30px;
                     background-color: #33333300;
                     color: $main-paraf;
-                    width: 33%;
+                    width: 42%;
                 }
                 #timezone{
                     border: none;
@@ -167,6 +203,85 @@ width: 100%;
     margin: 0;
     display: none;
     grid-template-columns: 1fr;
+    .myCaption {
+        border: 1px solid $box-border;
+        background-color: $newBox;
+        width: 60%;
+        margin-left: 20%;
+        @media(max-width:600px) {
+            width: 90%;
+            margin-left: 5%;
+        }
+        h4{
+            font-size: 21px;
+            width: 60%;
+            margin-left: 20%;
+            @media(max-width:600px){
+                font-size: 20px;
+            }
+        }
+        p{
+            font-size: 1.2rem;
+        }
+        form{
+            text-align: center;
+            width: 90%;
+            margin-left: 5%;
+            margin-bottom: 30px;
+            @include desplayStyle(1fr 1fr);
+           @media(max-width:600px){
+            @include desplayStyle(1fr);
+           }
+            label{
+                color: $ribonIcone;
+                margin: 0;
+            }
+            input{
+                border-radius: 21px;
+                border: none;
+                height: 25px;
+                background-color: #928d8d61;
+                color: $body;
+                width: 100%;
+                margin: 0 auto;
+                @media(max-width:600px){
+                    min-width: 60%;
+                    max-width: 60%;
+                    margin-left: 20%;
+                }
+            }
+            input[type=time] {
+                min-width: 80px;
+                max-width: 80px;
+                
+            }
+            #Gender{
+                border: none;
+                border-radius: 30px;
+                width: 21%;
+                background-color: #33333300;
+                color: $main-paraf;
+            }
+            #countries {
+                border: none;
+                border-radius: 30px;
+                background-color: #33333300;
+                color: $main-paraf;
+                width: 33%;
+            }
+            #timezone{
+                border: none;
+                border-radius: 30px;
+                background-color: #33333300;
+                color: $body;
+                width: 33%;
+            }
+            button{
+                width: 160px;
+                margin: 0 auto;
+            }
+        }
+     }
  }
 
  .newNumber{
@@ -354,7 +469,7 @@ width: 100%;
 /* three under the main section */
 .threeUnder {
     @include flexible(center);
-    background-color: $box-background;
+    background-color: $newBox;
     border-radius: 30px;
 }
 
@@ -377,16 +492,18 @@ width: 100%;
 
 .threeUnder h1 {
     color: $hgroup;
+    font-size: 30px;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 .threeUnder h4{
-    color:$hgroup;
+    color:$ribonIcone;
     padding: 0;
     margin: 0 0 6px 0;
 }
 .threeUnder p {
-    color: $main-paraf;  
+      
     text-align: left;
     max-width: 70%;
     padding: 0;
@@ -396,13 +513,13 @@ width: 100%;
 .inseideFigure {
    display: flex;
    flex-direction: row;
-    
+   background-color: $newBox;
    margin: 30px 0 0 0;
    padding: 0;
    cursor: pointer;
 }
 .inseideFigure h3 {
-    color: $main-text;
+    color: $body;
 }
 .inseideFigure figcaption{
     margin-left: 10px;

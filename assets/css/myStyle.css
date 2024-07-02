@@ -47,6 +47,16 @@
     color: #CAC3BC;
   }
 }
+@keyframes hiddenParaf {
+  0% {
+    color: red;
+    opacity: 0;
+  }
+  100% {
+    color: #23201D;
+    opacity: 1;
+  }
+}
 .menuIcone {
   display: none;
 }
@@ -361,6 +371,16 @@
     color: #CAC3BC;
   }
 }
+@keyframes hiddenParaf {
+  0% {
+    color: red;
+    opacity: 0;
+  }
+  100% {
+    color: #23201D;
+    opacity: 1;
+  }
+}
 #All_sec .right-s .DivFig figure hr, #MainFooter .secondFoot .break, #MainFooter .forthFoot .break, #MainFooter .thirdFoot .break {
   border: 1px dotted #FECFA7;
   width: 60%;
@@ -592,6 +612,16 @@
     color: #CAC3BC;
   }
 }
+@keyframes hiddenParaf {
+  0% {
+    color: red;
+    opacity: 0;
+  }
+  100% {
+    color: #23201D;
+    opacity: 1;
+  }
+}
 #All_sec {
   display: flex;
   flex-direction: row;
@@ -783,11 +813,18 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+#bioInside .myCaption {
+  width: 80%;
+  margin-left: 10%;
+}
 #bioInside .myCaption h4 {
-  font-size: 1.8rem;
+  font-size: 30px;
 }
 #bioInside .myCaption p {
-  font-size: 1.2rem;
+  display: none;
+  font-size: 15px;
+  color: black;
+  animation: hiddenParaf 2s ease-in-out;
 }
 
 #PersonalBirth {
@@ -799,6 +836,39 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+}
+#PersonalBirth #displayNumber #first-arrow {
+  text-align: center;
+  display: none;
+  cursor: pointer;
+  margin: -20px 0 10px 0;
+}
+#PersonalBirth #displayNumber #second-arrow {
+  text-align: center;
+  cursor: pointer;
+  margin: -20px 0 10px 0;
+}
+#PersonalBirth #displayNumber h5 {
+  text-align: center;
+}
+#PersonalBirth #displayNumber h5:hover {
+  color: #9A5C23;
+}
+#PersonalBirth #displayNumber h5 a {
+  font-size: 30px;
+  text-align: center;
+  color: #c9a56e;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 600px) {
+  #PersonalBirth #displayNumber h5 a {
+    font-size: 20px;
+  }
+}
+#PersonalBirth #displayNumber #hidden_p {
+  display: none;
+  animation: hiddenParaf 2s ease-in-out;
 }
 #PersonalBirth #displayNumber p {
   font-size: 15px;
@@ -833,20 +903,15 @@
   font-size: 1.2rem;
 }
 #PersonalBirth #displayNumber .myCaption form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 90%;
   margin-left: 5%;
   margin-bottom: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-@media (max-width: 600px) {
-  #PersonalBirth #displayNumber .myCaption form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+  display: flex;
 }
 #PersonalBirth #displayNumber .myCaption form label {
   color: #9A5C23;
@@ -865,7 +930,6 @@
   #PersonalBirth #displayNumber .myCaption form input {
     min-width: 60%;
     max-width: 60%;
-    margin-left: 20%;
   }
 }
 #PersonalBirth #displayNumber .myCaption form input[type=time] {
@@ -884,7 +948,7 @@
   border-radius: 30px;
   background-color: rgba(51, 51, 51, 0);
   color: #CAC3BC;
-  width: 33%;
+  width: 42%;
 }
 #PersonalBirth #displayNumber .myCaption form #timezone {
   border: none;
@@ -938,6 +1002,96 @@
   margin: 0;
   display: none;
   grid-template-columns: 1fr;
+}
+#displayBio .myCaption {
+  border: 1px solid #5C4228;
+  background-color: rgba(248, 245, 245, 0.464);
+  width: 60%;
+  margin-left: 20%;
+}
+@media (max-width: 600px) {
+  #displayBio .myCaption {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+#displayBio .myCaption h4 {
+  font-size: 21px;
+  width: 60%;
+  margin-left: 20%;
+}
+@media (max-width: 600px) {
+  #displayBio .myCaption h4 {
+    font-size: 20px;
+  }
+}
+#displayBio .myCaption p {
+  font-size: 1.2rem;
+}
+#displayBio .myCaption form {
+  text-align: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  #displayBio .myCaption form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+#displayBio .myCaption form label {
+  color: #9A5C23;
+  margin: 0;
+}
+#displayBio .myCaption form input {
+  border-radius: 21px;
+  border: none;
+  height: 25px;
+  background-color: rgba(146, 141, 141, 0.3803921569);
+  color: #23201D;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  #displayBio .myCaption form input {
+    min-width: 60%;
+    max-width: 60%;
+    margin-left: 20%;
+  }
+}
+#displayBio .myCaption form input[type=time] {
+  min-width: 80px;
+  max-width: 80px;
+}
+#displayBio .myCaption form #Gender {
+  border: none;
+  border-radius: 30px;
+  width: 21%;
+  background-color: rgba(51, 51, 51, 0);
+  color: #CAC3BC;
+}
+#displayBio .myCaption form #countries {
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(51, 51, 51, 0);
+  color: #CAC3BC;
+  width: 33%;
+}
+#displayBio .myCaption form #timezone {
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(51, 51, 51, 0);
+  color: #23201D;
+  width: 33%;
+}
+#displayBio .myCaption form button {
+  width: 160px;
+  margin: 0 auto;
 }
 
 .newNumber {
@@ -1131,7 +1285,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #332f2b;
+  background-color: rgba(248, 245, 245, 0.464);
   border-radius: 30px;
 }
 
@@ -1156,18 +1310,19 @@
 
 .threeUnder h1 {
   color: #c9a56e;
+  font-size: 30px;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 .threeUnder h4 {
-  color: #c9a56e;
+  color: #9A5C23;
   padding: 0;
   margin: 0 0 6px 0;
 }
 
 .threeUnder p {
-  color: #CAC3BC;
   text-align: left;
   max-width: 70%;
   padding: 0;
@@ -1177,13 +1332,14 @@
 .inseideFigure {
   display: flex;
   flex-direction: row;
+  background-color: rgba(248, 245, 245, 0.464);
   margin: 30px 0 0 0;
   padding: 0;
   cursor: pointer;
 }
 
 .inseideFigure h3, .inseideFigure #navigation hgroup h5, #navigation hgroup .inseideFigure h5, .inseideFigure #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption .inseideFigure p {
-  color: #CAC3BC;
+  color: #23201D;
 }
 
 .inseideFigure figcaption {

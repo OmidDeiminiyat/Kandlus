@@ -74,3 +74,21 @@ window.location.href = sendTo;
 
 // 
 
+function firstHideParaf(){
+  const first_hidddenP = document.getElementById('hidden_p');
+  const first_arrow = document.getElementById('first-arrow');
+  const secondArrow = document.getElementById('second-arrow');
+  if (first_hidddenP.style.display === 'none') {
+    first_hidddenP.style.display = 'block';
+  } else {
+    first_hidddenP.style.display = 'none';
+  }
+  if (first_arrow.style.display === 'none') {
+    first_arrow.style.display = 'block';
+    secondArrow.style.display = 'none';
+  } else {
+    first_arrow.style.display = 'none';
+    secondArrow.style.display = 'block';
+  }
+  
+}

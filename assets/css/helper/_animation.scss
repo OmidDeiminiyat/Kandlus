@@ -38,5 +38,17 @@
     100%{color: $main-paraf;}
     
   }
+  
+  @keyframes hiddenParaf {
+    0% {
+      color: red;
+      opacity: 0;
+    }
+    100% {
+      color: $body;
+      opacity: 1;
+    }
+  }
+  
 
 

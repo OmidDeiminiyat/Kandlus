@@ -342,7 +342,13 @@
                  <!-- The same as biorythm use for personal day number -->
                  <aside id="PersonalBirth" class="bg-grey">
                     <figure id="displayNumber">
-                        <p><a href="https://kandlus.net/Astrology/ascendant.html">What is Ascendant?</a><br>
+                        <h5><a href="https://kandlus.net/Astrology/ascendant.html">What is Ascendant?</a></h5>
+                        <span onclick="firstHideParaf()" class="material-symbols-outlined" id="first-arrow">
+                            arrow_drop_down
+                            </span> <span onclick="firstHideParaf()" class="material-symbols-outlined" id="second-arrow">
+                                arrow_right
+                                </span>
+                        <p id="hidden_p">
                             Ascendant is a sign that rises in the east at the time of birth. Therefore,
                              it is also called the emergence sign. As the most important house,
                               the Ascendant is also known as the first house of the horoscope, 
@@ -350,7 +356,7 @@
                         </p>
                         <figcaption id="myCaption" class="myCaption" >
                             <h4>Let calculate your name, birth day, place, and time to find your ascendant</h4><br>
-                            <form id="newForm">
+                            <form id="dateForm">
                                 <div>
                                     <label for="Gender">Select your gender:</label>
                                     <select name="Gender" id="Gender">
@@ -358,20 +364,19 @@
                                         <option value="F">Fmale</option>
                                     </select>
                                 </div><br>
-                                <div>
                                     <label for="name">What is your birth name</label> 
                                     <input type="text" id="name" required>
-                                    </div><br>
-                                <div>
+                                    <br>
+                                
                                 <label for="pBirth">Insert your birth day</label> 
                                 <input type="date" id="pBirth" required>
-                                </div><br>
-                                <div>
+                               <br>
+                                
                                 <label for="timeBirth">Insert your birth time</label> 
                                 <input type="time" id="timeBirth" required>
-                                </div><br>
+                               <br>
 
-                                <div>
+                                
                                 <label for="countries">Country of birth:</label>
                                 <select id="countries" name="countries">
                                     <option value="34.5553,69.2075">Afghanistan</option>
@@ -495,9 +500,9 @@
                                     <option value="35.9078,127.7669">South Korea</option>
                                     <option value="40.7128,-74.0060">New York</option>
                                     <option value="34.0522,-118.2437">Los Angeles</option>
-                                </select></div> <br><br> 
+                                </select><br><br> 
                                 <button class="myButton" type="submit" >
-                                    <i class="ti-arrow-right mr-5"></i> Click to continue
+                                    <i class="ti-arrow-right mr-5"></i>Continue
                                 </button>
                             </form>
                         </figcaption>
