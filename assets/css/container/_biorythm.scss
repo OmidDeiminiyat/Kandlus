@@ -36,10 +36,12 @@
     }
  }
  #PersonalBirth {
+    background-color: $landingBackground;
     #displayNumber {
-        padding: 0;
+        padding: 0 0 30px 0;
         margin: 0;
        @include desplayStyle(1fr);
+
        p{
         font-size: 1.2rem;
         text-align: center;
@@ -49,9 +51,15 @@
        }
         .myCaption {
             border: 1px solid $box-border;
-            background-color: $boxbackground; 
+            background-color: $newBox;
+            width: 60%;
+            margin-left: 20%;
+            @media(max-width:600px) {
+                width: 90%;
+                margin-left: 5%;
+            }
             h4{
-                font-size: 30px;
+                font-size: 21px;
                 width: 60%;
                 margin-left: 20%;
                 @media(max-width:600px){
@@ -63,25 +71,29 @@
             }
             form{
                 text-align: center;
-                width: 50%;
-                margin-left: 25%;
+                width: 90%;
+                margin-left: 5%;
                 margin-bottom: 30px;
                 @include desplayStyle(1fr 1fr);
                @media(max-width:600px){
                 @include desplayStyle(1fr);
                }
                 label{
-                    color: $main-paraf;
+                    color: $ribonIcone;
                     margin: 0;
                 }
                 input{
-                    border-radius: 30px;
+                    border-radius: 21px;
                     border: none;
-                    height: 21px;
-                    background-color: #33333361;
-                    color: $main-paraf;
-                    width: 100px;
+                    height: 25px;
+                    background-color: #928d8d61;
+                    color: $body;
+                    width: 100%;
                     margin: 0 auto;
+                    @media(max-width:600px){
+                        width: 60%;
+                        margin-left: 20%;
+                    }
                 }
                 input[type=time] {
                     width: 80px;
@@ -105,12 +117,12 @@
                     border: none;
                     border-radius: 30px;
                     background-color: #33333300;
-                    color: $main-paraf;
+                    color: $body;
                     width: 33%;
                 }
                 button{
-                    width: 140px;
-                        margin: 0 auto;
+                    width: 160px;
+                    margin: 0 auto;
                 }
             }
          }
@@ -181,7 +193,7 @@ width: 100%;
     grid-template-columns: 1fr;
     border: 1px solid $box-border; 
     text-align: center;
-    background-color: $boxbackground; 
+    background-color: $body; 
     border-radius: 30px;
  }
  #dispNum h4, #NumeroDip h4, #ascend h4 {

@@ -790,8 +790,11 @@
   font-size: 1.2rem;
 }
 
+#PersonalBirth {
+  background-color: #D9D9D9;
+}
 #PersonalBirth #displayNumber {
-  padding: 0;
+  padding: 0 0 30px 0;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -806,10 +809,18 @@
 }
 #PersonalBirth #displayNumber .myCaption {
   border: 1px solid #5C4228;
-  background-color: #4B443F;
+  background-color: rgba(248, 245, 245, 0.464);
+  width: 60%;
+  margin-left: 20%;
+}
+@media (max-width: 600px) {
+  #PersonalBirth #displayNumber .myCaption {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
 #PersonalBirth #displayNumber .myCaption h4 {
-  font-size: 30px;
+  font-size: 21px;
   width: 60%;
   margin-left: 20%;
 }
@@ -823,8 +834,8 @@
 }
 #PersonalBirth #displayNumber .myCaption form {
   text-align: center;
-  width: 50%;
-  margin-left: 25%;
+  width: 90%;
+  margin-left: 5%;
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -838,17 +849,23 @@
   }
 }
 #PersonalBirth #displayNumber .myCaption form label {
-  color: #CAC3BC;
+  color: #9A5C23;
   margin: 0;
 }
 #PersonalBirth #displayNumber .myCaption form input {
-  border-radius: 30px;
+  border-radius: 21px;
   border: none;
-  height: 21px;
-  background-color: rgba(51, 51, 51, 0.3803921569);
-  color: #CAC3BC;
-  width: 100px;
+  height: 25px;
+  background-color: rgba(146, 141, 141, 0.3803921569);
+  color: #23201D;
+  width: 100%;
   margin: 0 auto;
+}
+@media (max-width: 600px) {
+  #PersonalBirth #displayNumber .myCaption form input {
+    width: 60%;
+    margin-left: 20%;
+  }
 }
 #PersonalBirth #displayNumber .myCaption form input[type=time] {
   width: 80px;
@@ -871,11 +888,11 @@
   border: none;
   border-radius: 30px;
   background-color: rgba(51, 51, 51, 0);
-  color: #CAC3BC;
+  color: #23201D;
   width: 33%;
 }
 #PersonalBirth #displayNumber .myCaption form button {
-  width: 140px;
+  width: 160px;
   margin: 0 auto;
 }
 
@@ -947,7 +964,7 @@
   grid-template-columns: 1fr;
   border: 1px solid #5C4228;
   text-align: center;
-  background-color: #4B443F;
+  background-color: #23201D;
   border-radius: 30px;
 }
 
@@ -2081,7 +2098,7 @@
 }
 
 .main-spritual {
-  background-color: #CEBEB1;
+  background-color: rgba(248, 245, 245, 0.464);
   width: 96%;
   margin-left: 2%;
 }
@@ -2235,6 +2252,7 @@
 .fullHr {
   border: 1px dotted #9A5C23;
   width: 60%;
+  margin-left: 20%;
 }
 
 /*

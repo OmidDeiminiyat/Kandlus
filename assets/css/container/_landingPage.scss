@@ -333,7 +333,7 @@
     }
 }
 .main-spritual{
-    @include sprituality($landingBox, 96%, 2%);
+    @include sprituality(rgba(248, 245, 245, 0.464), 96%, 2%);
     .MainSpritual{
         .rightSpirit{
            ul{
@@ -484,6 +484,7 @@
 .fullHr{
     border: 1px dotted $ribonIcone;
     width: 60%;
+    margin-left: 20%;
 }
 /*
  .findSize {
