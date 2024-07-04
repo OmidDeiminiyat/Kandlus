@@ -1048,7 +1048,7 @@
 }
 #displayBio .myCaption form input {
   border-radius: 9px;
-  border: none;
+  border: 1px solid #8E6845;
   height: 33px;
   color: #23201D;
   width: 100%;
@@ -1066,23 +1066,20 @@
   max-width: 80px;
 }
 #displayBio .myCaption form #Gender {
-  border: none;
+  border: 1px solid #8E6845;
   border-radius: 30px;
   width: 21%;
-  background-color: rgba(51, 51, 51, 0);
   color: #CAC3BC;
 }
 #displayBio .myCaption form #countries {
-  border: none;
+  border: 1px solid #8E6845;
   border-radius: 30px;
-  background-color: rgba(51, 51, 51, 0);
   color: #CAC3BC;
   width: 33%;
 }
 #displayBio .myCaption form #timezone {
-  border: none;
+  border: 1px solid #8E6845;
   border-radius: 30px;
-  background-color: rgba(51, 51, 51, 0);
   color: #23201D;
   width: 33%;
 }
@@ -3137,4 +3134,4 @@ spinner6
 #ThreeCards figure hgroup :nth-child(2) {
   width: 40%;
   color: #c9a56e;
-}
+}/*# sourceMappingURL=myStyle.css.map */
