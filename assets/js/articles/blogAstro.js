@@ -1,4 +1,5 @@
-fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
+const firstCategory = 'Decoding';
+fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?categoryOne=eq.${firstCategory}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

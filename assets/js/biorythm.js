@@ -88,18 +88,18 @@ const no3 = no1 * 3;
 
 
 const Ph4 = recivedNewData.response.physical.score;
-const ph1 = no4 / 4;
+const ph1 = Ph4 / 4;
 const ph3 = '-' + ph1;
 
 
 const green4 = recivedNewData.response.emotional.score;
 const green1 = green4 / 4;
-const green3 = '-' + ph1;
+const green3 = '-' + green1;
 
 
 const blue4 = recivedNewData.response.intellectual.score;
 const blue1 = blue4 / 4;
-const blue3 = '-' + ph1;
+const blue3 = '-' + blue1;
 
   const xValues = [0,no1,no2,no3,no4];
 

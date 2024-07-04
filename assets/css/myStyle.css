@@ -1047,10 +1047,9 @@
   margin: 0;
 }
 #displayBio .myCaption form input {
-  border-radius: 21px;
+  border-radius: 9px;
   border: none;
-  height: 25px;
-  background-color: rgba(146, 141, 141, 0.3803921569);
+  height: 33px;
   color: #23201D;
   width: 100%;
   margin: 0 auto;
@@ -3138,4 +3137,4 @@ spinner6
 #ThreeCards figure hgroup :nth-child(2) {
   width: 40%;
   color: #c9a56e;
-}/*# sourceMappingURL=myStyle.css.map */
+}
