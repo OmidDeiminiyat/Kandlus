@@ -52,25 +52,30 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   .then(dataAst => {
      //console.log(NewReciData); // Do something with the fetched data
      if (dataAst) {
-        console.log(dataAst[0].name);
-        autoLoginUser(dataAst[0].name);
+        console.log(dataAst[0]);
+        autoLoginUser(dataAst[0]);
      } else {
         // Token is invalid, delete the cookie
         setCookie('Kandlus', '', -1);
       }
-
-
-
   })
   .catch(error => {
     console.error('Error fetching data:', error);
   });
     }
-
   }
 
   function autoLoginUser(user) {
     // Perform actions to log in the user, such as updating UI, storing user info in state, etc.
-    console.log('User auto-logged in:', user);
+    console.log('User auto-logged in:', user.name);
+    var sessionName = user.name;
+    sessionStorage.setItem('User-name', sessionName);
+    console.log('welcome:' + sessionName);
+    const username = document.getElementById('username');
+    username.innerText = 'Welcome: ' + sessionName;
+    const userExist = document.getElementById('right-s');
+    userExist.style.display = 'block';
+ 
   }
   document.addEventListener('DOMContentLoaded', checkAutoLogin);
+

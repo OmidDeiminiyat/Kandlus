@@ -730,6 +730,19 @@
   color: #ffffff;
   text-align: center;
 }
+#All_sec .right-s .DivFig figure figcaption .Error {
+  display: none;
+}
+#All_sec .right-s .DivFig figure figcaption .Error p {
+  color: red;
+}
+#All_sec .right-s .DivFig figure figcaption .Error a {
+  color: #CAC3BC;
+}
+#All_sec .right-s .DivFig figure figcaption .Error a:hover {
+  color: #9A5C23;
+}
+
 @media (max-width: 600px) {
   #All_sec {
     display: grid;
@@ -3134,4 +3147,4 @@ spinner6
 #ThreeCards figure hgroup :nth-child(2) {
   width: 40%;
   color: #c9a56e;
-}/*# sourceMappingURL=myStyle.css.map */
+}

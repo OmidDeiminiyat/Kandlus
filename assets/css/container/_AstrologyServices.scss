@@ -3,7 +3,6 @@
 @import "../helper/mixin";
 @import "../helper/variable";
 
-
 #All_sec {
     @include flexible(0);
     gap: 1rem;
@@ -98,12 +97,24 @@
                     p{
                         @extend h3;
                      }
+                     .Error{
+                        display: none;
+                        p{
+                            color: $error;
+                        }
+                        a{
+                            color: $main-paraf;
+                            &:hover{
+                                color: $ribonIcone;
+                            }
+                        }
+                       
+                     }
                 }
             }
         }
      }
  }
-
 @media (max-width:600px) {
 
     #All_sec {

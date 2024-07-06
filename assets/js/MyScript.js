@@ -68,9 +68,140 @@ for (i = 0; i < coll.length; i++) {
 
 
 function pages(recived) {
-  const sendTo = "../Astrology/" + recived;
-window.location.href = sendTo;
+  var sessionName = sessionStorage.getItem('User-name');
+  
+  if (sessionName != null ) {
+      const sendTo = "../Astrology/" + recived;
+      window.location.href = sendTo;
+  } else {
+    const showError = document.getElementById('Error');
+    const no1 = document.getElementById('No-1');
+    no1.style.display = 'none';
+    showError.style.display = 'block';
+  }
 }
+
+function pages2(recived) {
+  var sessionName = sessionStorage.getItem('User-name');
+  
+  if (sessionName != null ) {
+      const sendTo = "../Astrology/" + recived;
+      window.location.href = sendTo;
+  } else {
+    const showError = document.getElementById('Error2');
+    const no2 = document.getElementById('No-2');
+    no2.style.display = 'none';
+    showError.style.display = 'block';
+  }
+}
+
+function pages3(recived) {
+  var sessionName = sessionStorage.getItem('User-name');
+  
+  if (sessionName != null ) {
+      const sendTo = "../Astrology/" + recived;
+      window.location.href = sendTo;
+  } else {
+    const showError = document.getElementById('Error3');
+    const no3 = document.getElementById('No-3');
+    no3.style.display = 'none';
+    showError.style.display = 'block';
+  }
+}
+function pages4(recived) {
+  var sessionName = sessionStorage.getItem('User-name');
+  
+  if (sessionName != null ) {
+      const sendTo = "../Astrology/" + recived;
+      window.location.href = sendTo;
+  } else {
+    const showError = document.getElementById('Error4');
+    const no4 = document.getElementById('No-4');
+    no4.style.display = 'none';
+    showError.style.display = 'block';
+  }
+}
+
+function pages5(recived) {
+  var sessionName = sessionStorage.getItem('User-name');
+  
+  if (sessionName != null ) {
+      const sendTo = "../Astrology/" + recived;
+      window.location.href = sendTo;
+  } else {
+    const showError = document.getElementById('Error5');
+    const no5 = document.getElementById('No-5');
+    no5.style.display = 'none';
+    showError.style.display = 'block';
+  }
+}
+
+function pages6(recived) {
+  var sessionName = sessionStorage.getItem('User-name');
+  
+  if (sessionName != null ) {
+      const sendTo = "../Astrology/" + recived;
+      window.location.href = sendTo;
+  } else {
+    const showError = document.getElementById('Error6');
+    const no6 = document.getElementById('No-6');
+    no6.style.display = 'none';
+    showError.style.display = 'block';
+  }
+}
+
+function pages7(recived) {
+  var sessionName = sessionStorage.getItem('User-name');
+  
+  if (sessionName != null ) {
+      const sendTo = "../Astrology/" + recived;
+      window.location.href = sendTo;
+  } else {
+    const showError = document.getElementById('Error7');
+    const no7 = document.getElementById('No-7');
+    no7.style.display = 'none';
+    showError.style.display = 'block';
+  }
+}
+function pages8(recived) {
+  var sessionName = sessionStorage.getItem('User-name');
+  
+  if (sessionName != null ) {
+      const sendTo = "../Astrology/" + recived;
+      window.location.href = sendTo;
+  } else {
+    const showError = document.getElementById('Error8');
+    const no8 = document.getElementById('No-8');
+    no8.style.display = 'none';
+    showError.style.display = 'block';
+  }
+}
+
+function pages9(recived) {
+  var sessionName = sessionStorage.getItem('User-name');
+  
+  if (sessionName != null ) {
+      const sendTo = "../Astrology/" + recived;
+      window.location.href = sendTo;
+  } else {
+    const showError = document.getElementById('Error9');
+    const no9 = document.getElementById('No-9');
+    no9.style.display = 'none';
+    showError.style.display = 'block';
+  }
+}
+
+    // const no2 = document.getElementById('No-2');
+    // const no3 = document.getElementById('No-3');
+    // const no4 = document.getElementById('No-4');
+    // const no5 = document.getElementById('No-5');
+    // const no6 = document.getElementById('No-6');
+    // const no7 = document.getElementById('No-7');
+    // const no8 = document.getElementById('No-8');
+    // const no9 = document.getElementById('No-9');
+    // const no10 = document.getElementById('No-10');
+    // const no11 = document.getElementById('No-11');
+    // const no12 = document.getElementById('No-12');
 
 // 
 
