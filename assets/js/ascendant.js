@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log(letArray);
 
 insiPut.innerHTML=''
-let insideCountiner = `<span><h4>Here is your ascendant</h4><br>`
+let insideCountiner = `<span><h4>Your ascendant:</h4><br>`
 
 letArray.forEach((element, index) => {
     console.log(element.ascendant);

@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log(LetData.response);
     
     resRac.innerHTML = ''
-    let insideElement = `<h4>Here is your numerology resault</h4><br>
+    let insideElement = `<h4>Resault for your numerology table</h4><br>
     <figcaption class="letBeCaption">
     <div> <h5> Date Considered:<span class="circleDay" >${LetData.response.date_considered} </span> </h5></div>
     <div><h3> Radical ruler: <h5><span class="circleDay" >${LetData.response.radical_ruler} </span></h3> </h5></div> 

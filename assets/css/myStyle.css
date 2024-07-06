@@ -1130,6 +1130,25 @@
   background-color: #23201D;
   border-radius: 30px;
 }
+#dispNum .newStyle, #NumeroDip .newStyle, #ascend .newStyle {
+  text-align: left;
+  width: 90%;
+  margin-left: 5%;
+}
+#dispNum .newStyle h5, #NumeroDip .newStyle h5, #ascend .newStyle h5 {
+  font-size: 1.2rem;
+  margin: 9px 0 9px 0;
+  color: #c9a56e;
+}
+#dispNum .newStyle .dividedInside h5, #NumeroDip .newStyle .dividedInside h5, #ascend .newStyle .dividedInside h5 {
+  font-size: 1.2rem;
+}
+#dispNum .newStyle .predeicted, #NumeroDip .newStyle .predeicted, #ascend .newStyle .predeicted {
+  margin: 0;
+}
+#dispNum .newStyle .predeicted h5, #NumeroDip .newStyle .predeicted h5, #ascend .newStyle .predeicted h5 {
+  font-size: 1.2rem;
+}
 
 #dispNum h4, #NumeroDip h4, #ascend h4 {
   font-size: 2vw;
@@ -1154,28 +1173,33 @@
   font-size: 1.1rem;
 }
 
-.letBeCaption {
+#NumberResault .letBeCaption {
   display: grid;
   grid-template-columns: 1fr;
   color: #CAC3BC;
+  text-align: left;
+  width: 90%;
+  margin-left: 5%;
 }
-.letBeCaption h5 {
-  font-size: 21px;
+#NumberResault .letBeCaption .circleDay {
+  color: #CAC3BC;
+}
+#NumberResault .letBeCaption h3, #NumberResault .letBeCaption #navigation hgroup h5, #navigation hgroup #NumberResault .letBeCaption h5, #NumberResault .letBeCaption #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #NumberResault .letBeCaption p {
+  color: #FECFA7;
+  font-size: 18px;
+}
+#NumberResault .letBeCaption h5 {
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
-.letBeCaption h6 {
+#NumberResault .letBeCaption h6 {
   font-size: 1.1rem;
 }
-.letBeCaption p {
+#NumberResault .letBeCaption p {
   max-width: 60%;
   margin-left: 20%;
   font-size: 1.1rem;
-}
-
-.letBeCaption h3, .letBeCaption #navigation hgroup h5, #navigation hgroup .letBeCaption h5, .letBeCaption #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption .letBeCaption p {
-  color: #FECFA7;
-  font-size: 21px;
 }
 
 #newForm select {
@@ -1193,21 +1217,12 @@
   box-sizing: border-box;
 }
 
-.circleDay {
-  color: red;
-}
-
 .citcleNight {
   color: #CAC3BC;
 }
 
 .newColor {
-  color: #c9a56e;
-}
-
-.dividedInside {
-  display: grid;
-  grid-template-columns: 1fr;
+  color: #CAC3BC;
 }
 
 .predeicted {
@@ -1215,9 +1230,24 @@
   margin-left: 5%;
 }
 
-#insidAscend h5 {
+#insidAscend {
+  width: 90%;
+  margin-left: 5%;
+}
+#insidAscend .newStyle {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #CAC3BC;
+  text-align: left;
+}
+#insidAscend .newStyle .dividedInside {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#insidAscend .newStyle h5 {
   font-size: 1.2rem;
   margin-top: 3px;
+  color: #c9a56e;
 }
 
 .right-side {
@@ -1265,23 +1295,6 @@
   #finalData .figCaptureIn {
     grid-template-columns: 1fr;
   }
-}
-
-.newStyle h5 {
-  font-size: 1.2rem;
-  margin: 9px 0 9px 0;
-}
-.newStyle .dividedInside h5 {
-  font-size: 1.2rem;
-}
-.newStyle .predeicted h5 {
-  font-size: 1.2rem;
-}
-
-.newStyle {
-  display: grid;
-  grid-template-columns: 1fr;
-  color: #CAC3BC;
 }
 
 #finalData h4 {
@@ -1465,6 +1478,9 @@
     width: 20%;
     margin: 0;
     right: 0;
+  }
+  .font-weight-bold {
+    display: none;
   }
 }
 /* Horoscop resault design */
@@ -3147,4 +3163,4 @@ spinner6
 #ThreeCards figure hgroup :nth-child(2) {
   width: 40%;
   color: #c9a56e;
-}
+}/*# sourceMappingURL=myStyle.css.map */

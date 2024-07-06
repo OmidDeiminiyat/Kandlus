@@ -9,9 +9,9 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
   .then(response => response.json())
   .then(NewReciData => {
      //console.log(NewReciData); // Do something with the fetched data
-    firstArticle(NewReciData)
-    threeColumn(NewReciData)
-    homeSingle(NewReciData)
+  
+    LatestArticles(NewReciData)
+    HotArticle(NewReciData)
     homeThree(NewReciData)
   })
   .catch(error => {
@@ -20,49 +20,55 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
   
 
 
-  function firstArticle(data) {
-    const firstArticle = document.getElementById('rightSide');
-    firstArticle.innerHTML=''
-    let firstart = ` <a href="singlePage.html?id=${data[0].seo}"><figure>
-                        <img src="../assets/images/Articles/width/${data[0].image}" alt="">
-                        <figcaption>
-                            <h3>${data[0].title}</h3>
-                            <p>${data[0].describtion}</p>
-                            <div class="views">
-                                <span class="material-symbols-outlined"> visibility </span> ${data[0].score}
-                                <span class="material-symbols-outlined"> schedule </span>${data[0].created_at}
-                            </div>
-                        </figcaption>
-                    </figure></a>`
-      firstArticle.innerHTML = firstart;
-  }
 
-  function threeColumn(threeData){
-    const firstArticle = document.getElementById('leftSide');
+  function LatestArticles(threeData){
+    const firstArticle = document.getElementById('firsthigh');
     firstArticle.innerHTML = ''
 
-let threemyRow = `<div>`;
-threeData.slice(0,3).forEach((items, index) => {
-    console.log(items.title);
-    const limitDescribe = limitTextTo50Words(items.describtion);
-threemyRow += `<a href="singlePage.html?id=${items.seo}"> <article class="ThreeArticle">
-                            <header>
-                                <img src="../assets/images/Articles/width/${items.image}" alt="">
-                            </header>
-                            <hgroup>
-                                <h3>${items.title}</h3>
-                                <p>${limitDescribe} </p>
-                            <div class="views">
-                                <span class="material-symbols-outlined"> visibility </span> ${items.score}
-                                <span class="material-symbols-outlined"> schedule </span>${items.created_at}
-                            </div>
-                            </hgroup>
-                        </article></a>`
-})
-threemyRow += `</div>`
-firstArticle.innerHTML = threemyRow;
-  }
+   
+ let threemyRow = `<div class="thumb-overlay img-hover-slide transition-04s position-relative" style="background-image: url('../assets/images/Articles/height/${threeData[0].image}')">
+                                            <a class="img-link" href="single.html"></a>
+                                            <div class="post-content-overlay transition-04s p-20">
+                                                <div class="entry-meta mb-20 text-uppercase font-small text-white">
+                                                    <span class="create-date mr-15 ">${threeData[0].created_at}</span>
+                                                    <a href="category.html"><span class="post-cat text-white position-relative">${threeData[0].categoryOne}</span></a>
+                                                    <a href="tag.html"><span class="post-cat text-white position-relative">${threeData[0].tagOne}</span></a>
+                                                </div>
+                                                <h4 class="post-title">
+                                                    <a class="text-white" href="single.html">${threeData[0].title}</a>
+                                                </h4>
+                                            </div>
+                                        </div>`
+   firstArticle.innerHTML = threemyRow;
 
+  }
+/*
+  function HotArticle(HotData) {
+    const Hoter = document.getElementById('nav-trending');
+    Hoter.innerHTML = ''
+
+    let insideHoter = `<div class="home-featured-1 post-module-1">`
+    HotData.forEach((items, index) => {
+      insideHoter += `<div class="post-thumb position-relative">
+                                        <div class="thumb-overlay img-hover-slide transition-04s position-relative" style="background-image: url(http://via.placeholder.com/600x700)">
+                                            <a class="img-link" href="single.html"></a>
+                                            <div class="post-content-overlay transition-04s p-20">
+                                                <div class="entry-meta mb-20 text-uppercase font-small text-white">
+                                                    <span class="create-date mr-15 ">25 Jan 2020</span>
+                                                    <a href="category.html"><span class="post-cat text-white position-relative">World</span></a>
+                                                    <a href="category.html"><span class="post-cat text-white position-relative">Travel</span></a>
+                                                </div>
+                                                <h4 class="post-title">
+                                                    <a class="text-white" href="single.html">Tesla’s Cooking Up A New Way To Wire Its Cars, Report Says</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>`
+    })
+    insideHoter += `</div>`
+    Hoter.innerHTML = insideHoter;
+  }
+*/
 function limitTextTo50Words(text) {
     const words = text.split(/\s+/);
     const limitedText = words.slice(0, 15).join(' ');

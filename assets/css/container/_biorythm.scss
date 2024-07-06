@@ -305,6 +305,29 @@ width: 100%;
     text-align: center;
     background-color: $body; 
     border-radius: 30px;
+
+    .newStyle {
+        text-align: left;
+        width: 90%;
+        margin-left: 5%;
+        h5 {
+        font-size: 1.2rem;
+        margin: 9px 0 9px 0;
+        color: $hgroup;
+        }
+        .dividedInside {
+            h5{
+                font-size: 1.2rem;
+            }
+        }
+        .predeicted{
+            margin: 0;
+            h5{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    
  }
  #dispNum h4, #NumeroDip h4, #ascend h4 {
     font-size: 2vw;
@@ -327,29 +350,38 @@ width: 100%;
         font-size: 1.1rem;
     }
 }
-.letBeCaption {
-    display: grid;
-    grid-template-columns: 1fr;
-    color: $main-paraf; 
-    h5{
-        font-size: 21px;
-        margin: 0;
-        padding: 0;
+#NumberResault {
+    .letBeCaption {
+        display: grid;
+        grid-template-columns: 1fr;
+        color: $main-paraf; 
+        text-align: left;
+        width: 90%;
+        margin-left: 5%;
+        .circleDay {
+            color: $main-paraf;
+        }
+        h3{
+            color: $Butoon; 
+            font-size: 18px;
+        }
+        h5{
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+        }
+        h6{
+            font-size: 1.1rem;
+        }
+        p{
+            max-width: 60%;
+            margin-left: 20%;
+            font-size: 1.1rem;
+        }
     }
-    h6{
-        font-size: 1.1rem;
-    }
-    p{
-        max-width: 60%;
-        margin-left: 20%;
-        font-size: 1.1rem;
-    }
+    
 }
 
-.letBeCaption h3{
-    color: $Butoon; 
-    font-size: 21px;
-}
 #newForm select {
         width: 90px;
         padding: 0.5em;
@@ -363,23 +395,13 @@ width: 100%;
         box-sizing: border-box;
 }
 
-
-
-
-
-.circleDay {
-    color: red;
-}
 .citcleNight {
     color: $main-paraf;  
 }
 .newColor {
-    color: $hgroup; 
+    color: $main-paraf; 
 }
-.dividedInside {
-    display: grid;
-    grid-template-columns: 1fr;
-}
+
 
 .predeicted {
     max-width: 90%;
@@ -387,11 +409,29 @@ width: 100%;
 }
 
 #insidAscend {
-    h5{
-        font-size: 1.2rem;
-        margin-top: 3px;
+    width: 90%;
+    margin-left: 5%;
+    .newStyle {
+        display: grid;
+        grid-template-columns: 1fr;
+        color: $main-paraf; 
+        text-align: left;
+        .dividedInside {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        h5{
+            font-size: 1.2rem;
+            margin-top: 3px;
+            color: $hgroup;
+        }
     }
+
+   
 }
+
+
+
 
 .right-side {
     width: 24%;
@@ -436,26 +476,7 @@ width: 100%;
     }
 }
 
-.newStyle { h5 {
-    font-size: 1.2rem;
-    margin: 9px 0 9px 0;
-    }
-    .dividedInside {
-        h5{
-            font-size: 1.2rem;
-        }
-    }
-    .predeicted{
-        h5{
-            font-size: 1.2rem;
-        }
-    }
-}
-.newStyle {
-    display: grid;
-    grid-template-columns: 1fr;
-    color: $main-paraf; 
-}
+
 #finalData h4 {
     text-align: center;
 }
@@ -638,6 +659,9 @@ height: 25%;
                 }
                
             }
+        }
+        .font-weight-bold {
+            display: none;
         }
 }
 

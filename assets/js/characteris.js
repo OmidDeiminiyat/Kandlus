@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   
   }
-  
+   
   function CharacterDataSend(resivedCharacter) {
     const caption = document.getElementById('myCaption');
     const displaycap = document.getElementById('dispNum');
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log(letArray);
 
 leadData.innerHTML=''
-let insideCountiner = `<span><h4>Here is your personal characteristics</h4><br>`
+let insideCountiner = `<span><h4>Resault for your personal characteristics</h4><br>`
 
 letArray.forEach((element, index) => {
     console.log(element.current_house);
