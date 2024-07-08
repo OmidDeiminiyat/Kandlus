@@ -16,6 +16,12 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
     singleItem(NewReciData)
     JustTwo(NewReciData)
     AncientAliens(NewReciData)
+    Decoding(NewReciData)
+    DecodingSec(NewReciData)
+    DecodingThird(NewReciData)
+    mostArticles(NewReciData)
+    MostVisited(NewReciData)
+    SingleFigure(NewReciData)
   })
   .catch(error => {
     console.error('Error fetching data:', error);
@@ -317,6 +323,226 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
   }
 
 
+  function Decoding(DecodData) {
+    const DecodVid = DecodData;
+    const Aliener = DecodVid.filter(item => item.categoryOne === 'Decoding');
+    Aliener.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+    const Decoder = document.getElementById('Decoding');
+    Decoder.innerHTML = ''
+    let inseidDecoder = `<div class="slide-fade mb-lg-0 mb-md-4 mb-sm-4">`
+    Aliener.slice(0, 1).forEach((DecodItems, index) => {
+        const DesocLimit = limit33Words(DecodItems.describtion);
+        inseidDecoder += `<article class="slide-fade-item">
+                                <figure class="mb-30">
+                                    <a href="single.html?id=${DecodItems.seo}">
+                                        <img src="../assets/images/Articles/width/${DecodItems.image}" alt="">
+                                    </a>
+                                    <span class="post-format position-top-right text-uppercase font-small">
+                                        <i class="ti-video-camera"></i>
+                                    </span>
+                                </figure>
+                                <div class="post-content text-center plr-5-percent">
+                                    <h2 class="post-title mb-30 position-relative divider-wave">
+                                        <a href="single.html?id=${DecodItems.seo}">${DecodItems.image}</a>
+                                    </h2>
+                                    <p class="excerpt">
+                                        ${DesocLimit} ...
+                                    </p>
+                                </div>
+                            </article>`
+    });
+    inseidDecoder += `</div>`
+    Decoder.innerHTML = inseidDecoder;
+  }
+
+
+  function DecodingSec(SecDecod){
+
+    const DecodTwo = SecDecod;
+    const SeDecData = DecodTwo.filter(item => item.categoryOne === 'Decoding');
+    SeDecData.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+    const SecondaryDecod = document.getElementById('DecodingSecond');
+    SecondaryDecod.innerHTML = ''
+    let insideSecondary = `<div>`
+    SeDecData.slice(1,4).forEach((SecondItems, index) => {
+        const SecondDecLimi = limitTextTo50Words(SecondItems.describtion);
+        insideSecondary += `<article class="row wow fadeIn animated">
+                            <div class="col-lg-6 col-md-9 mb-sm-3">
+                                <h6 class="post-title mb-10 font-weight-bold">
+                                    <a href="single.html?id=${SecondItems.seo}">${SecondItems.title}</a>
+                                </h6>
+                                <p class="excerpt mb-0">
+                                    ${SecondDecLimi} ...
+                                </p>
+                            </div>
+                            <div class="col-lg-6 col-md-3">
+                                <figure class="mb-0">
+                                    <a href="single.html?id=${SecondItems.seo}"><img src="../assets/images/Articles/width/${SecondItems.image}" alt=""></a>
+                                </figure>
+                            </div>
+                        </article>`
+    });
+    insideSecondary += `</div>`
+    SecondaryDecod.innerHTML = insideSecondary;
+  }
+
+  function DecodingThird(ThirdDecodData) {
+
+    const ForThird = ThirdDecodData;
+    const newDatas = ForThird.filter(item => item.categoryOne === 'Decoding');
+    newDatas.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+    const DecondThree = document.getElementById('ThirdDecod');
+    DecondThree.innerHTML = ''
+    let insDecThree = ` <ul class="list-post">`
+    newDatas.slice(5,10).forEach((threeDecl, index) => {
+        insDecThree += `<li class="mb-15 wow fadeIn animated">
+                                <div class="d-flex">
+                                    <div class="post-content media-body">
+                                        <h6 class="post-title mb-10 font-weight-500"><a href="single.html?id=${threeDecl.seo}">${threeDecl.title}</a></h6>
+                                        <div class="entry-meta meta-1 font-x-small color-grey mt-10">
+                                            <span class="post-on mr-15">${threeDecl.created_at}</span>
+                                            <span class="hit-count has-dot">${threeDecl.score} Views</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale">
+                                        <a class="color-white" href="single.html?id=${threeDecl.seo}">
+                                            <img src="../assets/images/Articles/width/${threeDecl.image}" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>`
+    });
+    insDecThree += `</ul>`
+    DecondThree.innerHTML = insDecThree;
+  }
+
+
+  function mostArticles(LatestData){
+   
+const items = LatestData;
+const LatestItemOne = items.sort((a, b) => b.score - a.score);
+const singleLatest = document.getElementById('OneLatest');
+let insideSinle = `<div>`
+LatestItemOne.slice(0, 1).forEach((singleLatestIt, index)=> {
+ const myLimitSing = limit33Words(singleLatestIt.describtion);
+    insideSinle += `<article class="row wow fadeIn animated">
+                            	<div class="col-md-6 mb-md-0 mb-sm-3">	
+	                                <figure class="mb-0">
+	                                    <a href="single.html?id=${singleLatestIt.seo}">
+	                                        <img src="../assets/images/Articles/width/${singleLatestIt.image}" alt="">
+	                                    </a>
+	                                    <span class="post-format position-top-right text-uppercase font-small">
+	                                        <i class="ti-stats-up"></i>
+	                                    </span>
+	                                </figure>
+                                </div>
+                                <div class="col-md-6 align-self-center">
+                                    <div class="post-content text-center plr-5-percent">
+                                        <div class="entry-meta meta-0 mb-15 font-small">
+                                            <a href="category.html?id=${singleLatestIt.categoryOne}"><span class="post-cat position-relative"># ${singleLatestIt.categoryOne}</span></a>
+                                            <a href="category.html?id=${singleLatestIt.categoryTwo}"><span class="post-cat position-relative"># ${singleLatestIt.categoryTwo}</span></a>
+                                        </div>
+                                        <h2 class="post-title mb-30 position-relative divider-wave">
+                                            <a href="single.html?id=${singleLatestIt.seo}">${singleLatestIt.title}</a>
+                                        </h2>
+                                        <p class="excerpt">
+                                            ${myLimitSing}
+                                        </p>
+                                        <p><span class="live-now text-danger">Live now</span></p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="horizontal-divider mt-15 mb-15"></div>
+                                </div>
+                            </article>`
+
+    });
+    insideSinle += `</div>`
+    singleLatest.innerHTML = insideSinle;
+  }
+
+  function MostVisited(mostItems){
+    const Mitemer = mostItems;
+    const MostFind = Mitemer.sort((a, b) => b.score - a.score);
+    const SecMostVie = document.getElementById('MostView');
+    SecMostVie.innerHTML = ''
+    let onsideMost = `<section>`
+    MostFind.slice(1, 4).forEach((MostElements, index)=> {
+     const myMost = limit33Words(MostElements.describtion);
+        onsideMost += `<article class="row wow fadeIn animated">
+                                        <div class="col-md-4">
+                                            <figure class="mb-md-0 mb-sm-3">
+                                                <img src="../assets/images/Articles/width/${MostElements.image}" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="col-md-8 pl-0">
+                                            <div class="entry-meta meta-0 mb-15 font-small">
+                                                <a href="category.html?id=${MostElements.categoryOne}"><span class="post-cat position-relative"># ${MostElements.categoryOne}</span></a>
+                                            </div>
+                                            <h6 class="post-title mb-20 font-weight-bold">
+                                                <a href="single.html?id=${MostElements.seo}">${MostElements.title}</a>
+                                            </h6>
+                                            <p class="excerpt mb-0">
+                                                ${myMost}
+                                            </p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="horizontal-divider mt-15 mb-15"></div>
+                                        </div>
+                                    </article>`
+    
+        });
+        onsideMost += `</section>`
+        SecMostVie.innerHTML = onsideMost;
+      }
+
+function SingleFigure(figureData) {
+    const Figsorted = figureData;
+    const figOut = Figsorted.sort((a, b) => b.score - a.score);
+    const FigSingVie = document.getElementById('myFig');
+    FigSingVie.innerHTML = ''
+    let insidFigSin = `<section>`
+    figOut.slice(5, 10).forEach((figElemIt, index)=> {
+     const lastElements = limit33Words(figElemIt.describtion);
+        insidFigSin += `<article class="wow fadeIn animated">
+                                        <h6 class="post-title font-weight-bold mb-10">
+                                            <a href="single.html?id=${figElemIt.seo}">${figElemIt.title}</a>
+                                        </h6>
+                                        <p class="excerpt">
+                                            ${lastElements}..
+                                        </p>
+                                        <div class="horizontal-divider mt-15 mb-15"></div>
+                                    </article>`
+    
+        });
+        insidFigSin += `</section>`
+        FigSingVie.innerHTML = insidFigSin;
+}
 function limitTextTo50Words(text) {
     const words = text.split(/\s+/);
     const limitedText = words.slice(0, 15).join(' ');

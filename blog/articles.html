@@ -8,10 +8,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/Kandlus.png">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <!-- NewsBoard CSS  -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/widgets.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+     <link rel="stylesheet" href="../assets/css/myStyle.css"> 
 </head>
 
 <body>
@@ -312,49 +314,9 @@
     </header>
 
     <!--Start search form-->
-    <div class="main-search-form">
-        <div class="container">
-            <div class="main-search-form-cover pt-50 pb-50 m-auto">
-                <div class="row mb-20">
-                    <div class="col-12">
-                        <form action="#" class="search-header">
-                            <div class="input-group w-100">
-                                <select class="form-control first_null not_chosen">
-                                    <option value="">Search all</option>
-                                    <option value="AX">Articles</option>
-                                    <option value="AF">Authors</option>
-                                    <option value="AF">Tags</option>
-                                </select>
-                                <input type="text" class="form-control" placeholder="Type your key words and hit enter">
-                                <div class="input-group-append">
-                                    <button class="btn btn-black" type="submit">
-                                        <i class="ti-search mr-5"></i> Search
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 font-small suggested-area">
-                        <p class="suggested font-heading mb-10"><strong>Suggestion</strong></p>
-                        <ul class="list-inline d-inline-block">
-                            <li class="list-inline-item"><a href="category.html">World</a></li>
-                            <li class="list-inline-item"><a href="category.html">American</a></li>
-                            <li class="list-inline-item"><a href="category.html">Opinion</a></li>
-                            <li class="list-inline-item"><a href="category.html">Tech</a></li>
-                            <li class="list-inline-item"><a href="category.html">Science</a></li>
-                            <li class="list-inline-item"><a href="category.html">Books</a></li>
-                            <li class="list-inline-item"><a href="category.html">Travel</a></li>
-                            <li class="list-inline-item"><a href="category.html">Business</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!-- Start Main content -->
-    <main class="mt-30">
+    <main id="forSearchBar" class="mt-30">
         <div class="container">
             <!--Featured post Start-->
             <div class="home-featured mb-20">
@@ -461,197 +423,24 @@
                     <div id="AncientAliens" class="col-lg-7 col-md-12">
                     </div>
                     <div id="AliensTwo"  class="col-lg-5 col-md-12 d-none d-lg-block">
-                        
-                        
-                        
+
                     </div>
                 </div>
             </section>
             <!--Loop Grid 5-->
             <section class="video-news mb-30 p-30 bg-grey">
                 <h6 class="font-weight-bold text-uppercase widget-header mb-30 text-center divider-wave-1">
-                    <span class="font-family-normal"># Breaking News</span>
+                    <span class="font-family-normal"># Decoding</span>
                 </h6>
                 <div class="loop-grid-4 row vertical-divider">
-                    <div class="col-lg-5 col-md-12 wow fadeIn animated">
-                        <div class="slide-fade mb-lg-0 mb-md-4 mb-sm-4">
-                            <article class="slide-fade-item">
-                                <figure class="mb-30">
-                                    <a href="single.html">
-                                        <img src="http://via.placeholder.com/900x670" alt="">
-                                    </a>
-                                    <span class="post-format position-top-right text-uppercase font-small">
-                                        <i class="ti-video-camera"></i>
-                                    </span>
-                                </figure>
-                                <div class="post-content text-center plr-5-percent">
-                                    <h2 class="post-title mb-30 position-relative divider-wave">
-                                        <a href="single.html">Why African Spirituality Became Associated With Satan</a>
-                                    </h2>
-                                    <p class="excerpt">
-                                        These are all common derogatory comments I have received as a third-generation practitioner of Vodu, an ancient West African spiritual and herbal practice, mostly by Christians
-                                    </p>
-                                </div>
-                            </article>
-                            <article class="slide-fade-item">
-                                <figure class="mb-30">
-                                    <a href="single.html">
-                                        <img src="http://via.placeholder.com/900x670" alt="">
-                                    </a>
-                                    <span class="post-format position-top-right text-uppercase font-small">
-                                        <i class="ti-video-camera"></i>
-                                    </span>
-                                </figure>
-                                <div class="post-content text-center plr-5-percent">
-                                    <h2 class="post-title mb-30 position-relative divider-wave">
-                                        <a href="single.html">The Truth About Blood Types and the Coronavirus</a>
-                                    </h2>
-                                    <p class="excerpt">
-                                         Among the more than 1,500 Italian and Spanish patients with the coronavirus included in the study, infection appeared to be less common among people with blood type O
-                                    </p>
-                                </div>
-                            </article>
-                        </div>
+                    <div id="Decoding" class="col-lg-5 col-md-12 wow fadeIn animated">
+
                     </div>
-                    <div class="col-lg-4 col-md-12">
-                        <article class="row wow fadeIn animated">
-                            <div class="col-lg-6 col-md-9 mb-sm-3">
-                                <h6 class="post-title mb-10 font-weight-bold">
-                                    <a href="single.html">Do Americans Understand How Badly They’re Doing?</a>
-                                </h6>
-                                <p class="excerpt mb-0">
-                                    In France, where I live, the virus is under control. I can hardly believe the news coming out of the United States.
-                                </p>
-                            </div>
-                            <div class="col-lg-6 col-md-3">
-                                <figure class="mb-0">
-                                    <a href="single.html"><img src="http://via.placeholder.com/600x600" alt=""></a>
-                                </figure>
-                            </div>
-                        </article>
-                        <article class="row wow fadeIn animated">
-                            <div class="col-12">
-                                <div class="has-top-border mb-15 mt-15"></div>
-                            </div>
-                            <div class="col-lg-6 col-md-9 mb-sm-3">
-                                <h6 class="post-title mb-10 font-weight-bold">
-                                    <a href="single.html">The Devaluation of Music: It’s Worse Than You Think</a>
-                                </h6>
-                                <p class="excerpt mb-0">
-                                    These are serious issues, and many agree that the industry and lawmakers have a lot of work to do. 
-                                </p>
-                            </div>
-                            <div class="col-lg-6 col-md-3">
-                                <figure class="mb-0">
-                                    <a href="single.html"><img src="http://via.placeholder.com/600x600" alt=""></a>
-                                    <span class="post-format position-top-right text-uppercase font-small">
-                                        <i class="ti-video-camera"></i>
-                                    </span>
-                                </figure>
-                            </div>
-                        </article>
-                        <article class="row wow fadeIn animated">
-                            <div class="col-12">
-                                <div class="has-top-border mb-15 mt-15"></div>
-                            </div>
-                            <div class="col-lg-6 col-md-9 mb-sm-3">
-                                <h6 class="post-title mb-10 font-weight-bold">
-                                    <a href="single.html">How Music Affects Your Productivity</a>
-                                </h6>
-                                <p class="excerpt mb-0">
-                                    Music is regarded as one of the triumphs of human creativity.
-                                </p>
-                            </div>
-                            <div class="col-lg-6 col-md-3">
-                                <figure class="mb-0">
-                                    <a href="single.html"><img src="http://via.placeholder.com/900x670" alt=""></a>
-                                </figure>
-                            </div>
-                        </article>
+                    <div id="DecodingSecond" class="col-lg-4 col-md-12">
+
                     </div>
-                    <div class="col-md-3 d-none d-lg-block">
-                        <ul class="list-post">
-                            <li class="mb-15 wow fadeIn animated">
-                                <div class="d-flex">
-                                    <div class="post-content media-body">
-                                        <h6 class="post-title mb-10 font-weight-500"><a href="single.html">LThis ‘Equity’ picture is actually White Supremacy at work</a></h6>
-                                        <div class="entry-meta meta-1 font-x-small color-grey mt-10">
-                                            <span class="post-on mr-15">23 April</span>
-                                            <span class="hit-count has-dot">34k Views</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale">
-                                        <a class="color-white" href="single.html">
-                                            <img src="http://via.placeholder.com/600x600" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mb-15 wow fadeIn animated">
-                                <div class="d-flex">
-                                    <div class="post-content media-body">
-                                        <h6 class="post-title mb-10 font-weight-500"><a href="single.html">Towards a Bra-free Instagram Experience</a></h6>
-                                        <div class="entry-meta meta-1 font-x-small color-grey mt-10">
-                                            <span class="post-on mr-15">17 April</span>
-                                            <span class="hit-count has-dot">58k Views</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale">
-                                        <a class="color-white" href="single.html">
-                                            <img src="http://via.placeholder.com/600x600" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mb-15 wow fadeIn animated">
-                                <div class="d-flex">
-                                    <div class="post-content media-body">
-                                        <h6 class="post-title mb-10 font-weight-500"><a href="single.html">Why wireframes are becoming obsolete</a></h6>
-                                        <div class="entry-meta meta-1 font-x-small color-grey mt-10">
-                                            <span class="post-on mr-15">25 April</span>
-                                            <span class="hit-count has-dot">54k Views</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale">
-                                        <a class="color-white" href="single.html">
-                                            <img src="http://via.placeholder.com/600x600" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mb-15 wow fadeIn animated">
-                                <div class="d-flex">
-                                    <div class="post-content media-body">
-                                        <h6 class="post-title mb-10 font-weight-500"><a href="single.html">I’m a “highly functional” Autistic. It takes a lot of work.</a></h6>
-                                        <div class="entry-meta meta-1 font-x-small color-grey mt-10">
-                                            <span class="post-on mr-15">25 April</span>
-                                            <span class="hit-count has-dot">16k Views</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale">
-                                        <a class="color-white" href="single.html">
-                                            <img src="http://via.placeholder.com/600x600" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="wow fadeIn animated">
-                                <div class="d-flex">
-                                    <div class="post-content media-body">
-                                        <h6 class="post-title mb-10 font-weight-500"><a href="single.html">Apple Is Killing A Billion-Dollar Ad Industry With One Popup</a></h6>
-                                        <div class="entry-meta meta-1 font-x-small color-grey mt-10">
-                                            <span class="post-on mr-15">25 April</span>
-                                            <span class="hit-count has-dot">67k Views</span>
-                                        </div>
-                                    </div>
-                                    <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale">
-                                        <a class="color-white" href="single.html">
-                                            <img src="http://via.placeholder.com/600x600" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                    <div id="ThirdDecod" class="col-md-3 d-none d-lg-block">
+
                     </div>
                 </div>
             </section>
@@ -663,162 +452,15 @@
                             <span class="line-dots"></span>
                         </h5>
                         <div class="loop-grid-3">
-                            <article class="row wow fadeIn animated">
-                            	<div class="col-md-6 mb-md-0 mb-sm-3">	
-	                                <figure class="mb-0">
-	                                    <a href="single.html">
-	                                        <img src="http://via.placeholder.com/900x670" alt="">
-	                                    </a>
-	                                    <span class="post-format position-top-right text-uppercase font-small">
-	                                        <i class="ti-stats-up"></i>
-	                                    </span>
-	                                </figure>
-                                </div>
-                                <div class="col-md-6 align-self-center">
-                                    <div class="post-content text-center plr-5-percent">
-                                        <div class="entry-meta meta-0 mb-15 font-small">
-                                            <a href="category.html"><span class="post-cat position-relative"># World</span></a>
-                                            <a href="category.html"><span class="post-cat position-relative"># Education</span></a>
-                                        </div>
-                                        <h2 class="post-title mb-30 position-relative divider-wave">
-                                            <a href="single.html">How to Reopen Schools: What Science and Other Countries Teach Us</a>
-                                        </h2>
-                                        <p class="excerpt">
-                                            The pressure to bring American students back to classrooms is intense, but the calculus is tricky with infections still out of control in many communities.
-                                        </p>
-                                        <p><span class="live-now text-danger">Live now</span></p>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="horizontal-divider mt-15 mb-15"></div>
-                                </div>
-                            </article>
+                            <section id="OneLatest">
+                            
+                            </section>
                             <div class="row vertical-divider">
-                                <div class="col-md-8">
-                                    <article class="row wow fadeIn animated">
-                                        <div class="col-md-4">
-                                            <figure class="mb-md-0 mb-sm-3">
-                                                <img src="http://via.placeholder.com/600x600" alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="col-md-8 pl-0">
-                                            <div class="entry-meta meta-0 mb-15 font-small">
-                                                <a href="category.html"><span class="post-cat position-relative"># Technology</span></a>
-                                            </div>
-                                            <h6 class="post-title mb-20 font-weight-bold">
-                                                <a href="single.html">The Endgame for LinkedIn Is Coming</a>
-                                            </h6>
-                                            <p class="excerpt mb-0">
-                                                Every time this LinkedIn commercial pops up on YouTube I am reminded of how low the company has fallen to.
-                                            </p>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="horizontal-divider mt-15 mb-15"></div>
-                                        </div>
-                                    </article>
-                                    <article class="row wow fadeIn animated">
-                                        <div class="col-md-4">
-                                            <figure class="mb-md-0 mb-sm-3">
-                                                <img src="http://via.placeholder.com/600x600" alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="col-md-8 pl-0">
-                                            <div class="entry-meta meta-0 mb-15 font-small">
-                                                <a href="category.html"><span class="post-cat position-relative"># Music</span></a>
-                                            </div>
-                                            <h6 class="post-title mb-20 font-weight-bold">
-                                                <a href="single.html">Neuroscience Says Listening to This Song Reduces Anxiety by Up to 65 Percent</a>
-                                            </h6>
-                                            <p class="excerpt mb-0">
-                                                After a calamitous drop in March, the stock market has had a ferocious rally, despite a cascade of awful news. How can investors cope?
-                                            </p>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="horizontal-divider mt-15 mb-15"></div>
-                                        </div>
-                                    </article>
-                                    <article class="row wow fadeIn animated">
-                                        <div class="col-md-4">
-                                            <figure class="mb-md-0 mb-sm-3">
-                                                <img src="http://via.placeholder.com/600x600" alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="col-md-8 pl-0">
-                                            <div class="entry-meta meta-0 mb-15 font-small">
-                                                <a href="category.html"><span class="post-cat position-relative"># Entertainment</span></a>
-                                            </div>
-                                            <h6 class="post-title mb-20 font-weight-bold">
-                                                <a href="single.html">I Have A Theory That Donald Glover And Childish Gambino Are Secretly The Same Person</a>
-                                            </h6>
-                                            <p class="excerpt mb-0">
-                                                For anyone who doesn’t know who these 2 dudes are, Donald Glover is a beloved actor/writer/comedian and Childish Gambino is a popular musician.
-                                            </p>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="horizontal-divider mt-15 mb-15"></div>
-                                        </div>
-                                    </article>
-                                    <article class="row wow fadeIn animated">
-                                        <div class="col-md-4">
-                                            <figure class="mb-md-0 mb-sm-3">
-                                                <img src="http://via.placeholder.com/600x600" alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="col-md-8 pl-0">
-                                            <div class="entry-meta meta-0 mb-15 font-small">
-                                                <a href="category.html"><span class="post-cat position-relative">World</span></a>
-                                            </div>
-                                            <h6 class="post-title mb-20 font-weight-bold">
-                                                <a href="single.html">Half a million people have seen me naked</a>
-                                            </h6>
-                                            <p class="excerpt mb-0">
-                                                Twitch has quickly become a household name after its acquisition by Amazon. You can watch strangers livestream just about anything these days, working out, body painting; you can even tune in and watch someone else eating.
-                                            </p>
-                                        </div>
-                                    </article>
+                                <div id="MostView" class="col-md-8">
+
                                 </div>
-                                <div class="col-md-4">
-                                    <article class="wow fadeIn animated">
-                                        <figure class="mb-15">
-                                            <a href="single.html">
-                                                <img src="http://via.placeholder.com/900x670" alt="">
-                                            </a>
-                                        </figure>
-                                        <h6 class="post-title font-weight-bold mb-10">
-                                            <a href="single.html">What Is Your True ‘Character’? And Who’s to Judge It?</a>
-                                        </h6>
-                                        <p class="excerpt">
-                                            Marjorie Garber’s new book prods at confusion surrounding the word — its philosophical roots, literary history, political uses and inadvertent comedy..
-                                        </p>
-                                        <div class="horizontal-divider mt-15 mb-15"></div>
-                                    </article>
-                                    <article class="wow fadeIn animated">
-                                        <h6 class="post-title mb-10 font-weight-bold">
-                                            <a href="single.html">    How the United Arab Emirates Set Its Sights on Mars</a>
-                                        </h6>
-                                        <p class="excerpt mb-0">
-                                            he launch of the Hope orbiter was delayed because of weather. The goal is for it to make contributions to research on the red planet.
-                                        </p>
-                                        <div class="horizontal-divider mt-15 mb-15"></div>
-                                    </article>
-                                    <article class="wow fadeIn animated">
-                                        <h6 class="post-title mb-10 font-weight-bold">
-                                            <a href="single.html">A Big California Quake Just Got ‘a Little Likelier’</a>
-                                        </h6>
-                                        <p class="excerpt mb-0">
-                                            A new analysis puts the likelihood of an earthquake slightly higher than earlier forecasts.
-                                        </p>
-                                        <div class="horizontal-divider mt-15 mb-15"></div>
-                                    </article>
-                                    <article class="wow fadeIn animated">
-                                        <h6 class="post-title mb-10 font-weight-bold">
-                                            <a href="single.html">A Record 5.4 Million Americans Have Lost Health Insurance</a>
-                                        </h6>
-                                        <p class="excerpt mb-0">
-                                            California’s governor announced a sweeping rollback of the state’s reopening and Los Angeles and San Diego school districts will be online-only in the fall.
-                                        </p>
-                                    </article>
+                                <div id="myFig" class="col-md-4">
+
                                 </div>
                             </div>
                             <!--Start pagination -->
@@ -851,10 +493,15 @@
                                     <span>Author Award</span>
                                 </h6>
                                 <div class="author-content text-center">
-                                    <a href="author.html"><img class="img-circle d-inline-block mb-10" src="http://via.placeholder.com/133x133" alt=""></a>
-                                    <p><img src="assets/imgs/authors/sign.png" alt=""></p>
+                                    <a href="author.html"><img class="img-circle d-inline-block mb-10" src="../assets/images/Omid.PNG" alt=""></a>
+                                    <p><img src="../assets/imgs/authors/sign.png" alt=""></p>
                                     <p>
-                                        You should write because you love the shape of stories and sentences and the creation of different words on a page. Writing comes from reading, and reading is the finest teacher of how to write.
+                                        Omid is the creative mind behind Kandlus,
+                                         where he shares his passion for Ancient civilization, Decoding mysteries, Matrix theory etc..
+                                          With over a decade of experience in the field,
+                                           Omid combines her expertise and personal experiences to deliver engaging,
+                                            informative, and inspiring content to his readers.
+
                                     </p>
                                     <ul class="header-social-network d-inline-block list-inline font-small">
                                         <li class="list-inline-item"><a class="social-icon facebook-icon text-xs-center" target="_blank" href="#"><i class="ti-facebook"></i></a></li>
@@ -867,59 +514,10 @@
                             </div>
                             <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
                                 <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                    <span>Most comments</span>
+                                    <span></span>
                                 </h6>
                                 <div class="post-block-list post-module-1 post-module-5">
-                                    <ul class="list-post">
-                                        <li class="mb-15">
-                                            <div class="d-flex">
-                                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                                    <a class="color-white" href="single.html">
-                                                        <img src="http://via.placeholder.com/600x600" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="post-content media-body">
-                                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html">How I Made $11,000 From Writing in 30 Days</a></h6>
-                                                    <div class="entry-meta meta-1 font-x-small color-grey mt-10">
-                                                        <span class="post-on mr-15">25 April</span>
-                                                        <span class="hit-count has-dot">54k Views</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="mb-15">
-                                            <div class="d-flex">
-                                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                                    <a class="color-white" href="single.html">
-                                                        <img src="http://via.placeholder.com/600x600" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="post-content media-body">
-                                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html">Incognito Mode Won’t Keep Your Browsing Private</a></h6>
-                                                    <div class="entry-meta meta-1 font-x-small color-grey mt-10">
-                                                        <span class="post-on mr-15">25 April</span>
-                                                        <span class="hit-count has-dot">54k Views</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex">
-                                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                                    <a class="color-white" href="single.html">
-                                                        <img src="http://via.placeholder.com/600x600" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="post-content media-body">
-                                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html">So You Want To Know The Cause of Avicii’s Death?</a></h6>
-                                                    <div class="entry-meta meta-1 font-x-small color-grey mt-10">
-                                                        <span class="post-on mr-15">25 April</span>
-                                                        <span class="hit-count has-dot">54k Views</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <!--Ads-->
                                 </div>
                             </div>
                             <div class="sidebar-widget widget_newsletter wow fadeIn animated">
@@ -948,14 +546,21 @@
     </main>
     <!-- End Main content -->
     <!-- Footer Start-->
-    <section id="searchPage">
-        <h1>Search</h1>
-        <p>Search is based on all categories</p>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Enter your search">
-            <div id="results"></div>
-        </div>
-    </section>
+    <main id="mainSearch" class="mt-30">
+        <div class="container">
+            <section id="searchPage" >
+                <h1>Search</h1>
+                <p>Search is based on all categories</p>
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="Enter your search">
+                    <div id="results"></div>
+                </div>
+            </section>
+         </div>
+    </main>
+        
+    </div>
+    
     <!-- Footer Start-->
     <footer>
         <div class="footer-area">
@@ -1133,6 +738,7 @@
     <!-- NewsBoard JS -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/articles/articleScript.js"></script>
+    <script src="../assets/js/search.js"></script>
 </body>
 
 </html>

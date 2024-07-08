@@ -1,0 +1,48 @@
+#mainSearch {
+   
+#searchPage {
+    display: none;
+    width: 90%;
+    margin-left: 5%;
+    height: 40rem;
+    h1{
+        color: white;
+    }
+    p{
+        color: $main-paraf;
+    }
+    .search-container{
+        input{
+            width: 100%;
+            border-radius: 6px;
+            height: 1.7rem;
+            background-color: $box-background;
+            border: none;
+            color: $main-paraf;
+        }
+        #results{
+            color: $main-paraf;
+            ul{
+                margin: 0;
+                padding: 0;
+                li{
+                    list-style: none;
+                    margin: 3px 0 2px 0;
+                    a{
+                        color: $main-paraf;
+                        text-decoration: none;
+                        cursor: pointer;
+                        &:hover{
+                            color: $hgroup;
+                        }
+                    }
+                }
+                .WidthHr{
+                    min-width: 100%;
+                    border: 1px dotted $Butoon;
+                }
+            }
+        }
+    }
+}
+}

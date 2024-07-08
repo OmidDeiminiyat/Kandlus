@@ -3163,4 +3163,48 @@ spinner6
 #ThreeCards figure hgroup :nth-child(2) {
   width: 40%;
   color: #c9a56e;
+}
+
+#mainSearch #searchPage {
+  display: none;
+  width: 90%;
+  margin-left: 5%;
+  height: 40rem;
+}
+#mainSearch #searchPage h1 {
+  color: white;
+}
+#mainSearch #searchPage p {
+  color: #CAC3BC;
+}
+#mainSearch #searchPage .search-container input {
+  width: 100%;
+  border-radius: 6px;
+  height: 1.7rem;
+  background-color: #332f2b;
+  border: none;
+  color: #CAC3BC;
+}
+#mainSearch #searchPage .search-container #results {
+  color: #CAC3BC;
+}
+#mainSearch #searchPage .search-container #results ul {
+  margin: 0;
+  padding: 0;
+}
+#mainSearch #searchPage .search-container #results ul li {
+  list-style: none;
+  margin: 3px 0 2px 0;
+}
+#mainSearch #searchPage .search-container #results ul li a {
+  color: #CAC3BC;
+  text-decoration: none;
+  cursor: pointer;
+}
+#mainSearch #searchPage .search-container #results ul li a:hover {
+  color: #c9a56e;
+}
+#mainSearch #searchPage .search-container #results ul .WidthHr {
+  min-width: 100%;
+  border: 1px dotted #FECFA7;
 }/*# sourceMappingURL=myStyle.css.map */
