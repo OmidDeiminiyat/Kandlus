@@ -34,7 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
       });
        console.log('Email is:' + checkEmail[0].email); // Do something with the fetched data
        if (Emails === checkEmail[0].email && password === checkEmail[0].Password) {
-        onLoginSuccess()
+        onLoginSuccess('Kandlus-users', checkEmail[0].Code, 3 )
            
         alert('Login successful!');
         // Redirect to another page or perform other actions here
@@ -58,14 +58,17 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
   }
   
-  const users = 'Kandlus-users';
-  const code = 'omid@yahoo.com';
-  const Email = 'omid@yahoo.com';
+  // const users = 'Kandlus-users';
+  // const code = 'omid@yahoo.com';
+  // const Email = 'omid@yahoo.com';
   
   // Example usage: Set the auth token when the user logs in
   
   
-  function onLoginSuccess(authToken) {
-    setCookie(users, code, 3); // Set cookie for 3 days
+  function onLoginSuccess(dataOne, DataTwo, DataThree) {
+    const users = dataOne;
+    const code = DataTwo;
+    const Duration = DataThree;
+    setCookie(users, code, Duration); // Set cookie for 3 days
   }  
   

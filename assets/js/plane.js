@@ -1,6 +1,12 @@
 
+var url = window.location.href;
 
-  // Function to get a cookie by name
+var urlObj = new URL(url);
+
+var id = urlObj.searchParams.get('id');
+console.log(id);
+checkAutoLogin()
+
 function getCookie(Name) {
     const nameEQ = Name + "=";
     const cookiesArray = document.cookie.split(';');
@@ -12,8 +18,8 @@ function getCookie(Name) {
     }
     return null;
   }
-  
-  function checkAutoLogin() {
+
+function checkAutoLogin() {
     const authToken = getCookie('Kandlus-users');
     
     if (authToken) {
@@ -29,7 +35,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
      //console.log(NewReciData); // Do something with the fetched data
      if (dataAst) {
         console.log('Data Ast:' + dataAst[0]);
-        autoLoginUser(dataAst[0]);
+        callForUpdate(dataAst[0]);
      } else {
         // Token is invalid, delete the cookie
         setCookie('Kandlus-users', '', -1);
@@ -41,46 +47,10 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     }
   }
 
-  function autoLoginUser(user) {
-    // Perform actions to log in the user, such as updating UI, storing user info in state, etc.
-    console.log('User auto-logged in:', user.name);
-    var sessionName = user.name;
-    var sessionPlan = user.Plan;
-    sessionStorage.setItem('User-name', sessionName);
-    sessionStorage.setItem('Plan', sessionPlan);
-    console.log('welcome:' + sessionName);
-    const username = document.getElementById('username');
-    username.innerText = 'Welcome: ' + sessionName;
-    const checkLogins = document.getElementById('checkLogin');
-    checkLogins.style.display= 'none';
+
+
+  function callForUpdate(UserData){
+    console.log('call for update:' + UserData.email);
+
 
   }
-  document.addEventListener('DOMContentLoaded', checkAutoLogin);
-  checkAutoLogin()
-
-
-
-
-
-  function letCookie(name, value, days) {
-    const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    const expires = "expires=" + date.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/;Secure;SameSite=Strict";
-    console.log('cookie');
-  }
-  
-  const guest = 'Kandlus-guest';
-  const guestCode = '8393';
-  
-  // Example usage: Set the auth token when the user logs in
-  
-  
-  function guestVisit() {
-    letCookie(guest, guestCode, 3); // Set cookie for 3 days
-  }  
-
-
-  guestVisit()
-
- 
