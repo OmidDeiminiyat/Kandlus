@@ -223,3 +223,44 @@ function firstHideParaf(){
   }
   
 }
+
+
+
+function mantraPage(){
+  const nature = document.getElementById('nature');
+  const Mantra = document.getElementById('MantraP');
+  const SolfeggioP = document.getElementById('SolfegP');
+  const SolfCard = document.getElementById('SolfegCard');
+  const MantraCard = document.getElementById('MantraCard');
+  Mantra.style.display = 'block';
+  SolfeggioP.style.display = 'none';
+  nature.style.display = 'none';
+  SolfCard.style.display = 'block';
+  MantraCard.style.display = 'none'
+
+}
+
+function SolfegCard(){
+  const nature = document.getElementById('nature');
+  const Mantra = document.getElementById('MantraP');
+  const SolfeggioP = document.getElementById('SolfegP');
+  Mantra.style.display = 'none';
+  SolfeggioP.style.display = 'block';
+  nature.style.display = 'none';
+  const SolfCard = document.getElementById('SolfegCard');
+  const MantraCard = document.getElementById('MantraCard');
+   SolfCard.style.display = 'none';
+  MantraCard.style.display = 'block'
+}
+
+function Nature(){
+  const nature = document.getElementById('nature');
+  const Mantra = document.getElementById('MantraP');
+  const SolfeggioP = document.getElementById('SolfegP');
+  Mantra.style.display = 'none';
+  SolfeggioP.style.display = 'none';
+  nature.style.display = 'block';
+}
+function Podcast() {
+  window.location.href = 'Podcast.html';
+}
