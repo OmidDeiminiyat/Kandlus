@@ -133,3 +133,18 @@ document.addEventListener('DOMContentLoaded', () => {
         allInOne.style.display ='none';
         searchPage.style.display = 'block';
     }
+
+
+function Annually() {
+    const annual = document.getElementById('Aanually');
+    const month = document.getElementById('Monthly');
+        annual.style.display = 'none';
+        month.style.display = 'block';
+   
+  }
+  function monthly() {
+    const annual = document.getElementById('Aanually');
+    const month = document.getElementById('Monthly');
+    annual.style.display = 'block';
+    month.style.display = 'none';
+  }

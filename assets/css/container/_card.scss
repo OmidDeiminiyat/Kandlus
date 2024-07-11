@@ -28,8 +28,16 @@ $firaSans: 'Fira Sans', sans-serif;
   align-items: center;
   margin: 51px 0 51px 0;
   padding: 0;
-  
   color: #1F1D42;
+  h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0;
+}
   @media(max-width:600px){
     display: grid;
     grid-template-columns: 1fr;
@@ -41,15 +49,6 @@ $firaSans: 'Fira Sans', sans-serif;
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 800;
-  margin-top: 0;
-  margin-bottom: 0;
-}
 
 
 .card-hover {
@@ -219,4 +218,142 @@ h5 {
 }
 #SolfegCard {
   display: none;
+}
+
+
+
+
+//  Price from here
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+#prices {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  color: $main-paraf;
+}
+
+#Aanually {
+  h1 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+#Monthly {
+  h1 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .plan {
+    background-color: #282626;
+    padding: 2.5rem;
+    margin: 12px;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      margin-bottom: 1rem;
+      font-size: 30px;
+    }
+   
+    ul.features {
+      list-style-type: none;
+      text-align: left;
+      li {
+        margin: 8px;
+        .fas {
+          margin-right: 4px;
+        }
+        .fa-check-circle {
+          color: #6ab04c;
+        }
+        .fa-times-circle {
+          color: #eb4d4b;
+        }
+      }
+    }
+
+    button {
+      border: none;
+      width: 100%;
+      padding: 12px 35px;
+      margin-top: 1rem;
+      background-color: #6ab04c;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      &:hover{
+        background-color: #6ab04c30;
+      color: #6ab04c;
+      }
+      a{
+        color: white;
+      }
+    }
+
+    &.popular {
+      border: 2px solid #6ab04c;
+      position: relative;
+      transform: scale(1.08);
+
+      span {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #6ab04c;
+        color: #fff;
+        padding: 4px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+    }
+
+    &:hover {
+      box-shadow: 5px 7px 67px -28px rgba(0, 0, 0, 0.37);
+    }
+  }
+}
+.anual {
+  border: none;
+  width: 6%;
+  padding: 12px 35px;
+  margin-top: 1rem;
+  background-color: #6ab04c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  @media(max-width:600px) {
+    width: 12%;
+  }
+  &:hover{
+    background-color: #6ab04c72;
+  color: #6ab04c;
+  }
+}
+#Monthly{
+display: none;
 }
