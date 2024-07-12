@@ -357,3 +357,23 @@ h5 {
 #Monthly{
 display: none;
 }
+
+#allCont {
+  display: none;
+}
+
+#preImage {
+  position: relative;
+  img{
+    cursor: pointer;
+  }
+  h1{
+    display: none;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    color: red;
+    top: 30%;
+    text-align: center;
+  }
+}

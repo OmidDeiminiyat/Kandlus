@@ -315,6 +315,12 @@
         <main>
             <section id="All_sec" >
                 <section id="right-s" class="right-s content">
+                    <div id="preImage" class="right-s content">
+                        <img id="scim" onclick="preImg()" src="../assets/images/podcast/Solfeg-librarry.png" alt="">
+                        <h1 id="hno1">This service can only be used with the plan: Standard</h1>
+                    </div>
+                    <span id="allCont" >
+                        
                     <div id="SolfegP" class="StartPlayer" >
                         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
                         <div class="elfsight-app-e5bd0174-767c-4313-94ca-b6ea48614241" data-elfsight-app-lazy></div>
@@ -325,7 +331,7 @@
                         <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
                         <div class="elfsight-app-e5bd0174-767c-4313-94ca-b6ea48614241" data-elfsight-app-lazy></div>
                     </div>
-
+                    </span>
                     <div id="nature" class="StartPlayer">
                         <h1>nature here</h1>
                     </div>
@@ -336,7 +342,7 @@
                                 Listen to <span>mantra</span> right now!
                             </h3>
                             <p class="card-hover__text">A mantra is a numerical sound made by practitioners that is believed to have spiritual powers.</p>
-                            <a href="#" class="card-hover__link">
+                            <a id="listen" href="#" class="card-hover__link">
                                 <span onclick="mantraPage()">Listen now</span>
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -355,7 +361,7 @@
                                 Listen to <span>9 main solfeggio</span>
                             </h3>
                             <p class="card-hover__text">A mantra is a numerical sound made by practitioners that is believed to have spiritual powers.</p>
-                            <a href="#" class="card-hover__link">
+                            <a id="listen-1" href="#" class="card-hover__link">
                                 <span onclick="SolfegCard()">Listen now</span>
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -373,7 +379,7 @@
                                 Listen to the <span>nature</span> 
                             </h3>
                             <p class="card-hover__text">Give your brain time to recover from mental fatigue by listening to the sounds of nature, leading to increased productivity and creativity.</p>
-                            <a href="#" class="card-hover__link">
+                            <a id="listen-2" href="#" class="card-hover__link">
                                 <span onclick="Nature()" >Learn How</span>
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -391,7 +397,7 @@
                                 Week in <span>Review</span> every Friday!
                             </h3>
                             <p class="card-hover__text">Join me every Friday as i break down the latest in news, politics, culture, and technology, providing insightful analysis and expert commentary. </p>
-                            <a href="#" class="card-hover__link">
+                            <a id="listen-3" href="#" class="card-hover__link">
                                 <span onclick="Podcast()" >Listen now</span>
                                 <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -403,9 +409,8 @@
                             </div>
                             <img src="../assets/images/podcast/Podcast-Kandlus.png" alt="">
                         </div>
-                        
+                       
                     </section>
-
                 </section>
                 <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
                     <div class="widget-area">
@@ -634,6 +639,7 @@
    <script src="../assets/js/landingNav.js"></script>
   <script src="../assets/js/articles/HomeArticle.js"></script>
   <script src="../assets/js/articles/blogAstro.js"></script>
+  <script src="../assets/js/podcast/Solfeggio.js"></script>
 </body>
 
 </html>

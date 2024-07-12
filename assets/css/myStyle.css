@@ -2405,6 +2405,10 @@
      overflow: auto;
  }
 */
+body {
+  max-width: 100%;
+}
+
 .spinner-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -3486,4 +3490,24 @@ spinner6
 
 #Monthly {
   display: none;
+}
+
+#allCont {
+  display: none;
+}
+
+#preImage {
+  position: relative;
+}
+#preImage img {
+  cursor: pointer;
+}
+#preImage h1 {
+  display: none;
+  position: absolute;
+  width: 80%;
+  margin-left: 10%;
+  color: red;
+  top: 30%;
+  text-align: center;
 }/*# sourceMappingURL=myStyle.css.map */
