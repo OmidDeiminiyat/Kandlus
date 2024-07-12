@@ -1,10 +1,5 @@
 
-var url = window.location.href;
 
-var urlObj = new URL(url);
-
-var id = urlObj.searchParams.get('id');
-console.log(id);
 checkAutoLogin()
 
 function getCookie(Name) {
@@ -47,10 +42,28 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     }
   }
 
-
+  import updateSubscribeTable from './controller/updateSubscribe.js';
 
   function callForUpdate(UserData){
     console.log('call for update:' + UserData.email);
-
+   
+    const Code = UserData.Code;
+  const updatedData = { Plan: 'Pro' };
+  
+  updateSubscribeTable(Code, updatedData);
 
   }
+  
+
+  
+
+
+// main.js
+
+
+
+
+
+
+
+  
