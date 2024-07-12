@@ -51,10 +51,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
      if (dataAst.length === 0) {
       newUser(username.value, emailInput.value, passwordInput.value);
       console.log('Email not exist');
-      
+      form.style.display = 'none';
      } else {
         // Token is invalid, delete the cookie
         console.log('Email already exist');
+        emailError.textContent = 'Email is already exist.';
       }
   })
   .catch(error => {
@@ -101,8 +102,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 import insertIntoSubscribeTable from './controller/insertSubscribe.js';
 function newUser(userN, userE, pas) {
   // Your newUser function logic here
-  const generated = userN.length + userE.length + pas.length / 3 * 12;
-
+  const letGenerate = userN.length * 21 + userE.length * 38 + pas.length / 3 * 18;
+  const generated = userN + letGenerate;
+  setCookie('Kandlus-users', generated, 3 )
   console.log(generated);
   const newData = {
     name: userN,
@@ -118,5 +120,21 @@ function newUser(userN, userE, pas) {
 }
 
 
+
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/;Secure;SameSite=Strict";
+  console.log('cookie');
+  window.location.href = 'Price.html';
+
+}
+
+// const users = 'Kandlus-users';
+// const code = 'omid@yahoo.com';
+// const Email = 'omid@yahoo.com';
+
+// Example usage: Set the auth token when the user logs in
 
 

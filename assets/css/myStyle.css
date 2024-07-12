@@ -734,6 +734,7 @@
 }
 #All_sec .right-s .DivFig figure figcaption .Error {
   display: none;
+  margin-top: 30px;
 }
 #All_sec .right-s .DivFig figure figcaption .Error p {
   color: red;

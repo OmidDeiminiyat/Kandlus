@@ -30,7 +30,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
      if (dataAst) {
         console.log('Data Ast:' + dataAst[0]);
         callForUpdate(dataAst[0]);
-        sessionStorage.setItem('Plan', 'Basic');
+        sessionStorage.setItem('Plan', 'Standard');
      } else {
         // Token is invalid, delete the cookie
         setCookie('Kandlus-users', '', -1);

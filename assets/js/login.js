@@ -36,7 +36,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
        if (Emails === checkEmail[0].email && password === checkEmail[0].Password) {
         onLoginSuccess('Kandlus-users', checkEmail[0].Code, 3 )
            
-        alert('Login successful!');
         // Redirect to another page or perform other actions here
     } else {
         errorMessage.textContent = 'Invalid username or password';
