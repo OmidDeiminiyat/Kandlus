@@ -3177,10 +3177,11 @@ spinner6
   font-size: 100%;
 }
 
+/*
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+*/
 .card {
   -webkit-text-size-adjust: 100%;
   font-variant-ligatures: none;
