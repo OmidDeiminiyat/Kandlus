@@ -27,40 +27,48 @@ singlePageArticle(data)
 
 
   function singlePageArticle(showVideo) {
- const insideFigure = document.getElementById('insideFigure');
+    const cateTwo = document.getElementById('categor');
+    const tit = document.getElementById('titleArt');
+    const informs = document.getElementById('inform');
+    const imageArt = document.getElementById('articleImage');
+    const Describ = document.getElementById('letDescribe');
  const maintextOne = document.getElementById('mainTextOne');
  const maintextTwo = document.getElementById('mainTextTwo');
  const maintextThree = document.getElementById('mainTextThree');
  const AllTags = document.getElementById('Article_tags');
-    insideFigure.innerHTML = ''
+   
 
 showVideo.forEach((getData, index) => {
-    let allInsides = `<h1>${getData.title}</h1>
-                        <img src="../assets/images/Articles/width/${getData.image}" alt="${getData.categoryOne} , ${getData.categoryTwo}, ${getData.tagOne}, ${getData.tagTwo}">
-                        <figcaption>
-                            <div class="AllIcpns" >
-                                <div>
-                                    <span><i class="material-symbols-outlined">visibility</i> ${getData.score} </span> 
-                                    <span><i class="material-symbols-outlined"> edit_note </i> ${getData.channel} </span>
-                                    <span><i class="material-symbols-outlined"> save </i> Save</span>
-                                </div>
-                                <div class="Socials">
-                                    <span> <img src="../assets/images/icons/facebook-2.png" alt="">  <img src="../assets/images/icons/instagram.png" alt="">  </span>
-                                </div>
-                            </div>
-                            <p class="Description"> ${getData.describtion}
-                            </p>
-                        </figcaption>`
-                insideFigure.innerHTML = allInsides;
+  let teoCat = `<a href="category.html"><span class="post-cat position-relative"># ${getData.categoryOne}</span></a>
+                <a href="category.html"><span class="post-cat position-relative"># ${getData.categoryTwo}</span></a>`
+      cateTwo.innerHTML= teoCat;           
+      tit.innerHTML=getData.title;
+      let insideInforms = `<div class="entry-meta align-items-center meta-2 font-small color-muted">
+                                    <p class="mb-5">
+                                        <a class="author-avatar" href="#"><img class="img-circle" src="../../imagess/kandlus.png" alt=""></a>
+                                        By <a href="#"><span class="author-name font-weight-bold color-black">${getData.channel}</span></a>
+                                    </p>
+                                    <span class="mr-10"> ${getData.created_at}</span>
+                                    <span class="has-dot"> ${getData.score} views</span>
+                                </div>`
+       informs.innerHTML = insideInforms;
+       imageArt.innerHTML = `<img src="../assets/images/Articles/megaW/${getData.image}" alt="${getData.categoryOne}, ${getData.categoryTwo}, ${getData.tagOne}, ${getData.tagTwo}, ${getData.tagThree}">`       
+       Describ.innerHTML = getData.describtion;                  
                 maintextOne.innerHTML = getData.maintextOne;
                 maintextTwo.innerHTML = getData.maintextTwo;
                 maintextThree.innerHTML = getData.maintextThree;
-                let tagList = `<a href="tags.html?id=${getData.tagOne}"> ${getData.tagOne} </a> <a href="tags.html?id=${getData.tagTwo}"> ${getData.tagTwo} </a> <a href="tags.html?id=${getData.tagThree}"> ${getData.tagThree} </a>`
+                let tagList = `<a href="Tag.html?id=${getData.tagOne}" rel="tag">${getData.tagOne}</a>
+                                <a href="Tag.html?id=${getData.tagTwo}" rel="tag">${getData.tagTwo}</a>
+                                <a href="Tag.html?id=${getData.tagThree}" rel="tag">${getData.tagThree}</a>`
                 AllTags.innerHTML = tagList;
                 relatedArticle(getData.categoryOne)
                 popularArticles(getData.score)
 })
+}
 
+function onScrollTo1200px() {
+  // console.log('You have scrolled to the point!');
+  relatedArticle();
 }
 
 
@@ -86,22 +94,34 @@ function relatedArticle(recivDatp) {
   
   }
   function relatedArticleByCategory(relatedData){
-    const realtedPost = document.getElementById('realtedPost');
-    const limiteddescrib = limitWords(relatedData[0].describtion); 
-    let trelatedIns = `<a href="singlePage.html?id=${relatedData[0].seo}"> <figure>
-                            <img src="../assets/images/Articles/width/${relatedData[0].image}" alt="">
-                        </figure>
-                        <article>
-                            <header><h1>${relatedData[0].title} </h1>
-                                <p>${limiteddescrib}
-                                </p>
-                                <div class="Article_tags singlePost">
-                                    <a href="tags.html?id=${relatedData[0].tagOne}">${relatedData[0].tagOne} </a>
-                                    <a href="tags.html?id=${relatedData[0].tagTwo}">${relatedData[0].tagTwo}</a>
-                                </div>
-                            </header>
-                        </article></a>`
-                        realtedPost.innerHTML = trelatedIns;
+    const realtedPost = document.getElementById('related-posts');
+    realtedPost.innerHTML = ''
+    let relatedinside = ` <h3 class="mb-30">Related articles</h3>
+                            <div class="loop-list">`
+    relatedData.slice(0, 3).forEach((itemsRelat, index) => {
+    const limiteddescrib = limitWords(itemsRelat.describtion); 
+    relatedinside += `<article class="row mb-30 wow fadeIn animated">
+                                    <div class="col-md-4">
+                                        <div class="post-thumb position-relative thumb-overlay mb-md-0 mb-3">
+                                            <div class="img-hover-slide border-radius-5 position-relative" style="background-image: url('../../assets/images/Articles/width/${itemsRelat.image}')">
+                                                <a class="img-link" href="single.html"></a>
+                                                <span class="top-right-icon background8"><i class="mdi mdi-flash-on"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 align-center-vertical">
+                                        <div class="post-content">
+                                            <div class="entry-meta meta-0 font-small mb-15"><a href="category.html?id=${itemsRelat.categoryOne}"><span class="post-cat background2 color-white"># ${itemsRelat.categoryOne}</span></a></div>
+                                            <h4 class="post-title mb-15">
+                                                <a href="single.html?id=${itemsRelat.seo}">${itemsRelat.title}</a>
+                                            </h4>
+                                            <p class="font-medium excerpt">${limiteddescrib} ...</p>
+                                        </div>
+                                    </div>
+                                </article>`
+      });
+      relatedinside += `</div>`
+      realtedPost.innerHTML = relatedinside;
   }
 
 function rightSideThree(firstData) {
@@ -126,7 +146,8 @@ function rightSideThree(firstData) {
 }
 
 
-
+fetchAndSortData()
+// you might be intrested
   async function fetchAndSortData() {
     const supabaseUrl = 'https://bfrnndgsghbkfrbbzuuk.supabase.co';
     const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU';
@@ -152,6 +173,8 @@ function rightSideThree(firstData) {
       // Output sorted data
       // console.log('New test:' +  data);
       forArticlesD(data)
+      randomArt(data)
+      Decod(data)
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -159,30 +182,39 @@ function rightSideThree(firstData) {
   
   function forArticlesD(forItemsD) {
     console.log(forItemsD);
-    const ForItemsD = document.getElementById('secondSection');
+    const ForItemsD = document.getElementById('intrested');
     ForItemsD.innerHTML = ''
-    let inForItemD = ` <div class="fourElements">`
-    forItemsD.forEach((dataFour, index) => {
+    let inForItemD = ` <ul class="list-post">`
+    forItemsD.slice(3,5).forEach((dataFour, index) => {
       console.log(dataFour);
       const ShortedD = limitWords(dataFour.describtion)
-      inForItemD += `<figure> <a href="singlePage.html?id=${dataFour.seo}">
-                           <img src="../assets/images/Articles/width/${dataFour.image}" alt="">
-                           <figcaption>
-                               <h3>${dataFour.title}</h3>
-                               <p>${ShortedD}</p>
-                               <div> <a href="tags.html?id=${dataFour.tagOne}">${dataFour.tagOne}</a>, <a href="tags.html?id=${dataFour.tagTwo}">${dataFour.tagTwo}</a> </div>
-                           </figcaption>
-                           </a></figure>`
+      inForItemD += `<li class="mb-15">
+                                        <div class="d-flex">
+                                            <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
+                                                <a class="color-white" href="single.html">
+                                                    <img src="../assets/images/Articles/width/${dataFour.image}" alt="${dataFour.categoryOne}, ${dataFour.categoryTwo}, ${dataFour.tagOne}, ${dataFour.tagTwo}, ${dataFour.tagThree}">
+                                                </a>
+                                            </div>
+                                            <div class="post-content media-body">
+                                                <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html?id=${dataFour.seo}">${dataFour.title}</a></h6>
+                                                <div class="entry-meta meta-1 font-x-small color-grey">
+                                                    <span class="post-on">${dataFour.created_at}</span>
+                                                    <span class="hit-count has-dot">${dataFour.score} Views</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>`
     })
-    inForItemD += `</div>`
+    inForItemD += `</ul>`
     ForItemsD.innerHTML=inForItemD;
   }
   
   // we call api when scrol down reached the half of the page
   function onScrollTo1200px() {
-    // console.log('You have scrolled to the point!');
+   
     fetchAndSortData();
   }
+    
   const pageHeight = document.documentElement.scrollHeight;
   const claculHight = pageHeight / 2; 
 console.log(`Page height is: ${claculHight}px`);
@@ -194,9 +226,6 @@ console.log(`Page height is: ${claculHight}px`);
       window.removeEventListener('scroll', arguments.callee);
     }
   });
-
-
-  
 
    // Function to be called when the element with id="test" is reached
    function onReachTestElement(entries, observer) {
@@ -214,58 +243,81 @@ console.log(`Page height is: ${claculHight}px`);
     threshold: 0.1 
   });
 
-  const targetElement = document.getElementById('AncientLine');
+    // use this function for load when id observed
+  /*
+    const targetElement = document.getElementById('MostPopular');
+    observer.observe(targetElement);
 
-  observer.observe(targetElement);
-
-function observId() {
-const myCategories = 'Decoding';
-  fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?categoryOne=eq.${myCategories}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU' // Replace 'your-api-key' with your actual Supabase API key
+    function observId() {
     }
-  })
-  .then(response => response.json())
-  .then(obsData => {
-    bservedIt(obsData)
-  
-  
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
-  
-}
-function bservedIt(besIremR) {
-  console.log(besIremR);
-  const inAncient = document.getElementById('AncientCivilization');
+*/
+
+
+function randomArt(besIremR) {
+  const inAncient = document.getElementById('MostPopular');
   inAncient.innerHTML = ''
-  let typTwo = ``
-  besIremR.forEach((obseIteR, index) => {
+  let typTwo = `<ul class="list-post">`
+  besIremR.slice(0,3).forEach((obseIteR, index) => {
     const ShortSheyda = Limitosho(obseIteR.describtion);
-    typTwo += `<div class="TwoAncient">
-                        <figure>
-                            <img src="../assets/images/Articles/width/${obseIteR.image}" alt="">
-                        </figure>
-                         <article>
-                            <hgroup>
-                                <h3>${obseIteR.title}</h3>
-                                <p>${ShortSheyda}</p>
-                                <div class="views">
-                                    <span class="material-symbols-outlined"> visibility </span> 33
-                                    <span class="material-symbols-outlined"> schedule </span>33.12.2024
-                                </div>
-                                <a href="singlePage.html?id=${obseIteR.seo}"> Read article</a>
-                            </hgroup>
-                        </article></div>`
+    typTwo += `<li class="mb-15">
+                                        <div class="d-flex">
+                                            <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
+                                                <a class="color-white" href="single.html">
+                                                    <img src="../assets/images/Articles/width/${obseIteR.image}" alt="${obseIteR.categoryOne}, ${obseIteR.categoryTwo}, ${obseIteR.tagOne}, ${obseIteR.tagTwo}, ${obseIteR.tagThree}">
+                                                </a>
+                                            </div>
+                                            <div class="post-content media-body">
+                                                <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html?id=${obseIteR.seo}">${obseIteR.title}</a></h6>
+                                                <div class="entry-meta meta-1 font-x-small color-grey mt-10">
+                                                    <span class="post-on mr-15"><a href="category.html?id=${obseIteR.categoryOne}"> ${obseIteR.categoryOne}</a></span>
+                                                    <span class="hit-count has-dot">${obseIteR.score} Views</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>`
   })
-  typTwo += ``
+  typTwo += `</ul>`
   inAncient.innerHTML = typTwo;
 }
 
 
+function Decod(dataDecod) {
+  const DecoCate = document.getElementById('DecodingCate');
+  const letDecod = dataDecod;
+  const decoders = letDecod.filter(item => item.categoryOne === 'Decoding');
+    decoders.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+    DecoCate.innerHTML = ''
+    let insidDecoder = `<ul class="list-post">`
+    decoders.slice(0,4).forEach((DecoItems, index) => {
+      console.log('Decoding is:' + DecoItems);
+      insidDecoder += `<li class="mb-15">
+                                        <div class="d-flex">
+                                            <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
+                                                <a class="color-white" href="single.html">
+                                                    <img src="../assets/images/Articles/width/${DecoItems.image}" alt="${DecoItems.categoryOne}, ${DecoItems.categoryTwo}, ${DecoItems.tagOne}, ${DecoItems.tagTwo}, ${DecoItems.tagThree}">
+                                                </a>
+                                            </div>
+                                            <div class="post-content media-body">
+                                                <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html?id=${DecoItems.seo}">${DecoItems.title}</a></h6>
+                                                <div class="entry-meta meta-1 font-x-small color-grey mt-10">
+                                                    <span class="post-on mr-15"><a href="category.html?id=${DecoItems.categoryOne}"> ${DecoItems.categoryOne}</a></span>
+                                                    <span class="hit-count has-dot">${DecoItems.score} Views</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>`
+    });
+    insidDecoder += `</ul>`
+    DecoCate.innerHTML = insidDecoder;
+}
 
   function limitWords(shortText) {
     const splitWord = shortText.split(/\s+/);
