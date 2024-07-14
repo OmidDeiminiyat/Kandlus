@@ -2333,6 +2333,12 @@
     margin-top: 10%;
   }
 }
+@media (max-width: 600px) {
+  #Sprituality .MainSpritual .rightSpirit ul .spiritLine {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
 #Sprituality .MainSpritual .rightSpirit ul li {
   list-style: none;
   margin-top: 15px;
