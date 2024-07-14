@@ -25,7 +25,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
 .then(MyCateData => {
 
   const category = MyCateData;
-    const newDatas = category.filter(item => item.categoryOne === id);
+    const newDatas = category.filter(item => item.tagOne === id);
     newDatas.sort((a, b) => {
       if (a.name < b.name) {
         return -1;
@@ -111,7 +111,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
 .then(secData => {
   // console.log(data); // Do something with the fetched data
   const categoryD = secData;
-    const SecondD = categoryD.filter(item => item.categoryOne === id);
+    const SecondD = categoryD.filter(item => item.tagOne === id);
     SecondD.sort((a, b) => {
       if (a.name < b.name) {
         return -1;
@@ -184,7 +184,7 @@ function secondFetch() {
     .then(thirdData => {
       // console.log(data); // Do something with the fetched data
       const categoryB = thirdData;
-      const secondBB = categoryB.filter(item => item.categoryOne === id);
+      const secondBB = categoryB.filter(item => item.tagOne === id);
       secondBB.sort((a, b) => {
         if (a.name < b.name) {
           return -1;

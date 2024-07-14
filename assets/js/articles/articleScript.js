@@ -22,6 +22,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
     mostArticles(NewReciData)
     MostVisited(NewReciData)
     SingleFigure(NewReciData)
+    trendingToday(NewReciData)
   })
   .catch(error => {
     console.error('Error fetching data:', error);
@@ -39,7 +40,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
     secondArticcle.innerHTML = ''
     ThirdArticcle.innerHTML = ''
     forthArticcle.innerHTML = ''
-
+    
  let threemyRow = `<div class="thumb-overlay img-hover-slide transition-04s position-relative" style="background-image: url('../assets/images/Articles/height/${threeData[0].image}')">
                                             <a class="img-link" href="single.html?id=${threeData[1].seo}"></a>
                                             <div class="post-content-overlay transition-04s p-20">
@@ -543,6 +544,32 @@ function SingleFigure(figureData) {
         insidFigSin += `</section>`
         FigSingVie.innerHTML = insidFigSin;
 }
+
+
+function trendingToday(Trends) {
+    const newDatas = Trends;
+    const itemsR = newDatas.sort((a, b) => b.score - a.score);
+ const flash = document.getElementById('firstFlash');
+ const flashTwo = document.getElementById('secondFlash');
+ const flashThree = document.getElementById('thirdFlash');
+ const flashFour = document.getElementById('forthflash');
+  flash.innerHTML = ''
+  flashTwo.innerHTML = ''
+  flashThree.innerHTML = ''
+  flashFour.innerHTML = ''
+
+flash.innerHTML = `<a class="font-large post-title" href="single.html?id=${itemsR[0].seo}">${itemsR[0].title}</a>`;
+flashTwo.innerHTML = `<a class="font-large post-title" href="single.html?id=${itemsR[1].seo}">${itemsR[1].title}</a>`;
+flashThree.innerHTML = `<a class="font-large post-title" href="single.html?id=${itemsR[2].seo}">${itemsR[2].title}</a>`;
+flashFour.innerHTML = `<a class="font-large post-title" href="single.html?id=${itemsR[4].seo}">${itemsR[4].title}</a>`;
+ 
+}
+
+
+
+
+
+
 function limitTextTo50Words(text) {
     const words = text.split(/\s+/);
     const limitedText = words.slice(0, 15).join(' ');

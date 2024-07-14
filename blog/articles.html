@@ -19,9 +19,16 @@
 <body>
     <div class="scroll-progress bg-dark"></div>
     <!-- Start Preloader -->
-    <div class="preloader font-heading">
-        <div class="counter">0</div>
-    </div> 
+    <div class="preloader-2">
+        <div class="preloader-2-inner d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative wow animated fadeIn">
+                <div class="text-center">
+                    <h1 class="font-weight-bold">Kandlus.</h1>
+                    <p class="text-uppercase">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Offcanvas sidebar-->
     <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
         <button class="off-canvas-close"><i class="ti-close"></i></button>
@@ -29,7 +36,7 @@
             <!--Latest-->
             <div class="sidebar-widget widget-latest-posts mb-30">
                 <div class="widget-header position-relative mb-30">
-                    <h5 class="widget-title mt-5 mb-30">Main categories</h5>
+                    <h5 class="widget-title mt-5 mb-30" id="username" > You are not log in </h5>
                 </div>
                 <div class="post-block-list post-module-1 post-module-5">
                     <ul class="list-post">
@@ -179,7 +186,7 @@
     <div class="top-bar pt-15 pb-5 d-none d-lg-block">
         <div class="container">
             <ul class="list-inline font-small text-right">
-                <li class="list-inline-item mr-15"><a href="../login.html"><i class="ti-user font-x-small mr-5"></i>Login / Register</a></li>
+                <li id="checkLogin" class="list-inline-item mr-15"><a href="../login.html"><i class="ti-user font-x-small mr-5"></i>Login / Register</a></li>
                 <li class="list-inline-item dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="ti-world font-x-small mr-5"></i>Lang
                         <span class="caret"></span></a>
@@ -334,7 +341,7 @@
                         <div id="date-time" class="d-inline-table">
                             <ul>
                                 <li id="date"></li>
-                                <li><i class="ti-book mr-5 font-x-small text-danger"></i><a href="blog/article.html">Get the latest <article></article></a></li>
+                                <li><i class="ti-book mr-5 font-x-small text-danger"></i><a href="blog/article.html">Get the latest articles <article></article></a></li>
                                 <li id="times"><i class="ti-shine mr-5 font-x-small text-danger"></i></li>
                             </ul>
                         </div>
@@ -373,13 +380,13 @@
             <div class="row mb-30">
                 <div class="col-12">
                     <div class="news-flash-cover">
-                        <h6 class="flash-news-title"><i class="ti-bolt mr-5"></i><span class="font-family-normal">Flash news</span></h6>
+                        <h6 class="flash-news-title"><i class="ti-bolt mr-5"></i><span class="font-family-normal">Trending today</span></h6>
                         <div id="news-flash" class="d-inline-table">
                             <ul>
-                                <li><a class="font-large post-title" href="single.html">When will it actually be safe to go to the beach again?</a></li>
-                                <li><a class="font-large post-title" href="single.html">LAUSD is teaching a lesson on how to fight hunger during</a></li>
-                                <li><a class="font-large post-title" href="single.html">Cómo hacer su propio desinfectante de manos en casa</a></li>
-                                <li><a class="font-large post-title" href="single.html">Column: Why we cook when the world doesn’t make sense</a></li>
+                                <li id="firstFlash"><a class="font-large post-title" href="single.html">When will it actually be safe to go to the beach again?</a></li>
+                                <li id="secondFlash"><a class="font-large post-title" href="single.html">LAUSD is teaching a lesson on how to fight hunger during</a></li>
+                                <li id="thirdFlash"><a class="font-large post-title" href="single.html">Cómo hacer su propio desinfectante de manos en casa</a></li>
+                                <li id="forthflash"><a class="font-large post-title" href="single.html"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -389,7 +396,7 @@
             <section class="latest-post mb-30">
                 <h3 class="widget-header widget-header-style-1 font-weight-bold text-center mb-20">
                     <span class="line-dots mb-10"></span>
-                    <span class="pl-15 pr-15 bg-white font-family-normal"># Latest News</span>
+                    <span class="pl-15 pr-15 bg-white font-family-normal"># Latest articles</span>
                 </h3>
                 <section id="latestNew">
                
@@ -644,15 +651,15 @@
                         <div class="col">
                             <h5 class="mb-15">Archive Layouts</h5>
                             <ul class="float-left mr-30 font-small">
-                                <li class="cat-item cat-item-2"><a href="../category.html?id=All">Default</a></li>
-                                <li class="cat-item cat-item-2"><a href="../category.html?id=Ancient-Civilazation">Ancient Civilazation</a></li>
-                                <li class="cat-item cat-item-3"><a href="../category.html?id=Extraterrestrials-Life">Extraterrestrials Life</a></li>
-                                <li class="cat-item cat-item-4"><a href="../category.html?id=Historical">Historical</a></li>
-                                <li class="cat-item cat-item-5"><a href="../category.html?id=Ancient">Ancient discoveries</a></li>
-                                <li class="cat-item cat-item-6"><a href="../category.html?id=Tourist-Attraction">Tourist Attraction</a></li>
-                                <li class="cat-item cat-item-7"><a href="../category.html?id=Mysterical">Mysterious topics</a></li>
-                                <li class="cat-item cat-item-8"><a href="../category.html?id=top-10">Top 10</a></li>
-                                <li class="cat-item cat-item-9"><a href="../indexVide.html">Videos</a></li>
+                                <li class="cat-item cat-item-2"><a href="category.html?id=All">Default</a></li>
+                                <li class="cat-item cat-item-2"><a href="category.html?id=Ancient-Civilazation">Ancient Civilazation</a></li>
+                                <li class="cat-item cat-item-3"><a href="category.html?id=Extraterrestrials-Life">Extraterrestrials Life</a></li>
+                                <li class="cat-item cat-item-4"><a href="category.html?id=Historical">Historical</a></li>
+                                <li class="cat-item cat-item-5"><a href="category.html?id=Ancient">Ancient discoveries</a></li>
+                                <li class="cat-item cat-item-6"><a href="category.html?id=Tourist-Attraction">Tourist Attraction</a></li>
+                                <li class="cat-item cat-item-7"><a href="category.html?id=Mysterical">Mysterious topics</a></li>
+                                <li class="cat-item cat-item-8"><a href="category.html?id=top-10">Top 10</a></li>
+                                <li class="cat-item cat-item-9"><a href="../videos/video.html">Videos</a></li>
                             </ul>
                         </div>
                         <div class="col">
@@ -737,6 +744,7 @@
     <script src="../assets/js/articles/articleScript.js"></script>
     <script src="../assets/js/search.js"></script>
     <script src="../assets/js/Weather.js"></script>
+    <script src="../assets/js/cookie.js"></script>
 </body>
 
 </html>
