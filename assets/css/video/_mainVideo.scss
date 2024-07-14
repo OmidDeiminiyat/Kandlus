@@ -29,3 +29,18 @@ text-align: center;
 .testimage img {
     width: 100%;
 }
+
+.artImg {
+	img {
+		width: 100%;
+		height: 150px;
+		@media(max-width:600px) {
+			width: 80%;
+			margin-left: 10%;
+			height: 200px;
+		}
+	}
+	a{
+		display: block;
+	}
+} 

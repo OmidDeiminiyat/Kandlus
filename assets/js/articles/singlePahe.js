@@ -227,6 +227,9 @@ console.log(`Page height is: ${claculHight}px`);
     }
   });
 
+
+
+
    // Function to be called when the element with id="test" is reached
    function onReachTestElement(entries, observer) {
     entries.forEach(entry => {

@@ -118,7 +118,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
                         </h5>
                         <p class="excerpt mb-15">${limitless}...</p>
                         <figure class="mb-15">
-                            <img src="../assets/images/Articles/width/${latestItems.image}" alt="">
+                            <img src="../assets/images/Articles/width/${latestItems.image}" alt="${latestItems.categoryOne}, ${latestItems.categoryTwo}, ${latestItems.tagOne}, ${latestItems.tagTwo}, ${latestItems.tagThree}">
                         </figure>
                         <div class="entry-meta meta-2 text-uppercase font-x-small color-muted">
                             <a class="float-left mr-10 author-img" href="author.html">
@@ -159,7 +159,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
                             </div>
                             <div class="col-md-6">
                                 <figure class="mb-15 mt-sm-3">
-                                    <img src="../assets/images/Articles/height/${ThreeItems.image}" alt="">
+                                    <img src="../assets/images/Articles/height/${ThreeItems.image}" alt="${ThreeItems.categoryOne}, ${ThreeItems.categoryTwo}, ${ThreeItems.tagOne}, ${ThreeItems.tagTwo}, ${ThreeItems.tagThree}">
                                 </figure>
                             </div>
                         </div>
@@ -191,12 +191,12 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
       contentSingle = `<article class="first-post wow fadeIn animated mb-md-4 mb-lg-0">
                             <figure class="mb-30">
                                 <a href="single.html?id=${singOneIt.seo}">
-                                    <img src="../assets/images/Articles/width/${singOneIt.image}" alt="">
+                                    <img src="../assets/images/Articles/width/${singOneIt.image}" alt="${singOneIt.categoryOne}, ${singOneIt.categoryTwo}, ${singOneIt.tagOne}, ${singOneIt.tagTwo}, ${singOneIt.tagThree}">
                                 </a>
                             </figure>
                             <div class="post-content text-center plr-5-percent">
                                 <h2 class="post-title mb-30 position-relative">
-                                    <a href="single.html?id=${singOneIt.title}">${singOneIt.title}</a>
+                                    <a href="single.html?id=${singOneIt.seo}">${singOneIt.title}</a>
                                 </h2>
                                 <p class="excerpt">
                                     ${oneLimit}
@@ -234,7 +234,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
       insideHorry += `<article class="col-md-6 wow fadeIn animated">
                                 <figure class="mb-15">
                                     <a href="single.html?id=${horryitem.seo}">
-                                        <img src="../assets/images/Articles/width/${horryitem.image}" alt="">
+                                        <img src="../assets/images/Articles/width/${horryitem.image}" alt="${horryitem.categoryOne}, ${horryitem.categoryTwo}, ${horryitem.tagOne}, ${horryitem.tagTwo}, ${horryitem.tagThree}">
                                     </a>
                                 </figure>
                                 <h6 class="post-title font-weight-bold mb-10">
@@ -274,7 +274,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
       insideAliens += `<article class="col-md-6 wow fadeIn animated">
                                 <figure class="mb-15">
                                     <a href="single.html?id=${AliensItem.seo}">
-                                        <img src="../assets/images/Articles/width/${AliensItem.image}" alt="">
+                                        <img src="../assets/images/Articles/width/${AliensItem.image}" alt="${AliensItem.categoryOne}, ${AliensItem.categoryTwo}, ${AliensItem.tagOne}, ${AliensItem.tagTwo}, ${AliensItem.tagThree}">
                                     </a>
                                 </figure>
                                 <h6 class="post-title font-weight-bold mb-10">
@@ -313,7 +313,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
                             </div>
                             <div class="col-md-6">
                                 <figure class="mb-0">
-                                    <img src="../assets/images/Articles/width/${AliensItemTo.image}" alt="">
+                                    <img src="../assets/images/Articles/width/${AliensItemTo.image}" alt="${AliensItemTo.categoryOne}, ${AliensItemTo.categoryTwo}, ${AliensItemTo.tagOne}, ${AliensItemTo.tagTwo}, ${AliensItemTo.tagThree}">
                                 </figure>
                             </div>
                         </article>`
@@ -343,7 +343,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
         inseidDecoder += `<article class="slide-fade-item">
                                 <figure class="mb-30">
                                     <a href="single.html?id=${DecodItems.seo}">
-                                        <img src="../assets/images/Articles/width/${DecodItems.image}" alt="">
+                                        <img src="../assets/images/Articles/width/${DecodItems.image}" alt="${DecodItems.categoryOne}, ${DecodItems.categoryTwo}, ${DecodItems.tagOne}, ${DecodItems.tagTwo}, ${DecodItems.tagThree}">
                                     </a>
                                     <span class="post-format position-top-right text-uppercase font-small">
                                         <i class="ti-video-camera"></i>
@@ -393,7 +393,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
                             </div>
                             <div class="col-lg-6 col-md-3">
                                 <figure class="mb-0">
-                                    <a href="single.html?id=${SecondItems.seo}"><img src="../assets/images/Articles/width/${SecondItems.image}" alt=""></a>
+                                    <a href="single.html?id=${SecondItems.seo}"><img src="../assets/images/Articles/width/${SecondItems.image}" alt="${SecondItems.categoryOne}, ${SecondItems.categoryTwo}, ${SecondItems.tagOne}, ${SecondItems.tagTwo}, ${SecondItems.tagThree}"></a>
                                 </figure>
                             </div>
                         </article>`
@@ -430,7 +430,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
                                     </div>
                                     <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale">
                                         <a class="color-white" href="single.html?id=${threeDecl.seo}">
-                                            <img src="../assets/images/Articles/width/${threeDecl.image}" alt="">
+                                            <img src="../assets/images/Articles/width/${threeDecl.image}" alt="${threeDecl.categoryOne}, ${threeDecl.categoryTwo}, ${threeDecl.tagOne}, ${threeDecl.tagTwo}, ${threeDecl.tagThree}">
                                         </a>
                                     </div>
                                 </div>
@@ -453,7 +453,7 @@ LatestItemOne.slice(0, 1).forEach((singleLatestIt, index)=> {
                             	<div class="col-md-6 mb-md-0 mb-sm-3">	
 	                                <figure class="mb-0">
 	                                    <a href="single.html?id=${singleLatestIt.seo}">
-	                                        <img src="../assets/images/Articles/width/${singleLatestIt.image}" alt="">
+	                                        <img src="../assets/images/Articles/width/${singleLatestIt.image}" alt="${singleLatestIt.categoryOne}, ${singleLatestIt.categoryTwo}, ${singleLatestIt.tagOne}, ${singleLatestIt.tagTwo}, ${singleLatestIt.tagThree}">
 	                                    </a>
 	                                    <span class="post-format position-top-right text-uppercase font-small">
 	                                        <i class="ti-stats-up"></i>
@@ -497,7 +497,7 @@ LatestItemOne.slice(0, 1).forEach((singleLatestIt, index)=> {
         onsideMost += `<article class="row wow fadeIn animated">
                                         <div class="col-md-4">
                                             <figure class="mb-md-0 mb-sm-3">
-                                                <img src="../assets/images/Articles/width/${MostElements.image}" alt="">
+                                                <img src="../assets/images/Articles/width/${MostElements.image}" alt="${MostElements.categoryOne}, ${MostElements.categoryTwo}, ${MostElements.tagOne}, ${MostElements.tagTwo}, ${MostElements.tagThree}">
                                             </figure>
                                         </div>
                                         <div class="col-md-8 pl-0">

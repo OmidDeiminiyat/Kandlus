@@ -3070,6 +3070,21 @@ spinner6
   width: 100%;
 }
 
+.artImg img {
+  width: 100%;
+  height: 150px;
+}
+@media (max-width: 600px) {
+  .artImg img {
+    width: 80%;
+    margin-left: 10%;
+    height: 200px;
+  }
+}
+.artImg a {
+  display: block;
+}
+
 #ThreeCards {
   margin-top: 60px;
   width: 100%;
@@ -3128,19 +3143,26 @@ spinner6
   color: #c9a56e;
 }
 
-#mainSearch #searchPage {
+#searchPage {
   display: none;
-  width: 90%;
-  margin-left: 5%;
+  width: 60%;
+  margin-left: 20%;
   height: 40rem;
 }
-#mainSearch #searchPage h1 {
-  color: white;
+@media (max-width: 600px) {
+  #searchPage {
+    width: 90%;
+    margin-left: 5%;
+  }
 }
-#mainSearch #searchPage p {
-  color: #CAC3BC;
+#searchPage h3, #searchPage #navigation hgroup h5, #navigation hgroup #searchPage h5, #searchPage #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #searchPage p {
+  color: #181411;
+  text-align: center;
 }
-#mainSearch #searchPage .search-container input {
+#searchPage p {
+  color: #181411;
+}
+#searchPage .search-container input {
   width: 100%;
   border-radius: 6px;
   height: 1.7rem;
@@ -3148,26 +3170,26 @@ spinner6
   border: none;
   color: #CAC3BC;
 }
-#mainSearch #searchPage .search-container #results {
+#searchPage .search-container #results {
   color: #CAC3BC;
 }
-#mainSearch #searchPage .search-container #results ul {
+#searchPage .search-container #results ul {
   margin: 0;
   padding: 0;
 }
-#mainSearch #searchPage .search-container #results ul li {
+#searchPage .search-container #results ul li {
   list-style: none;
   margin: 3px 0 2px 0;
 }
-#mainSearch #searchPage .search-container #results ul li a {
-  color: #CAC3BC;
+#searchPage .search-container #results ul li a {
+  color: #181411;
   text-decoration: none;
   cursor: pointer;
 }
-#mainSearch #searchPage .search-container #results ul li a:hover {
+#searchPage .search-container #results ul li a:hover {
   color: #c9a56e;
 }
-#mainSearch #searchPage .search-container #results ul .WidthHr {
+#searchPage .search-container #results ul .WidthHr {
   min-width: 100%;
   border: 1px dotted #FECFA7;
 }

@@ -8,7 +8,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
   })
   .then(response => response.json())
   .then(NewReciData => {
-     data = NewReciData.map(item => item.title);
+     data = NewReciData.map(item => item);
   })
   .catch(error => {
     console.error('Error fetching data:', error);
@@ -20,14 +20,14 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
  
     function filterData(searchTerm) {
   
-      const filteredResults = data.filter(item => item.toLowerCase().includes(searchTerm.toLowerCase()));
+      const filteredResults = data.filter(item => item.title.toLowerCase().includes(searchTerm.toLowerCase()));
     
       resultsList.innerHTML = "";
     
       if (filteredResults.length > 0) {
         let linkStyle = `<ul>`
         filteredResults.forEach((item, index) => {
-            linkStyle += `<li><a href="singlePage.html?id=${item}"><span class="material-symbols-outlined"> movie </span> ${item}</a><li>`
+            linkStyle += `<li><a href="single.html?id=${item.seo}">${item.title}</a><li>`
         });
         linkStyle += `</ul>`
         resultsList.innerHTML = linkStyle;
