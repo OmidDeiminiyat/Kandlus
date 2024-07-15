@@ -43,17 +43,19 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
 
   function autoLoginUser(user) {
     // Perform actions to log in the user, such as updating UI, storing user info in state, etc.
-    console.log('User auto-logged in:', user.name);
     var sessionName = user.name;
     var sessionPlan = user.Plan;
     sessionStorage.setItem('User-name', sessionName);
     sessionStorage.setItem('Plan', sessionPlan);
-    console.log('welcome:' + sessionName);
+    
     const username = document.getElementById('username');
     username.innerText = 'Welcome: ' + sessionName;
     const checkLogins = document.getElementById('checkLogin');
     checkLogins.style.display= 'none';
-
+    const readPrices = document.getElementById('readPrice');
+    readPrices.style.display = 'none';
+    const Proof = document.getElementById('profiles');
+    Proof.style.display = 'block';
   }
   document.addEventListener('DOMContentLoaded', checkAutoLogin);
   checkAutoLogin()
