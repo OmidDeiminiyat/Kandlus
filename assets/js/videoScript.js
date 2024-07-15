@@ -139,6 +139,8 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/SingleVide', {
   // console.log(data); // Do something with the fetched data
   SinglePageLast(NewReciData)
   nextRow(NewReciData)
+  nextLatest(NewReciData)
+  thirdDatas(NewReciData)
 })
 .catch(error => {
   console.error('Error fetching data:', error);
@@ -227,6 +229,84 @@ nextLandData.innerHTML += NextLanding
 }
 
 
+
+function nextLatest(lateData) {
+  const latelate = document.getElementById('latestSec');
+  
+  lateData.sort((a, b) => newRand());
+  
+
+  
+  let lateInsid = `<div class="row vertical-divider mb-30">`
+  
+  lateData.slice(8, 16).forEach((latered, index) => {
+   const date = new Date(latered.zaman);
+   const year = date.getFullYear();
+   const month = date.getMonth() + 1;
+   const day = date.getDay();
+  
+      latelate.innerHTML = ''
+      lateInsid += `<article class="col-md-3 mb-sm-3 wow fadeIn animated">
+      <figure class="mb-15 mainImg">
+          <a href="SinglePageVid.html?id=${latered.seo}">
+              <img src="../assets/images/videos/longImg/${latered.image}" alt="" style="height:300px;" >
+          </a>
+      </figure>
+      <h6 class="post-title font-weight-bold mb-10">
+          <a href="SinglePageVid.html?id=${latered.seo}">${latered.subject}</a>
+      </h6>
+      
+      <div class="entry-meta meta-2 font-x-small color-muted">
+         
+          <span class="mr-10"><i class="ti-time">  ${day}.${month}.${year} </i></span>
+          <span class="has-dot"><i class="ti-eye">  ${latered.score} </i>  </span>
+      </div>
+  </article>`
+  })
+  lateInsid += `</div>`
+  latelate.innerHTML += lateInsid
+  
+  
+  }
+
+  function thirdDatas(newD) {
+    const thirSe = document.getElementById('thirdsSec');
+    
+    newD.sort((a, b) => newRand());
+    
+    
+    let insidThird = `<div class="row vertical-divider mb-30">`
+    
+    newD.slice(16, 24).forEach((ThirItems, index) => {
+     const date = new Date(ThirItems.zaman);
+     const year = date.getFullYear();
+     const month = date.getMonth() + 1;
+     const day = date.getDay();
+    
+        thirSe.innerHTML = ''
+        insidThird += `<article class="col-md-3 mb-sm-3 wow fadeIn animated">
+        <figure class="mb-15 mainImg">
+            <a href="SinglePageVid.html?id=${ThirItems.seo}">
+                <img src="../assets/images/videos/longImg/${ThirItems.image}" alt="" style="height:300px;" >
+            </a>
+        </figure>
+        <h6 class="post-title font-weight-bold mb-10">
+            <a href="SinglePageVid.html?id=${ThirItems.seo}">${ThirItems.subject}</a>
+        </h6>
+        
+        <div class="entry-meta meta-2 font-x-small color-muted">
+           
+            <span class="mr-10"><i class="ti-time">  ${day}.${month}.${year} </i></span>
+            <span class="has-dot"><i class="ti-eye">  ${ThirItems.score} </i>  </span>
+        </div>
+    </article>`
+    })
+    insidThird += `</div>`
+    thirSe.innerHTML += insidThird
+    
+    
+    }
+  
 // Subscribe submit
 function subscribe() {
   const EmailInput = document.getElementById('Email').value;
@@ -262,10 +342,39 @@ function newRand() {
 // Rightside.sort((a, b) => newRand());
 
 
+var secondR = document.getElementById('secondRowes');
+var firstR = document.getElementById('firstRows');
+var NextLanding = document.getElementById('NextLandingData');
+var latelater = document.getElementById('latestSec');
+var thirds = document.getElementById('thirdsSec');
+var thirdR = document.getElementById('thirdRow');
+ function secondRowes() {
+NextLanding.style.display = 'none';
+latelater.style.display = 'block';
+secondR.style.color = 'red';
+firstR.style.color = 'black';
+thirdR.style.color = 'black';
+thirds.style.display = 'none';
 
- 
+ }
 
-  
+  function FirstRows() {
+    NextLanding.style.display = 'block';
+    latelater.style.display = 'none';
+    secondR.style.color = 'black';
+    firstR.style.color = 'red';
+    thirdR.style.color = 'black';
+    thirds.style.display = 'none';
+  }
+
+  function thirdRow() {
+    NextLanding.style.display = 'none';
+    latelater.style.display = 'none';
+    secondR.style.color = 'black';
+    firstR.style.color = 'black';
+    thirdR.style.color = 'red';
+    thirds.style.display = 'block';
+  }
 
 
 

@@ -321,14 +321,11 @@
                 </div>
                 <h2 class="font-weight-bold"><span class="font-family-normal" id="ShowCategory" ></span></h2>
                 <ul class="sub-category list-inline font-x-small text-uppercase">
-                    <li class="list-inline-item"><a href="category.html">Nature</a></li>
-                    <li class="list-inline-item"><a href="category.html">Biological</a></li>
-                    <li class="list-inline-item"><a href="category.html">Scientific</a></li>
-                    <li class="list-inline-item"><a href="category.html">Earth</a></li>
-                    <li class="list-inline-item"><a href="category.html">Health</a></li>
-                    <li class="list-inline-item"><a href="category.html">Physical</a></li>
-                    <li class="list-inline-item"><a href="category.html">Environmental</a></li>
-                    <li class="list-inline-item"><a href="category.html">Library</a></li>
+                    <li class="list-inline-item"><a href="category.html?id=Ancient Civilazation">Ancient Civilazation</a></li>
+                    <li class="list-inline-item"><a href="category.html?id=Extraterrestrials Life">Extraterrestrials Life</a></li>
+                    <li class="list-inline-item"><a href="category.html?id=Decoding">Decoding</a></li>
+                    <li class="list-inline-item"><a href="category.html?id=Spritual awakening">Spritual awakening</a></li>
+                    
                 </ul>
                 <span class="line-dots mt-30 mb-30"></span>
             </div>
@@ -373,6 +370,12 @@
 
                         <span id="NextLandingData">
                         </span>
+
+                        <span id="latestSec" style="display: none;">
+                        </span>
+
+                        <span id="thirdsSec" style="display: none;">
+                        </span>
                     </div>
                     <div class="pagination-area pt-15 border-top-2 mt-30 font-heading wow fadeIn  animated">
                         <div class="container">
@@ -382,9 +385,9 @@
                                         <nav aria-label="Page navigation example">
                                             <ul class="pagination">
                                                 <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-                                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                                <li class="page-item active"><a onclick="FirstRows()" id="firstRows" class="page-link" style="color: red;" >01</a></li>
+                                                <li class="page-item"><a onclick="secondRowes()" id="secondRowes" class="page-link" >02</a></li>
+                                                <li class="page-item"><a onclick="thirdRow()" id="thirdRow" class="page-link">03</a></li>
                                                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
                                             </ul>
                                         </nav>
@@ -397,14 +400,15 @@
                 <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
                     <div class="widget-area">
                         <div class="sidebar-widget widget-latest-posts mb-30 wow fadeIn animated">
+                            <!-- Ads here -->
                             <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Author Award</span>
+                                <span>Kandlus</span>
                             </h6>
                             <div class="author-content text-center">
-                                <a href="author.html"><img class="img-circle d-inline-block mb-10" src="http://via.placeholder.com/133x133" alt=""></a>
+                                <a href="author.html"><img class="img-circle d-inline-block mb-10" src="../assets/images/Omid.PNG" alt=""></a>
                                 <p><img src="assets/imgs/authors/sign.png" alt=""></p>
                                 <p>
-                                    You should write because you love the shape of stories and sentences and the creation of different words on a page. Writing comes from reading, and reading is the finest teacher of how to write.
+                                    Omid is the creative mind behind Kandlus, where he shares his passion for Ancient civilization, Decoding mysteries, Matrix theory etc.. With over a decade of experience in the field, Omid combines her expertise and personal experiences to deliver engaging, informative, and inspiring content to his readers
                                 </p>
                                 <ul class="header-social-network d-inline-block list-inline font-small">
                                     <li class="list-inline-item"><a class="social-icon facebook-icon text-xs-center" target="_blank" href="#"><i class="ti-facebook"></i></a></li>
@@ -417,12 +421,11 @@
                         </div>
                         <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
                             <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Most comments</span>
+                                <span></span>
                             </h6>
+                              <!-- Ads here -->
                             <div class="post-block-list post-module-1 post-module-5">
                                 <ul class="list-post">
-
-                                   <!-- Ads here -->
                                     
                                 </ul>
                             </div>
@@ -539,15 +542,15 @@
                     <div class="col">
                         <h5 class="mb-15">Archive Layouts</h5>
                         <ul class="float-left mr-30 font-small">
-                            <li class="cat-item cat-item-2"><a href="../category.html?id=All">Default</a></li>
-                            <li class="cat-item cat-item-2"><a href="../category.html?id=Ancient-Civilazation">Ancient Civilazation</a></li>
-                            <li class="cat-item cat-item-3"><a href="../category.html?id=Extraterrestrials-Life">Extraterrestrials Life</a></li>
-                            <li class="cat-item cat-item-4"><a href="../category.html?id=Historical">Historical</a></li>
-                            <li class="cat-item cat-item-5"><a href="../category.html?id=Ancient">Ancient discoveries</a></li>
-                            <li class="cat-item cat-item-6"><a href="../category.html?id=Tourist-Attraction">Tourist Attraction</a></li>
-                            <li class="cat-item cat-item-7"><a href="../category.html?id=Mysterical">Mysterious topics</a></li>
-                            <li class="cat-item cat-item-8"><a href="../category.html?id=top-10">Top 10</a></li>
-                            <li class="cat-item cat-item-9"><a href="../indexVide.html">Videos</a></li>
+                            <li class="cat-item cat-item-2"><a href="category.html?id=All">Default</a></li>
+                            <li class="cat-item cat-item-2"><a href="category.html?id=Ancient-Civilazation">Ancient Civilazation</a></li>
+                            <li class="cat-item cat-item-3"><a href="category.html?id=Extraterrestrials-Life">Extraterrestrials Life</a></li>
+                            <li class="cat-item cat-item-4"><a href="category.html?id=Historical">Historical</a></li>
+                            <li class="cat-item cat-item-5"><a href="category.html?id=Ancient">Ancient discoveries</a></li>
+                            <li class="cat-item cat-item-6"><a href="category.html?id=Tourist-Attraction">Tourist Attraction</a></li>
+                            <li class="cat-item cat-item-7"><a href="category.html?id=Mysterical">Mysterious topics</a></li>
+                            <li class="cat-item cat-item-8"><a href="category.html?id=top-10">Top 10</a></li>
+                            <li class="cat-item cat-item-9"><a href="video.html">Videos</a></li>
                         </ul>
                     </div>
                     <div class="col">

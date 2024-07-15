@@ -335,3 +335,6 @@ function Decod(dataDecod) {
     const limitSheyda = SlitSheyda.slice(0, 30).join(' ');
     return limitSheyda;
   }
+
+
+
