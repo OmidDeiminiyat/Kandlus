@@ -266,7 +266,9 @@ h5 {
     text-align: center;
     transition: 0.3s;
     cursor: pointer;
-
+    @media(max-width:600px) {
+      margin: 36px 12px 12px 12px;
+    }
     h2 {
       font-size: 22px;
       margin-bottom: 12px;
@@ -338,7 +340,7 @@ h5 {
 }
 .anual {
   border: none;
-  width: 6%;
+  width: 12%;
   padding: 12px 35px;
   margin-top: 1rem;
   background-color: #6ab04c;
@@ -347,7 +349,7 @@ h5 {
   cursor: pointer;
   font-size: 16px;
   @media(max-width:600px) {
-    width: 12%;
+    width: 25%;
   }
   &:hover{
     background-color: #6ab04c72;

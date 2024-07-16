@@ -3431,6 +3431,11 @@ spinner6
   transition: 0.3s;
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .pricing .plan {
+    margin: 36px 12px 12px 12px;
+  }
+}
 .pricing .plan h2 {
   font-size: 22px;
   margin-bottom: 12px;
@@ -3495,7 +3500,7 @@ spinner6
 
 .anual {
   border: none;
-  width: 6%;
+  width: 12%;
   padding: 12px 35px;
   margin-top: 1rem;
   background-color: #6ab04c;
@@ -3506,7 +3511,7 @@ spinner6
 }
 @media (max-width: 600px) {
   .anual {
-    width: 12%;
+    width: 25%;
   }
 }
 .anual:hover {
