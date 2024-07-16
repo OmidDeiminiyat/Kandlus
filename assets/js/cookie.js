@@ -86,3 +86,14 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   guestVisit()
 
  
+
+  const forSignUp = getCookie('Kandlus-users');
+  const online = document.getElementById('OnUser');
+    const ofline = document.getElementById('Ofuser');
+  if (!forSignUp) {
+    online.style.display = 'none';
+    ofline.style.display = 'block';
+  } else {
+    online.style.display = 'block';
+    ofline.style.display = 'none';
+  }

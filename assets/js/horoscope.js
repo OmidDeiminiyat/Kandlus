@@ -495,3 +495,4 @@ const footerYear = document.getElementById('CurrentYear');
 footerYear.innerText = '©' + ' ' + currentYear + ' Kandlus All rights reserved';
 
 
+

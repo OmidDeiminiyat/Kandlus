@@ -69,25 +69,28 @@ for (i = 0; i < coll.length; i++) {
 
 function pages(recived) {
   var sessionName = sessionStorage.getItem('Plan');
-  
-  if (sessionName == 'Basic' ) {
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else if (sessionName == 'Basic') {
     const showError = document.getElementById('Error');
-    const no1 = document.getElementById('No-1');
-    const img1 = document.getElementById('img1');
-    no1.style.display = 'none';
-    img1.style.display = 'none';
-    showError.style.display = 'block';
-      
+     const no1 = document.getElementById('No-1');
+     const img1 = document.getElementById('img1');
+     no1.style.display = 'none';
+     img1.style.display = 'none';
+   showError.style.display = 'block';
   } else {
     const sendTo = "../Astrology/" + recived;
-      window.location.href = sendTo;
+       window.location.href = sendTo;
   }
 }
 
 function pages2(recived) {
   var sessionName = sessionStorage.getItem('Plan');
-  
-  if (sessionName == 'Basic' ) {
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else if  (sessionName == 'Basic' ) {
     const showError = document.getElementById('Error2');
     const no2 = document.getElementById('No-2');
     const img2 = document.getElementById('img2');
@@ -103,8 +106,10 @@ function pages2(recived) {
 
 function pages3(recived) {
   var sessionName = sessionStorage.getItem('Plan');
-  
-  if (sessionName == 'Basic' ) {
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else if (sessionName == 'Basic' ) {
     const showError = document.getElementById('Error3');
     const no3 = document.getElementById('No-3');
     const img3 = document.getElementById('img3');
@@ -119,8 +124,10 @@ function pages3(recived) {
 }
 function pages4(recived) {
   var sessionName = sessionStorage.getItem('Plan');
-  
-  if (sessionName == 'Basic' || sessionName == 'Standard' ) {
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else if  (sessionName == 'Basic' || sessionName == 'Standard' ) {
     const showError = document.getElementById('Error4');
     const no4 = document.getElementById('No-4');
     const img4 = document.getElementById('img4');
@@ -135,8 +142,10 @@ function pages4(recived) {
 
 function pages5(recived) {
   var sessionName = sessionStorage.getItem('Plan');
-  
-  if (sessionName == 'Basic' || sessionName == 'Standard') {
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else if  (sessionName == 'Basic' || sessionName == 'Standard') {
     const showError = document.getElementById('Error5');
     const no5 = document.getElementById('No-5');
     const img5 = document.getElementById('img5');
@@ -151,8 +160,10 @@ function pages5(recived) {
 
 function pages6(recived) {
   var sessionName = sessionStorage.getItem('User-name');
-  
-  if (sessionName != null ) {
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else if  (sessionName != null ) {
       const sendTo = "../Astrology/" + recived;
       window.location.href = sendTo;
   } else {
@@ -165,8 +176,10 @@ function pages6(recived) {
 
 function pages7(recived) {
   var sessionName = sessionStorage.getItem('Plan');
-  
-  if (sessionName == 'Basic' || sessionName == 'Standard') {
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else if  (sessionName == 'Basic' || sessionName == 'Standard') {
     const showError = document.getElementById('Error7');
     const no7 = document.getElementById('No-7');
     const img7 = document.getElementById('img7');
@@ -181,8 +194,10 @@ function pages7(recived) {
 }
 function pages8(recived) {
   var sessionName = sessionStorage.getItem('Plan');
-  
-  if (sessionName == 'Basic' || sessionName == 'Standard') {
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else if  (sessionName == 'Basic' || sessionName == 'Standard') {
     const showError = document.getElementById('Error8');
     const no8 = document.getElementById('No-8');
     const img8 = document.getElementById('img8');
@@ -197,8 +212,10 @@ function pages8(recived) {
 
 function pages9(recived) {
   var sessionName = sessionStorage.getItem('Plan');
-  
-  if (sessionName == 'Basic' || sessionName == 'Standard') {
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else if  (sessionName == 'Basic' || sessionName == 'Standard') {
     const showError = document.getElementById('Error9');
     const no9 = document.getElementById('No-9');
     const img9 = document.getElementById('img9');
