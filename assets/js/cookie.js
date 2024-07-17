@@ -56,6 +56,9 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     readPrices.style.display = 'none';
     const Proof = document.getElementById('profiles');
     Proof.style.display = 'block';
+    const PlanW = document.getElementById('Wplan');
+    PlanW.innerText =  sessionPlan;
+    PlanW.style.color = '#9A5C23';
   }
   document.addEventListener('DOMContentLoaded', checkAutoLogin);
   checkAutoLogin()
