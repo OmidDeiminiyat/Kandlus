@@ -24,8 +24,8 @@ function homeSingle(HomeData){
     //console.log(HomeData);
     const homeSingleright = document.getElementById('Centers');
     homeSingleright.innerHTML=''
-    let singleHome = ` <a href="singlePage.html?id=${HomeData[0].seo}"><figure>
-                    <img src="../assets/images/Articles/height/${HomeData[0].image}" alt="">
+    let singleHome = ` <a href="blog/single.html?id=${HomeData[0].seo}"><figure>
+                    <img src="../assets/images/Articles/height/${HomeData[0].image}"  alt="${HomeData[0].categoryOne}, ${HomeData[0].categoryTwo}, ${HomeData[0].tagOne}, ${HomeData[0].tagTwo}, ${HomeData[0].tagThree}">
                     <p>${HomeData[0].title}</p>
                 </figure></a>`
       homeSingleright.innerHTML = singleHome;

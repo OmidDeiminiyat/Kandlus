@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const checkPass = document.getElementById('checkPass');
   const emailError = document.getElementById('email-error');
   const passwordError = document.getElementById('password-error');
+  const CheckBox = document.getElementById('exampleCheckbox1');
+  const CheckErr = document.getElementById('checkBox-error');
 
   form.addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent the default form submission
@@ -32,6 +34,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         valid = false;
       } else {
         passwordError.textContent = '';
+      } 
+      if (!CheckBox.checked) {
+        CheckErr.textContent = 'Terms and conditions must be read and agree';
+        valid = false;
+      }  else {
+        console.log('not checked');
       }
 
       if (valid) {
