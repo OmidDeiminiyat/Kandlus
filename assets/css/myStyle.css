@@ -2190,7 +2190,7 @@
   margin: 0;
 }
 #videos .insideVideos .fourVideos p a {
-  color: #23201D;
+  color: #CAC3BC;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -2205,7 +2205,6 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  background-image: url("../../../assets/images/Astrology/Aquarius-new.png");
   background-size: cover;
 }
 #videos .insideVideos .fourVideos .fourFigure:hover {
@@ -2219,6 +2218,9 @@
 #videos .insideVideos .fourVideos .fourFigure h4 {
   color: #9A5C23;
   font-size: 1.1rem;
+}
+#videos .insideVideos .fourVideos .fourFigure h4 a {
+  color: #9A5C23;
 }
 @media (max-width: 600px) {
   #videos .insideVideos .fourVideos .fourFigure {
