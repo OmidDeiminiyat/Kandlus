@@ -61,6 +61,9 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     Proof.style.display = 'block';
 <<<<<<< HEAD
     const PlanW = document.getElementById('Wplan');
+    if (PlanW == '') {
+      
+    }
     PlanW.innerText =  sessionPlan;
     PlanW.style.color = '#9A5C23';
 =======
