@@ -72,7 +72,7 @@ function pages(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if (sessionName == 'Basic') {
+  } else if (sessionName == '99etB637s') {
     const showError = document.getElementById('Error');
      const no1 = document.getElementById('No-1');
      const img1 = document.getElementById('img1');
@@ -90,7 +90,7 @@ function pages2(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == 'Basic' ) {
+  } else if  (sessionName == '99etB637s' ) {
     const showError = document.getElementById('Error2');
     const no2 = document.getElementById('No-2');
     const img2 = document.getElementById('img2');
@@ -109,7 +109,7 @@ function pages3(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if (sessionName == 'Basic' ) {
+  } else if (sessionName == '99etB637s' ) {
     const showError = document.getElementById('Error3');
     const no3 = document.getElementById('No-3');
     const img3 = document.getElementById('img3');
@@ -127,7 +127,7 @@ function pages4(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == 'Basic' || sessionName == 'Standard' ) {
+  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR' ) {
     const showError = document.getElementById('Error4');
     const no4 = document.getElementById('No-4');
     const img4 = document.getElementById('img4');
@@ -145,7 +145,7 @@ function pages5(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == 'Basic' || sessionName == 'Standard') {
+  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
     const showError = document.getElementById('Error5');
     const no5 = document.getElementById('No-5');
     const img5 = document.getElementById('img5');
@@ -174,12 +174,13 @@ function pages6(recived) {
   }
 }
 
+const Basic = '99etB637s';
 function pages7(recived) {
   var sessionName = sessionStorage.getItem('Plan');
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == 'Basic' || sessionName == 'Standard') {
+  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
     const showError = document.getElementById('Error7');
     const no7 = document.getElementById('No-7');
     const img7 = document.getElementById('img7');
@@ -197,7 +198,7 @@ function pages8(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == 'Basic' || sessionName == 'Standard') {
+  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
     const showError = document.getElementById('Error8');
     const no8 = document.getElementById('No-8');
     const img8 = document.getElementById('img8');
@@ -215,7 +216,7 @@ function pages9(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == 'Basic' || sessionName == 'Standard') {
+  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
     const showError = document.getElementById('Error9');
     const no9 = document.getElementById('No-9');
     const img9 = document.getElementById('img9');

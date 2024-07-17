@@ -13,6 +13,7 @@ function getCookie(Name) {
     return null;
   }
 
+
 function checkAutoLogin() {
     const authToken = getCookie('Kandlus-users');
     
@@ -28,9 +29,8 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   .then(dataAst => {
      //console.log(NewReciData); // Do something with the fetched data
      if (dataAst) {
-        console.log('Data Ast:' + dataAst[0]);
         callForUpdate(dataAst[0]);
-        sessionStorage.setItem('Plan', 'Basic');
+        sessionStorage.setItem('Plan', '99etB637s');
      } else {
         // Token is invalid, delete the cookie
         setCookie('Kandlus-users', '', -1);
@@ -48,7 +48,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     console.log('call for update:' + UserData.email);
    
     const Code = UserData.Code;
-  const updatedData = { Plan: 'Basic' };
+  const updatedData = { Plan: '99etB637s' };
   
   updateSubscribeTable(Code, updatedData);
 
