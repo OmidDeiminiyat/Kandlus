@@ -40,7 +40,11 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   });
     }
   }
-
+  const checkLogins = document.getElementById('checkLogin');
+  const readPrices = document.getElementById('readPrice');
+  const logOut = document.getElementById('checkOut');
+  const username = document.getElementById('username');
+  const Proof = document.getElementById('profiles');
   function autoLoginUser(user) {
     // Perform actions to log in the user, such as updating UI, storing user info in state, etc.
     var sessionName = user.name;
@@ -48,17 +52,21 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     sessionStorage.setItem('User-name', sessionName);
     sessionStorage.setItem('Plan', sessionPlan);
     
-    const username = document.getElementById('username');
     username.innerText = 'Welcome: ' + sessionName;
     const checkLogins = document.getElementById('checkLogin');
     checkLogins.style.display= 'none';
-    const readPrices = document.getElementById('readPrice');
+    
     readPrices.style.display = 'none';
-    const Proof = document.getElementById('profiles');
+    
     Proof.style.display = 'block';
+<<<<<<< HEAD
     const PlanW = document.getElementById('Wplan');
     PlanW.innerText =  sessionPlan;
     PlanW.style.color = '#9A5C23';
+=======
+    
+    logOut.style.display = 'block';
+>>>>>>> 62a45b497a9598558a2fc8ac00714180aa6a5710
   }
   document.addEventListener('DOMContentLoaded', checkAutoLogin);
   checkAutoLogin()
@@ -99,4 +107,22 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   } else {
     online.style.display = 'block';
     ofline.style.display = 'none';
+  }
+
+
+  function LogOut() {
+    const cookies = document.cookie.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i];
+        const eqPos = cookie.indexOf("=");
+        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+    }
+    sessionStorage.clear();    console.log('logOut');
+
+    checkLogins.style.display= 'block';
+    readPrices.style.display = 'block';
+    logOut.style.display = 'none';
+    username.innerText = 'use this service, you must have an account and choose a plan';
+    Proof.style.display = 'none';
   }
