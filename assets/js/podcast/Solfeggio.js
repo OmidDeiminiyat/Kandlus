@@ -6,7 +6,7 @@ const listen = document.getElementById('listen');
 const listen1 = document.getElementById('listen-1');
 const listen2 = document.getElementById('listen-2');
 const listen3 = document.getElementById('listen-3');
-if (sessionPlan === 'Standard' || sessionPlan === 'Pro') {
+if (sessionPlan === '663idsmS98pR' || sessionPlan === '9dyhf3Ds') {
     solfeg.style.display= 'block';
     imger.style.display = 'none';
 } else {

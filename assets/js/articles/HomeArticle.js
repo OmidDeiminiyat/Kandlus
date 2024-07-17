@@ -41,7 +41,7 @@ let rightSideHome = `<div>`;
 HomeandenData.slice(0,3).forEach((Threeitems, index) => {
     //console.log(Threeitems.title);
     const limitDescribe = limitTextTo50Words(Threeitems.describtion);
-rightSideHome += `<a href="singlePage.html?id=${Threeitems.seo}"> <figure>
+rightSideHome += `<a href="blog/single.html?id=${Threeitems.seo}"> <figure>
                     <img src="assets/images/Articles/width/${Threeitems.image}" alt="">
                     <figcaption>
                     <h3>${Threeitems.title}</h3> 

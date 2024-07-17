@@ -59,17 +59,21 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     readPrices.style.display = 'none';
     
     Proof.style.display = 'block';
-<<<<<<< HEAD
+
     const PlanW = document.getElementById('Wplan');
-    if (PlanW == '') {
-      
+    if (sessionPlan == '99etB637s') {
+      PlanW.innerText =  'Basic';
+    } else if (sessionPlan == '663idsmS98pR') {
+      PlanW.innerText =  'Standard';
+    }  else if (sessionPlan == '9dyhf3Ds') {
+      PlanW.innerText =  'Pro';
     }
-    PlanW.innerText =  sessionPlan;
+    
     PlanW.style.color = '#9A5C23';
-=======
+
     
     logOut.style.display = 'block';
->>>>>>> 62a45b497a9598558a2fc8ac00714180aa6a5710
+
   }
   document.addEventListener('DOMContentLoaded', checkAutoLogin);
   checkAutoLogin()
