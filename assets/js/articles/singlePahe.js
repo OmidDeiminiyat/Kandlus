@@ -17,6 +17,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?seo=eq.${id}`, {
 .then(data => {
 
 singlePageArticle(data)
+
 })
 .catch(error => {
   console.error('Error fetching data:', error);
@@ -61,10 +62,23 @@ showVideo.forEach((getData, index) => {
                                 <a href="Tag.html?id=${getData.tagTwo}" rel="tag">${getData.tagTwo}</a>
                                 <a href="Tag.html?id=${getData.tagThree}" rel="tag">${getData.tagThree}</a>`
                 AllTags.innerHTML = tagList;
+                const forTitlt = document.getElementById('ArtTitle');
+                const blogDescrib = document.getElementById('bloDescr');
+                blogDescrib.innerHTML = `<meta name="description" content="${getData.describtion}">`
+                forTitlt.innerText = getData.title;
+
                 relatedArticle(getData.categoryOne)
                 popularArticles(getData.score)
 })
 }
+
+
+function justTest(artItems) {
+  console.log('title:');
+  // const forTitlt = document.getElementById('ArtTitle');
+  // forTitlt.innerText = items[0].title;
+}
+
 
 function onScrollTo1200px() {
   // console.log('You have scrolled to the point!');
@@ -85,7 +99,7 @@ function relatedArticle(recivDatp) {
   .then(response => response.json())
   .then(newData => {
     relatedArticleByCategory(newData)
-    rightSideThree(newData)
+   // rightSideThree(newData)
   
   })
   .catch(error => {
@@ -124,6 +138,7 @@ function relatedArticle(recivDatp) {
       realtedPost.innerHTML = relatedinside;
   }
 
+  /*
 function rightSideThree(firstData) {
   const rightSideTh = document.getElementById('articles');
   rightSideTh.innerHTML = ''
@@ -145,7 +160,7 @@ function rightSideThree(firstData) {
   rightSideTh.innerHTML = firstThr;
 }
 
-
+*/
 fetchAndSortData()
 // you might be intrested
   async function fetchAndSortData() {
@@ -181,12 +196,12 @@ fetchAndSortData()
   }
   
   function forArticlesD(forItemsD) {
-    console.log(forItemsD);
+    
     const ForItemsD = document.getElementById('intrested');
     ForItemsD.innerHTML = ''
     let inForItemD = ` <ul class="list-post">`
     forItemsD.slice(3,5).forEach((dataFour, index) => {
-      console.log(dataFour);
+     
       const ShortedD = limitWords(dataFour.describtion)
       inForItemD += `<li class="mb-15">
                                         <div class="d-flex">
@@ -217,7 +232,6 @@ fetchAndSortData()
     
   const pageHeight = document.documentElement.scrollHeight;
   const claculHight = pageHeight / 2; 
-console.log(`Page height is: ${claculHight}px`);
 
   window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY || window.pageYOffset;
@@ -234,7 +248,7 @@ console.log(`Page height is: ${claculHight}px`);
    function onReachTestElement(entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        console.log('Element with id="test" is now in view!');
+        
         observer.unobserve(entry.target);
         observId()
       }
@@ -300,7 +314,7 @@ function Decod(dataDecod) {
     DecoCate.innerHTML = ''
     let insidDecoder = `<ul class="list-post">`
     decoders.slice(0,4).forEach((DecoItems, index) => {
-      console.log('Decoding is:' + DecoItems);
+     
       insidDecoder += `<li class="mb-15">
                                         <div class="d-flex">
                                             <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
@@ -335,6 +349,7 @@ function Decod(dataDecod) {
     const limitSheyda = SlitSheyda.slice(0, 30).join(' ');
     return limitSheyda;
   }
+
 
 
 
