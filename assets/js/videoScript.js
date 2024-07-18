@@ -18,6 +18,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/SingleVide?seo=eq.${id}`
 
 singleVideo(data)
 secondRow(data[0].category)
+titleDisp(data)
 })
 .catch(error => {
   console.error('Error fetching data:', error);
@@ -249,7 +250,7 @@ function nextLatest(lateData) {
       lateInsid += `<article class="col-md-3 mb-sm-3 wow fadeIn animated">
       <figure class="mb-15 mainImg">
           <a href="SinglePageVid.html?id=${latered.seo}">
-              <img src="../assets/images/videos/longImg/${latered.image}" alt="" style="height:300px;" >
+              <img src="../assets/images/videos/longImg/${latered.image}" alt="${latered.category}, ${latered.tag1}" style="height:300px;" >
           </a>
       </figure>
       <h6 class="post-title font-weight-bold mb-10">
@@ -287,7 +288,7 @@ function nextLatest(lateData) {
         insidThird += `<article class="col-md-3 mb-sm-3 wow fadeIn animated">
         <figure class="mb-15 mainImg">
             <a href="SinglePageVid.html?id=${ThirItems.seo}">
-                <img src="../assets/images/videos/longImg/${ThirItems.image}" alt="" style="height:300px;" >
+                <img src="../assets/images/videos/longImg/${ThirItems.image}" alt="${ThirItems.category}, ${ThirItems.tag1}" style="height:300px;" >
             </a>
         </figure>
         <h6 class="post-title font-weight-bold mb-10">
@@ -377,5 +378,9 @@ thirds.style.display = 'none';
   }
 
 
-
-
+function titleDisp(items) {
+  const Titles = document.getElementById('title');
+  const Describtion = document.getElementById('describ');
+  Titles.innerText= items[0].subject;
+  Describtion.innerHTML = `<meta name="description" content="${items[0].describ}">`;
+}
