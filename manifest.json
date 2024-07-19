@@ -4,8 +4,8 @@
     "description": "Astrology, blog and videos",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#4BA598",
-    "theme_color": "#F5D45B",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
     
     "icons": [
       {
