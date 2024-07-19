@@ -3163,8 +3163,8 @@ spinner6
 }
 @media (max-width: 600px) {
   #searchPage {
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
   }
 }
 #searchPage h3, #searchPage #navigation hgroup h5, #navigation hgroup #searchPage h5, #searchPage #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #searchPage p {
