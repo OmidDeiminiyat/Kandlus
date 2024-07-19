@@ -46,7 +46,7 @@ showVideo.forEach((getData, index) => {
       tit.innerHTML=getData.title;
       let insideInforms = `<div class="entry-meta align-items-center meta-2 font-small color-muted">
                                     <p class="mb-5">
-                                        <a class="author-avatar" href="#"><img class="img-circle" src="../../imagess/kandlus.png" alt=""></a>
+                                        <a class="author-avatar" href="#"><img class="img-circle" src="../assets/images/kandlus.png" alt=""></a>
                                         By <a href="#"><span class="author-name font-weight-bold color-black">${getData.channel}</span></a>
                                     </p>
                                     <span class="mr-10"> ${getData.created_at}</span>
@@ -68,13 +68,13 @@ showVideo.forEach((getData, index) => {
                 forTitlt.innerText = getData.title;
 
                 relatedArticle(getData.categoryOne)
-                popularArticles(getData.score)
+               
 })
 }
 
 
 function justTest(artItems) {
-  console.log('title:');
+ 
   // const forTitlt = document.getElementById('ArtTitle');
   // forTitlt.innerText = items[0].title;
 }

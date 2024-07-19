@@ -36,7 +36,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
       }
   })
   .catch(error => {
-    console.error('Error fetching data:', error);
+   // console.error('Error fetching data:', error);
   });
     }
   }

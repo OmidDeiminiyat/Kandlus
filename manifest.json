@@ -1,6 +1,6 @@
 {
     "name": "Kandlus APP",
-    "short_name": "KAPP",
+    "short_name": "Kandlus",
     "description": "Astrology, blog and videos",
     "start_url": "/index.html",
     "display": "standalone",
@@ -38,7 +38,7 @@
       },
       {
         "src": "assets/images/Screenshot-No-2.png",
-        "sizes": "1242x894",
+        "sizes": "1244x892",
         "type": "image/png"
       },
       {

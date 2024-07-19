@@ -2857,6 +2857,12 @@ spinner6
   margin: 0 6px 0 6px;
 }
 
+@media (max-width: 600px) {
+  .downPop {
+    display: none;
+  }
+}
+
 #headerSeaction {
   display: grid;
   grid-template-columns: 1fr 1fr;

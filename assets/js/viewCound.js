@@ -16,7 +16,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?seo=eq.${currentID}
 })
 .then(response => response.json())
 .then(currentData => {
-console.log("my counter is:" + currentData[0].score);
+
 myCounter(currentData)
 })
 .catch(error => {
@@ -28,7 +28,7 @@ myCounter(currentData)
 // Function to increment the page view count in Supabase
 async function myCounter(newDa) {
     const currentCount = newDa[0].score;
-    console.log('count is:' + currentCount);
+    
     const newCount = currentCount + 1;
     callForUpdate(newDa[0].seo, newCount)
 }
@@ -36,7 +36,7 @@ async function myCounter(newDa) {
 import counterLoad from '../js/controller/pageViewCount.js';
 
 function callForUpdate(linked, counted){
- console.log('linked is:' + linked);
+ 
   const seo = linked;
 const updatedData = { score: counted };
 
