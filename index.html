@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Kandlus </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.png">
+    <title>Kandlus - Articles, Astrology Services and Videos</title>
+    <meta name="description" content="Explore the mystical world with my insightful articles, engaging videos and astrology services. delve into the secrets of the ncient and enhance your cosmic knowledge.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/Kandlus144.png">
     <!-- NewsBoard CSS  -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/widgets.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/myStyle.css">
+    <link rel="manifest" href="manifest.json">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -47,15 +47,16 @@
                 
                 <div class="widget_nav_menu">
                     <ul class="menu">
-                        <li class="cat-item"><a>Your plan is: Free</a></li>
+                        <li class="cat-item"><a>Your plan is: <span id="Wplan">Free</span></a></li>
                         <li class="cat-item"><a>Current Point: 00</a></li>
+                        <li class="cat-item"><a onclick="LogOut()" style="cursor: pointer;">Log out</a></li>
                         <li class="cat-item"><a></a></li>
 
                         <li class="cat-item cat-item-2 menu-item-has-children">
                             <a>Library</a>
                             <ul class="sub-menu">
-                                <li class="cat-item"><a href="category.html">Videos</a></li>
-                                <li class="cat-item"><a href="category.html">Articles</a></li>
+                                <li class="cat-item"><a href="../videos/users.html">Videos</a></li>
+                                <li class="cat-item"><a href="../blog/usersArticle.html">Articles</a></li>
                             </ul>
                         </li>
                         <li class="cat-item cat-item-2 menu-item-has-children">
@@ -93,7 +94,7 @@
                                 <div class="post-content media-body">
                                     <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
                                     <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">9 different astrology services</span>
+                                        <span class="post-on">use biorythm for 12 points</span>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +110,7 @@
     <div class="top-bar pt-15 pb-5 d-none d-lg-block">
         <div class="container">
             <ul class="list-inline font-small text-right">
-                <li class="list-inline-item mr-15"><a id="checkLogin" href="login.html"><i class="ti-user font-x-small mr-5"></i>Login / Register</a> <a id="checkOut" onclick="LogOut()" style="display: none; cursor: pointer;" ><i class="ti-user font-x-small mr-5"></i>Log Out</a></li> 
+                <li id="checkLogin" class="list-inline-item mr-15"><a href="../login.html"><i class="ti-user font-x-small mr-5"></i>Login / Register</a></li>
                 <li class="list-inline-item dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="ti-world font-x-small mr-5"></i>Lang
                         <span class="caret"></span></a>
@@ -227,10 +228,6 @@
                     <li class="list-inline-item"><a class="social-icon facebook-icon text-xs-center color-grey" target="_blank" href="#"><i class="ti-facebook"></i></a></li>
                     <li class="list-inline-item"><a class="social-icon twitter-icon text-xs-center color-grey" target="_blank" href="#"><i class="ti-twitter"></i></a></li>
                 </ul>
-                <button onclick="SearchPage()" class="search search-icon search-btn mr-15">
-                    <i class="ti-close"></i>
-                    <i class="ti-search"></i>
-                </button>
                 <div class="off-canvas-toggle-cover d-inline-block">
                     <div class="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle">
                         <span></span>

@@ -1,4 +1,5 @@
 // li open in navigation
+/*
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.querySelector('.CateList');
     const toggleDiv = document.querySelector('.secondList');
@@ -26,11 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
+*/
 
 
 
     // Search for mobile
+    /*
     const searchBar = document.getElementById("search-bar");
     const resultsList = document.getElementById("results");
 
@@ -63,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const searchTerm = event.target.value;
       filterData(searchTerm);
     });
-
+*/
 
    
 

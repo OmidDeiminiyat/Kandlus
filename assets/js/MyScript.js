@@ -22,7 +22,7 @@ function closeSearch() {
      layousBar.style.display = 'flex';
  }
 */
-
+/*
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 const data = [  // Replace with your actual data array
@@ -65,7 +65,7 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-
+*/
 
 function pages(recived) {
   var sessionName = sessionStorage.getItem('Plan');

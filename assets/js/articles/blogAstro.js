@@ -24,8 +24,8 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?categoryOne=eq.${fi
         insideliForR += `<li id="liForRight" class="mb-15">
                                         <div class="d-flex">
                                             <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                                <a class="color-white" href="../blog/singlePage.html?id=${elements.seo}">
-                                                    <img src="../../assets/images/Articles/${elements.image}" alt="">
+                                                <a class="color-white" href="../blog/single.html?id=${elements.seo}">
+                                                    <img src="../assets/images/Articles/width/${elements.image}" alt="">
                                                 </a>
                                             </div>
                                             <div class="post-content media-body">
@@ -43,8 +43,8 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?categoryOne=eq.${fi
   }
   
 
-  const myCategories = 'Decoding';
-  fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?categoryOne=eq.${myCategories}`, {
+  const myCategories = 'Spiritual Awakening';
+  fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/SingleVide?category=eq.${myCategories}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ function moreBlogs(moreData){
     const moreDaras = document.getElementById('moreData');
     moreDaras.innerHTML = ''
     let insideMoreData = `<h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Decoding</span>
+                                <span>Related videos</span>
                             </h6>
                             <div class="post-block-list post-module-6 mt-50">`
 
@@ -73,9 +73,9 @@ function moreBlogs(moreData){
         insideMoreData += `<div class="post-module-6-item d-flex wow fadeIn">
                                     <span class="item-count vertical-align"><i class="ti-write"></i></span>
                                     <div class="alith_post_title_small">
-                                        <p class="font-medium mb-10"><a href="../blog/singlePage.html?id=${moreDa.seo}">${moreDa.title}</a></p>
+                                        <p class="font-medium mb-10"><a href="../videos/singlePageVid.html?id=${moreDa.seo}">${moreDa.subject}</a></p>
                                         <div class="entry-meta meta-1 font-x-small">
-                                            <span class="post-on">${moreDa.created_at}</span>
+                                            <span class="post-on">${moreDa.zaman}</span>
                                             <span class="hit-count has-dot">${moreDa.score}</span>Views
                                         </div>
                                     </div>

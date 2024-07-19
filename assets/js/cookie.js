@@ -8,7 +8,7 @@ function getCookie(Name) {
       let cookie = cookiesArray[i];
       while (cookie.charAt(0) == ' ') cookie = cookie.substring(1, cookie.length);
       if (cookie.indexOf(nameEQ) == 0) return cookie.substring(nameEQ.length, cookie.length);
-      console.log('Cookie is:' + cookie.length);
+      // console.log('Cookie is:' + cookie.length);
     }
     return null;
   }
@@ -28,7 +28,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   .then(dataAst => {
      //console.log(NewReciData); // Do something with the fetched data
      if (dataAst) {
-        console.log('Data Ast:' + dataAst[0]);
+        
         autoLoginUser(dataAst[0]);
      } else {
         // Token is invalid, delete the cookie
@@ -42,7 +42,6 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   }
   const checkLogins = document.getElementById('checkLogin');
   const readPrices = document.getElementById('readPrice');
-  const logOut = document.getElementById('checkOut');
   const username = document.getElementById('username');
   const Proof = document.getElementById('profiles');
   function autoLoginUser(user) {
@@ -71,9 +70,6 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     
     PlanW.style.color = '#9A5C23';
 
-    
-    logOut.style.display = 'block';
-
   }
   document.addEventListener('DOMContentLoaded', checkAutoLogin);
   checkAutoLogin()
@@ -87,7 +83,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/;Secure;SameSite=Strict";
-    console.log('cookie');
+    
   }
   
   const guest = 'Kandlus-guest';
@@ -105,16 +101,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
 
  
 
-  const forSignUp = getCookie('Kandlus-users');
-  const online = document.getElementById('OnUser');
-    const ofline = document.getElementById('Ofuser');
-  if (!forSignUp) {
-    online.style.display = 'none';
-    ofline.style.display = 'block';
-  } else {
-    online.style.display = 'block';
-    ofline.style.display = 'none';
-  }
+
 
 
   function LogOut() {
@@ -125,11 +112,11 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
         const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
         document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
     }
-    sessionStorage.clear();    console.log('logOut');
+    sessionStorage.clear();   
 
     checkLogins.style.display= 'block';
     readPrices.style.display = 'block';
-    logOut.style.display = 'none';
     username.innerText = 'use this service, you must have an account and choose a plan';
     Proof.style.display = 'none';
+    // window.location.href = '../index.html';
   }
