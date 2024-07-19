@@ -42,15 +42,15 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
     forthArticcle.innerHTML = ''
     
  let threemyRow = `<div class="thumb-overlay img-hover-slide transition-04s position-relative" style="background-image: url('../assets/images/Articles/height/${threeData[0].image}')">
-                                            <a class="img-link" href="single.html?id=${threeData[1].seo}"></a>
+                                            <a class="img-link" href="single.html?id=${threeData[0].seo}"></a>
                                             <div class="post-content-overlay transition-04s p-20">
                                                 <div class="entry-meta mb-20 text-uppercase font-small text-white">
                                                     <span class="create-date mr-15 ">${threeData[0].created_at}</span>
                                                     <a href="category.html"><span class="post-cat text-white position-relative">${threeData[0].categoryOne}</span></a>
-                                                    <a href="tag.html"><span class="post-cat text-white position-relative">${threeData[0].tagOne}</span></a>
+                                                    <a href="tag.html?id=${threeData[0].seo}"><span class="post-cat text-white position-relative">${threeData[0].tagOne}</span></a>
                                                 </div>
                                                 <h4 class="post-title">
-                                                    <a class="text-white" href="single.html">${threeData[0].title}</a>
+                                                    <a class="text-white" href="single.html?id=${threeData[0].seo}">${threeData[0].title}</a>
                                                 </h4>
                                             </div>
                                         </div>`
@@ -60,10 +60,10 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
                                             <div class="entry-meta mb-20 text-uppercase font-small text-white">
                                                 <span class="create-date mr-15 ">${threeData[1].created_at}</span>
                                                 <a href="category.html"><span class="post-cat text-white position-relative">${threeData[1].categoryOne}</span></a>
-                                                <a href="tag.html"><span class="post-cat text-white position-relative">${threeData[1].tagOne}</span></a>
+                                                <a href="tag.html?id=${threeData[1].seo}"><span class="post-cat text-white position-relative">${threeData[1].tagOne}</span></a>
                                             </div>
                                             <h4 class="post-title">
-                                                <a class="text-white" href="single.html">${threeData[1].title}</a>
+                                                <a class="text-white" href="single.html?id=${threeData[1].seo}">${threeData[1].title}</a>
                                             </h4>
                                         </div>
                                     </div>`
@@ -73,10 +73,10 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
                                             <div class="entry-meta mb-20 text-uppercase font-small text-white">
                                                 <span class="create-date mr-15 ">${threeData[2].created_at}</span>
                                                 <a href="category.html"><span class="post-cat text-white position-relative">${threeData[2].categoryOne}</span></a>
-                                                <a href="tag.html"><span class="post-cat text-white position-relative">${threeData[2].tagOne}</span></a>
+                                                <a href="tag.html?id=${threeData[2].seo}"><span class="post-cat text-white position-relative">${threeData[2].tagOne}</span></a>
                                             </div>
                                             <h4 class="post-title">
-                                                <a class="text-white" href="single.html">${threeData[2].title}</a>
+                                                <a class="text-white" href="single.html?id=${threeData[2].seo}">${threeData[2].title}</a>
                                             </h4>
                                         </div>
                                     </div>`
@@ -86,10 +86,10 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
                                             <div class="entry-meta mb-20 text-uppercase font-small text-white">
                                                 <span class="create-date mr-15 ">${threeData[3].created_at}</span>
                                                 <a href="category.html"><span class="post-cat text-white position-relative">${threeData[3].categoryOne}</span></a>
-                                                <a href="tag.html"><span class="post-cat text-white position-relative">${threeData[3].tagOne}</span></a>
+                                                <a href="tag.html?id=${threeData[3].seo}"><span class="post-cat text-white position-relative">${threeData[3].tagOne}</span></a>
                                             </div>
                                             <h4 class="post-title">
-                                                <a class="text-white" href="single.html">${threeData[3].title}</a>
+                                                <a class="text-white" href="single.html?id=${threeData[3].seo}">${threeData[3].title}</a>
                                             </h4>
                                         </div>
                                     </div>`
