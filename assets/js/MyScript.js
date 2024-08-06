@@ -72,7 +72,7 @@ function pages(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if (sessionName == '99etB637s') {
+  } else if  (sessionName == '99etB637s') {
     const showError = document.getElementById('Error');
      const no1 = document.getElementById('No-1');
      const img1 = document.getElementById('img1');

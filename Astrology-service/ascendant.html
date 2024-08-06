@@ -4,20 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title id="title"> </title>
-    <span id="describ"> </span>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astrology services - Kandlus</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/Kandlus.png">
     <!-- NewsBoard CSS  -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/widgets.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/myStyle.css">
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+</head>
 
 <body>
     <div class="scroll-progress bg-dark"></div>
+    <!-- Start Preloader -->
     <!--Offcanvas sidebar-->
     <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
         <button class="off-canvas-close"><i class="ti-close"></i></button>
@@ -32,6 +35,7 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
             <!--Categories-->
             <div id="profiles" class="sidebar-widget widget_categories mb-50" style="display: none;">
@@ -40,7 +44,7 @@
                 
                 <div class="widget_nav_menu">
                     <ul class="menu">
-                        <li class="cat-item"><a>Your plan is: Free</a></li>
+                        <li class="cat-item"><a>Your plan is: <span id="Wplan">Free</span></a></li>
                         <li class="cat-item"><a>Current Point: 00</a></li>
                         <li class="cat-item"><a></a></li>
 
@@ -69,7 +73,7 @@
                                     </a>
                                 </div>
                                 <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="../Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
+                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
                                     <div class="entry-meta meta-1 font-x-small color-grey">
                                         <span class="post-on">Use Horoscope for 9 points</span>
                                     </div>
@@ -84,9 +88,9 @@
                                     </a>
                                 </div>
                                 <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="../Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
+                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
                                     <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">9 different astrology services</span>
+                                        <span class="post-on">use biorythm for 12 points</span>
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +106,7 @@
     <div class="top-bar pt-15 pb-5 d-none d-lg-block">
         <div class="container">
             <ul class="list-inline font-small text-right">
-                <li class="list-inline-item mr-15"><a href="../login.html"><i class="ti-user font-x-small mr-5"></i>Login / Register</a></li>
+                <li id="checkLogin" class="list-inline-item mr-15"><a href="../login.html"><i class="ti-user font-x-small mr-5"></i>Login / Register</a></li>
                 <li class="list-inline-item dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="ti-world font-x-small mr-5"></i>Lang
                         <span class="caret"></span></a>
@@ -126,8 +130,8 @@
                             <ul class="sub-menu text-muted font-small">
                                 <li><a href="../index.html">Home</a></li>
                                 <li><a href="../blog/articles.html">Articles</a></li>
-                                <li><a href="../Astrology/astrology_service.html">Astrology</a></li>
-                                <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
+                                <li><a href="astrology_service.html">Astrology</a></li>
+                                <li><a href="../Podcast/Solfeggio_frequency.html">Solfeggio</a></li>
                                 <li><a href="../Videos/video.html">Videos</a></li>
                             </ul>
                         </li>
@@ -144,17 +148,17 @@
                                         </ul>
                                         <ul class="col-md-2">
                                             <li><strong>Astrology</strong></li>
-                                            <li><a href="../Astrology/Horoscope.html">Horoscope</a></li>
-                                            <li><a href="../Astrology/Numerology.html">Numerology</a></li>
-                                            <li><a href="../Astrology/Biorythm.html">Biorythm</a></li>
-                                            <li><a href="../Astrology/ascendant.html">Ascendant</a></li>
-                                            <li><a href="../Astrology/list-of-Yoga.html">List of Yoga</a></li>
+                                            <li><a href="Horoscope.html">Horoscope</a></li>
+                                            <li><a href="Numerology.html">Numerology</a></li>
+                                            <li><a href="Biorythm.html">Biorythm</a></li>
+                                            <li><a href="ascendant.html">Ascendant</a></li>
+                                            <li><a href="list-of-Yoga.html">List of Yoga</a></li>
                                         </ul>
                                         <ul class="col-md-2">
                                             <li><strong>Sound library</strong></li>
                                             <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
-                                            <li><a href="../podcast/Mantra.html">Mantra</a></li>
-                                            <li><a href="#">Podcast</a></li>
+                                            <li><a href="../Podcast/mantra.html">Mantra</a></li>
+                                            <li><a href="../podcast/Podcast.html">Podcast</a></li>
                                         </ul>
                                         <ul class="col-md-2">
                                             <li><strong>Most searched tags</strong></li>
@@ -171,7 +175,7 @@
                                             <li><a href="../contact.html">Contact us</a></li>
                                         </ul>
                                         <div class="col-md-2 text-center">
-                                            <a target="_blank" href="http://demos.alithemes.com/html/newsboard/docs/"><img src="assets/images/Kandlus.png" alt=""></a>
+                                            <a target="_blank" href="../index.html"><img src="../assets/images/Kandlus.png" alt="Kandlus, Kandlus network, kandlus services, kandlus astrology, Kandlus articles"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -189,7 +193,7 @@
                             <ul class="sub-menu text-muted font-small">
                                 <li><a href="../index.html">Home</a></li>
                                 <li><a href="../articles.html">Articles</a></li>
-                                <li><a href="../Astrology/astrology_service.html">Astrology</a></li>
+                                <li><a href="astrology_service.html">Astrology</a></li>
                                 <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
                                 <li><a href="../Videos/video.html">Videos</a></li>
                             </ul>
@@ -217,13 +221,10 @@
             <h1 class="logo logo-mobile text-uppercase d-inline d-md-none"><a href="../index.html">Kandlus</a></h1>
             <div class="float-right header-tools">
                 <ul class="header-social-network d-inline-block list-inline mr-10">
-                    <li class="list-inline-item"><a class="social-icon facebook-icon text-xs-center color-grey" target="_blank" href="#"><i class="ti-facebook"></i></a></li>
-                    <li class="list-inline-item"><a class="social-icon twitter-icon text-xs-center color-grey" target="_blank" href="#"><i class="ti-twitter"></i></a></li>
+                    <li class="list-inline-item"><a class="social-icon facebook-icon text-xs-center color-grey" target="_blank" href="https://www.facebook.com/Kandlus1"><i class="ti-facebook"></i></a></li>
+                    <li class="list-inline-item"><a class="social-icon twitter-icon text-xs-center color-grey" target="_blank" href="https://www.youtube.com/c/Kandlus"><i class="ti-youtube"></i></a></li>
                 </ul>
-                <button onclick="SearchPage()" class="search search-icon search-btn mr-15">
-                    <i class="ti-close"></i>
-                    <i class="ti-search"></i>
-                </button>
+                
                 <div class="off-canvas-toggle-cover d-inline-block">
                     <div class="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle">
                         <span></span>
@@ -235,152 +236,301 @@
             <div class="divider-2"></div>
         </div>
     </header>
-    <!-- Start Main content -->
-    <main class="mt-30">
-        <div class="container">
-            <!--archive header-->
+
+    <main>
+        <div class="container improvCont">
             <div class="archive-header">
                 <div class="breadcrumb font-small">
                     <a href="../index.html">Home</a>
-                    <span></span> Videos
+                    <span></span> ascendant
                 </div>
-                <h2 class="font-weight-bold"><span class="font-family-normal" id="ShowCategory" ></span></h2>
+                <h2 class="font-weight-bold"><span class="font-family-normal"></span></h2>
                 <ul class="sub-category list-inline font-x-small text-uppercase">
-                    <li class="list-inline-item"><a href="category.html?id=Ancient Civilazation">Ancient Civilazation</a></li>
-                    <li class="list-inline-item"><a href="category.html?id=Extraterrestrials Life">Extraterrestrials Life</a></li>
-                    <li class="list-inline-item"><a href="category.html?id=Decoding">Decoding</a></li>
-                    <li class="list-inline-item"><a href="category.html?id=Spritual awakening">Spritual awakening</a></li>
-                    
+                    <li class="list-inline-item"><a href="Biorythm.html">Biorythm</a></li>
+                    <li class="list-inline-item"><a href="ascendant.html">Ascendant</a></li>
+                    <li class="list-inline-item"><a href="Characteris.html">Personal characteris</a></li>
+                    <li class="list-inline-item"><a href="list-of-Yoga.html">List of Yogas</a></li>
+                    <li class="list-inline-item"><a href="Numerology.html">Numerology</a></li>
+                    <li class="list-inline-item"><a href="NumerologyTable.html">Numerology Table</a></li>
+                    <li class="list-inline-item"><a href="Radical_number.html">Radical Number</a></li>
+                    <li class="list-inline-item"><a href="Horoscope.html">Horoscope</a></li>
                 </ul>
                 <span class="line-dots mt-30 mb-30"></span>
             </div>
-            <!--Loop Grid 5-->
+        </div>
+        <section id="All_sec">
+            <div class="left-side">
+    
+                 <!-- The same as biorythm use for personal day number -->
+                 <aside id="PersonalBirth" class="bg-grey">
+                    <figure id="displayNumber">
+                        <h5><a href="https://kandlus.net/Astrology/ascendant.html">What is Ascendant?</a></h4>
+                        <span onclick="firstHideParaf()" class="material-symbols-outlined" id="first-arrow">
+                            arrow_drop_down
+                            </span> <span onclick="firstHideParaf()" class="material-symbols-outlined" id="second-arrow">
+                                arrow_right
+                                </span>
+                        <p id="hidden_p">
+                            Ascendant is a sign that rises in the east at the time of birth. Therefore,
+                             it is also called the emergence sign. As the most important house,
+                              the Ascendant is also known as the first house of the horoscope, 
+                              which records the basic principles of one's life.
+                        </p>
+                        <figcaption id="myCaption" class="myCaption" >
+                            <h4>Let calculate your name, birth day, place, and time to find your ascendant</h4><br>
+                            <form id="newForm">
+                                <div>
+                                    <label for="Gender">Select your gender:</label>
+                                    <select name="Gender" id="Gender">
+                                        <option value="M">Male</option>
+                                        <option value="F">Fmale</option>
+                                    </select>
+                                </div><br>
+                            
+                                    <label for="name">What is your birth name</label> 
+                                    <input type="text" id="name" required>
+                                    <br>
+                             
+                                <label for="pBirth">Insert your birth day</label> 
+                                <input type="date" id="pBirth" required>
+                               <br>
+                               
+                                <label for="timeBirth">Insert your birth time</label> 
+                                <input type="time" id="timeBirth" required>
+                                <br>
 
-            <div class="row vertical-divider mb-50">
-                <div class="col-lg-9 col-md-12">
-                    <div class="mb-30">
-                        <article class="first-post mb-md-4 mb-lg-0 mb-30">
-                            <figure class="mb-30">
-                                <a href="single.html" id="displayVideo">
-                                   
-                                </a>
-                            </figure>
-                            <div class="post-content">
-                                <h3 class="mb-20 position-relative font-weight-bold">
-                                    <a href="#" id="displayTitle"></a>
-                                </h3>
-                                <p class="excerpt" id="describe">
+                               
+                                <label for="countries">Country of birth:</label>
+                                <select id="countries" name="countries">
+                                    <option value="34.5553,69.2075">Afghanistan</option>
+                                    <option value="41.3275,19.8189">Albania</option>
+                                    <option value="36.7372,3.0868">Algeria</option>
+                                    <option value="42.5063,1.5218">Andorra</option>
+                                    <option value="-8.7832,-55.4915">Angola</option>
+                                    <option value="17.1175,-61.8456">Antigua and Barbuda</option>
+                                    <option value="-34.6037,-58.3816">Argentina</option>
+                                    <option value="40.1792,44.4991">Armenia</option>
+                                    <option value="-35.282,149.1287">Australia</option>
+                                    <option value="48.2082,16.3738">Austria</option>
+                                    <option value="40.4093,49.8671">Azerbaijan</option>
+                                    <option value="25.0343,-77.3963">Bahamas</option>
+                                    <option value="26.0667,50.5577">Bahrain</option>
+                                    <option value="23.685,90.3563">Bangladesh</option>
+                                    <option value="13.1939,-59.5432">Barbados</option>
+                                    <option value="53.9045,27.5615">Belarus</option>
+                                    <option value="50.8503,4.3517">Belgium</option>
+                                    <option value="17.1899,-88.4976">Belize</option>
+                                    <option value="9.3077,2.3158">Benin</option>
+                                    <option value="32.3078,-64.7505">Bermuda</option>
+                                    <option value="27.5142,90.4336">Bhutan</option>
+                                    <option value="-16.5000,-68.1500">Bolivia</option>
+                                    <option value="43.8563,18.4131">Bosnia and Herzegovina</option>
+                                    <option value="-24.6583,25.9080">Botswana</option>
+                                    <option value="-15.7939,-47.8828">Brazil</option>
+                                    <option value="18.4207,-64.6399">British Virgin Islands</option>
+                                    <option value="4.6110,-74.0817">Brunei</option>
+                                    <option value="42.6977,23.3219">Bulgaria</option>
+                                    <option value="12.3714,-1.5197">Burkina Faso</option>
+                                    <option value="-3.3731,29.9189">Burundi</option>
+                                    <option value="-3.3704,-64.7146">Cabo Verde</option>
+                                    <option value="11.5500,104.9167">Cambodia</option>
+                                    <option value="3.8480,11.5021">Cameroon</option>
+                                    <option value="45.4215,-75.6972">Canada</option>
+                                    <option value="-11.2027,17.8739">Central African Republic</option>
+                                    <option value="12.1206,-14.9799">Chad</option>
+                                    <option value="-33.4489,-70.6693">Chile</option>
+                                    <option value="39.9042,116.4074">China</option>
+                                    <option value="4.6097,-74.0817">Colombia</option>
+                                    <option value="-11.6558,43.3333">Comoros</option>
+                                    <option value="-4.3224,15.3070">Congo</option>
+                                    <option value="9.7489,-83.7534">Costa Rica</option>
+                                    <option value="45.2671,19.8335">Croatia</option>
+                                    <option value="23.1333,-82.3830">Cuba</option>
+                                    <option value="35.1667,33.3667">Cyprus</option>
+                                    <option value="50.0755,14.4378">Czech Republic</option>
+                                    <option value="55.6761,12.5683">Denmark</option>
+                                    <option value="11.8251,42.5903">Djibouti</option>
+                                    <option value="15.3126,-61.3794">Dominica</option>
+                                    <option value="18.4861,-69.9312">Dominican Republic</option>
+                                    <option value="-0.1807,-78.4678">Ecuador</option>
+                                    <option value="30.0444,31.2357">Egypt</option>
+                                    <option value="13.7367,100.5231">El Salvador</option>
+                                    <option value="1.3733,32.2903">Equatorial Guinea</option>
+                                    <option value="15.1794,39.7823">Eritrea</option>
+                                    <option value="59.4370,24.7535">Estonia</option>
+                                    <option value="9.1450,40.4897">Ethiopia</option>
+                                    <option value="62.3908,17.3069">Faroe Islands</option>
+                                    <option value="-17.7134,178.0650">Fiji</option>
+                                    <option value="60.1699,24.9384">Finland</option>
+                                    <option value="48.8566,2.3522">France</option>
+                                    <option value="-0.8037,11.6094">Gabon</option>
+                                    <option value="13.4443,144.7937">Gambia</option>
+                                    <option value="41.7151,44.8271">Georgia</option>
+                                    <option value="52.5200,13.4050">Germany</option>
+                                    <option value="5.6037,-0.1870">Ghana</option>
+                                    <option value="37.9838,23.7275">Greece</option>
+                                    <option value="64.1830,-51.7216">Greenland</option>
+                                    <option value="12.1165,-61.6790">Grenada</option>
+                                    <option value="15.7835,-90.2308">Guatemala</option>
+                                    <option value="11.5512,-85.6981">Guinea</option>
+                                    <option value="9.9456,-9.6966">Guinea-Bissau</option>
+                                    <option value="4.8604,-58.9302">Guyana</option>
+                                    <option value="18.9712,-72.2852">Haiti</option>
+                                    <option value="14.6349,-90.5069">Honduras</option>
+                                    <option value="47.1625,19.5033">Hungary</option>
+                                    <option value="64.1355,-21.8954">Iceland</option>
+                                    <option value="28.6139,77.2090">India</option>
+                                    <option value="-6.2088,106.8456">Indonesia</option>
+                                    <option value="35.6895,51.3890">Iran</option>
+                                    <option value="33.3152,44.3661">Iraq</option>
+                                    <option value="53.3498,-6.2603">Ireland</option>
+                                    <option value="31.7683,35.2137">Israel</option>
+                                    <option value="41.9028,12.4964">Italy</option>
+                                    <option value="18.1096,-77.2975">Jamaica</option>
+                                    <option value="36.2048,138.2529">Japan</option>
+                                    <option value="31.9454,35.9284">Jordan</option>
+                                    <option value="51.1694,71.4491">Kazakhstan</option>
+                                    <option value="-1.2864,36.8172">Kenya</option>
+                                    <option value="-29.3456,27.4240">Lesotho</option>
+                                    <option value="6.4281,-9.4295">Liberia</option>
+                                    <option value="32.7940,13.0878">Libya</option>
+                                    <option value="47.1625,19.5033">Hungary</option>
+                                    <option value="64.1355,-21.8954">Iceland</option>
+                                    <option value="28.6139,77.2090">India</option>
+                                    <option value="-6.2088,106.8456">Indonesia</option>
+                                    <option value="35.6895,51.3890">Iran</option>
+                                    <option value="33.3152,44.3661">Iraq</option>
+                                    <option value="53.3498,-6.2603">Ireland</option>
+                                    <option value="31.7683,35.2137">Israel</option>
+                                    <option value="41.9028,12.4964">Italy</option>
+                                    <option value="18.1096,-77.2975">Jamaica</option>
+                                    <option value="36.2048,138.2529">Japan</option>
+                                    <option value="31.9454,35.9284">Jordan</option>
+                                    <option value="51.1694,71.4491">Kazakhstan</option>
+                                    <option value="-1.2864,36.8172">Kenya</option>
+                                    <option value="42.3601,-71.0589">USA</option>
+                                    <option value="35.9078,127.7669">South Korea</option>
+                                    <option value="37.5665,126.9780">North Korea</option>
+                                    <option value="25.0343,-77.3963">Bahamas</option>
+                                    <option value="39.9334,32.8597">Turkey</option>
+                                    <option value="41.9028,12.4964">Italy</option>
+                                    <option value="52.3676,4.9041">Netherlands</option>
+                                    <option value="40.7128,-74.0060">USA</option>
+                                    <option value="55.7558,37.6173">Russia</option>
+                                    <option value="35.6895,139.6917">Japan</option>
+                                    <option value="48.8566,2.3522">France</option>
+                                    <option value="51.5074,-0.1278">United Kingdom</option>
+                                    <option value="35.9078,127.7669">South Korea</option>
+                                    <option value="40.7128,-74.0060">New York</option>
+                                    <option value="34.0522,-118.2437">Los Angeles</option>
+                                </select><br><br> 
+                                <button class="myButton" type="submit" >
+                                    <i class="ti-arrow-right mr-5"></i>Continue
+                                </button>
+                            </form>
+                        </figcaption>
+                    </figure>
+                 <figure id="ascend">
+                    <span id="insidAscend">
+                        <div class="spinner-container">
+                             <div class="spinnerWrap">
+                              <div class="spinner" id="spinner2"></div>
+                            </div> 
+                          </div>
+                   </span>
+                </figure>
+                </aside>
 
-                                </p>
-                                <div class="entry-meta meta-0 mb-15 font-small" id="shoeMainCategory" >
-                                    
-                                </div>
-                            </div>
-                        </article>
-                        <h6 class="font-weight-bold widget-header widget-header-style-5 mb-10">
-                            <span class="d-inline-block block mb-10 widget-title font-family-normal" id="NoCate"> </span>
-                        </h6>
-
-                        <span id="SecondRow">
-                        </span>
-                         <!--Ads-->
-                         <h6 class="font-weight-bold widget-header widget-header-style-5 mb-10">
-                            <span class="d-inline-block block mb-10 widget-title font-family-normal">Latest Videos </span>
-                        </h6>
-
-                        <span id="thirdmoc">
-                        </span>
-
-                         <!--Ads-->
-
-                        <span id="NextLandingData">
-                        </span>
-
-                        <span id="latestSec" style="display: none;">
-                        </span>
-
-                        <span id="thirdsSec" style="display: none;">
-                        </span>
-                    </div>
-                    <div class="pagination-area pt-15 border-top-2 mt-30 font-heading wow fadeIn  animated">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="single-wrap d-flex">
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination">
-                                                <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-                                                <li class="page-item active"><a onclick="FirstRows()" id="firstRows" class="page-link" style="color: red;" >01</a></li>
-                                                <li class="page-item"><a onclick="secondRowes()" id="secondRowes" class="page-link" >02</a></li>
-                                                <li class="page-item"><a onclick="thirdRow()" id="thirdRow" class="page-link">03</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Ascendant start  -->
+                 
+                 <div class="widthAds" style="width: 100%;">
+                    ads
                 </div>
-                <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
-                    <div class="widget-area">
-                        <div class="sidebar-widget widget-latest-posts mb-30 wow fadeIn animated">
-                            <!-- Ads here -->
-                            <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Kandlus</span>
-                            </h6>
-                            <div class="author-content text-center">
-                                <a href="author.html"><img class="img-circle d-inline-block mb-10" src="../assets/images/Omid.PNG" alt=""></a>
-                                <p><img src="assets/imgs/authors/sign.png" alt=""></p>
-                                <p>
-                                    Omid is the creative mind behind Kandlus, where he shares his passion for Ancient civilization, Decoding mysteries, Matrix theory etc.. With over a decade of experience in the field, Omid combines her expertise and personal experiences to deliver engaging, informative, and inspiring content to his readers
-                                </p>
-                                <ul class="header-social-network d-inline-block list-inline font-small">
-                                    <li class="list-inline-item"><a class="social-icon facebook-icon text-xs-center" target="_blank" href="#"><i class="ti-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a class="social-icon twitter-icon text-xs-center" target="_blank" href="#"><i class="ti-twitter-alt"></i></a></li>
-                                    <li class="list-inline-item"><a class="social-icon pinterest-icon text-xs-center" target="_blank" href="#"><i class="ti-pinterest"></i></a></li>
-                                    <li class="list-inline-item"><a class="social-icon instagram-icon text-xs-center" target="_blank" href="#"><i class="ti-instagram"></i></a></li>
-                                </ul>
-                                <p class="font-small mt-15 text-muted"><a href="#">View more</a></p>
-                            </div>
+
+                <section class="threeUnder" >
+                    <div class="rightSideImage">
+                       
+                    </div>
+                    <div>
+                        <h1>Realated astrology service</h1>
+                        <a href="Numerology.html">
+                        <figure class="inseideFigure">
+                            
+                            <figcaption>
+                                <h3>Biorythm</h3>
+                                <h4>Ranked by users: <span class="material-symbols-outlined">
+                                    star
+                                    </span>100%</h4>
+                                <p> Let calculate your birthday and birthtime to find your biorythm, including chart. </p>
+                            </figcaption>
+                           <span class="myImages" id="mi-1"></span>
+                        </figure></a> <hr class="breakLine" >
+                        
+                        <figure onclick="Numerology()" class="inseideFigure">
+                            <figcaption>
+                                <h3>Numerology</h3>
+                                <h4>Ranked by users: <span class="material-symbols-outlined">
+                                    star
+                                    </span>100%</h4>
+                                <p>Enter your name, date of birth and time to analyze the numbers related to you</p>
+                            </figcaption>
+                           <span class="myImages" id="mi-2"></span>
+                        </figure> <hr class="breakLine" >
+                        <figure class="inseideFigure">
+                            <figcaption onclick="ascendant()">
+                                <h3>Ascendant report</h3>
+                                <h4>Ranked by users: <span class="material-symbols-outlined">
+                                    star
+                                    </span>99%</h4>
+                                <p>Ascendant which records the basic principles of one's life is a sign that rises in the east at the time of birth. </p>
+                            </figcaption>
+                           <span class="myImages" id="mi-3"></span>
+                        </figure> <hr class="breakLine" >
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
+                <div class="widget-area">
+                    <div class="sidebar-widget widget-latest-posts mb-30 wow fadeIn animated">
+                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
+                            <span>Kandlus</span>
+                        </h6>
+                        ads
+                    </div>
+                    <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
+                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
+                            <span>Related Articles</span>
+                        </h6>
+                        <div id="liForRight" class="post-block-list post-module-1 post-module-5">
+                        
                         </div>
-                        <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
-                            <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span></span>
-                            </h6>
-                              <!-- Ads here -->
-                            <div class="post-block-list post-module-1 post-module-5">
-                                <ul class="list-post">
-                                    
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="sidebar-widget widget_newsletter wow fadeIn animated">
-                            <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Newsletter</span>
-                            </h6>
-                            <div class="newsletter">
-                                <p class="">Continue reading uninterrupted with a subscription</p>
-                                <form id="myForm" action="#" method="post" class="subscribe_form relative mail_part">
-                                    <div class="form-newsletter-cover">
-                                        <div class="form-newsletter">
-                                            <input id="Email" type="email" name="EMAIL" placeholder="Email address" required="">
-                                            <button type="button" onclick="subscribe()">
-                                                <span class="long-arrow long-arrow-right"></span>
-                                            </button>
-                                        </div>
+                    </div>
+                    Ads
+                    <div id="moreData" class="sidebar-widget widget-latest-comments mb-30 wow fadeIn  animated">
+
+                    </div>
+                    <div class="sidebar-widget widget_newsletter mb-50 wow fadeIn animated">
+                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
+                            <span>Newsletter</span>
+                        </h6>
+                        <div class="newsletter">
+                            <p class="">Continue reading uninterrupted with a subscription</p>
+                            <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
+                                <div class="form-newsletter-cover">
+                                    <div class="form-newsletter">
+                                        <input type="email" name="EMAIL" placeholder="Email address" required="">
+                                        <button type="submit">
+                                            <span class="long-arrow long-arrow-right"></span>
+                                        </button>
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
-      
-    <!-- End Main content -->
-    <!-- Footer Start-->
     <footer>
         <div class="footer-area">
             <div class="container">
@@ -423,7 +573,7 @@
                                 <div class="d-flex">
                                     <div class="post-thumb post-thumb-50 d-flex mr-15 border-radius-5 img-hover-scale">
                                         <a class="color-white" href="#">
-                                            <img class="img-circle" src="../img/team/OmidKandlus.png" alt="">
+                                            <img class="img-circle" src="../assets/images/Omid.PNG" alt="">
                                         </a>
                                     </div>
                                     <div class="post-content media-body">
@@ -434,6 +584,7 @@
                                     </div>
                                 </div>
                             </li>
+
                         </ul>
                     </div>
                     <div class="col">
@@ -458,7 +609,7 @@
                             <li class="cat-item cat-item-6"><a href="../blog/category.html?id=Tourist-Attraction">Tourist Attraction</a></li>
                             <li class="cat-item cat-item-7"><a href="../blog/category.html?id=Mysterical">Mysterious topics</a></li>
                             <li class="cat-item cat-item-8"><a href="../blog/category.html?id=top-10">Top 10</a></li>
-                            <li class="cat-item cat-item-9"><a href="../indexVide.html">Videos</a></li>
+                            <li class="cat-item cat-item-9"><a href="../videos/video.html">Videos</a></li>
                         </ul>
                     </div>
                     <div class="col">
@@ -532,16 +683,23 @@
     <script src="../assets/js/vendor/jquery.ticker.js"></script>
     <script src="../assets/js/vendor/jquery.vticker-min.js"></script>
     <script src="../assets/js/vendor/jquery.scrollUp.min.js"></script>
-    <script src="../assets/js/vendor/jquery.nice-select.min.js"></script>
+    <!-- <script src="../assets/js/vendor/jquery.nice-select.min.js"></script> -->
     <script src="../assets/js/vendor/jquery.magnific-popup.js"></script>
     <script src="../assets/js/vendor/jquery.sticky.js"></script>
     <script src="../assets/js/vendor/perfect-scrollbar.js"></script>
     <script src="../assets/js/vendor/waypoints.min.js"></script>
     <script src="../assets/js/vendor/jquery.theia.sticky.js"></script>
-    <script src="../assets/js/videoScript.js"></script>
     <!-- NewsBoard JS -->
     <script src="../assets/js/main.js"></script>
-    <script type="module" src="./../assets/js/timeCount.js"></script>
+    <script src="../assets/js/MyScript.js"></script>
+   <script src="../assets/js/script.js"></script>
+   <script src="../assets/js/landingNav.js"></script>
+    <script src="../assets/js/articles/HomeArticle.js"></script>
+    <script src="../assets/js/articles/blogAstro.js"></script>
+    <script src="../assets/js/ascendant.js"></script>
+    <script src="../assets/js/planet.js"></script>
+    <script src="../assets/js/cookie.js"></script>
+    <script src="../assets/js/checkon.js"></script>
 </body>
 
 </html>

@@ -35,18 +35,16 @@ if (plan) {
         }
 
       
-    let currentDate = new Date();
-    let hours = currentDate.getHours();
+
     
 // Format the time as a string
         
 
         function justtest(codes, items) {
 
-          const newH = items[0].date;
           let points = items[0].TimeSpend;
           if (hours > newH) {
-            points = items[0].TimeSpend + 1; 
+            points = items[0].TimeSpend - serviceAm; 
             recordTimeSpent(codes, points, hours);
             
           } 
