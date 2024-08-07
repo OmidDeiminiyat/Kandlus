@@ -1,14 +1,21 @@
 
-
-
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+async function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  return hashHex;
+}
+document.getElementById('loginForm').addEventListener('submit', async (event) => {
     event.preventDefault();
   
     const newEmail = document.getElementById('Email').value;
-    const password = document.getElementById('password').value;
+    const getPass = document.getElementById('password').value;
+    const passed = await hashPassword(getPass);
     const errorMessage = document.getElementById('errorMessage');
     console.log(newEmail);
-    console.log(password);
+    console.log(passed);
   
     // Sample credentials for demonstration purposes
   
@@ -33,7 +40,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         return 0;
       });
        console.log('Email is:' + checkEmail[0].email); // Do something with the fetched data
-       if (Emails === checkEmail[0].email && password === checkEmail[0].Password) {
+       if (Emails === checkEmail[0].email && passed === checkEmail[0].Password) {
         onLoginSuccess('Kandlus-users', checkEmail[0].Code, 3 )
            
         // Redirect to another page or perform other actions here

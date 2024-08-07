@@ -40,6 +40,15 @@ singlePageArticle(data)
    
 
 showVideo.forEach((getData, index) => {
+
+  let artIds = sessionStorage.getItem("ArtId");
+  if (artIds) {
+    sessionStorage.removeItem("ArtId");
+    sessionStorage.setItem("ArtId", getData.id);
+  } else {
+    sessionStorage.setItem("ArtId", getData.id);
+  }
+  
   let teoCat = `<a href="category.html"><span class="post-cat position-relative"># ${getData.categoryOne}</span></a>
                 <a href="category.html"><span class="post-cat position-relative"># ${getData.categoryTwo}</span></a>`
       cateTwo.innerHTML= teoCat;           

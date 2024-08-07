@@ -234,7 +234,7 @@
                             <a href="#">Library</a>
                             <ul class="col-md-2">
                                 <li><a href="category.html">Video</a></li>
-                                <li><a href="category-grid.html">Article</a></li>
+                                <li><a href="../blog/usersArticle.html">Article</a></li>
                             </ul>
                         </li>
                         <li>
@@ -284,7 +284,12 @@
                                     </span>
                                     <a class="single-print mr-15"><span><i class="ti-printer mr-5"></i>Print</span></a>
                                     <div class="vline-space d-inline-block"></div>
-                                    <a href="#"><span><i class="ti-email mr-5"></i>Email</span></a>
+                                  <script>
+                                        var url = window.location.href;
+                                        var urlObj = new URL(url);
+                                        var seo = urlObj.searchParams.get('id');
+                                    </script> 
+                                    <a id="checkChange"><span><i class="ti-email mr-5"></i>Save</span></a>
                                 </div>
                             </div>
                         </div>
@@ -677,6 +682,7 @@
     <script src="../assets/js/cookie.js"></script>
     <script type="module" src="./../assets/js/viewCound.js"></script>
     <script type="module" src="./../assets/js/timeCount.js"></script>
+    <script type="module"  src="./../assets/js/controller/savingPage.js"></script>
 </body>
 
 </html>
