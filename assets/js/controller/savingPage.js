@@ -3,7 +3,14 @@ const articleId = sessionStorage.getItem("ArtId");
 
 const UserCode = getCookie('Kandlus-users');
 test1.addEventListener("click", () => {
+  const SendErlog = document.getElementById('changeSaves');
+  if (UserCode) {
     callForUpdate(UserCode, articleId)
+    SendErlog.innerHTML = '<p> Article saved in your library section </p>';
+  } else {
+    SendErlog.innerHTML = '<p> Dear user, You must be logged in to save articles </p>';
+  }
+   
   });
 
 function callForUpdate(tests, articleId) {
