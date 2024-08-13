@@ -303,3 +303,17 @@ function Podcast() {
   window.location.href = 'Podcast.html';
 }
 
+
+function Zodiacs() {
+  var cook = getCookie('Kandlus-users');
+  if (cook) {
+    console.log('You are welcome');
+    const ZodRe = "Astrology/" + dataRe;
+      window.location.href = ZodRe;
+  } else {
+    console.log('You are not log in');
+     const ZodRe = "Astrology/Horoscope.html";
+      window.location.href = ZodRe;
+  }
+  
+}

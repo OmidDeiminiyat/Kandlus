@@ -2040,6 +2040,41 @@
   }
 }
 
+#Zodiacs {
+  width: 80%;
+  margin-left: 10%;
+  box-shadow: 7px 2px 48px -11px rgba(0, 0, 0, 0.75);
+}
+#Zodiacs figure {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  #Zodiacs figure {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  #Zodiacs figure {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#Zodiacs figure img {
+  width: 100%;
+  cursor: pointer;
+}
+#Zodiacs figure img:hover {
+  filter: hue-rotate(120deg) saturate(2) brightness(1.2);
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  #Zodiacs figure img {
+    width: 100%;
+  }
+}
+
 #MainMusicPlayer {
   width: 96%;
   margin-left: 2%;
