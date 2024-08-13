@@ -444,80 +444,12 @@
                 </article>
             </div>
             <div class="secondrDiv">
-                <div class="wheel-container">
-                    <div id="wheel" class="wheel">
-                        <div class="segment" style="--i: 0;"><img src="aries.png" alt="Aries"></div>
-                        <div class="segment" style="--i: 1;"><img src="taurus.png" alt="Taurus"></div>
-                        <div class="segment" style="--i: 2;"><img src="gemini.png" alt="Gemini"></div>
-                        <div class="segment" style="--i: 3;"><img src="cancer.png" alt="Cancer"></div>
-                        <div class="segment" style="--i: 4;"><img src="leo.png" alt="Leo"></div>
-                        <div class="segment" style="--i: 5;"><img src="virgo.png" alt="Virgo"></div>
-                        <div class="segment" style="--i: 6;"><img src="libra.png" alt="Libra"></div>
-                        <div class="segment" style="--i: 7;"><img src="scorpio.png" alt="Scorpio"></div>
-                        <div class="segment" style="--i: 8;"><img src="sagittarius.png" alt="Sagittarius"></div>
-                        <div class="segment" style="--i: 9;"><img src="capricorn.png" alt="Capricorn"></div>
-                        <div class="segment" style="--i: 10;"><img src="aquarius.png" alt="Aquarius"></div>
-                        <div class="segment" style="--i: 11;"><img src="pisces.png" alt="Pisces"></div>
-                    </div>
+                <div class="circle-container">
+                    <img src="assets/images/Astrology/Service/Horoscope.png" alt="Spinning Circle" class="spinning-circle">
                   </div>
                 <!-- <figure>
                     <img src="assets/images/Astrology/Service/Horoscope.png" alt="">
                 </figure> -->
-                <style>
-                    .wheel-container {
-  text-align: center;
-}
-
-.wheel {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 5px solid #333;
-  position: relative;
-  overflow: hidden;
-  animation: spin 10s linear infinite; /* Continuous spinning */
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.segment {
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 50%;
-  left: 50%;
-  transform-origin: 0% 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.segment img {
-  width: 100%;
-  height: auto;
-  transform: rotate(-30deg); /* Corrects the image rotation */
-}
-
-.segment:nth-child(1) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(2) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(3) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(4) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(5) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(6) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(7) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(8) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(9) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(10) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(11) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-.segment:nth-child(12) { transform: rotate(calc(30deg * var(--i))) skewY(-30deg); }
-                </style>
             </div>
         </section>
         <div id="Zodiacs">

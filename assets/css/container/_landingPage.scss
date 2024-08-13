@@ -8,11 +8,19 @@
         width:80%;
         margin-left: 10%;
         padding-top: 6%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         @include flexible(center);
         @media(max-width:600px){
             width: 100%;
             margin-left: 0;
             text-align: center;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 600px) and (max-width: 800px) {
+            display: grid;
+            grid-template-columns: 1fr ;
         }
         .firstrDic{
         
@@ -98,13 +106,30 @@
             
         }
         .secondrDiv{
+            .circle-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .spinning-circle {
+                    width: 80%; /* Adjust the size as needed */
+                    animation: spin 3s linear infinite;
+                    animation-duration: 6s;
+                   
+                  }
+              }
+ 
+              @keyframes spin {
+                0% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                  transform: rotate(360deg);
+                }
+              }
             figure{
                 img{
                     width: 30vw;
                 }
-            }
-            @media(max-width:600px) {
-                display: none;
             }
         }
     }   
@@ -113,6 +138,9 @@
     width: 80%;
     margin-left: 10%;
     box-shadow: 7px 2px 48px -11px rgba(0,0,0,0.75);
+    @media(max-width:800px) {
+        display: none;
+   }
 
     figure{
         margin: 0;

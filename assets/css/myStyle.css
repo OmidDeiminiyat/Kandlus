@@ -1922,6 +1922,8 @@
   width: 80%;
   margin-left: 10%;
   padding-top: 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1931,6 +1933,14 @@
     width: 100%;
     margin-left: 0;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  #landingMain .firstSectionLand {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 #landingMain .firstSectionLand .firstrDic article header h1 {
@@ -2031,19 +2041,37 @@
   color: #CAC3BC;
   font-size: 1rem;
 }
+#landingMain .firstSectionLand .secondrDiv .circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#landingMain .firstSectionLand .secondrDiv .circle-container .spinning-circle {
+  width: 80%; /* Adjust the size as needed */
+  animation: spin 3s linear infinite;
+  animation-duration: 6s;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 #landingMain .firstSectionLand .secondrDiv figure img {
   width: 30vw;
-}
-@media (max-width: 600px) {
-  #landingMain .firstSectionLand .secondrDiv {
-    display: none;
-  }
 }
 
 #Zodiacs {
   width: 80%;
   margin-left: 10%;
   box-shadow: 7px 2px 48px -11px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 800px) {
+  #Zodiacs {
+    display: none;
+  }
 }
 #Zodiacs figure {
   margin: 0;
