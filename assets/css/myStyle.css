@@ -3160,6 +3160,19 @@ spinner6
   display: block;
 }
 
+.My-tools {
+  display: table;
+  float: right;
+  background: #f5f5f5;
+  padding: 7px 15px;
+  border-radius: 2px;
+}
+@media (max-width: 600px) {
+  .My-tools {
+    margin-top: 15px;
+  }
+}
+
 #ThreeCards {
   margin-top: 60px;
   width: 100%;
