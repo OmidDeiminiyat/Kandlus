@@ -1804,6 +1804,14 @@
   gap: 1rem;
   width: 100%;
 }
+@media (min-width: 600px) and (max-width: 950px) {
+  #headerDesign {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+}
 @media (max-width: 600px) {
   #headerDesign {
     display: grid;
@@ -1866,6 +1874,11 @@
 }
 @media (max-width: 600px) {
   #headerDesign #Centers {
+    display: none;
+  }
+}
+@media (min-width: 600px) and (max-width: 950px) {
+  #headerDesign #rightSides {
     display: none;
   }
 }
@@ -1937,7 +1950,7 @@
     grid-template-columns: 1fr;
   }
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 900px) {
   #landingMain .firstSectionLand {
     display: grid;
     grid-template-columns: 1fr;
@@ -1958,7 +1971,6 @@
   background-color: #CEBEB1;
   border-radius: 21px;
   position: absolute;
-  margin-left: 15%;
   width: 30vw;
 }
 @media (max-width: 600px) {
@@ -1968,11 +1980,17 @@
     width: 96%;
   }
 }
+@media (min-width: 601px) and (max-width: 900px) {
+  #landingMain .firstSectionLand .firstrDic article .vertical {
+    width: 85%;
+    margin: 0;
+  }
+}
 #landingMain .firstSectionLand .firstrDic article .vertical span {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-left: 10px;
+  padding: 20px 10px 0 0;
 }
 #landingMain .firstSectionLand .firstrDic article .vertical span h3, #landingMain .firstSectionLand .firstrDic article .vertical span #navigation hgroup h5, #navigation hgroup #landingMain .firstSectionLand .firstrDic article .vertical span h5, #landingMain .firstSectionLand .firstrDic article .vertical span #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #landingMain .firstSectionLand .firstrDic article .vertical span p {
   font-size: 1.5rem;
@@ -2291,6 +2309,11 @@
     margin: 0;
   }
 }
+@media (min-width: 600px) and (max-width: 1000px) {
+  #videos .insideVideos .fourVideos .fourFigure {
+    width: 200px;
+  }
+}
 #videos .insideVideos .fourVideos .fourFigure img {
   width: 100%;
   max-height: 200px;
@@ -2320,6 +2343,11 @@
     overflow-y: auto;
   }
   #videos .insideVideos .fourVideos .captionVideos :nth-child(n+3) {
+    display: none;
+  }
+}
+@media (min-width: 600px) and (max-width: 1050px) {
+  #videos .insideVideos .fourVideos .captionVideos :nth-child(n+4) {
     display: none;
   }
 }
@@ -3160,6 +3188,19 @@ spinner6
   display: block;
 }
 
+.My-tools {
+  display: table;
+  float: right;
+  background: #f5f5f5;
+  padding: 7px 15px;
+  border-radius: 2px;
+}
+@media (max-width: 600px) {
+  .My-tools {
+    margin-top: 15px;
+  }
+}
+
 #ThreeCards {
   margin-top: 60px;
   width: 100%;
@@ -3613,4 +3654,4 @@ spinner6
   color: red;
   top: 30%;
   text-align: center;
-}
+}/*# sourceMappingURL=myStyle.css.map */
