@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-3825145502473153",
-            enable_page_level_ads: true
-        });
-    </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Kandlus - Articles, Astrology Services and Videos</title>
@@ -31,7 +24,7 @@
     <!-- Start Preloader -->
   
     <!--Offcanvas sidebar-->
-    <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
+     <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
         <button class="off-canvas-close"><i class="ti-close"></i></button>
         <div class="sidebar-inner">
             <!--Latest-->
@@ -54,8 +47,7 @@
                 <div class="widget_nav_menu">
                     <ul class="menu">
                         <li class="cat-item"><a>Your plan is: <span id="Wplan">Free</span></a></li>
-                        <li class="cat-item"><a id="currentP">Current Point: 00</a></li>
-                        <li class="cat-item"><a onclick="LogOut()" style="cursor: pointer;">Log out</a></li>
+                        <li class="cat-item" id="currentP" style="display: none;">Renew plan on:</li>
                         <li class="cat-item"><a></a></li>
 
                         <li class="cat-item cat-item-2 menu-item-has-children">
@@ -65,168 +57,18 @@
                                 <li class="cat-item"><a href="../blog/usersArticle.html">Articles</a></li>
                             </ul>
                         </li>
-                        <li class="cat-item cat-item-2 menu-item-has-children">
-                            <a>What is points</a>
-                            <ul class="sub-menu"><br>
-                                <p>You recived points automatically based on the time you spending in my website to: reading articles and watching videos. </p>
+                        <li id="subscriptionPlan" class="cat-item cat-item-2 menu-item-has-children">
+                            <a style="cursor: pointer;">Cancel subscription</a>
+                            <ul class="sub-menu">
+                                <p>You are about to cancel the subscription, Are you sure? </p>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="cancelSub" > Yes </a> </li>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="follow" > No </a> </li>
                             </ul>
                         </li>
+                        <li class="cat-item"><a onclick="LogOut()" style="cursor: pointer;">Log out</a></li>
                     </ul>
                 </div><br>
-                <div class="post-block-list post-module-1 post-module-5">
-                    <ul class="list-post">
-                        <li class="mb-15" id="firstOffer" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(3)" >Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">Use Ascendant for 3 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15" id="seconOffer" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(4)">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use biorythm for 4 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15" id="thirdOf" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(5)">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use Personal charactrise for 5 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15" id="forthOf" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(6)">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use list of yoga for 6 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15" id="sixthOf" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(7)">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use numerology for 7 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15" id="seventhOf" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(8)">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use solfeggio frequency library for 8 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15" id="eighthOf" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(9)">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use numerology table for 9 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15" id="ninthOf" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(10)">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use horoscope for 10 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15" id="tenthOf" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(11)">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use radical number for 11 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15" id="eleventhOf" style="display: none;">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a style="cursor: pointer;" onclick="pageview(12)">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use kundali matching for 12 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+              
             </div>
             <!--Ads-->
         </div>
@@ -347,7 +189,7 @@
                 </nav>
             </div>
             <h1 class="logo text-uppercase d-md-inline d-none"><a href="index.html">Kandlus</a></h1>
-            <h1 class="logo logo-mobile text-uppercase d-inline d-md-none" style="font-size: 21px;"><a href="index.html">Kandlus</a></h1>
+            <h1 class="logo logo-mobile text-uppercase d-inline d-md-none"><a href="index.html">Kandlus</a></h1>
             <div class="float-right header-tools">
                 <ul class="header-social-network d-inline-block list-inline mr-10">
                     <li class="list-inline-item"><a class="social-icon facebook-icon text-xs-center color-grey" target="_blank" href="#"><i class="ti-facebook"></i></a></li>
@@ -399,20 +241,11 @@
     </header>
 
    </section>
-   <div style="width: 80%; margin-left:10%; ">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3825145502473153"
-    crossorigin="anonymous"></script>
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-3825145502473153"
-        data-ad-slot="4661065121"
-        data-ad-format="auto"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+   <div id="forAds" style="width: 80%; margin-left:10%; ">
+    
    </div>
    <main id="landingMain">
-        <section class="firstSectionLand">
+         <section class="firstSectionLand">
             <div class="firstrDic">
                 <article>
                     <header>
@@ -489,17 +322,8 @@
         </div>
         </section>
         <hr class="fullHr">
-        <div style="width: 80%; margin-left:10%; ">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3825145502473153"
-            crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3825145502473153"
-                data-ad-slot="4661065121"
-                data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+        <div id="for-tests" style="width: 80%; margin-left:10%; ">
+            
            </div>
         <section id="videos">
             <video autoplay muted loop class="video-background">
@@ -583,6 +407,7 @@
                         <li><a href="https://kandlus.net/blog/QuizEgo.php?id=Ego-Vs-Yourself#em2">Determine what percentage of your personality is ego and what percentage is true self </a></li><hr class="spiritLine">
                         <li><a href="https://kandlus.net/blog/SinglePageEn.php?id=The-Path-of-Enlightenment#em2">What level of spiritual awakening you are?</a></li><hr class="spiritLine">
                         <li><a href="https://kandlus.net/Angel-numbers/Angel-numbers.php">Do you keep seeing repeating numbers? </a></li><hr class="spiritLine">
+                        <li><a href="Sprituality/human-frequency.html">Human frequency </a></li><hr class="spiritLine">
                     </ul>
                 </div>
                 <figure class="leftSpritual" >
@@ -591,17 +416,8 @@
             </div>
 
         </section>
-        <div style="width: 80%; margin-left:10%; ">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3825145502473153"
-            crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3825145502473153"
-                data-ad-slot="4661065121"
-                data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+        <div id="adsThree" style="width: 80%; margin-left:10%; ">
+            
            </div>
    </main>
 </span>
@@ -777,7 +593,8 @@
    <script src="../assets/js/landingNav.js"></script>
   <script src="assets/js/articles/HomeArticle.js"></script>
     <script type="module" src="./assets/js/timeCount.js"></script>
-    <script src="assets/js/linkCheck.js"></script>   
+    <script src="assets/js/linkCheck.js"></script>
+   <script src="assets/js/adsUser.js"></script>
 </body>
 
 </html>
