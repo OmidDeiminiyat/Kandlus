@@ -1486,7 +1486,7 @@
 /* Horoscop resault design */
 #HorosResult {
   display: none;
-  width: 80%;
+  width: 100%;
 }
 
 #HorosMenu {
@@ -1584,9 +1584,11 @@
   grid-template-columns: 1fr 1fr 1fr;
   padding: 0;
   margin: 0;
+  width: 80%;
+  margin-left: 10%;
 }
 
-.charts #myChart {
+.charts #myChart, #finances, #health, #Realation, #Friend, #Travel {
   margin: 30px 0 0 0;
   padding: 0;
 }
@@ -1664,8 +1666,6 @@
   #HorosResult {
     display: none;
     grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 100%;
     margin: 0;
   }
   #HorosResult img {
@@ -1709,6 +1709,62 @@
     margin: 5% 0 0 10%;
   }
 }
+.HorosCard {
+  width: 80%;
+  margin-left: 10%;
+  border: 1px solid #9A5C23;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 600px) {
+  .HorosCard {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.HorosCard div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  text-align: center;
+}
+.HorosCard div h1 {
+  font-size: 120px;
+  color: #c9a56e;
+}
+@media (max-width: 600px) {
+  .HorosCard div h1 {
+    font-size: 30px;
+  }
+}
+.HorosCard div h4 {
+  color: #c9a56e;
+}
+.HorosCard div img {
+  width: 70%;
+  margin: 0;
+  padding: 0;
+}
+.HorosCard p {
+  width: 80%;
+  margin: 3% 0 0 10%;
+}
+.HorosCard h5 {
+  margin: 3% 0 0 10%;
+  color: #c9a56e;
+}
+.HorosCard .elements {
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.HorosCard .elements .cubed {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
 #LandingHeader header {
   height: 100%;
 }
@@ -3654,4 +3710,4 @@ spinner6
   color: red;
   top: 30%;
   text-align: center;
-}/*# sourceMappingURL=myStyle.css.map */
+}

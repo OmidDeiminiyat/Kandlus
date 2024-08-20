@@ -47,7 +47,7 @@ fetch(`${url}?${params.toString()}`, {
 function horoscope(recivedData) {
    // console.log(recivedData);
     const apeared = recivedData;
-    const displayeAll = document.getElementById('article');
+    const displayeAll = document.getElementById('newHoros');
    
     const today = new Date();
 const tomorrow = new Date(today.getTime() + (24 * 60 * 60 * 1000));
@@ -60,19 +60,24 @@ const formattedDate = `${day}/${month}/${year}`;
     displayeAll.innerHTML = ''
 
        
-       let mySection = `<head>
-       <h2>Here is your Horoscope for: <span>${formattedDate}</span></h2>
-   </head>
-   <section class="paraf">
-       <h4>Your Zodiac sign is: ${apeared.response.zodiac}</h4>
-       <p>${apeared.response.bot_response}</p>
-
-           <h4>Your lukky number is: ${apeared.response.lucky_number}</h4>
-           <h4>Your color is: ${apeared.response.lucky_color} <aside class="color1" style="border: 6px solid ${apeared.response.lucky_color_code}; background-color: ${apeared.response.lucky_color_code}; " > </aside> </h4>
-   </section>`
+       let mySection = `<div class="HorosCard">
+       <div>
+           <span>
+               <h1>${apeared.response.zodiac}</h1>
+               <h4>Mar 21 - Apr 19</h4>
+           </span>
+           <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+       </div>
+       <h5>Your horoscope for: ${formattedDate}</h5>
+       <p> ${apeared.response.bot_response} </p>
+       <div class="elements">
+           <ul>
+               <li>Lukky number: ${apeared.response.lucky_number}</li>
+               <li>Color: ${apeared.response.lucky_color} &nbsp &nbsp &nbsp <span style="border: 6px solid ${apeared.response.lucky_color_code}; display: inline-block; width: 21px; height: 21px; border-radius: 50%; background-color: ${apeared.response.lucky_color_code}; "></span> </li>
+           </ul>
+       </div>
+   </div>`
       displayeAll.innerHTML += mySection
-      
-    
 }
 
 
