@@ -1,3 +1,130 @@
+
+function openTable(tableData) {
+  const careerTable = document.getElementById('Career');
+  const EducationTable = document.getElementById('Education');
+  const FinancesTable = document.getElementById('Finance');
+  const FriendsTable = document.getElementById('Friends');
+  const HealthTable = document.getElementById('Health');
+  const RelationshipTable = document.getElementById('Relationship');
+  const TravelTable = document.getElementById('Travel');
+  const StatusTable = document.getElementById('Status');
+  const FamilyTable = document.getElementById('Family');
+  const generalCard = document.getElementById('GivGeneral');
+console.log(tableData);
+  if (tableData == 'Career') {
+    careerTable.style.display = 'block';
+    generalCard.style.display = 'none';
+    EducationTable.style.display = 'none';
+    FamilyTable.style.display = 'none';
+    FinancesTable.style.display = 'none';
+    FriendsTable.style.display = 'none';
+    HealthTable.style.display = 'none';
+    RelationshipTable.style.display = 'none';
+    TravelTable.style.display = 'none';
+    StatusTable.style.display = 'none';
+    tableData = '';
+  } else if(tableData == 'Education') {
+    careerTable.style.display = 'none';
+    generalCard.style.display = 'none';
+    EducationTable.style.display = 'block';
+    FamilyTable.style.display = 'none';
+    FinancesTable.style.display = 'none';
+    FriendsTable.style.display = 'none';
+    HealthTable.style.display = 'none';
+    RelationshipTable.style.display = 'none';
+    TravelTable.style.display = 'none';
+    StatusTable.style.display = 'none';  console.log('Education');
+  tableData = '';
+  } else if(tableData == 'Family') {
+    careerTable.style.display = 'none';
+    generalCard.style.display = 'none';
+    EducationTable.style.display = 'none';
+    FamilyTable.style.display = 'block';
+    FinancesTable.style.display = 'none';
+    FriendsTable.style.display = 'none';
+    HealthTable.style.display = 'none';
+    RelationshipTable.style.display = 'none';
+    TravelTable.style.display = 'none';
+    StatusTable.style.display = 'none';
+  
+  tableData = '';
+  }  else if(tableData == 'Finances') {
+    careerTable.style.display = 'none';
+    generalCard.style.display = 'none';
+    EducationTable.style.display = 'none';
+    FamilyTable.style.display = 'none';
+    FinancesTable.style.display = 'block';
+    FriendsTable.style.display = 'none';
+    HealthTable.style.display = 'none';
+    RelationshipTable.style.display = 'none';
+    TravelTable.style.display = 'none';
+    StatusTable.style.display = 'none';
+  tableData = '';
+  }  else if(tableData == 'Friends') {
+    careerTable.style.display = 'none';
+    generalCard.style.display = 'none';
+    EducationTable.style.display = 'none';
+    FamilyTable.style.display = 'none';
+    FinancesTable.style.display = 'none';
+    FriendsTable.style.display = 'block';
+    HealthTable.style.display = 'none';
+    RelationshipTable.style.display = 'none';
+    TravelTable.style.display = 'none';
+    StatusTable.style.display = 'none';
+  tableData = '';
+  } else if(tableData == 'Health') {
+    careerTable.style.display = 'none';
+    generalCard.style.display = 'none';
+    EducationTable.style.display = 'none';
+    FamilyTable.style.display = 'none';
+    FinancesTable.style.display = 'none';
+    FriendsTable.style.display = 'none';
+    HealthTable.style.display = 'block';
+    RelationshipTable.style.display = 'none';
+    TravelTable.style.display = 'none';
+    StatusTable.style.display = 'none';
+  tableData = '';
+  } else if(tableData == 'Relationship') {
+    careerTable.style.display = 'none';
+    generalCard.style.display = 'none';
+    EducationTable.style.display = 'none';
+    FamilyTable.style.display = 'none';
+    FinancesTable.style.display = 'none';
+    FriendsTable.style.display = 'none';
+    HealthTable.style.display = 'none';
+    RelationshipTable.style.display = 'block';
+    TravelTable.style.display = 'none';
+    StatusTable.style.display = 'none';
+  tableData = '';
+  } else if(tableData == 'Travel') {
+    careerTable.style.display = 'none';
+    generalCard.style.display = 'none';
+    EducationTable.style.display = 'none';
+    FamilyTable.style.display = 'none';
+    FinancesTable.style.display = 'none';
+    FriendsTable.style.display = 'none';
+    HealthTable.style.display = 'none';
+    RelationshipTable.style.display = 'none';
+    TravelTable.style.display = 'block';
+    StatusTable.style.display = 'none';
+  tableData = '';
+  }  else if(tableData == 'Status') {
+    careerTable.style.display = 'none';
+    generalCard.style.display = 'none';
+    EducationTable.style.display = 'none';
+    FamilyTable.style.display = 'none';
+    FinancesTable.style.display = 'none';
+    FriendsTable.style.display = 'none';
+    HealthTable.style.display = 'none';
+    RelationshipTable.style.display = 'none';
+    TravelTable.style.display = 'none';
+    StatusTable.style.display = 'block';
+  tableData = '';
+  } 
+
+} 
+
+
 const url = 'https://api.vedicastroapi.com/v3-json/prediction/daily-sun';
 
 function zodiacSign(GetZodiac) {
@@ -54,9 +181,34 @@ const tomorrow = new Date(today.getTime() + (24 * 60 * 60 * 1000));
 const day = String(tomorrow.getDate()).padStart(2, '0');
 const month = String(tomorrow.getMonth() + 1).padStart(2, '0');
 const year = tomorrow.getFullYear();
-
 const formattedDate = `${day}/${month}/${year}`;
     
+let images = '';
+if (apeared.response.zodiac == 'Aries') {
+  images = '../assets/images/Astrology/Horoscope/Aries.png';
+} else if (apeared.response.zodiac == 'Taurus') {
+  images = '../assets/images/Astrology/Horoscope/Taurus.png'
+} else if (apeared.response.zodiac == 'Gemini') {
+  images = '../assets/images/Astrology/Horoscope/Gemini.png'
+} else if (apeared.response.zodiac == 'Aquarius') {
+  images = '../assets/images/Astrology/Horoscope/Aquarius.png'
+} else if (apeared.response.zodiac == 'Cancer') {
+  images = '../assets/images/Astrology/Horoscope/Cancer.png'
+} else if (apeared.response.zodiac == 'Capricorn') {
+  images = '../assets/images/Astrology/Horoscope/Capricorn.png'
+} else if (apeared.response.zodiac == 'Leo') {
+  images = '../assets/images/Astrology/Horoscope/Leo.png'
+} else if (apeared.response.zodiac == 'Libra') {
+  images = '../assets/images/Astrology/Horoscope/Libra.png'
+} else if (apeared.response.zodiac == 'Picess') {
+  images = '../assets/images/Astrology/Horoscope/Picess.png'
+} else if (apeared.response.zodiac == 'Sagitarius') {
+  images = '../assets/images/Astrology/Horoscope/Sagitarius.png'
+}else if (apeared.response.zodiac == 'Scorpio') {
+  images = '../assets/images/Astrology/Horoscope/Scorpio.png'
+}else if (apeared.response.zodiac == 'Virgo') {
+  images = '../assets/images/Astrology/Horoscope/Virgo.png'
+}
     displayeAll.innerHTML = ''
 
        
@@ -66,15 +218,16 @@ const formattedDate = `${day}/${month}/${year}`;
                <h1>${apeared.response.zodiac}</h1>
                <h4>Mar 21 - Apr 19</h4>
            </span>
-           <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+           <img src="${images}" alt="">
        </div>
        <h5>Your horoscope for: ${formattedDate}</h5>
        <p> ${apeared.response.bot_response} </p>
        <div class="elements">
            <ul>
                <li>Lukky number: ${apeared.response.lucky_number}</li>
-               <li>Color: ${apeared.response.lucky_color} &nbsp &nbsp &nbsp <span style="border: 6px solid ${apeared.response.lucky_color_code}; display: inline-block; width: 21px; height: 21px; border-radius: 50%; background-color: ${apeared.response.lucky_color_code}; "></span> </li>
-           </ul>
+               <li>Color: ${apeared.response.lucky_color} </li>
+                <li> Your color code is: ${apeared.response.lucky_color_code}, &nbsp &nbsp &nbsp <span style="border: 6px solid ${apeared.response.lucky_color_code}; display: inline-block; width: 21px; height: 21px; border-radius: 50%; background-color: ${apeared.response.lucky_color_code}; "></span>  </li>
+               </ul>
        </div>
    </div>`
       displayeAll.innerHTML += mySection
@@ -109,7 +262,7 @@ function WeekChange(weekData) {
   .then(weekData => {
     // console.log('Success:', weekData);
 
-    HorosByWeek(weekData)
+    HorosByWeek(weekData, newValue)
     cartWorker(weekData)
    
   })
@@ -119,25 +272,96 @@ function WeekChange(weekData) {
   
   }
 
-function HorosByWeek(weekly) {
-  const displayeAll = document.getElementById('article');
+function HorosByWeek(weekly, getStrong) {
+  let myWeek = '';
+  console.log(getStrong);
+  if (getStrong == 'thisweek') {
+    myWeek = 'This week';
+  } else {
+    myWeek = 'Next week';
+  }
+  const displayeAll = document.getElementById('newHoros');
   const secondArticle = document.getElementById('Second-article');
-  secondArticle.style.display = 'block';
+  const yaerses = document.getElementById('myYearly');
+  const careerTable = document.getElementById('Career');
+  const EducationTable = document.getElementById('Education');
+  const FinancesTable = document.getElementById('Finance');
+  const FriendsTable = document.getElementById('Friends');
+  const HealthTable = document.getElementById('Health');
+  const RelationshipTable = document.getElementById('Relationship');
+  const TravelTable = document.getElementById('Travel');
+  const StatusTable = document.getElementById('Status');
+  const FamilyTable = document.getElementById('Family');
+  const generalCard = document.getElementById('GivGeneral');
+  const yearlyPredict = document.getElementById('myYearly');
+  const Buttons = document.getElementById('butts');
 
-  displayeAll.innerHTML = ''
+  if (yearlyPredict.style.display == 'block' ) {
+    careerTable.style.display = 'none';
+  generalCard.style.display = 'none';
+  EducationTable.style.display = 'none';
+  FamilyTable.style.display = 'none';
+  FinancesTable.style.display = 'none';
+  FriendsTable.style.display = 'none';
+  HealthTable.style.display = 'none';
+  RelationshipTable.style.display = 'none';
+  TravelTable.style.display = 'none';
+  StatusTable.style.display = 'none';
+  Buttons.style.display = 'none';
+  }
+  yaerses.style.dispaly = 'none';
+  secondArticle.style.display = 'block';
+  displayeAll.style.display = 'none';
+
+  let images = '';
+if (weekly.response.zodiac == 'Aries') {
+  images = '../assets/images/Astrology/Horoscope/Aries.png';
+} else if (weekly.response.zodiac == 'Taurus') {
+  images = '../assets/images/Astrology/Horoscope/Taurus.png'
+} else if (weekly.response.zodiac == 'Gemini') {
+  images = '../assets/images/Astrology/Horoscope/Gemini.png'
+} else if (weekly.response.zodiac == 'Aquarius') {
+  images = '../assets/images/Astrology/Horoscope/Aquarius.png'
+} else if (weekly.response.zodiac == 'Cancer') {
+  images = '../assets/images/Astrology/Horoscope/Cancer.png'
+} else if (weekly.response.zodiac == 'Capricorn') {
+  images = '../assets/images/Astrology/Horoscope/Capricorn.png'
+} else if (weekly.response.zodiac == 'Leo') {
+  images = '../assets/images/Astrology/Horoscope/Leo.png'
+} else if (weekly.response.zodiac == 'Libra') {
+  images = '../assets/images/Astrology/Horoscope/Libra.png'
+} else if (weekly.response.zodiac == 'Picess') {
+  images = '../assets/images/Astrology/Horoscope/Picess.png'
+} else if (weekly.response.zodiac == 'Sagitarius') {
+  images = '../assets/images/Astrology/Horoscope/Sagitarius.png'
+}else if (weekly.response.zodiac == 'Scorpio') {
+  images = '../assets/images/Astrology/Horoscope/Scorpio.png'
+}else if (weekly.response.zodiac == 'Virgo') {
+  images = '../assets/images/Astrology/Horoscope/Virgo.png'
+}
+
+  secondArticle.innerHTML = ''
 
        
-  let mySection = `<head>
-  <h2>Here is your Horoscope for: <span>Weekly</span></h2>
-</head>
-<section class="paraf">
-  <h4>Your Zodiac sign is: ${weekly.response.zodiac}</h4>
-  <p>${weekly.response.bot_response}</p>
-
-      <h4>Your lukky number is: ${weekly.response.lucky_number}</h4>
-      <h4>Your color is: ${weekly.response.lucky_color} <aside class="color1" style="border: 6px solid ${weekly.response.lucky_color_code}; background-color: ${weekly.response.lucky_color_code}; " > </aside> </h4>
-</section>`
- displayeAll.innerHTML += mySection
+  let mySection = `<div class="HorosCard">
+  <div>
+      <span>
+          <h1>${weekly.response.zodiac}</h1>
+          <h4>Mar 21 - Apr 19</h4>
+      </span>
+      <img src="${images}" alt="">
+  </div>
+  <h5>Your horoscope for: ${myWeek}</h5>
+  <p> ${weekly.response.bot_response} </p>
+  <div class="elements">
+      <ul>
+          <li>Lukky number: ${weekly.response.lucky_number}</li>
+          <li>Color: ${weekly.response.lucky_color} </li>
+           <li> Your color code is: ${weekly.response.lucky_color_code}, &nbsp &nbsp &nbsp <span style="border: 6px solid ${weekly.response.lucky_color_code}; display: inline-block; width: 21px; height: 21px; border-radius: 50%; background-color: ${weekly.response.lucky_color_code}; "></span>  </li>
+          </ul>
+  </div>
+</div>`
+secondArticle.innerHTML += mySection
 
 }
 
@@ -180,11 +404,29 @@ function yearly(Yearly, season) {
   }
 
 function yearlyData(yearDataRecived, SeasonRecived) {
-  const displayeAll = document.getElementById('article');
+  const displayeAll = document.getElementById('newHoros');
   const AllCharts = document.getElementById('charts');
+  const yearlyPredict = document.getElementById('myYearly');
+  const secondArts = document.getElementById('Second-article');
+  const Buttons = document.getElementById('butts');
+  yearlyPredict.style.display = 'block';
+  if (secondArts.style.dispaly == 'block') {
+    secondArts.style.dispaly == 'none'
+    console.log('its block');
+  } else {
+    console.log('its not block');
+  }
+  secondArts.style.display = 'none';
+  displayeAll.style.display = 'none';
+  Buttons.style.display = 'block';
+
+  
+
+
+
   AllCharts.innerHTML = ''
 
-console.log(SeasonRecived);
+console.log('seconds');
 
 
   const GetNewSeasons = SeasonRecived;
@@ -203,65 +445,150 @@ console.log(SeasonRecived);
 
   console.log(valuesArray);
  
-   displayeAll.innerHTML = ''
+  yearlyPredict.innerHTML = ''
 
     //newData = item.SeasonRecived;
-   let innerYear = `<head>
-    <h2>Here is your Horoscope for: <span>${valuesArray.period}</span></h2>
-  </head>
-  <section class="paraf">
-    <h4>Your Zodiac sign is: Zodiac</h4>
-    <p>Prediction: ${valuesArray.prediction}</p>
-  
-        <h4>Score for first 3 month: ${valuesArray.score}</h4><hr>
-        <div>
-            <h4>Career:</h4>
-            <p>${valuesArray.career.prediction}</p>
-            <h4>Your carrer score: ${valuesArray.career.score} <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.career.score}; max-width: 100%; " ></aside> </h4>
-        </div>
-        <div>
-            <h4>Family:</h4>
-            <p>${valuesArray.family.prediction}</p>
-            <h4>Your carrer score:  ${valuesArray.family.score} <aside class="yearSpan" style="width: 50%;" ></aside><aside class="yearSpanTwo" style="width: ${valuesArray.family.score}; max-width: 100%; " ></aside> </h4>
-        </div>
-        <div>
-            <h4>Finance:</h4>
-            <p>${valuesArray.finances.prediction}</p>
-            <h4>Your carrer score: ${valuesArray.finances.score} <aside class="yearSpan" style="width: 50%;" ></aside><aside class="yearSpanTwo" style="width: ${valuesArray.finances.score}; max-width: 100%; " ></aside> </h4>
-        </div>
-        <div>
-          <h4>Friends:</h4>
-          <p>${valuesArray.friends.prediction}</p>
-          <h4>Your carrer score: ${valuesArray.friends.score} <aside class="yearSpan" style="width: 50%;" ></aside><aside class="yearSpanTwo" style="width: ${valuesArray.friends.score}; max-width: 100%; " ></aside> </h4>
-        </div>
-        <div>
-          <h4>Health:</h4>
-          <p>${valuesArray.health.prediction}</p>
-          <h4>Your carrer score: ${valuesArray.health.score} <aside class="yearSpan" style="width: 50%;" ></aside><aside class="yearSpanTwo" style="width: ${valuesArray.health.score}; max-width: 100%; " ></aside> </h4>
-        </div>
-        <div>
-          <h4>Relationship:</h4>
-          <p>${valuesArray.relationship.prediction}</p>
-          <h4>Your carrer score: ${valuesArray.relationship.score} <aside class="yearSpan" style="width: 50%;" ></aside><aside class="yearSpanTwo" style="width: ${valuesArray.relationship.score}; max-width: 100%; " ></aside> </h4>
-        </div>
-        <div>
-          <h4>Education:</h4>
-          <p>${valuesArray.education.prediction}</p>
-          <h4>Your carrer score: ${valuesArray.education.score} <aside class="yearSpan" style="width: 50%;" ></aside><aside class="yearSpanTwo" style="width: ${valuesArray.education.score}; max-width: 100%; " ></aside> </h4>
-        </div>
-        <div>
-          <h4>Status:</h4>
-          <p>${valuesArray.status.prediction}</p>
-          <h4>Your carrer score: ${valuesArray.status.score} <aside class="yearSpan" style="width: 50%;" ></aside><aside class="yearSpanTwo" style="width: ${valuesArray.status.score}; max-width: 100%; " ></aside> </h4>
-        </div>
-        <div>
-          <h4>Travel:</h4>
-          <p>${valuesArray.travel.prediction}</p>
-          <h4>Your carrer score: ${valuesArray.travel.score} <aside class="yearSpan" style="width: 50%;" ></aside><aside class="yearSpanTwo" style="width: ${valuesArray.travel.score}; max-width: 100%; " ></aside> </h4>
-        </div>
-        </section>`
+   let innerYear = `<div id='GivGeneral' class="HorosCard">
+                        <div>
+                        <span>
+                            <h1>General</h1>
+                            <h4>${valuesArray.period}</h4>
+                        </span>
+                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                          </div>
+                          <p>${valuesArray.prediction} </p>
+                          <div class="elements">
+                          <h4>First three month: ${valuesArray.score} <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.score}; max-width: 100%; " ></aside> </h4>
+                          </div>
+                    </div>
+
+                    <div id='Career' class="HorosCard">
+                        <div>
+                        <span>
+                            <h1>Career</h1>
+                            <h4>${valuesArray.period}</h4>
+                        </span>
+                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                          </div>
+                          <p>${valuesArray.career.prediction} </p>
+                          <div class="elements">
+                          <h4>First three month: ${valuesArray.career.score}  <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.career.score};  max-width: 100%; " ></aside> </h4>
+                          </div>
+                    </div>
+
+                    <div id='Family' class="HorosCard">
+                        <div>
+                        <span>
+                            <h1>Family</h1>
+                            <h4>${valuesArray.period}</h4>
+                        </span>
+                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                          </div>
+                          <p>${valuesArray.family.prediction} </p>
+                          <div class="elements">
+                          <h4>First three month: ${valuesArray.family.score}  <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.family.score};  max-width: 100%; " ></aside> </h4>
+                          </div>
+                    </div>
+
+                    <div id='Finance' class="HorosCard">
+                        <div>
+                        <span>
+                            <h1>Finance</h1>
+                            <h4>${valuesArray.period}</h4>
+                        </span>
+                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                          </div>
+                          <p>${valuesArray.finances.prediction} </p>
+                          <div class="elements">
+                          <h4>First three month: ${valuesArray.finances.score}  <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.finances.score};  max-width: 100%; " ></aside> </h4>
+                          </div>
+                    </div>
+
+                    <div id='Friends' class="HorosCard">
+                        <div>
+                        <span>
+                            <h1>Friends</h1>
+                            <h4>${valuesArray.period}</h4>
+                        </span>
+                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                          </div>
+                          <p>${valuesArray.friends.prediction} </p>
+                          <div class="elements">
+                          <h4>First three month: ${valuesArray.friends.score}  <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.friends.score};  max-width: 100%; " ></aside> </h4>
+                          </div>
+                    </div>
+
+                    <div id='Health' class="HorosCard">
+                        <div>
+                        <span>
+                            <h1>Health</h1>
+                            <h4>${valuesArray.period}</h4>
+                        </span>
+                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                          </div>
+                          <p>${valuesArray.health.prediction} </p>
+                          <div class="elements">
+                          <h4>First three month: ${valuesArray.health.score}  <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.health.score};  max-width: 100%; " ></aside> </h4>
+                          </div>
+                    </div>
+
+                  <div id='Relationship' class="HorosCard">
+                    <div>
+                    <span>
+                        <h1>Relationship</h1>
+                        <h4>${valuesArray.period}</h4>
+                    </span>
+                    <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                      </div>
+                      <p>${valuesArray.relationship.prediction} </p>
+                      <div class="elements">
+                      <h4>First three month: ${valuesArray.relationship.score}  <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.relationship.score};  max-width: 100%; " ></aside> </h4>
+                      </div>
+                  </div>
+
+                  <div id='Education' class="HorosCard">
+                    <div>
+                    <span>
+                        <h1>Education</h1>
+                        <h4>${valuesArray.period}</h4>
+                    </span>
+                    <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                      </div>
+                      <p>${valuesArray.education.prediction} </p>
+                      <div class="elements">
+                      <h4>First three month: ${valuesArray.education.score}  <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.education.score};  max-width: 100%; " ></aside> </h4>
+                      </div>
+                  </div>
+
+                  <div id='Status' class="HorosCard">
+                    <div>
+                    <span>
+                        <h1>Status</h1>
+                        <h4>${valuesArray.period}</h4>
+                    </span>
+                    <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                      </div>
+                      <p>${valuesArray.status.prediction} </p>
+                      <div class="elements">
+                      <h4>First three month: ${valuesArray.status.score}  <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.status.score};  max-width: 100%; " ></aside> </h4>
+                      </div>
+                  </div>
+
+                <div id='Travel' class="HorosCard">
+                  <div>
+                  <span>
+                      <h1>Travel</h1>
+                      <h4>${valuesArray.period}</h4>
+                  </span>
+                  <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                    </div>
+                    <p>${valuesArray.travel.prediction} </p>
+                    <div class="elements">
+                    <h4>First three month: ${valuesArray.travel.score}  <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.travel.score};  max-width: 100%; " ></aside> </h4>
+                    </div>
+                </div>`
     
-   displayeAll.innerHTML = innerYear;
+        yearlyPredict.innerHTML = innerYear;
 }
 
 
@@ -487,7 +814,6 @@ new Chart("Travel", {
 
 
 
-
 // get current year for footer
 const today = new Date();
 const currentYear = today.getFullYear();
@@ -498,6 +824,8 @@ const currentMonth = today.getMonth();
 
 const footerYear = document.getElementById('CurrentYear');
 footerYear.innerText = '©' + ' ' + currentYear + ' Kandlus All rights reserved';
+
+
 
 
 

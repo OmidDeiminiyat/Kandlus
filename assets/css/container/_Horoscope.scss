@@ -96,7 +96,7 @@ padding: 0 12px 0 12px;
     margin: 30px 0 0 0;
     padding: 0;
 }
-#Second-article {
+#Second-article, #myYearly {
     display: none;
 }
 
@@ -274,5 +274,20 @@ padding: 0 12px 0 12px;
             border-radius: 50%;
             margin-top: 6px;
         }
+    }
+}
+
+#Career, #Health, #Relationship, #Education, #Status, #Travel, #Family, #Finance, #Friends{
+    margin-top: 30px;
+}
+#Health, #Relationship, #Education, #Status, #Travel, #Family, #Finance, #Friends, #Career {
+    display: none;
+}
+#butts{
+    display: none;
+    width: 80%;
+    margin-left: 10%;
+    button {
+        margin-top: 6px;
     }
 }
