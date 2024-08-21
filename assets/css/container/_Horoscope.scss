@@ -11,7 +11,12 @@
 }
 #HorosMenu {
     background-color: $box-border; 
-    width: 40%;
+    width: 70%;
+    margin: 0 0 15px 15%;
+    
+    @media(max-width:600px) {
+        margin: 0 0 15px 0;
+    }
 }
 #HorosMenu ul {
     display: flex;
@@ -89,7 +94,7 @@ padding: 0 12px 0 12px;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0;
     margin: 0;
-    width: 80%;
+    width: 90%;
     margin-left: 10%;
 }
 .charts #myChart, #finances, #health, #Realation, #Friend, #Travel{
@@ -104,7 +109,10 @@ padding: 0 12px 0 12px;
     border: 6px solid rgba(9, 9, 9, 0.223);
    background-color: rgba(15, 14, 14, 0.187);
    position: absolute;
-   max-width: 100%;
+   width: 31.5%;
+   @media(max-width:600px) {
+    width: 41%;
+   }
    
 }
 .yearSpanTwo {
@@ -113,7 +121,7 @@ padding: 0 12px 0 12px;
    position: relative;
    animation-name: myLine;
    animation-duration: 6s;
-   max-width: 50%;
+   max-width: 100%;
 }
 @keyframes myLine { 0%{width: 0%; } 100%{width: 100%;} }
 
@@ -125,6 +133,9 @@ padding: 0 12px 0 12px;
 
 .main-content {
     width: 95%;
+    @media(max-width:600px) {
+        width: 100%;
+    }
 }
 
 #article {
@@ -139,6 +150,10 @@ padding: 0 12px 0 12px;
         width: 100%;
         margin: 0;
         padding: 0;
+        h1{
+            color: $hgroup; 
+            text-align: center;
+        }
     }
     .main-section h2 {
         color: $hgroup; 
@@ -188,7 +203,7 @@ padding: 0 12px 0 12px;
     .charts {
         display: grid;
         grid-template-columns: 1fr;
-        width: 100%;
+        width: 90%;
         
     }
 
@@ -273,6 +288,9 @@ padding: 0 12px 0 12px;
             height: 21px;
             border-radius: 50%;
             margin-top: 6px;
+        }
+        h4{
+            width: 100%;
         }
     }
 }

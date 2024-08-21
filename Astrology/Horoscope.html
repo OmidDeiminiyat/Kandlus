@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Astrology services - Kandlus</title>
-    <meta name="description" content="">
+    <title>Get your daily, weekly, and monthly Horoscope insights</title>
+    <meta name="description" content="Discover what the stars have in store for your love, career, and personal life. Stay informed with accurate and personalized astrological predictions">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.png">
     <!-- NewsBoard CSS  -->
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../assets/css/myStyle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144883160-1"></script>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                     <h5 class="widget-title mt-5 mb-30" id="username" > To use this service, you must have an account and choose a plan </h5>
                     <div class="widget_nav_menu">
                         <ul id="readPrice" class="menu">
-                            <li class="cat-item"><a href="../price.html">Read more</a></li>
+                            <li class="cat-item"><a href="price.html">Read more</a></li>
                         </ul>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                 <div class="widget_nav_menu">
                     <ul class="menu">
                         <li class="cat-item"><a>Your plan is: <span id="Wplan">Free</span></a></li>
-                        <li class="cat-item"><a>Current Point: 00</a></li>
+                        <li class="cat-item" id="currentP" style="display: none;">Renew plan on:</li>
                         <li class="cat-item"><a></a></li>
 
                         <li class="cat-item cat-item-2 menu-item-has-children">
@@ -54,51 +54,20 @@
                                 <li class="cat-item"><a href="../blog/usersArticle.html">Articles</a></li>
                             </ul>
                         </li>
-                        <li class="cat-item cat-item-2 menu-item-has-children">
-                            <a>What is points</a>
-                            <ul class="sub-menu"><br>
-                                <p>You recived points automatically based on the time you spending in my website to: reading articles and watching videos. </p>
+                        <li id="subscriptionPlan" class="cat-item cat-item-2 menu-item-has-children">
+                            <a style="cursor: pointer;">Cancel subscription</a>
+                            <ul class="sub-menu">
+                                <p>You are about to cancel the subscription, Are you sure? </p>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="cancelSub" > Yes </a> </li>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="follow" > No </a> </li>
                             </ul>
                         </li>
+                        <li class="cat-item"><a onclick="LogOut()" style="cursor: pointer;">Log out</a></li>
                     </ul>
                 </div><br>
-                <div class="post-block-list post-module-1 post-module-5">
-                    <ul class="list-post" style="opacity: 0.4;">
-                        <li class="mb-15">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">Use Horoscope for 9 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use biorythm for 12 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+              
             </div>
             <!--Ads-->
-            
         </div>
     </aside>
     <!-- Start Header -->
@@ -107,11 +76,8 @@
             <ul class="list-inline font-small text-right">
                 <li id="checkLogin" class="list-inline-item mr-15"><a href="../login.html"><i class="ti-user font-x-small mr-5"></i>Login / Register</a></li>
                 <li class="list-inline-item dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="ti-world font-x-small mr-5"></i>Lang
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu dropdown-menu-language dropdown-menu-right border-0 font-small text-right">
-                        <li><a href="#">English</a></li>
-                    </ul>
+                    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                    <div class="elfsight-app-dbadbc99-4e8e-45ae-a9d4-3d7484e3d050" data-elfsight-app-lazy></div>
                 </li>
             </ul>
         </div>
@@ -198,13 +164,6 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Library</a>
-                            <ul class="col-md-2">
-                                <li><a href="../blog/category.html">Video</a></li>
-                                <li><a href="../blog/category-grid.html">Article</a></li>
-                            </ul>
-                        </li>
-                        <li>
                             <a href="../index.html">Pages</a>
                             <ul class="sub-menu text-muted font-small">
                                 <li><a href="../privacyPolicy.html">Privacy police</a></li>
@@ -259,7 +218,8 @@
         </div>
         <section id="All_sec">
             <section id="main-section" class="main-section right-s content">
-            <h2>Pick your zodiac sign to know about your future</h2>
+            <h1>Pick your zodiac sign </h1>
+            <hr>
             <div class="DivFig">
                 <figure>
                     <img onclick="zodiacSign('1')" src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
@@ -366,6 +326,7 @@
                 <div class="main-content">
                     <div id="HorosMenu">
                         <ul>
+                            <li> <a href="Horoscope.html" style="color: white;" >Zodiacs</a></li>
                             <li class="picked">Tomorrow</li>
                             <li id="clicMe">Weekly
                                 <ul id="getTest">
@@ -373,7 +334,6 @@
                                     <li id="getTest" onclick="WeekChange('nextweek')">Next week</li>
                                 </ul>
                             </li>
-                            <li>Monthly </li>
                             <li id="clicMe">2024
                                 <ul id="getTest">
                                     <li id="getTest" onclick="yearly('2024', 'phase_1')">First Season</li> <br>
@@ -385,67 +345,98 @@
                         </ul>
                     </div>
                     <article>
-                        <div id="article">
-                            
-                        </div>
-                        <div id="Second-article">
-                        
-                        </div>
-                        <span id="charts" class="charts">
-                            <canvas id="myChart" style="width:70%;max-width:300px" ></canvas>
-                            <canvas id="finances" style="width:70%;max-width:300px"></canvas>
-                            <canvas id="health" style="width:70%;max-width:300px"></canvas>
-                            <canvas id="Realation" style="width:70%;max-width:300px"></canvas>
-                            <canvas id="Friend" style="width:70%;max-width:300px"></canvas>
-                            <canvas id="Travel" style="width:70%;max-width:300px"></canvas>
+                        <span id="newHoros" >
+                            <div class="HorosCard">
+                                <div>
+                                    <span>
+                                        <h1>Aries</h1>
+                                        <h4>Mar 21 - Apr 19</h4>
+                                    </span>
+                                    <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                                </div>
+                                <h5>Your horoscope for: 21.08.2024</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, doloribus exercitationem temporibus cupiditate, officia suscipit officiis eligendi aut modi quasi et, fugiat maxime cumque quidem ad voluptatibus aspernatur laborum laboriosam!Lorem
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, laudantium provident? Sapiente enim delectus maiores, odio blanditiis deserunt dolore. Eius, velit vero. Possimus culpa fuga minima sunt aperiam pariatur quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae tempora provident veniam iusto voluptates quaerat debitis obcaecati expedita omnis natus quisquam harum error quidem voluptas ea excepturi, assumenda, earum libero!
+                                </p>
+                                <div class="elements">
+                                    <ul>
+                                        <li>Lukky number: 14, 7</li>
+                                        <li>Color: blood-red &nbsp &nbsp &nbsp<span class="cubed" ></span> </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </span>
+                            <span id="Second-article"  >
+                                <div class="HorosCard">
+                                    <div>
+                                        <span>
+                                            <h1>its me</h1>
+                                            <h4>Mar 21 - Apr 19</h4>
+                                        </span>
+                                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                                    </div>
+                                    <h5>Your horoscope for: 21.08.2024</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, doloribus exercitationem temporibus cupiditate, officia suscipit officiis eligendi aut modi quasi et, fugiat maxime cumque quidem ad voluptatibus aspernatur laborum laboriosam!Lorem
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, laudantium provident? Sapiente enim delectus maiores, odio blanditiis deserunt dolore. Eius, velit vero. Possimus culpa fuga minima sunt aperiam pariatur quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae tempora provident veniam iusto voluptates quaerat debitis obcaecati expedita omnis natus quisquam harum error quidem voluptas ea excepturi, assumenda, earum libero!
+                                    </p>
+                                    <div class="elements">
+                                        <ul>
+                                            <li>Lukky number: 14, 7</li>
+                                            <li>Color: blood-red &nbsp &nbsp &nbsp<span class="cubed" ></span> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </span>
+                            
+                            <span id="charts" class="charts">
+                                <canvas id="myChart" style="width:70%;max-width:300px" ></canvas>
+                                <canvas id="finances" style="width:70%;max-width:300px"></canvas>
+                                <canvas id="health" style="width:70%;max-width:300px"></canvas>
+                                <canvas id="Realation" style="width:70%;max-width:300px"></canvas>
+                                <canvas id="Friend" style="width:70%;max-width:300px"></canvas>
+                                <canvas id="Travel" style="width:70%;max-width:300px"></canvas>
+                            </span>
+
+                            <span id="myYearly" >
+                                <div class="HorosCard">
+                                    <div>
+                                        <span>
+                                            <h1>oops</h1>
+                                            <h4>Mar 21 - Apr 19</h4>
+                                        </span>
+                                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                                    </div>
+                                    <h5>Your horoscope for: 21.08.2024</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, doloribus exercitationem temporibus cupiditate, officia suscipit officiis eligendi aut modi quasi et, fugiat maxime cumque quidem ad voluptatibus aspernatur laborum laboriosam!Lorem
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, laudantium provident? Sapiente enim delectus maiores, odio blanditiis deserunt dolore. Eius, velit vero. Possimus culpa fuga minima sunt aperiam pariatur quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae tempora provident veniam iusto voluptates quaerat debitis obcaecati expedita omnis natus quisquam harum error quidem voluptas ea excepturi, assumenda, earum libero!
+                                    </p>
+                                    <div class="elements">
+                                        <ul>
+                                            <li>Lukky number: 14, 7</li>
+                                            <li>Color: blood-red &nbsp &nbsp &nbsp<span class="cubed" ></span> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </span>
+                            <div id="butts">
+                                <button class="btn button button-contactForm" onclick="openTable('Career')" > Career</button>
+                                <button class="btn button button-contactForm" onclick="openTable('Education')"> Education </button>
+                                <button class="btn button button-contactForm" onclick="openTable('Family')"> Family </button>
+                                <button class="btn button button-contactForm" onclick="openTable('Finances')"> Finances </button>
+                                <button class="btn button button-contactForm" onclick="openTable('Friends')"> Friends </button>
+                                <button class="btn button button-contactForm" onclick="openTable('Health')"> Health </button>
+                                <button class="btn button button-contactForm" onclick="openTable('Relationship')"> Relationship </button>
+                                <button class="btn button button-contactForm" onclick="openTable('Travel')"> Travel </button>
+                                <button class="btn button button-contactForm" onclick="openTable('Status')"> Status </button>
+                            </div>
                     
                     </article>
                     <div class="widthAds" style="width: 100%;">
-                        ads
+
                     </div>
                 </div>
             </section>
-            <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
-                <div class="widget-area">
-                    <div class="sidebar-widget widget-latest-posts mb-30 wow fadeIn animated">
-                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                            <span>Kandlus</span>
-                        </h6>
-                        ads
-                    </div>
-                    <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
-                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                            <span>Related Articles</span>
-                        </h6>
-                        <div id="liForRight" class="post-block-list post-module-1 post-module-5">
-                        
-                        </div>
-                    </div>
-                    Ads
-                    <div id="moreData" class="sidebar-widget widget-latest-comments mb-30 wow fadeIn  animated">
-
-                    </div>
-                    <div class="sidebar-widget widget_newsletter mb-50 wow fadeIn animated">
-                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                            <span>Newsletter</span>
-                        </h6>
-                        <div class="newsletter">
-                            <p class="">Continue reading uninterrupted with a subscription</p>
-                            <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
-                                <div class="form-newsletter-cover">
-                                    <div class="form-newsletter">
-                                        <input type="email" name="EMAIL" placeholder="Email address" required="">
-                                        <button type="submit">
-                                            <span class="long-arrow long-arrow-right"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ 
            
         </section>
     </main>
@@ -579,7 +570,7 @@
                     <div class="row d-flex align-items-center justify-content-between">
                         <div class="col-12">
                             <div class="footer-copy-right">
-                                <p class="font-small text-muted"><span id="getYear">© 2024 </span>  All Rights Reserved - Kandlus</span></p>
+                                <p class="font-small text-muted"><span id="getYear">© 2024 </span>  All Rights Reserved - Kandlus</p>
                             </div>
                         </div>
                     </div>
@@ -612,10 +603,11 @@
     <script src="../assets/js/MyScript.js"></script>
    <script src="../assets/js/script.js"></script>
    <script src="../assets/js/landingNav.js"></script>
-  <script src="../assets/js/articles/HomeArticle.js"></script>
-  <script src="../assets/js/articles/blogAstro.js"></script>
-  <script src="../assets/js/horoscope.js"></script>
-  <script src="../assets/js/cookie.js"></script>
-  <script src="../assets/js/checkon.js"></script>
+   <script src="../assets/js/articles/HomeArticle.js"></script>
+   <script src="../assets/js/articles/blogAstro.js"></script>
+   <script src="../assets/js/horoscope.js"></script>
+   <script src="../assets/js/cookie.js"></script>
+   <script type="module" src="../assets/js/checkon.js"></script>
+   <script type="module" src="../assets/js/timeCount.js"></script>
 </body>
 </html>

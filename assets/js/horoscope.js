@@ -1,3 +1,61 @@
+function getImageForZodiac(zodiac) {
+  let images = '';
+if (zodiac === '1') {
+  images = '../assets/images/Astrology/Horoscope/Aries.png';
+} else if (zodiac === '2') {
+  images = '../assets/images/Astrology/Horoscope/Taurus.png'
+} else if (zodiac === '3') {
+  images = '../assets/images/Astrology/Horoscope/Gemini.png'
+} else if (zodiac === '4') {
+  images = '../assets/images/Astrology/Horoscope/Cancer.png'
+} else if (zodiac == '5') {
+  images = '../assets/images/Astrology/Horoscope/Leo.png'
+} else if (zodiac === '6') {
+  images = '../assets/images/Astrology/Horoscope/Virgo.png'
+} else if (zodiac === '7') {
+  images = '../assets/images/Astrology/Horoscope/Libra.png'
+} else if (zodiac === '8') {
+  images = '../assets/images/Astrology/Horoscope/Scorpio.png'
+}else if (zodiac === '9') {
+  images = '../assets/images/Astrology/Horoscope/Sagitarius.png'
+}else if (zodiac === '10') {
+  images = '../assets/images/Astrology/Horoscope/Capricorn.png'
+} if (zodiac === '11') {
+  images = '../assets/images/Astrology/Horoscope/Aquarius.png'
+} else  if (zodiac === '12') {
+  images = '../assets/images/Astrology/Horoscope/Picess.png'
+} 
+return images;
+}
+function getDurationForZodiac(ZodiacTimes) {
+  let periods = '';
+if (ZodiacTimes === '1') {
+  periods = 'Mar 21 - Apr 19';
+} else if (ZodiacTimes === '2') {
+  periods = 'Apr 20 - May 20'
+} else if (ZodiacTimes === '3') {
+  periods = 'May 21 - Jun 20'
+} else if (ZodiacTimes === '4') {
+  periods = 'Jun 21 - Jul 22'
+} else if (ZodiacTimes == '5') {
+  periods = 'Jul 23 - Aug 22'
+} else if (ZodiacTimes === '6') {
+  periods = 'Aug 23 - Sep 22'
+} else if (ZodiacTimes === '7') {
+  periods = 'Sep 23 - Oct 22'
+} else if (ZodiacTimes === '8') {
+  periods = 'Oct 23 - Nov 21'
+}else if (ZodiacTimes === '9') {
+  periods = 'Nov 22 - Dec 21'
+}else if (ZodiacTimes === '10') {
+  periods = 'Dec 22 - Jan 19'
+} if (ZodiacTimes === '11') {
+  periods = 'Jan 20 - Feb 18'
+} else  if (ZodiacTimes === '12') {
+  periods = 'Feb 19 - Mar 20'
+} 
+return periods;
+}
 
 function openTable(tableData) {
   const careerTable = document.getElementById('Career');
@@ -172,7 +230,7 @@ fetch(`${url}?${params.toString()}`, {
 
 
 function horoscope(recivedData) {
-   // console.log(recivedData);
+    console.log(recivedData);
     const apeared = recivedData;
     const displayeAll = document.getElementById('newHoros');
    
@@ -183,31 +241,46 @@ const month = String(tomorrow.getMonth() + 1).padStart(2, '0');
 const year = tomorrow.getFullYear();
 const formattedDate = `${day}/${month}/${year}`;
     
+
+
 let images = '';
+let Dura = '';
 if (apeared.response.zodiac == 'Aries') {
   images = '../assets/images/Astrology/Horoscope/Aries.png';
+  Dura = 'Apr 20 - May 20';
 } else if (apeared.response.zodiac == 'Taurus') {
-  images = '../assets/images/Astrology/Horoscope/Taurus.png'
+  images = '../assets/images/Astrology/Horoscope/Taurus.png';
+  Dura = 'Apr 20 - May 20';
 } else if (apeared.response.zodiac == 'Gemini') {
-  images = '../assets/images/Astrology/Horoscope/Gemini.png'
+  images = '../assets/images/Astrology/Horoscope/Gemini.png';
+  Dura = 'May 21 - Jun 20';
 } else if (apeared.response.zodiac == 'Aquarius') {
-  images = '../assets/images/Astrology/Horoscope/Aquarius.png'
+  images = '../assets/images/Astrology/Horoscope/Aquarius.png';
+  Dura = 'Jan 20 - Feb 18';
 } else if (apeared.response.zodiac == 'Cancer') {
-  images = '../assets/images/Astrology/Horoscope/Cancer.png'
+  images = '../assets/images/Astrology/Horoscope/Cancer.png';
+  Dura = 'Jun 21 - Jul 22';
 } else if (apeared.response.zodiac == 'Capricorn') {
-  images = '../assets/images/Astrology/Horoscope/Capricorn.png'
+  images = '../assets/images/Astrology/Horoscope/Capricorn.png';
+  Dura = 'Dec 22 - Jan 19';
 } else if (apeared.response.zodiac == 'Leo') {
-  images = '../assets/images/Astrology/Horoscope/Leo.png'
+  images = '../assets/images/Astrology/Horoscope/Leo.png';
+  Dura = 'Jul 23 - Aug 22';
 } else if (apeared.response.zodiac == 'Libra') {
-  images = '../assets/images/Astrology/Horoscope/Libra.png'
-} else if (apeared.response.zodiac == 'Picess') {
-  images = '../assets/images/Astrology/Horoscope/Picess.png'
+  images = '../assets/images/Astrology/Horoscope/Libra.png';
+  Dura = 'Sep 23 - Oct 22';
+} else if (apeared.response.zodiac == 'Pisces') {
+  images = '../assets/images/Astrology/Horoscope/Picess.png';
+  Dura = 'Feb 19 - Mar 20';
 } else if (apeared.response.zodiac == 'Sagitarius') {
-  images = '../assets/images/Astrology/Horoscope/Sagitarius.png'
+  images = '../assets/images/Astrology/Horoscope/Sagitarius.png';
+  Dura = 'Nov 22 - Dec 21';
 }else if (apeared.response.zodiac == 'Scorpio') {
-  images = '../assets/images/Astrology/Horoscope/Scorpio.png'
+  images = '../assets/images/Astrology/Horoscope/Scorpio.png';
+  Dura = 'Oct 23 - Nov 21';
 }else if (apeared.response.zodiac == 'Virgo') {
-  images = '../assets/images/Astrology/Horoscope/Virgo.png'
+  images = '../assets/images/Astrology/Horoscope/Virgo.png';
+  Dura = 'Aug 23 - Sep 22';
 }
     displayeAll.innerHTML = ''
 
@@ -216,7 +289,7 @@ if (apeared.response.zodiac == 'Aries') {
        <div>
            <span>
                <h1>${apeared.response.zodiac}</h1>
-               <h4>Mar 21 - Apr 19</h4>
+               <h4>${Dura}</h4>
            </span>
            <img src="${images}" alt="">
        </div>
@@ -262,7 +335,7 @@ function WeekChange(weekData) {
   .then(weekData => {
     // console.log('Success:', weekData);
 
-    HorosByWeek(weekData, newValue)
+    HorosByWeek(weekData, newValue, storageZodiac)
     cartWorker(weekData)
    
   })
@@ -272,7 +345,7 @@ function WeekChange(weekData) {
   
   }
 
-function HorosByWeek(weekly, getStrong) {
+function HorosByWeek(weekly, getStrong, numberZodiiac) {
   let myWeek = '';
   console.log(getStrong);
   if (getStrong == 'thisweek') {
@@ -313,33 +386,12 @@ function HorosByWeek(weekly, getStrong) {
   secondArticle.style.display = 'block';
   displayeAll.style.display = 'none';
 
-  let images = '';
-if (weekly.response.zodiac == 'Aries') {
-  images = '../assets/images/Astrology/Horoscope/Aries.png';
-} else if (weekly.response.zodiac == 'Taurus') {
-  images = '../assets/images/Astrology/Horoscope/Taurus.png'
-} else if (weekly.response.zodiac == 'Gemini') {
-  images = '../assets/images/Astrology/Horoscope/Gemini.png'
-} else if (weekly.response.zodiac == 'Aquarius') {
-  images = '../assets/images/Astrology/Horoscope/Aquarius.png'
-} else if (weekly.response.zodiac == 'Cancer') {
-  images = '../assets/images/Astrology/Horoscope/Cancer.png'
-} else if (weekly.response.zodiac == 'Capricorn') {
-  images = '../assets/images/Astrology/Horoscope/Capricorn.png'
-} else if (weekly.response.zodiac == 'Leo') {
-  images = '../assets/images/Astrology/Horoscope/Leo.png'
-} else if (weekly.response.zodiac == 'Libra') {
-  images = '../assets/images/Astrology/Horoscope/Libra.png'
-} else if (weekly.response.zodiac == 'Picess') {
-  images = '../assets/images/Astrology/Horoscope/Picess.png'
-} else if (weekly.response.zodiac == 'Sagitarius') {
-  images = '../assets/images/Astrology/Horoscope/Sagitarius.png'
-}else if (weekly.response.zodiac == 'Scorpio') {
-  images = '../assets/images/Astrology/Horoscope/Scorpio.png'
-}else if (weekly.response.zodiac == 'Virgo') {
-  images = '../assets/images/Astrology/Horoscope/Virgo.png'
-}
 
+const zodiac = numberZodiiac;
+  const imagePath = getImageForZodiac(zodiac);
+
+  const ZodiacTimes = numberZodiiac;
+  const Dur = getDurationForZodiac(ZodiacTimes);
   secondArticle.innerHTML = ''
 
        
@@ -347,9 +399,9 @@ if (weekly.response.zodiac == 'Aries') {
   <div>
       <span>
           <h1>${weekly.response.zodiac}</h1>
-          <h4>Mar 21 - Apr 19</h4>
+          <h4>${Dur}</h4>
       </span>
-      <img src="${images}" alt="">
+      <img src="${imagePath}" alt="">
   </div>
   <h5>Your horoscope for: ${myWeek}</h5>
   <p> ${weekly.response.bot_response} </p>
@@ -395,7 +447,7 @@ function yearly(Yearly, season) {
   })
   .then(yearData => {
     // console.log('Success:', yearData);
-  yearlyData(yearData, seasons)
+  yearlyData(yearData, seasons, storageZodiac)
   })
   .catch(error => {
     console.error('Error:', error);
@@ -403,7 +455,7 @@ function yearly(Yearly, season) {
   
   }
 
-function yearlyData(yearDataRecived, SeasonRecived) {
+function yearlyData(yearDataRecived, SeasonRecived, ZodiacSign) {
   const displayeAll = document.getElementById('newHoros');
   const AllCharts = document.getElementById('charts');
   const yearlyPredict = document.getElementById('myYearly');
@@ -444,7 +496,13 @@ console.log('seconds');
 
 
   console.log(valuesArray);
- 
+  const zodiac = ZodiacSign;
+  console.log('newZodiac is:' + zodiac);
+  const imagePath = getImageForZodiac(zodiac);
+
+  const ZodiacTimes = ZodiacSign;
+  console.log('ZodiacTimes is:' + ZodiacTimes);
+  const Dur = getDurationForZodiac(ZodiacTimes);
   yearlyPredict.innerHTML = ''
 
     //newData = item.SeasonRecived;
@@ -452,13 +510,13 @@ console.log('seconds');
                         <div>
                         <span>
                             <h1>General</h1>
-                            <h4>${valuesArray.period}</h4>
+                            <h4>${Dur}</h4>
                         </span>
-                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                        <img src=${imagePath} alt="Zodiac sign">
                           </div>
                           <p>${valuesArray.prediction} </p>
                           <div class="elements">
-                          <h4>First three month: ${valuesArray.score} <aside class="yearSpan" style="width: 50%;"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.score}; max-width: 100%; " ></aside> </h4>
+                          <h4>First three month: ${valuesArray.score} <aside class="yearSpan"></aside><aside class="yearSpanTwo" style="width: ${valuesArray.score}; max-width: 100%; " ></aside> </h4>
                           </div>
                     </div>
 
@@ -466,9 +524,9 @@ console.log('seconds');
                         <div>
                         <span>
                             <h1>Career</h1>
-                            <h4>${valuesArray.period}</h4>
-                        </span>
-                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                            <h4>${Dur}</h4>
+                        </span> 
+                        <img src=${imagePath} alt="Zodiac sign">
                           </div>
                           <p>${valuesArray.career.prediction} </p>
                           <div class="elements">
@@ -480,9 +538,9 @@ console.log('seconds');
                         <div>
                         <span>
                             <h1>Family</h1>
-                            <h4>${valuesArray.period}</h4>
+                            <h4>${Dur}</h4>
                         </span>
-                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                        <img src=${imagePath} alt="Zodiac sign">
                           </div>
                           <p>${valuesArray.family.prediction} </p>
                           <div class="elements">
@@ -494,9 +552,9 @@ console.log('seconds');
                         <div>
                         <span>
                             <h1>Finance</h1>
-                            <h4>${valuesArray.period}</h4>
+                            <h4>${Dur}</h4>
                         </span>
-                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                        <img src=${imagePath} alt="Zodiac sign">
                           </div>
                           <p>${valuesArray.finances.prediction} </p>
                           <div class="elements">
@@ -508,9 +566,9 @@ console.log('seconds');
                         <div>
                         <span>
                             <h1>Friends</h1>
-                            <h4>${valuesArray.period}</h4>
+                            <h4>${Dur}</h4>
                         </span>
-                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                        <img src=${imagePath} alt="Zodiac sign">
                           </div>
                           <p>${valuesArray.friends.prediction} </p>
                           <div class="elements">
@@ -522,9 +580,9 @@ console.log('seconds');
                         <div>
                         <span>
                             <h1>Health</h1>
-                            <h4>${valuesArray.period}</h4>
+                            <h4>${Dur}</h4>
                         </span>
-                        <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                        <img src=${imagePath} alt="Zodiac sign">
                           </div>
                           <p>${valuesArray.health.prediction} </p>
                           <div class="elements">
@@ -536,9 +594,9 @@ console.log('seconds');
                     <div>
                     <span>
                         <h1>Relationship</h1>
-                        <h4>${valuesArray.period}</h4>
+                        <h4>${Dur}</h4>
                     </span>
-                    <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                    <img src=${imagePath} alt="Zodiac sign">
                       </div>
                       <p>${valuesArray.relationship.prediction} </p>
                       <div class="elements">
@@ -550,9 +608,9 @@ console.log('seconds');
                     <div>
                     <span>
                         <h1>Education</h1>
-                        <h4>${valuesArray.period}</h4>
+                        <h4>${Dur}</h4>
                     </span>
-                    <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                    <img src=${imagePath} alt="Zodiac sign">
                       </div>
                       <p>${valuesArray.education.prediction} </p>
                       <div class="elements">
@@ -564,9 +622,9 @@ console.log('seconds');
                     <div>
                     <span>
                         <h1>Status</h1>
-                        <h4>${valuesArray.period}</h4>
+                        <h4>${Dur}</h4>
                     </span>
-                    <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                    <img src=${imagePath} alt="Zodiac sign">
                       </div>
                       <p>${valuesArray.status.prediction} </p>
                       <div class="elements">
@@ -578,9 +636,9 @@ console.log('seconds');
                   <div>
                   <span>
                       <h1>Travel</h1>
-                      <h4>${valuesArray.period}</h4>
+                      <h4>${Dur}</h4>
                   </span>
-                  <img src="../assets/images/Astrology/Horoscope/Aries.png" alt="">
+                  <img src=${imagePath} alt="Zodiac sign">
                     </div>
                     <p>${valuesArray.travel.prediction} </p>
                     <div class="elements">

@@ -1491,7 +1491,13 @@
 
 #HorosMenu {
   background-color: #5C4228;
-  width: 40%;
+  width: 70%;
+  margin: 0 0 15px 15%;
+}
+@media (max-width: 600px) {
+  #HorosMenu {
+    margin: 0 0 15px 0;
+  }
 }
 
 #HorosMenu ul {
@@ -1584,7 +1590,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   padding: 0;
   margin: 0;
-  width: 80%;
+  width: 90%;
   margin-left: 10%;
 }
 
@@ -1601,7 +1607,12 @@
   border: 6px solid rgba(9, 9, 9, 0.223);
   background-color: rgba(15, 14, 14, 0.187);
   position: absolute;
-  max-width: 100%;
+  width: 31.5%;
+}
+@media (max-width: 600px) {
+  .yearSpan {
+    width: 41%;
+  }
 }
 
 .yearSpanTwo {
@@ -1610,7 +1621,7 @@
   position: relative;
   animation-name: myLine;
   animation-duration: 6s;
-  max-width: 50%;
+  max-width: 100%;
 }
 
 @keyframes myLine {
@@ -1628,6 +1639,11 @@
 .main-content {
   width: 95%;
 }
+@media (max-width: 600px) {
+  .main-content {
+    width: 100%;
+  }
+}
 
 #article {
   width: 90%;
@@ -1639,6 +1655,10 @@
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+  .main-section h1 {
+    color: #c9a56e;
+    text-align: center;
   }
   .main-section h2 {
     color: #c9a56e;
@@ -1681,7 +1701,7 @@
   .charts {
     display: grid;
     grid-template-columns: 1fr;
-    width: 100%;
+    width: 90%;
   }
   #article {
     width: 90%;
@@ -1763,6 +1783,9 @@
   height: 21px;
   border-radius: 50%;
   margin-top: 6px;
+}
+.HorosCard .elements h4 {
+  width: 100%;
 }
 
 #Career, #Health, #Relationship, #Education, #Status, #Travel, #Family, #Finance, #Friends {
