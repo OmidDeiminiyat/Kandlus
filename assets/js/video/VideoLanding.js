@@ -44,32 +44,32 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/SingleVide', {
     const Mobile = document.getElementById('MobileImg');
 
     h1.innerHTML = `<a href="videos/SinglePageVid.html?id=${recivedV[0].seo}"> ${recivedV[0].subject} </a>`;
-    figureElement.style.backgroundImage = `url('../../../assets/images/videos/LongImg/${recivedV[0].image}')`;
+    figureElement.style.backgroundImage = `url('../../../assets/images/videos/longImg/${recivedV[0].image}')`;
     v1.innerHTML = ` <span class="material-symbols-outlined"> visibility </span> ${recivedV[0].score}
                      <span class="material-symbols-outlined"> schedule </span> ${recivedV[0].length}`
 
      h2.innerHTML = `<a href="videos/SinglePageVid.html?id=${recivedV[1].seo}"> ${recivedV[1].subject} </a>`;
-    figureElement2.style.backgroundImage = `url('../../../assets/images/videos/LongImg/${recivedV[1].image}')`;
+    figureElement2.style.backgroundImage = `url('../../../assets/images/videos/longImg/${recivedV[1].image}')`;
     v2.innerHTML = ` <span class="material-symbols-outlined"> visibility </span> ${recivedV[1].score}
     <span class="material-symbols-outlined"> schedule </span> ${recivedV[1].length}`
 
     h3.innerHTML = `<a href="videos/SinglePageVid.html?id=${recivedV[2].seo}"> ${recivedV[2].subject} </a>`;
-    figureElement3.style.backgroundImage = `url('../../../assets/images/videos/LongImg/${recivedV[2].image}')`;
+    figureElement3.style.backgroundImage = `url('../../../assets/images/videos/longImg/${recivedV[2].image}')`;
     v3.innerHTML = ` <span class="material-symbols-outlined"> visibility </span> ${recivedV[2].score}
     <span class="material-symbols-outlined"> schedule </span> ${recivedV[2].length}`
 
     h4.innerHTML = `<a href="videos/SinglePageVid.html?id=${recivedV[3].seo}"> ${recivedV[3].subject} </a>`;
-    figureElement4.style.backgroundImage =`url('../../../assets/images/videos/LongImg/${recivedV[3].image}')`;
+    figureElement4.style.backgroundImage =`url('../../../assets/images/videos/longImg/${recivedV[3].image}')`;
     v4.innerHTML = ` <span class="material-symbols-outlined"> visibility </span> ${recivedV[3].score}
     <span class="material-symbols-outlined"> schedule </span> ${recivedV[3].length}`
 
     h5.innerHTML = `<a href="videos/SinglePageVid.html?id=${recivedV[4].seo}"> ${recivedV[4].subject} </a>`;
-    figureElement5.style.backgroundImage = `url('../../../assets/images/videos/LongImg/${recivedV[4].image}')`;
+    figureElement5.style.backgroundImage = `url('../../../assets/images/videos/longImg/${recivedV[4].image}')`;
     v5.innerHTML = ` <span class="material-symbols-outlined"> visibility </span> ${recivedV[4].score}
     <span class="material-symbols-outlined"> schedule </span> ${recivedV[4].length}`
 
     h6.innerHTML = `<a href="videos/SinglePageVid.html?id=${recivedV[5].seo}"> ${recivedV[5].subject} </a>`;
-    figureElement6.style.backgroundImage =`url('../../../assets/images/videos/LongImg/${recivedV[5].image}')`;
+    figureElement6.style.backgroundImage =`url('../../../assets/images/videos/longImg/${recivedV[5].image}')`;
     v6.innerHTML = ` <span class="material-symbols-outlined"> visibility </span> ${recivedV[5].score}
     <span class="material-symbols-outlined"> schedule </span> ${recivedV[5].length}`
 

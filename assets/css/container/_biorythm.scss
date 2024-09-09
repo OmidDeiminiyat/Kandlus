@@ -41,7 +41,9 @@
     }
  }
  #PersonalBirth {
-    background-color: $landingBackground;
+    background-color:  $landingBackground;
+    max-width: 96%;
+    margin-left: 2%;
     #displayNumber {
         padding: 0 0 30px 0;
         margin: 0;
@@ -305,6 +307,8 @@ width: 100%;
     text-align: center;
     background-color: $body; 
     border-radius: 30px;
+    
+
 
     .newStyle {
         text-align: left;
@@ -431,8 +435,6 @@ width: 100%;
 }
 
 
-
-
 .right-side {
     width: 24%;
     
@@ -467,7 +469,6 @@ width: 100%;
         grid-template-columns: 1fr 1fr;
         color: $main-paraf; 
         h5{
-            font-size: 1.2rem;
             margin: 12px 0 12px 0;
         }
         @media (max-width:600px) {
@@ -476,11 +477,32 @@ width: 100%;
     }
 }
 
-
 #finalData h4 {
     text-align: center;
 }
 
+// New added
+
+#BioRytmData {
+    h4 {
+        text-align: center;
+    }
+    .figCaptureIn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: $body; 
+        h5{
+            margin: 12px 0 12px 0;
+            @media (max-width:600px) {
+                font-size: 18px;
+            }
+        }
+        @media (max-width:600px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+}
 /* three under the main section */
 .threeUnder {
     @include flexible(center);
@@ -665,4 +687,8 @@ height: 25%;
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
 
+}
+
+input, select, textarea {
+  font-size: 16px;
 }

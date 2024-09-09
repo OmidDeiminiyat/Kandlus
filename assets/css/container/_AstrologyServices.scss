@@ -120,14 +120,18 @@
 
     #All_sec {
        @include desplayStyle(1fr);
-       width: 100%;
-       margin-left: 0;
+       width: 94%;
+        margin-left: 0;
+       padding: 0;
        .right-s {
         h2{
             font-size: 4vw;
         }
         .DivFig {
             @include desplayStyle(1fr 1fr);
+            max-width: 90%;
+            margin-left: 5%;
+            
             figure {
                 height: 250px;
                 img {
@@ -174,3 +178,18 @@
 .improvCont{
     margin-top: 30px;
 }
+
+.TreeBut {
+
+    button {
+        @media(max-width: 600px) {
+            margin-top: 30px;
+        }
+    }
+}
+
+#MyCharts {
+    margin-left: -100px;
+    padding: 0;
+}
+

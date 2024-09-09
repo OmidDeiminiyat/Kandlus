@@ -1,0 +1,205 @@
+.TarotCards{
+    top: 50px;
+    position: relative;
+    width: 96%;
+    margin-left: 2%;
+    animation-name: firstCards;
+    opacity: 1;
+    animation-duration: 20s;
+
+}
+@keyframes firstCards {
+    0% { opacity: 0; }
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.TarotCards img {
+    width: 16%;
+    cursor: pointer;
+    margin-left: 3px;
+    
+
+}
+.TarotCards img:hover{
+
+     margin-top: -60px;
+     scale: 1.1;
+     animation-name: cards;
+     animation-duration: 0.5s;
+     z-index: 1000;
+}
+
+@keyframes cards {
+    0% {scale: 1; margin-top: 0;}
+    100% {scale: 1.1; margin-top: -60px;}
+}
+
+.singleCard {
+display: flex;
+flex-direction: row;
+width: 80%;
+margin-left: 10%; 
+@media(max-width:600px) {
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+}
+
+figure {
+    img{
+        min-width: 200px;
+        @media(max-width:600px) {
+            min-width: 70%;
+            margin-left: 15%;
+        }
+    }
+} 
+div { 
+
+    width: 80%;
+    margin-left: 10%;
+    @media(max-width:600px) {
+        width: 100%;
+    margin-left: 0;
+    }
+        h3{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(25, 127, 168);
+        }
+    p{
+        margin-top: 30px;
+
+    }
+    }
+}
+
+
+#article {
+    width: 60%;
+    margin-left: 20%;
+    @media(max-width:600px) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.links {
+    width: 70%;
+    margin-left: 15%;
+    @media(max-width:600px) {
+        width: 100%;
+        margin-left: 0;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        li{
+            list-style: none;
+            margin: 0 6px 0 6px;
+            padding: 6px 12px 6px 12px;
+            border: 1px solid black;
+            background-color: $boxbackground;
+            color: white;
+            cursor: pointer;
+            opacity: 1;
+            // animation-duration: 17s;
+            animation: buts 15s;
+            &:hover{
+                background-color: $body;
+                color: $Butoon;
+            }  
+        }
+    }
+}
+
+#CardByCategory{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;  
+    @media(max-width:600px) {
+        width: 100%;
+        margin-left: 0;
+    }
+    h3{
+        text-align: center;
+        color: rgb(25, 127, 168);
+    }
+    figure{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: relative;
+    margin-top: 60px;
+    @media(max-width:600px) {
+        width: 90%;
+        margin-left: 5%;
+        overflow: auto;
+
+    }
+    
+    img{
+        width: 15%;
+        height: 300px;
+        cursor: pointer;
+        position: relative;
+        margin-left: -120px;
+        rotate: (3deg);
+        @media(max-width:600px) {
+            width: 30%;
+
+        }
+        
+        &:nth-child(2){
+            margin-left: -120px;
+            rotate: (3deg);
+        }
+        &:nth-child(3){
+            margin-left: -120px;
+            rotate: (3deg);
+        }
+        &:nth-child(4){
+            margin-left: -120px;
+            rotate: (3deg);
+        }
+        &:nth-child(5){
+            margin-left: -120px;
+            rotate: (3deg);
+        }
+        &:hover{
+            top: -9px;
+        }
+    }
+    }
+}
+
+#WishCards {
+    width: 80%;
+    margin-left: 10%;
+    display: none;
+    flex-direction: row;
+    gap: 1rem;
+    text-align: center;
+    @media(max-width:600px) {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+
+    }
+    
+    img{
+        width: 30%;
+        @media(max-width:600px) {
+            width: 70%;
+            margin-left: 15%;
+    
+        }
+    }
+    h5{
+        color: rgb(25, 127, 168);
+        text-align: center;
+    }
+    p{
+        margin-top: 50px;
+    }
+}

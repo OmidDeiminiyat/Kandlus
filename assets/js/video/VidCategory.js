@@ -42,12 +42,12 @@ recivedCateData.slice(0, dataLimit).forEach((newData, index) => {
    
     newSpan += `<article class="col-md-3 mb-sm-3 wow fadeIn animated">
     <figure class="mb-15 mainImg">
-        <a href="singlePageVid.html?id=${newData.seo}">
-            <img src="../assets/images/videos/longImg/${newData.image}" alt="" >
+        <a href="SinglePageVid.html?id=${newData.seo}">
+            <img src="../assets/images/videos/longImg/${newData.image}" alt="${newData.category}" >
         </a>
     </figure>
     <h6 class="post-title font-weight-bold mb-10">
-        <a href="singlePageVid.html?id=${newData.seo} ">${newData.subject} </a>
+        <a href="SinglePageVid.html?id=${newData.seo} ">${newData.subject} </a>
     </h6>
 
     <div class="entry-meta meta-2 font-x-small color-muted">
@@ -96,12 +96,12 @@ function justTest(secondRow) {
        
         newmainSpan += `    <article class="col-md-3 mb-sm-3 wow fadeIn animated">
         <figure class="mb-15 mainImg">
-            <a href="video.html?id=${getOne.seo} ">
-                <img src="../assets/images/videos/longImg/${getOne.image}" alt="" >
+            <a href="SinglePageVid.html?id=${getOne.seo} ">
+                <img src="../assets/images/videos/longImg/${getOne.image}" alt="${getOne.category}" >
             </a>
         </figure>
         <h6 class="post-title font-weight-bold mb-10">
-            <a href="video.html?id=${getOne.seo} ">${getOne.subject} </a>
+            <a href="SinglePageVid.html?id=${getOne.seo} ">${getOne.subject} </a>
         </h6>
     
         <div class="entry-meta meta-2 font-x-small color-muted">
@@ -153,12 +153,12 @@ function secondFetch() {
            
             thirdBe += `    <article class="col-md-3 mb-sm-3 wow fadeIn animated">
             <figure class="mb-15 mainImg">
-                <a href="singlePageVide.html?id=${goThree.seo}">
-                    <img src="../assets/images/videos/longImg/${goThree.image}" alt="">
+                <a href="SinglePageVide.html?id=${goThree.seo}">
+                    <img src="../assets/images/videos/longImg/${goThree.image}" alt="${goThree.category}">
                 </a>
             </figure>
             <h6 class="post-title font-weight-bold mb-10">
-                <a href="singlePageVide.html?id=${goThree.seo} ">${goThree.subject} </a>
+                <a href="SinglePageVide.html?id=${goThree.seo} ">${goThree.subject} </a>
             </h6>
         
             <div class="entry-meta meta-2 font-x-small color-muted">
