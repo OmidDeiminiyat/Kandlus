@@ -39,62 +39,31 @@
                 
                 <div class="widget_nav_menu">
                     <ul class="menu">
-                        <li class="cat-item"><a>Your plan is: Free</a></li>
-                        <li class="cat-item"><a>Current Point: 00</a></li>
+                        <li class="cat-item"><a>Your plan is: <span id="Wplan">Free</span></a></li>
+                        <li class="cat-item" id="currentP" style="display: none;">Renew plan on:</li>
                         <li class="cat-item"><a></a></li>
 
                         <li class="cat-item cat-item-2 menu-item-has-children">
                             <a>Library</a>
                             <ul class="sub-menu">
-                                <li class="cat-item"><a href="category.html">Videos</a></li>
-                                <li class="cat-item"><a href="category.html">Articles</a></li>
+                                <li class="cat-item"><a href="../videos/users.html">Videos</a></li>
+                                <li class="cat-item"><a href="../blog/usersArticle.html">Articles</a></li>
                             </ul>
                         </li>
-                        <li class="cat-item cat-item-2 menu-item-has-children">
-                            <a>What is points</a>
-                            <ul class="sub-menu"><br>
-                                <p>You recived points automatically based on the time you spending in my website to: reading articles and watching videos. </p>
+                        <li id="subscriptionPlan" class="cat-item cat-item-2 menu-item-has-children">
+                            <a style="cursor: pointer;">Cancel subscription</a>
+                            <ul class="sub-menu">
+                                <p>You are about to cancel the subscription, Are you sure? </p>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="cancelSub" > Yes </a> </li>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="follow" > No </a> </li>
                             </ul>
                         </li>
+                        <li class="cat-item"><a onclick="LogOut()" style="cursor: pointer;">Log out</a></li>
                     </ul>
                 </div><br>
-                <div class="post-block-list post-module-1 post-module-5">
-                    <ul class="list-post" style="opacity: 0.4;">
-                        <li class="mb-15">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">Use Horoscope for 9 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">9 different astrology services</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+              
             </div>
             <!--Ads-->
-            
         </div>
     </aside>
     <!-- Start Header -->
@@ -221,47 +190,7 @@
         </div>
     </header>
     <!--Start search form-->
-    <div class="main-search-form">
-        <div class="container">
-            <div class="main-search-form-cover pt-50 pb-50 m-auto">
-                <div class="row mb-20">
-                    <div class="col-12">
-                        <form action="#" class="search-header">
-                            <div class="input-group w-100">
-                                <select class="form-control first_null not_chosen">
-                                    <option value="">Search all</option>
-                                    <option value="AX">Articles</option>
-                                    <option value="AF">Authors</option>
-                                    <option value="AF">Tags</option>
-                                </select>
-                                <input type="text" class="form-control" placeholder="Type your key words and hit enter">
-                                <div class="input-group-append">
-                                    <button class="btn btn-black" type="submit">
-                                        <i class="ti-search mr-5"></i> Search
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 font-small suggested-area">
-                        <p class="suggested font-heading mb-10"><strong>Suggestion</strong></p>
-                        <ul class="list-inline d-inline-block">
-                            <li class="list-inline-item"><a href="category.html">World</a></li>
-                            <li class="list-inline-item"><a href="category.html">American</a></li>
-                            <li class="list-inline-item"><a href="category.html">Opinion</a></li>
-                            <li class="list-inline-item"><a href="category.html">Tech</a></li>
-                            <li class="list-inline-item"><a href="category.html">Science</a></li>
-                            <li class="list-inline-item"><a href="category.html">Books</a></li>
-                            <li class="list-inline-item"><a href="category.html">Travel</a></li>
-                            <li class="list-inline-item"><a href="category.html">Business</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Start Main content -->
     <main class="mt-30 mb-50">
         <div class="container single-content">
@@ -476,7 +405,10 @@
     <script src="./assets/js/vendor/jquery.theia.sticky.js"></script>
     <!-- NewsBoard JS -->
     <script src="./assets/js/main.js"></script>
-   <script type="module" src="./assets/js/plane.js"></script>
+   <script type="module" src="./assets/js/proM.js"></script>
+   <script type="module" src="assets/js/timeCount.js"></script>
+   <script src="./assets/js/cookie.js"></script>
+
 </body>
 
 </html>
