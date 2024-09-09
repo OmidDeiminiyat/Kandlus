@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
     
   
-  
   function ascend(character, BirthTime, Lati, long) {
    
     const charUrl = 'https://api.vedicastroapi.com/v3-json/horoscope/ascendant-report';
@@ -95,18 +94,16 @@ letArray.forEach((element, index) => {
 <div><h5>Symbol: <span class="newColor" >${element.symbol} </span>  </div>
 <div><h5>Zodiac characteristics: <span class="newColor" >${element.zodiac_characteristics} </span>  </div>
 </div>
-<div class="Verbal location"><h5>Personalised prediction: <span class="newColor" >${element.verbal_location} </span>  </div>
-<div class="Flagship qualities"><h5>Personalised prediction: <span class="newColor" >${element.flagship_qualities} </span>  </div>
-<div class="gayatri_mantra"><h5>Personalised prediction: <span class="newColor" >${element.gayatri_mantra} </span>  </div>
-<div class="General prediction"><h5>Personalised prediction: <span class="newColor" >${element.general_prediction} </span>  </div>
+<div class="Verbal location"><h5>Verbal location: <span class="newColor" >${element.verbal_location} </span>  </div>
+<div class="Flagship qualities"><h5>Flagship qualities: <span class="newColor" >${element.flagship_qualities} </span>  </div>
+<div class="gayatri_mantra"><h5>Gayatri mantra: <span class="newColor" >${element.gayatri_mantra} </span>  </div>
+<div class="General prediction"><h5>General prediction: <span class="newColor" >${element.general_prediction} </span>  </div>
 <div class="personalised_prediction"><h5>Personalised prediction: <span class="newColor" >${element.personalised_prediction} </span>  </div>
-<div class="spirituality_advice"><h5>Personalised prediction: <span class="newColor" >${element.spirituality_advice} </span>  </div>
+<div class="spirituality_advice"><h5>Spirituality advice: <span class="newColor" >${element.spirituality_advice} </span>  </div>
 </figcaption><hr>`
 });
 insideCountiner += `</span>`
 insiPut.innerHTML = insideCountiner;
-
-    
 
   }
 

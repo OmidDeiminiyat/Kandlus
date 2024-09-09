@@ -67,18 +67,67 @@ for (i = 0; i < coll.length; i++) {
 }
 */
 
+var sessionName = sessionStorage.getItem('Plan');
+console.log(sessionName);
+var Bios = document.getElementById('BioFirst');
+var bioLinks =document.getElementById('listen-2');
+var HoroFir = document.getElementById('HorosForst');
+var HorLink = document.getElementById('listen');
+var Person = document.getElementById('PersonTex');
+var PersonLink =document.getElementById('listen-3');
+var assenD = document.getElementById('assenTex');
+var AssLin = document.getElementById('listen-4');
+var Yogik = document.getElementById('YogaD');
+var yogiLink = document.getElementById('listen-5');
+var TablN = document.getElementById('NumTab');
+var tabLink = document.getElementById('listen-7');
+var Radic = document.getElementById('RadTex');
+var RLink = document.getElementById('listen-8');
+var tarotLink = document.getelementById('listenTarot');
+
+
+if (!sessionName || sessionName == '99etB637s') {
+  Bios.innerText =  'This service is available for Standard and Pro plans';
+  HoroFir.innerHTML = 'This service is available for Standard and Pro plans'
+  assenD.innerHTML = 'This service is available for Standard and Pro plans'
+  bioLinks.style.display = 'none';
+  HorLink.style.display = 'none';
+  AssLin.style.display = 'none';
+} else {
+  Bios.innerHTML = 'Let calculate your birth day and time to know your biorythm circle';
+  bioLinks.style.display = 'block';
+  HoroFir.innerHTML = 'Daily, Weekly, Monthly Horoscopes. Annual Forecasts, Transits, Progressions, Relationship, Compatibility and more';
+  HorLink.style.display = 'block';
+  assenD.innerHTML = 'Know your Personality, Appearance, Behavior, Attitudes, Life Path, Identity and more';
+  AssLin.style.display = 'block';
+}
+
+if(!sessionName || sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
+Person.innerText = 'This service is available for plan Pro'
+PersonLink.style.display = 'none';
+Yogik.innerText = 'This service is available for plan Pro'
+yogiLink.style.display = 'none';
+TablN.innerText = 'This service is available for plan Pro'
+tabLink.style.display = 'none';
+Radic.innerText = 'This service is available for plan Pro'
+RLink.style.display = 'none';
+} else {
+Person.innerText = 'This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location'
+PersonLink.style.display = 'block';
+Yogik.innerText = 'These yogas are formed based on the placement of planets in relation to each other and to certain houses in the natal chart'
+yogiLink.style.display = 'block';
+TablN.innerText = 'A numerology chart is created using specific numbers derived from a person’s birth date and full name. The chart provides insights into various aspects of their life.'
+tabLink.style.display = 'block';
+Radic.innerText = 'The radical number or root number, also known as the life path number, is derived from the date of birth. By having your root number, you can be aware of your life path'
+RLink.style.display = 'block';
+}
+
+
+
 function pages(recived) {
-  var sessionName = sessionStorage.getItem('Plan');
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == '99etB637s') {
-    const showError = document.getElementById('Error');
-     const no1 = document.getElementById('No-1');
-     const img1 = document.getElementById('img1');
-     no1.style.display = 'none';
-     img1.style.display = 'none';
-   showError.style.display = 'block';
   } else {
     const sendTo = "../Astrology/" + recived;
        window.location.href = sendTo;
@@ -86,19 +135,10 @@ function pages(recived) {
 }
 
 function pages2(recived) {
-  var sessionName = sessionStorage.getItem('Plan');
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == '99etB637s' ) {
-    const showError = document.getElementById('Error2');
-    const no2 = document.getElementById('No-2');
-    const img2 = document.getElementById('img2');
-    no2.style.display = 'none';
-    showError.style.display = 'block';
-    img2.style.display= 'none';
-      
-  } else {
+  }  else {
     const sendTo = "../Astrology/" + recived;
       window.location.href = sendTo;
   }
@@ -109,14 +149,6 @@ function pages3(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if (sessionName == '99etB637s' ) {
-    const showError = document.getElementById('Error3');
-    const no3 = document.getElementById('No-3');
-    const img3 = document.getElementById('img3');
-    img3.style.display = 'none';
-    no3.style.display = 'none';
-    showError.style.display = 'block';
-      
   } else {
     const sendTo = "../Astrology/" + recived;
       window.location.href = sendTo;
@@ -127,14 +159,7 @@ function pages4(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR' ) {
-    const showError = document.getElementById('Error4');
-    const no4 = document.getElementById('No-4');
-    const img4 = document.getElementById('img4');
-    img4.style.display = 'none';
-    no4.style.display = 'none';
-    showError.style.display = 'block';
-  } else {
+  } else  {
     const sendTo = "../Astrology/" + recived;
     window.location.href = sendTo;
   }
@@ -145,14 +170,7 @@ function pages5(recived) {
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
-    const showError = document.getElementById('Error5');
-    const no5 = document.getElementById('No-5');
-    const img5 = document.getElementById('img5');
-    img5.style.display = 'none'
-    no5.style.display = 'none';
-    showError.style.display = 'block';
-  } else {
+  } else  {
     const sendTo = "../Astrology/" + recived;
     window.location.href = sendTo;
   }
@@ -176,58 +194,46 @@ function pages6(recived) {
 
 const Basic = '99etB637s';
 function pages7(recived) {
-  var sessionName = sessionStorage.getItem('Plan');
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
-    const showError = document.getElementById('Error7');
-    const no7 = document.getElementById('No-7');
-    const img7 = document.getElementById('img7');
-    img7.style.display = 'none'
-    no7.style.display = 'none';
-    showError.style.display = 'block';
-      
-  } else {
+  } else  {
     const sendTo = "../Astrology/" + recived;
     window.location.href = sendTo;
   }
 }
 function pages8(recived) {
-  var sessionName = sessionStorage.getItem('Plan');
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
-    const showError = document.getElementById('Error8');
-    const no8 = document.getElementById('No-8');
-    const img8 = document.getElementById('img8');
-    img8.style.display = 'none'
-    no8.style.display = 'none';
-    showError.style.display = 'block';
-  } else {
+  } else  {
     const sendTo = "../Astrology/" + recived;
     window.location.href = sendTo;
   }
 }
 
 function pages9(recived) {
-  var sessionName = sessionStorage.getItem('Plan');
   var checkU = getCookie('Kandlus-users');
   if (!checkU) {
     alert('To use astrology services, you must log in and select one of the plans' );
-  } else if  (sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
-    const showError = document.getElementById('Error9');
-    const no9 = document.getElementById('No-9');
-    const img9 = document.getElementById('img9');
-    img9.style.display = 'none'
-    no9.style.display = 'none';
-    showError.style.display = 'block';
-  } else {
+  } else  {
     const sendTo = "../Astrology/" + recived;
       window.location.href = sendTo;
   }
 }
+
+function tarots(recived) {
+  var sessionName = sessionStorage.getItem('Plan');
+  var checkU = getCookie('Kandlus-users');
+  if (!checkU) {
+    alert('To use astrology services, you must log in and select one of the plans' );
+  } else  {
+    const sendTo = "../Astrology/" + recived;
+    window.location.href = sendTo;
+  }
+}
+
+
 
     // const no2 = document.getElementById('No-2');
     // const no3 = document.getElementById('No-3');
@@ -303,17 +309,12 @@ function Podcast() {
   window.location.href = 'Podcast.html';
 }
 
-
-function Zodiacs() {
-  var cook = getCookie('Kandlus-users');
-  if (cook) {
-    console.log('You are welcome');
-    const ZodRe = "Astrology/" + dataRe;
-      window.location.href = ZodRe;
-  } else {
-    console.log('You are not log in');
-     const ZodRe = "Astrology/Horoscope.html";
-      window.location.href = ZodRe;
-  }
-  
+function goHoroscope() {
+  window.location.href = 'Horoscope.html';
+}
+function goBiorythm() {
+  window.location.href = 'Biorythm.html';
+}
+function goPersonal() {
+  window.location.href = 'Characteris.html';
 }

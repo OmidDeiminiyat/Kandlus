@@ -27,7 +27,8 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
       if (filteredResults.length > 0) {
         let linkStyle = `<ul>`
         filteredResults.forEach((item, index) => {
-            linkStyle += `<li><a href="single.html?id=${item.seo}">${item.title}</a><li>`
+            linkStyle += `<li><a href="single.html?id=${item.seo}"><span class="material-symbols-outlined">
+              auto_stories </span> ${item.title}</a><li>`
         });
         linkStyle += `</ul>`
         resultsList.innerHTML = linkStyle;

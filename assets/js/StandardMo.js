@@ -8,13 +8,15 @@ function getCookie(Name) {
       let cookie = cookiesArray[i];
       while (cookie.charAt(0) == ' ') cookie = cookie.substring(1, cookie.length);
       if (cookie.indexOf(nameEQ) == 0) return cookie.substring(nameEQ.length, cookie.length);
+      console.log('Cookie is:' + cookie.length);
     }
     return null;
   }
 
+
 function checkAutoLogin() {
     const authToken = getCookie('Kandlus-users');
-    
+   
     if (authToken) {
 fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${authToken}`, {
     method: 'GET',
@@ -27,11 +29,13 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   .then(dataAst => {
      //console.log(NewReciData); // Do something with the fetched data
      if (dataAst) {
+      console.log('second:' + dataAst);
         callForUpdate(dataAst[0]);
-        sessionStorage.setItem('Plan', '9dyhf3Ds');
+        sessionStorage.setItem('Plan', '99etB637s');
      } else {
         // Token is invalid, delete the cookie
         setCookie('Kandlus-users', '', -1);
+        secondList()
       }
   })
   .catch(error => {
@@ -44,22 +48,22 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
 
   function callForUpdate(UserData){
 
-const today = new Date();
+    
+    const today = new Date();
 const day = today.getDate();
-const month = today.getMonth() + 1;
-const year = today.getFullYear() + 1;
+const month = today.getMonth() + 2;
+const year = today.getFullYear();
 const fulDate = day + '. ' + month + '. ' + year;
 
     const Code = UserData.Code;
-  const updatedData = { Plan: '9dyhf3Ds', subscribeData: fulDate };
+  const updatedData = { Plan: '663idsmS98pR', subscribeData: fulDate };
   
   updateSubscribeTable(Code, updatedData);
 
   }
   
 
-
-
+// main.js
 
 
 

@@ -45,10 +45,13 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   import updateSubscribeTable from './controller/updateSubscribe.js';
 
   function callForUpdate(UserData){
-    console.log('call for update:' + UserData.email);
-   
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.getMonth() + 1;
+    const year = today.getFullYear() + 1;
+    const fulDate = day + '. ' + month + '. ' + year;   
     const Code = UserData.Code;
-  const updatedData = { Plan: '663idsmS98pR' };
+  const updatedData = { Plan: '663idsmS98pR', subscribeData: fulDate };
   
   updateSubscribeTable(Code, updatedData);
 
@@ -56,9 +59,6 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   
 
   
-
-
-// main.js
 
 
 

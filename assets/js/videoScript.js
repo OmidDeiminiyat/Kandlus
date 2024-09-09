@@ -15,7 +15,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/SingleVide?seo=eq.${id}`
 })
 .then(response => response.json())
 .then(data => {
-
+  sessionStorage.setItem('ArtId', data[0].id);
 singleVideo(data)
 secondRow(data[0].category)
 titleDisp(data)

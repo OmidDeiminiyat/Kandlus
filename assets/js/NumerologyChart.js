@@ -80,10 +80,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log(LetData.response);
     
     resRac.innerHTML = ''
-    let insideElement = `<h4>Resault for your numerology table</h4><br>
+    let insideElement = `<h5 style="color: white;">Resault for your numerology table</h5><br>
     <figcaption class="letBeCaption">
     <div> <h5> Date Considered:<span class="circleDay" >${LetData.response.date_considered} </span> </h5></div>
-    <div><h3> Radical ruler: <h5><span class="circleDay" >${LetData.response.radical_ruler} </span></h3> </h5></div> 
+    <div><h3> Radical ruler: <span class="circleDay" >${LetData.response.radical_ruler} </span></h3> </div> 
     <div><h3>Radical Number: <span class="circleDay" >${LetData.response.radical_number} </span> </h3></div>
     <div><h3>Neutral Number: <span class="circleDay" >${LetData.response.neutral_num} </span> </h3></div>
     <div><h3>Name Number: <span class="circleDay" >${LetData.response.name_number} </span> </h3></div>

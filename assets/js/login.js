@@ -14,8 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
     const getPass = document.getElementById('password').value;
     const passed = await hashPassword(getPass);
     const errorMessage = document.getElementById('errorMessage');
-    console.log(newEmail);
-    console.log(passed);
+    const ErrorEm = document.getElementById('errorEmail');
   
     // Sample credentials for demonstration purposes
   
@@ -39,17 +38,17 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
         }
         return 0;
       });
-       console.log('Email is:' + checkEmail[0].email); // Do something with the fetched data
        if (Emails === checkEmail[0].email && passed === checkEmail[0].Password) {
         onLoginSuccess('Kandlus-users', checkEmail[0].Code, 3 )
            
         // Redirect to another page or perform other actions here
     } else {
-        errorMessage.textContent = 'Invalid username or password';
+        errorMessage.textContent = 'Invalid password, try again';
     }
     })
     .catch(error => {
       console.error('Error fetching data:', error);
+      ErrorEm.textContent = 'Emal does not exist, try again';
     });
     
   });
@@ -59,7 +58,6 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/;Secure;SameSite=Strict";
-    console.log('cookie');
     window.location.href = 'index.html';
 
   }

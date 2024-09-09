@@ -24,14 +24,13 @@ document.getElementById('dateForm').addEventListener('submit', (event) => {
 });
 
 
-
-
 function handleSubmit(birthData) {
    
     const thirdBio = document.getElementById('displayThird');
-    const secongFig = document.getElementById('displayBio');
+    const secongFig = document.getElementById('bioForm');
+    const SecChar = document.getElementById('secondChart');
 
-    console.log(birthData);
+   SecChar.style.display = 'none';
     secongFig.style.display = 'none';
     thirdBio.style.display = 'grid';
 
@@ -63,22 +62,21 @@ function handleSubmit(birthData) {
 }
 
 function bioData(addBioRcived) {
-const finalData = document.getElementById('finalData');
+const finalData = document.getElementById('BioRytmData');
 
 const recivedNewData = addBioRcived;
 console.log(recivedNewData.response.physical);
 
 finalData.innerHTML = ''
 let insideMyCaption = `<h4>Here is your biorythm circle</h4><br>
-<figcaption class="figCaptureIn">
+<div class="figCaptureIn">
 <div> <h5>Physical circle is: <span class="circleDay" >${recivedNewData.response.physical.score} </span> days</h5> <h5>Trend: ${recivedNewData.response.physical.trend} </h5></div> 
 <div><h5>Emotional circle is: <span class="circleDay" >${recivedNewData.response.emotional.score} </span> days</h5><h5>Trend: ${recivedNewData.response.emotional.trend} </h5></div>
 <div><h5>Intellectual circle is: <span class="circleDay" >${recivedNewData.response.intellectual.score} </span> days</h5> <h5>Trend: ${recivedNewData.response.intellectual.trend}</h5></div>
 <div><h5>Average circle is: <span class="circleDay" >${recivedNewData.response.average.score} </span> days </h5><h5>Trend: ${recivedNewData.response.average.trend}</h5></div>
-</figcaption>`
+</div>`
 
 finalData.innerHTML = insideMyCaption;
-
 
 
 const no4 = '120'
@@ -128,7 +126,7 @@ new Chart("newChart", {
 
 
 }
-
+/*
 function biorythm() {
     const changeBio = document.getElementById('bioInside');
     const secongFig = document.getElementById('displayBio');
@@ -138,7 +136,7 @@ function biorythm() {
 
 
   }
-
+*/
 
 //  Y axes
 

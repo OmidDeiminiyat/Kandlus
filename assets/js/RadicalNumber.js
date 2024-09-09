@@ -56,7 +56,7 @@ function character(Radical) {
     console.log(LetData.response);
     
     resRac.innerHTML = ''
-    let insideElement = `<h4>Here is your Radical number resault</h4><hr class="brLine">
+    let insideElement = `<h4 style="color: white;" >Here is your Radical number resault</h4><hr class="brLine">
     <figcaption class="letBeCaption">
     <div><h3> Content: <h5><span class="citcleNight" >${LetData.response.content} </span></h3> </h5></div><hr class="brLine">
     <div><h3> Fasting: <h5><span class="citcleNight" >${LetData.response.fasting} </span></h3> </h5></div> <hr class="brLine">

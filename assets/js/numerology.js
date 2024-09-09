@@ -55,11 +55,11 @@ function newSubmit(dayFetched) {
 }
 
 function bioData(numData) {
-  const dispNum = document.getElementById('dispNum');
-  const Number = document.getElementById('displayNumber');
+   const dispNum = document.getElementById('dispNum');
+   const Number = document.getElementById('newNumber');
 
-  Number.style.display = 'none';
-  dispNum.style.display = 'grid';
+    Number.style.display = 'none';
+    dispNum.style.display = 'grid';
 
   const DayNumber = document.getElementById('NumberResault');
 
@@ -84,7 +84,7 @@ DayNumber.innerHTML = newNums;
 function Numerology() {
   const numero = document.getElementById('Numero');
   const dispNum = document.getElementById('dispNum');
-  const Number = document.getElementById('displayNumber');
+  const Number = document.getElementById('newNumber');
 
 
   dispNum.style.display= 'none';

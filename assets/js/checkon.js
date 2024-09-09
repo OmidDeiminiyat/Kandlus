@@ -4,7 +4,7 @@ const userOn = getCookie('Kandlus-users');
 var sessionOn = sessionStorage.getItem('Plan');
 if (KCcoins) {
     IncrPoint(KCcoins)
-   console.log(KCcoins);
+   
     localStorage.removeItem('KC');
 } else if (!userOn || sessionOn == '99etB637s') {
     window.location.href = '../price.html';

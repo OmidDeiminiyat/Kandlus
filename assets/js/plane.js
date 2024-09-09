@@ -16,7 +16,7 @@ function getCookie(Name) {
 
 function checkAutoLogin() {
     const authToken = getCookie('Kandlus-users');
-    
+   
     if (authToken) {
 fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${authToken}`, {
     method: 'GET',
@@ -29,11 +29,13 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   .then(dataAst => {
      //console.log(NewReciData); // Do something with the fetched data
      if (dataAst) {
+      console.log('second:' + dataAst);
         callForUpdate(dataAst[0]);
         sessionStorage.setItem('Plan', '99etB637s');
      } else {
         // Token is invalid, delete the cookie
         setCookie('Kandlus-users', '', -1);
+        secondList()
       }
   })
   .catch(error => {
@@ -45,25 +47,21 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   import updateSubscribeTable from './controller/updateSubscribe.js';
 
   function callForUpdate(UserData){
-    console.log('call for update:' + UserData.email);
-   
+
+    
+    const today = new Date();
+const day = today.getDate();
+const month = today.getMonth() + 1;
+const year = today.getFullYear() + 1;
+const fulDate = day + '. ' + month + '. ' + year;
+
     const Code = UserData.Code;
-  const updatedData = { Plan: '99etB637s' };
+  const updatedData = { Plan: '99etB637s', subscribeData: fulDate };
   
   updateSubscribeTable(Code, updatedData);
 
   }
   
-
-  
-
-
-// main.js
-
-
-
-
-
 
 
   

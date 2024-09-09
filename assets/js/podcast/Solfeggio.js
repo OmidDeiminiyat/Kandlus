@@ -15,12 +15,3 @@ if (sessionPlan === '663idsmS98pR' || sessionPlan === '9dyhf3Ds') {
     listen2.style.display = 'none';
     listen3.style.display = 'none';
 }
-
-function preImg() {
-    const preImg = document.getElementById('scim');
-    const hno = document.getElementById('hno1');
-
-    hno.style.display= 'block';
-    preImg.style.opacity= '0.3';
-
-}

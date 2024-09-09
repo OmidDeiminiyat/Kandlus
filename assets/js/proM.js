@@ -46,8 +46,8 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
 
 const today = new Date();
 const day = today.getDate();
-const month = today.getMonth() + 1;
-const year = today.getFullYear() + 1;
+const month = today.getMonth() + 2;
+const year = today.getFullYear();
 const fulDate = day + '. ' + month + '. ' + year;
 
     const Code = UserData.Code;
@@ -58,6 +58,10 @@ const fulDate = day + '. ' + month + '. ' + year;
   }
   
 
+  
+
+
+// main.js
 
 
 
