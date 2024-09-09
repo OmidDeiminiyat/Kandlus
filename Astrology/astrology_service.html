@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Astrology services - Kandlus</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover personalized astrology services for insightful guidance and cosmic clarity. From birth charts and compatibility reports to daily horoscopes and tarot readings, unlock the mysteries of the stars and empower your life's journey.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.png">
     <!-- NewsBoard CSS  -->
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../assets/css/myStyle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144883160-1"></script>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                 <div class="widget_nav_menu">
                     <ul class="menu">
                         <li class="cat-item"><a>Your plan is: <span id="Wplan">Free</span></a></li>
-                        <li class="cat-item"><a>Current Point: 00</a></li>
+                        <li class="cat-item" id="currentP" style="display: none;">Renew plan on:</li>
                         <li class="cat-item"><a></a></li>
 
                         <li class="cat-item cat-item-2 menu-item-has-children">
@@ -58,51 +58,20 @@
                                 <li class="cat-item"><a href="../blog/usersArticle.html">Articles</a></li>
                             </ul>
                         </li>
-                        <li class="cat-item cat-item-2 menu-item-has-children">
-                            <a>What is points</a>
-                            <ul class="sub-menu"><br>
-                                <p>You recived points automatically based on the time you spending in my website to: reading articles and watching videos. </p>
+                        <li id="subscriptionPlan" class="cat-item cat-item-2 menu-item-has-children">
+                            <a style="cursor: pointer;">Cancel subscription</a>
+                            <ul class="sub-menu">
+                                <p>You are about to cancel the subscription, Are you sure? </p>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="cancelSub" > Yes </a> </li>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="follow" > No </a> </li>
                             </ul>
                         </li>
+                        <li class="cat-item"><a onclick="LogOut()" style="cursor: pointer;">Log out</a></li>
                     </ul>
                 </div><br>
-                <div class="post-block-list post-module-1 post-module-5">
-                    <ul class="list-post" style="opacity: 0.4;">
-                        <li class="mb-15">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">Use Horoscope for 9 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use biorythm for 12 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+              
             </div>
             <!--Ads-->
-            
         </div>
     </aside>
     <!-- Start Header -->
@@ -160,8 +129,7 @@
                                         <ul class="col-md-2">
                                             <li><strong>Sound library</strong></li>
                                             <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
-                                            <li><a href="../Podcast/mantra.html">Mantra</a></li>
-                                            <li><a href="../podcast/Podcast.html">Podcast</a></li>
+                                            <li><a href="../Podcast/Solfeggio_frequency.html">Mantra</a></li>
                                         </ul>
                                         <ul class="col-md-2">
                                             <li><strong>Most searched tags</strong></li>
@@ -202,13 +170,6 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Library</a>
-                            <ul class="col-md-2">
-                                <li><a href="../blog/category.html">Video</a></li>
-                                <li><a href="../blog/category-grid.html">Article</a></li>
-                            </ul>
-                        </li>
-                        <li>
                             <a href="../index.html">Pages</a>
                             <ul class="sub-menu text-muted font-small">
                                 <li><a href="../privacyPolicy.html">Privacy police</a></li>
@@ -241,199 +202,224 @@
     </header>
 
     <!-- Start Main content -->
-  
-    <span id="allInOne"> 
-        <main>
-            <section id="All_sec" >
 
-                <section id="right-s" class="right-s content">
-                    <h2 style="font-size: 30px;">Astrology Services</h2>
-                    <hr>
-                    <div class="DivFig" >
-                        <figure>
-                            <img id="img1" onclick="pages('biorythm.html')" src="../assets/images/Astrology/Service/Asse.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error" class="Error">
-                                  
-                                    <p>This service is available for Standard and Pro plans</p>
-                                    <h3> <a href="../Price.html">Read more</a></h3>
-                                </span>
-                                <span id="No-1">
-                                    <h3>Biorythm</h3>
-                                    <p>Check it out</p>
-                                </span>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img id="img2" onclick="pages2('Horoscope.html')" src="../assets/images/Astrology/Service/Horoscope.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error2" class="Error">
-                                     <p>This service is available for Standard and Pro plans</p>
-                                     <h3> <a href="../Price.html">Read more</a></h3>
-                                 </span>
-                                 <span id="No-2">
-                                     <h3>Horoscope</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img id="img3" onclick="pages3('ascendant.html')" src="../assets/images/Astrology/Service/Ascendant.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error3" class="Error">
-                                    <p>This service is available for Standard and Pro plans</p>
-                                     <h3> <a href="../Price.html">Read more</a></h3>
-                                 </span>
-                                 <span id="No-3">
-                                     <h3>Ascendant</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img id="img4" onclick="pages4('Characteris.html')" src="../assets/images/Astrology/Service/Personal_charactries.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error4" class="Error">
-                                    <p> This service is available for Pro plan </p>
-                                     <h3> <a href="../Price.html">Read more</a></h3>
-                                 </span>
-                                 <span id="No-4">
-                                     <h3>Personal Characteris</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-    
-                        <figure>
-                            <img id="img5" onclick="pages5('list-of-Yoga.html')" src="../assets/images/Astrology/Service/List-of-yoga.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error5" class="Error">
-                                    <p> This service is available for Pro plan </p>
-                                    <h3> <a href="../Price.html">Read more</a></h3>
-                                 </span>
-                                 <span id="No-5">
-                                     <h3>List of Yogas</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-    
-                        <figure>
-                            <img id="img6" onclick="pages6('Numerology.html')" src="../assets/images/Astrology/Service/Numerology.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error6" class="Error">
-                                    <h3><a href="../Price.html">Read more</a></h3>
-                                     <p>To use this service you have to log in</p>
-                                 </span>
-                                 <span id="No-6">
-                                     <h3>Numerology</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img id="img7" onclick="pages7('NumerologyTable.html')" src="../assets/images/Astrology/Service/Biorythm.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error7" class="Error">
-                                    <p> This service is available for Pro plan </p>
-                                    <h3> <a href="../Price.html">Read more</a></h3>
-                                 </span>
-                                 <span id="No-7">
-                                     <h3>Numerology table</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img id="img8" onclick="pages8('Radical_number.html')" src="../assets/images/Astrology/Service/Radical-number.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error8" class="Error">
-                                    <p> This service is available for Pro plan </p>
-                                    <h3> <a href="../Price.html">Read more</a></h3>
-                                 </span>
-                                 <span id="No-8">
-                                     <h3>Radical number</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-    
-                        <figure onclick="pages9('9')">
-                            <img id="img9" src="../assets/img/Sagitarius.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error9" class="Error">
-                                    <p> This service is available for Pro plan </p>
-                                    <h3> <a href="../Price.html">Read more</a></h3>
-                                 </span>
-                                 <span id="No-9">
-                                     <h3>Kundali matching</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img onclick="pages10('10')" src="../assets/img/Capricorn.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error10" class="Error">
-                                    <h3> <a href="../Price.html">Read more</a></h3>
-                                     <p>To use this service you have to log in</p>
-                                 </span>
-                                 <span id="No-10">
-                                     <h3>Biorythm</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img onclick="pages11('11')" src="../assets/img/Aquarius.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error11" class="Error">
-                                    <h3> <a href="../Price.html">Read more</a></h3>
-                                     <p>To use this service you have to log in</p>
-                                 </span>
-                                 <span id="No-11">
-                                     <h3>Biorythm</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img onclick="pages12('12')" src="../assets/img/Picess.png" alt="">
-                            <hr>
-                            <figcaption>
-                                <span id="Error12" class="Error">
-                                    <h3><a href="../Price.html">Read more</a></h3>
-                                     <p>To use this service you have to log in</p>
-                                 </span>
-                                 <span id="No-12">
-                                     <h3>Biorythm</h3>
-                                     <p>Check it out</p>
-                                 </span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="widthAds">
-                        ads here
-                    </div>
-                </section>
+    <main id="forSearchBar" class="mt-30">
+        <div class="container single-content">
+            <div class="row vertical-divider mb-50">
+                <div class="col-lg-9 col-md-12">
+
+                        <!-- Three card start -->
+                        <section class="card">
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    Tarot card <span>Reading</span> 
+                                </h3>
+                                <p id="PersonTex" class="card-hover__text"> Get your tarot reading now to explore the hidden depths of your soul. </p>
+                                <a id="listen-3" href="#" class="card-hover__link">
+                                    <span onclick="pages4('tarot_reading.html')">Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a>
+                                </div>
+                                <div class="card-hover__extra">
+                                </div>
+                                <img src="../assets/images/Astrology/cards/TarotCards.jpg" alt="Personality">
+                            </div>
+                            
+                            <div id="MantraCard" class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    Horoscope <span>Daily, Weekly, Yearly</span> 
+                                </h3>
+                                <p id="HorosForst" class="card-hover__text">Pick your zodiac sign to know about your future</p>
+                                <a id="listen" href="#" class="card-hover__link">
+                                    <span onclick="pages2('Horoscope.html')">Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a>
+                                </div>
+                                <div class="card-hover__extra">
+                                <!-- <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4> -->
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Horoscope.jpg" alt="Daily horoscope, weekly horoscope, yearly horoscope">
+                            </div>
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    Biorythm <span>+ Biochart</span> 
+                                </h3>
+                                <p id="BioFirst" class="card-hover__text">Let calculate your birth day and time to know your biorythm circle</p>
+                                <a id="listen-2" href="#" class="card-hover__link">
+                                    <span onclick="pages('Biorythm.html')" >Try now</span>
+                                    <svg id="BioSvg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a>
+                                </div>
+                                <div class="card-hover__extra">
+                                <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4>
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Biorythm.jpg" alt="">
+                            </div>
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    Personal <span>Characteris</span> 
+                                </h3>
+                                <p id="PersonTex" class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
+                                <a id="listen-3" href="#" class="card-hover__link">
+                                    <span onclick="pages4('Characteris.html')">Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a>
+                                </div>
+                                <div class="card-hover__extra">
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Personality.jpeg" alt="Personality">
+                            </div>
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    <span>Ascendant</span> 
+                                </h3>
+                                <p id="assenTex" class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
+                                <a id="listen-4" href="#" class="card-hover__link">
+                                    <span onclick="pages3('ascendant.html')">Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a>
+                                </div>
+                                <div class="card-hover__extra">
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Ascendant.jpg" alt="Ascendant">
+                            </div>
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    Type of <span>Yogas</span> 
+                                </h3>
+                                <p id="YogaD" class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
+                                <a id="listen-5" href="#" class="card-hover__link">
+                                    <span onclick="pages5('list-of-Yoga.html')">Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a>
+                                </div>
+                                <div class="card-hover__extra">
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Type-of-yoga.jpg" alt="Type of yoga, personal yoga">
+                            </div>
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                     <span>Numerology</span> 
+                                </h3>
+                                <p class="card-hover__text">Get your personal day number and meaning of your personal number. </p>
+                                <a id="listen-6" href="#" class="card-hover__link">
+                                    <span onclick="pages6('Numerology.html')">Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a>
+                                </div>
+                                <div class="card-hover__extra">
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Numerology.png" alt="Numerology">
+                            </div>
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    Numerology <span>Table</span> 
+                                </h3>
+                                <p id="NumTab" class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
+                                <a id="listen-7" href="#" class="card-hover__link">
+                                    <span onclick="pages7('NumerologyTable.html')">Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a>
+                                </div>
+                                <div class="card-hover__extra">
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Numerology-table.jpg" alt="Numerology table">
+                            </div>
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    Radical <span>Number</span> 
+                                </h3>
+                                <p id="RadTex" class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
+                                <a id="listen-8" href="#" class="card-hover__link">
+                                    <span onclick="pages8('Radical_number.html')">Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a>
+                                </div>
+                                <div class="card-hover__extra">
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Aquarius-new-1 copy.png" alt="Radical number">
+                            </div>
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    Kundali <span>matching</span> 
+                                </h3>
+                                <p class="card-hover__text">Coming Soon. </p>
+                                <!-- <a id="listen-3" href="#" class="card-hover__link">
+                                    <span >Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a> -->
+                                </div>
+                                <div class="card-hover__extra">
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Kundali-matching.jpg" alt="kundali matching">
+                            </div>
+                            <div class="card-hover">
+                                <div class="card-hover__content">
+                                <h3 class="card-hover__title">
+                                    Angel <span>numbers</span> 
+                                </h3>
+                                <p class="card-hover__text">Coming Soon. </p>
+                                 <a id="listen-3" href="#" class="card-hover__link">
+                                    <span onclick="TarAngel()" >Try now</span>
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                    </svg>        
+                                </a> 
+                                </div>
+                                <div class="card-hover__extra">
+                                </div>
+                                <img src="../assets/images/Astrology/cards/Angel-numbers.jpg" alt="kundali matching">
+                            </div>
+                           
+                           
+                        </section>
+                        <!-- End carts -->
+                        <div id="for-tests">
+            
+                        </div>
+
+                </div>
+                
                 <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
                     <div class="widget-area">
                         <div class="sidebar-widget widget-latest-posts mb-30 wow fadeIn animated">
                             <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
                                 <span>Kandlus</span>
                             </h6>
-                            ads
+                            <span id="adsCube" >
+
+                            </span>
+                            
                         </div>
                         <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
                             <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
@@ -443,9 +429,12 @@
                             
                             </div>
                         </div>
-                        Ads
-                        <div id="moreData" class="sidebar-widget widget-latest-comments mb-30 wow fadeIn  animated">
+                        <span id="cubeSec" >
 
+                        </span>
+                        
+                        <div id="moreData" class="sidebar-widget widget-latest-comments mb-30 wow fadeIn  animated">
+    
                         </div>
                         <div class="sidebar-widget widget_newsletter mb-50 wow fadeIn animated">
                             <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
@@ -467,10 +456,10 @@
                         </div>
                     </div>
                 </div>
-    
-            </section>
-        </main>
-        </span>
+            </div>
+        </div>
+    </main>
+
         <footer>
             <div class="footer-area">
                 <div class="container">
@@ -601,7 +590,7 @@
                         <div class="row d-flex align-items-center justify-content-between">
                             <div class="col-12">
                                 <div class="footer-copy-right">
-                                    <p class="font-small text-muted"><span id="getYear">© 2024 </span>  All Rights Reserved - Kandlus</span></p>
+                                    <p class="font-small text-muted"><span id="getYear">© 2024 </span>  All Rights Reserved - Kandlus </p>
                                 </div>
                             </div>
                         </div>
@@ -634,9 +623,12 @@
     <script src="../assets/js/MyScript.js"></script>
    <script src="../assets/js/script.js"></script>
    <script src="../assets/js/landingNav.js"></script>
-  <script src="../assets/js/articles/HomeArticle.js"></script>
-  <script src="../assets/js/articles/blogAstro.js"></script>
- <script src="../assets/js/cookie.js"></script>
+   <script src="../assets/js/articles/HomeArticle.js"></script>
+   <script src="../assets/js/articles/blogAstro.js"></script>
+   <script src="../assets/js/cookie.js"></script>
+   <script src="../assets/js/adsUser.js"></script>
+   <script type="module" src="../assets/js/timeCount.js"></script>
+
 </body>
 
 </html>

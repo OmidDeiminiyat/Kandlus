@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Astrology services - Kandlus</title>
-    <meta name="description" content="">
+    <title>Discover the transformative power of Personality Yoga in Astrology</title>
+    <meta name="description" content="Explore how the alignment of stars and planets influences your unique traits, behaviors, and life path. Unlock your true potential with personalized astrological insights and holistic practices">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/Kandlus.png">
     <!-- NewsBoard CSS  -->
@@ -15,7 +14,7 @@
     <link rel="stylesheet" href="../assets/css/myStyle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144883160-1"></script>
 </head>
 
 <body>
@@ -31,7 +30,7 @@
                     <h5 class="widget-title mt-5 mb-30" id="username" > To use this service, you must have an account and choose a plan </h5>
                     <div class="widget_nav_menu">
                         <ul id="readPrice" class="menu">
-                            <li class="cat-item"><a href="../price.html">Read more</a></li>
+                            <li class="cat-item"><a href="price.html">Read more</a></li>
                         </ul>
                     </div>
                 </div>
@@ -45,7 +44,7 @@
                 <div class="widget_nav_menu">
                     <ul class="menu">
                         <li class="cat-item"><a>Your plan is: <span id="Wplan">Free</span></a></li>
-                        <li class="cat-item"><a>Current Point: 00</a></li>
+                        <li class="cat-item" id="currentP" style="display: none;">Renew plan on:</li>
                         <li class="cat-item"><a></a></li>
 
                         <li class="cat-item cat-item-2 menu-item-has-children">
@@ -55,51 +54,20 @@
                                 <li class="cat-item"><a href="../blog/usersArticle.html">Articles</a></li>
                             </ul>
                         </li>
-                        <li class="cat-item cat-item-2 menu-item-has-children">
-                            <a>What is points</a>
-                            <ul class="sub-menu"><br>
-                                <p>You recived points automatically based on the time you spending in my website to: reading articles and watching videos. </p>
+                        <li id="subscriptionPlan" class="cat-item cat-item-2 menu-item-has-children">
+                            <a style="cursor: pointer;">Cancel subscription</a>
+                            <ul class="sub-menu">
+                                <p>You are about to cancel the subscription, Are you sure? </p>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="cancelSub" > Yes </a> </li>
+                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="follow" > No </a> </li>
                             </ul>
                         </li>
+                        <li class="cat-item"><a onclick="LogOut()" style="cursor: pointer;">Log out</a></li>
                     </ul>
                 </div><br>
-                <div class="post-block-list post-module-1 post-module-5">
-                    <ul class="list-post" style="opacity: 0.4;">
-                        <li class="mb-15">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">Use Horoscope for 9 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="mb-15">
-                            <div class="d-flex">
-                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
-                                    <a class="color-white" href="#">
-                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="post-content media-body">
-                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
-                                    <div class="entry-meta meta-1 font-x-small color-grey">
-                                        <span class="post-on">use biorythm for 12 points</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+              
             </div>
             <!--Ads-->
-            
         </div>
     </aside>
     <!-- Start Header -->
@@ -157,8 +125,7 @@
                                         <ul class="col-md-2">
                                             <li><strong>Sound library</strong></li>
                                             <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
-                                            <li><a href="../Podcast/mantra.html">Mantra</a></li>
-                                            <li><a href="../podcast/Podcast.html">Podcast</a></li>
+                                            <li><a href="../Podcast/Solfeggio_frequency.html">Mantra</a></li>
                                         </ul>
                                         <ul class="col-md-2">
                                             <li><strong>Most searched tags</strong></li>
@@ -199,13 +166,6 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Library</a>
-                            <ul class="col-md-2">
-                                <li><a href="../blog/category.html">Video</a></li>
-                                <li><a href="../blog/category-grid.html">Article</a></li>
-                            </ul>
-                        </li>
-                        <li>
                             <a href="../index.html">Pages</a>
                             <ul class="sub-menu text-muted font-small">
                                 <li><a href="../privacyPolicy.html">Privacy police</a></li>
@@ -237,428 +197,439 @@
         </div>
     </header>
 
-    <main>
-        <div class="container improvCont">
-            <div class="archive-header">
-                <div class="breadcrumb font-small">
-                    <a href="../index.html">Home</a>
-                    <span></span> Personal yoga practice
-                </div>
-                <h2 class="font-weight-bold"><span class="font-family-normal"></span></h2>
-                <ul class="sub-category list-inline font-x-small text-uppercase">
-                    <li class="list-inline-item"><a href="Biorythm.html">Biorythm</a></li>
-                    <li class="list-inline-item"><a href="ascendant.html">Ascendant</a></li>
-                    <li class="list-inline-item"><a href="Characteris.html">Personal characteris</a></li>
-                    <li class="list-inline-item"><a href="list-of-Yoga.html">List of Yogas</a></li>
-                    <li class="list-inline-item"><a href="Numerology.html">Numerology</a></li>
-                    <li class="list-inline-item"><a href="NumerologyTable.html">Numerology Table</a></li>
-                    <li class="list-inline-item"><a href="Radical_number.html">Radical Number</a></li>
-                    <li class="list-inline-item"><a href="Horoscope.html">Horoscope</a></li>
-                </ul>
-                <span class="line-dots mt-30 mb-30"></span>
-            </div>
-        </div>
-            <section id="All_sec">
-                <div class="left-side">
-    
-                    <!-- The same as biorythm use for personal day number -->
-                    <aside id="PersonalBirth" class="bg-grey">
-       
-                       <figure id="displayNumber">
-                        <h5><a href="https://kandlus.net/Astrology/list-of-Yoga.html">What is personal yoga practice?</a></h4>
-                            <span onclick="firstHideParaf()" class="material-symbols-outlined" id="first-arrow">
-                                arrow_drop_down
-                                </span> <span onclick="firstHideParaf()" class="material-symbols-outlined" id="second-arrow">
-                                    arrow_right
-                                    </span>
-                            <p id="hidden_p">
-                             With this service, you can assess your needs and limitations and
-                             start your unique yoga practice.
-                           </p>
-                            
-                           <figcaption id="myCaption" class="myCaption" >
-                               <h4>Let calculate your birth day, time etc, to find your personal Yoga practice</h4><br>
-                               <form id="newForm">
-                                   <div>
-                                       <label for="Gender">Select your gender:</label>
-                                       <select name="Gender" id="Gender">
-                                           <option value="M">Male</option>
-                                           <option value="F">Fmale</option>
-                                       </select>
-                                   </div><br>
+    <main id="forSearchBar" class="mt-30">
+        <div class="container single-content">
+            <div class="row vertical-divider mb-50">
+                <div class="col-lg-9 col-md-12">
+                    <div id="myCaption" class="col-xl-9 col-md-10">
+                        <div  class="login_wrap widget-taber-content p-30 background-white border-radius-5">
+                            <div class="padding_eight_all bg-white">
+                                <h2 class="mb-50 text-center position-relative divider-wave" onclick="firstHideParaf()" >What is personal yoga practice? <br> <span id="first-arrow" class="material-symbols-outlined"> arrow_right </span> 
+                                    <span id="second-arrow" class="material-symbols-outlined" style="display: none;" >arrow_drop_down </span> </h2>
+                                <p id="hidden_p" class="text-muted" style="text-align: center; display: none;" >* With this service, you can assess your needs and limitations and
+                                    start your unique yoga practice</p>
+                                <form id="newForm" method="post">
+                                    <div class="form-group">
+                                        <label for="Gender">Select your gender:</label>
+                                        <select name="Gender" id="Gender" required class="form-control">
+                                            <option value="M">Male</option>
+                                            <option value="F">Fmale</option>
+                                        </select>
+                                    </div>
+                                    <div >
+                                        <label for="name"> Your birth name:</label><br>
+                                        <input name="name" type="text" id="name" required style="width: 60%; border:1px solid rgb(225,225,225); border-radius:2px; height:48px;background:transparent;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date"> Your birth date:</label>
+                                        <input name="date" type="date" id="pBirth" required class="form-control">
+                                    </div>
 
-                                       <label for="name">What is your birth name</label> 
-                                       <input type="text" id="name" required>
-                                     <br>
-                                   <label for="pBirth">Insert your birth day</label> 
-                                   <input type="date" id="pBirth" required>
-                                   <br>
-                                   <label for="timeBirth">Insert your birth time</label> 
-                                   <input type="time" id="timeBirth" required>
-                                   <br>
-                                   <label for="countries">Country of birth:</label>
-                                   <select id="countries" name="countries">
-                                       <option value="34.5553,69.2075">Afghanistan</option>
-                                       <option value="41.3275,19.8189">Albania</option>
-                                       <option value="36.7372,3.0868">Algeria</option>
-                                       <option value="42.5063,1.5218">Andorra</option>
-                                       <option value="-8.7832,-55.4915">Angola</option>
-                                       <option value="17.1175,-61.8456">Antigua and Barbuda</option>
-                                       <option value="-34.6037,-58.3816">Argentina</option>
-                                       <option value="40.1792,44.4991">Armenia</option>
-                                       <option value="-35.282,149.1287">Australia</option>
-                                       <option value="48.2082,16.3738">Austria</option>
-                                       <option value="40.4093,49.8671">Azerbaijan</option>
-                                       <option value="25.0343,-77.3963">Bahamas</option>
-                                       <option value="26.0667,50.5577">Bahrain</option>
-                                       <option value="23.685,90.3563">Bangladesh</option>
-                                       <option value="13.1939,-59.5432">Barbados</option>
-                                       <option value="53.9045,27.5615">Belarus</option>
-                                       <option value="50.8503,4.3517">Belgium</option>
-                                       <option value="17.1899,-88.4976">Belize</option>
-                                       <option value="9.3077,2.3158">Benin</option>
-                                       <option value="32.3078,-64.7505">Bermuda</option>
-                                       <option value="27.5142,90.4336">Bhutan</option>
-                                       <option value="-16.5000,-68.1500">Bolivia</option>
-                                       <option value="43.8563,18.4131">Bosnia and Herzegovina</option>
-                                       <option value="-24.6583,25.9080">Botswana</option>
-                                       <option value="-15.7939,-47.8828">Brazil</option>
-                                       <option value="18.4207,-64.6399">British Virgin Islands</option>
-                                       <option value="4.6110,-74.0817">Brunei</option>
-                                       <option value="42.6977,23.3219">Bulgaria</option>
-                                       <option value="12.3714,-1.5197">Burkina Faso</option>
-                                       <option value="-3.3731,29.9189">Burundi</option>
-                                       <option value="-3.3704,-64.7146">Cabo Verde</option>
-                                       <option value="11.5500,104.9167">Cambodia</option>
-                                       <option value="3.8480,11.5021">Cameroon</option>
-                                       <option value="45.4215,-75.6972">Canada</option>
-                                       <option value="-11.2027,17.8739">Central African Republic</option>
-                                       <option value="12.1206,-14.9799">Chad</option>
-                                       <option value="-33.4489,-70.6693">Chile</option>
-                                       <option value="39.9042,116.4074">China</option>
-                                       <option value="4.6097,-74.0817">Colombia</option>
-                                       <option value="-11.6558,43.3333">Comoros</option>
-                                       <option value="-4.3224,15.3070">Congo</option>
-                                       <option value="9.7489,-83.7534">Costa Rica</option>
-                                       <option value="45.2671,19.8335">Croatia</option>
-                                       <option value="23.1333,-82.3830">Cuba</option>
-                                       <option value="35.1667,33.3667">Cyprus</option>
-                                       <option value="50.0755,14.4378">Czech Republic</option>
-                                       <option value="55.6761,12.5683">Denmark</option>
-                                       <option value="11.8251,42.5903">Djibouti</option>
-                                       <option value="15.3126,-61.3794">Dominica</option>
-                                       <option value="18.4861,-69.9312">Dominican Republic</option>
-                                       <option value="-0.1807,-78.4678">Ecuador</option>
-                                       <option value="30.0444,31.2357">Egypt</option>
-                                       <option value="13.7367,100.5231">El Salvador</option>
-                                       <option value="1.3733,32.2903">Equatorial Guinea</option>
-                                       <option value="15.1794,39.7823">Eritrea</option>
-                                       <option value="59.4370,24.7535">Estonia</option>
-                                       <option value="9.1450,40.4897">Ethiopia</option>
-                                       <option value="62.3908,17.3069">Faroe Islands</option>
-                                       <option value="-17.7134,178.0650">Fiji</option>
-                                       <option value="60.1699,24.9384">Finland</option>
-                                       <option value="48.8566,2.3522">France</option>
-                                       <option value="-0.8037,11.6094">Gabon</option>
-                                       <option value="13.4443,144.7937">Gambia</option>
-                                       <option value="41.7151,44.8271">Georgia</option>
-                                       <option value="52.5200,13.4050">Germany</option>
-                                       <option value="5.6037,-0.1870">Ghana</option>
-                                       <option value="37.9838,23.7275">Greece</option>
-                                       <option value="64.1830,-51.7216">Greenland</option>
-                                       <option value="12.1165,-61.6790">Grenada</option>
-                                       <option value="15.7835,-90.2308">Guatemala</option>
-                                       <option value="11.5512,-85.6981">Guinea</option>
-                                       <option value="9.9456,-9.6966">Guinea-Bissau</option>
-                                       <option value="4.8604,-58.9302">Guyana</option>
-                                       <option value="18.9712,-72.2852">Haiti</option>
-                                       <option value="14.6349,-90.5069">Honduras</option>
-                                       <option value="47.1625,19.5033">Hungary</option>
-                                       <option value="64.1355,-21.8954">Iceland</option>
-                                       <option value="28.6139,77.2090">India</option>
-                                       <option value="-6.2088,106.8456">Indonesia</option>
-                                       <option value="35.6895,51.3890">Iran</option>
-                                       <option value="33.3152,44.3661">Iraq</option>
-                                       <option value="53.3498,-6.2603">Ireland</option>
-                                       <option value="31.7683,35.2137">Israel</option>
-                                       <option value="41.9028,12.4964">Italy</option>
-                                       <option value="18.1096,-77.2975">Jamaica</option>
-                                       <option value="36.2048,138.2529">Japan</option>
-                                       <option value="31.9454,35.9284">Jordan</option>
-                                       <option value="51.1694,71.4491">Kazakhstan</option>
-                                       <option value="-1.2864,36.8172">Kenya</option>
-                                       <option value="-29.3456,27.4240">Lesotho</option>
-                                       <option value="6.4281,-9.4295">Liberia</option>
-                                       <option value="32.7940,13.0878">Libya</option>
-                                       <option value="47.1625,19.5033">Hungary</option>
-                                       <option value="64.1355,-21.8954">Iceland</option>
-                                       <option value="28.6139,77.2090">India</option>
-                                       <option value="-6.2088,106.8456">Indonesia</option>
-                                       <option value="35.6895,51.3890">Iran</option>
-                                       <option value="33.3152,44.3661">Iraq</option>
-                                       <option value="53.3498,-6.2603">Ireland</option>
-                                       <option value="31.7683,35.2137">Israel</option>
-                                       <option value="41.9028,12.4964">Italy</option>
-                                       <option value="18.1096,-77.2975">Jamaica</option>
-                                       <option value="36.2048,138.2529">Japan</option>
-                                       <option value="31.9454,35.9284">Jordan</option>
-                                       <option value="51.1694,71.4491">Kazakhstan</option>
-                                       <option value="-1.2864,36.8172">Kenya</option>
-                                       <option value="42.3601,-71.0589">USA</option>
-                                       <option value="35.9078,127.7669">South Korea</option>
-                                       <option value="37.5665,126.9780">North Korea</option>
-                                       <option value="25.0343,-77.3963">Bahamas</option>
-                                       <option value="39.9334,32.8597">Turkey</option>
-                                       <option value="41.9028,12.4964">Italy</option>
-                                       <option value="52.3676,4.9041">Netherlands</option>
-                                       <option value="40.7128,-74.0060">USA</option>
-                                       <option value="55.7558,37.6173">Russia</option>
-                                       <option value="35.6895,139.6917">Japan</option>
-                                       <option value="48.8566,2.3522">France</option>
-                                       <option value="51.5074,-0.1278">United Kingdom</option>
-                                       <option value="35.9078,127.7669">South Korea</option>
-                                       <option value="40.7128,-74.0060">New York</option>
-                                       <option value="34.0522,-118.2437">Los Angeles</option>
-                                   </select><br>
-                                   
-        <label for="timezone">Select Time Zone:</label>
-       <select id="timezone" name="timezone">
-           <option value="-11">(UTC-11:00) Midway Island</option>
-           <option value="-11">(UTC-11:00) Pago Pago</option>
-           <option value="-10">(UTC-10:00) Hawaii</option>
-           <option value="-9">(UTC-09:00) Alaska</option>
-           <option value="-8">(UTC-08:00) Pacific Time (US & Canada)</option>
-           <option value="-8">(UTC-08:00) Tijuana</option>
-           <option value="-7">(UTC-07:00) Mountain Time (US & Canada)</option>
-           <option value="-7">(UTC-07:00) Chihuahua</option>
-           <option value="-7">(UTC-07:00) Mazatlan</option>
-           <option value="-7">(UTC-07:00) Arizona</option>
-           <option value="-6">(UTC-06:00) Central Time (US & Canada)</option>
-           <option value="-6">(UTC-06:00) Saskatchewan</option>
-           <option value="-6">(UTC-06:00) Mexico City</option>
-           <option value="-6">(UTC-06:00) Monterrey</option>
-           <option value="-6">(UTC-06:00) Central America</option>
-           <option value="-5">(UTC-05:00) Eastern Time (US & Canada)</option>
-           <option value="-5">(UTC-05:00) Indiana (East)</option>
-           <option value="-5">(UTC-05:00) Bogota</option>
-           <option value="-5">(UTC-05:00) Lima</option>
-           <option value="-4">(UTC-04:00) Atlantic Time (Canada)</option>
-           <option value="-4">(UTC-04:30) Caracas</option>
-           <option value="-4">(UTC-04:00) La Paz</option>
-           <option value="-4">(UTC-04:00) Santiago</option>
-           <option value="-3">(UTC-03:30) Newfoundland</option>
-           <option value="-3">(UTC-03:00) Brasilia</option>
-           <option value="-3">(UTC-03:00) Buenos Aires</option>
-           <option value="-3">(UTC-03:00) Greenland</option>
-           <option value="-3">(UTC-03:00) Montevideo</option>
-           <option value="-2">(UTC-02:00) Mid-Atlantic</option>
-           <option value="-1">(UTC-01:00) Azores</option>
-           <option value="-1">(UTC-01:00) Cape Verde Is.</option>
-           <option value="0">(UTC+00:00) Dublin</option>
-           <option value="0">(UTC+00:00) Lisbon</option>
-           <option value="0">(UTC+00:00) London</option>
-           <option value="0">(UTC+00:00) Monrovia</option>
-           <option value="0">(UTC+00:00) Reykjavik</option>
-           <option value="0">(UTC+00:00) Casablanca</option>
-           <option value="+1">(UTC+01:00) Belgrade</option>
-           <option value="+1">(UTC+01:00) Bratislava</option>
-           <option value="+1">(UTC+01:00) Budapest</option>
-           <option value="+1">(UTC+01:00) Ljubljana</option>
-           <option value="+1">(UTC+01:00) Prague</option>
-           <option value="+1">(UTC+01:00) Sarajevo</option>
-           <option value="+1">(UTC+01:00) Skopje</option>
-           <option value="+1">(UTC+01:00) Warsaw</option>
-           <option value="+1">(UTC+01:00) Zagreb</option>
-           <option value="+1">(UTC+01:00) Brussels</option>
-           <option value="+1">(UTC+01:00) Copenhagen</option>
-           <option value="+1">(UTC+01:00) Madrid</option>
-           <option value="+1">(UTC+01:00) Paris</option>
-           <option value="+1">(UTC+01:00) Amsterdam</option>
-           <option value="+1">(UTC+01:00) Berlin</option>
-           <option value="+1">(UTC+01:00) Rome</option>
-           <option value="+1">(UTC+01:00) Stockholm</option>
-           <option value="+1">(UTC+01:00) Vienna</option>
-           <option value="+1">(UTC+01:00) West Central Africa</option>
-           <option value="+2">(UTC+02:00) Bucharest</option>
-           <option value="+2">(UTC+02:00) Cairo</option>
-           <option value="+2">(UTC+02:00) Helsinki</option>
-           <option value="+2">(UTC+02:00) Kyiv</option>
-           <option value="+2">(UTC+02:00) Riga</option>
-           <option value="+2">(UTC+02:00) Sofia</option>
-           <option value="+2">(UTC+02:00) Tallinn</option>
-           <option value="+2">(UTC+02:00) Vilnius</option>
-           <option value="+2">(UTC+02:00) Athens</option>
-           <option value="+2">(UTC+02:00) Istanbul</option>
-           <option value="+2">(UTC+02:00) Jerusalem</option>
-           <option value="+2">(UTC+02:00) Amman</option>
-           <option value="+2">(UTC+02:00) Beirut</option>
-           <option value="+2">(UTC+02:00) Windhoek</option>
-           <option value="+2">(UTC+02:00) Harare</option>
-           <option value="+3">(UTC+03:00) Kuwait</option>
-           <option value="+3">(UTC+03:00) Riyadh</option>
-           <option value="+3">(UTC+03:00) Baghdad</option>
-           <option value="+3">(UTC+03:00) Nairobi</option>
-           <option value="+3">(UTC+03:00) Tbilisi</option>
-           <option value="+3">(UTC+03:00) Moscow</option>
-           <option value="+3">(UTC+03:00) Volgograd</option>
-           <option value="+3">(UTC+03:30) Tehran</option>
-           <option value="+4">(UTC+04:00) Abu Dhabi</option>
-           <option value="+4">(UTC+04:00) Baku</option>
-           <option value="+4">(UTC+04:00) Yerevan</option>
-           <option value="+4">(UTC+04:30) Kabul</option>
-           <option value="+5">(UTC+05:00) Yekaterinburg</option>
-           <option value="+5">(UTC+05:00) Islamabad</option>
-           <option value="+5">(UTC+05:00) Tashkent</option>
-           <option value="+5">(UTC+05:30) Chennai</option>
-           <option value="+5">(UTC+05:30) Kolkata</option>
-           <option value="+5">(UTC+05:30) Mumbai</option>
-           <option value="+5">(UTC+05:30) New Delhi</option>
-           <option value="+5">(UTC+05:30) Sri Jayawardenepura</option>
-           <option value="+5">(UTC+05:45) Kathmandu</option>
-           <option value="+6">(GMT+06:00) Almaty</option>
-           <option value="+6">(GMT+06:00) Dhaka</option>
-           <option value="+6">(GMT+06:00) Novosibirsk</option>
-           <option value="+6">(GMT+06:30) Yangon (Rangoon)</option>
-           <option value="+7">(GMT+07:00) Bangkok</option>
-           <option value="+7">(GMT+07:00) Hanoi</option>
-           <option value="+7">(GMT+07:00) Jakarta</option>
-           <option value="+7">(GMT+07:00) Krasnoyarsk</option>
-           <option value="+8">(GMT+08:00) Beijing</option>
-           <option value="+8">(GMT+08:00) Chongqing</option>
-           <option value="+8">(GMT+08:00) Hong Kong</option>
-           <option value="+8">(GMT+08:00) Urumqi</option>
-           <option value="+8">(GMT+08:00) Kuala Lumpur</option>
-           <option value="+8">(GMT+08:00) Singapore</option>
-           <option value="+8">(GMT+08:00) Taipei</option>
-           <option value="+8">(GMT+08:00) Perth</option>
-           <option value="+8">(GMT+08:00) Irkutsk</option>
-           <option value="+8">(GMT+08:00) Ulaan Bataar</option>
-           <option value="+9">(GMT+09:00) Seoul</option>
-           <option value="+9">(GMT+09:00) Tokyo</option>
-           <option value="+9">(GMT+09:00) Yakutsk</option>
-           <option value="+10">(GMT+09:30) Darwin</option>
-           <option value="+10">(GMT+09:30) Adelaide</option>
-           <option value="+10">(GMT+10:00) Sydney</option>
-           <option value="+10">(GMT+10:00) Brisbane</option>
-           <option value="+10">(GMT+10:00) Hobart</option>
-           <option value="+10">(GMT+10:00) Vladivostok</option>
-           <option value="+10">(GMT+10:00) Guam</option>
-           <option value="+10">(GMT+10:00) Port Moresby</option>
-           <option value="+11">(GMT+11:00) Magadan</option>
-           <option value="+11">(GMT+11:00) New Caledonia</option>
-           <option value="+12">(GMT+12:00) Fiji</option>
-           <option value="+12">(GMT+12:00) Kamchatka</option>
-           <option value="+12">(GMT+12:00) Marshall Is.</option>
-           <option value="+12">(GMT+12:00) Auckland</option>
-           <option value="+13">(GMT+13:00) Nuku'alofa</option>
-       </select> <br> 
-                                   <button class="myButton" type="submit" >
-                                       <i class="ti-arrow-right mr-5"></i>Continue
-                                   </button>
-                               </form>
-                           </figcaption>
-                       </figure>
-                
-                       <figure id="dispNum">
-                           <span id="NumberResault">
-                           </span>
-                       </figure>
-                       <figure id="ascend">
-                           <span id="insidAscend">
-                           </span>
-                       </figure>
-                   </aside>
-                   <!-- Ascendant start  -->
-                    
-                    <div class="widthAds" style="width: 100%;">
-                       ads
-                   </div>
-   
-                   <section class="threeUnder" >
-                    <div class="rightSideImage">
-                       
-                    </div>
-                    <div>
-                        <h1>Realated astrology service</h1>
-                        <a href="Numerology.html">
-                        <figure class="inseideFigure">
-                            
-                            <figcaption>
-                                <h3>Biorythm</h3>
-                                <h4>Ranked by users: <span class="material-symbols-outlined">
-                                    star
-                                    </span>100%</h4>
-                                <p> Let calculate your birthday and birthtime to find your biorythm, including chart. </p>
-                            </figcaption>
-                           <span class="myImages" id="mi-1"></span>
-                        </figure></a> <hr class="breakLine" >
-                        
-                        <figure onclick="Numerology()" class="inseideFigure">
-                            <figcaption>
-                                <h3>Numerology</h3>
-                                <h4>Ranked by users: <span class="material-symbols-outlined">
-                                    star
-                                    </span>100%</h4>
-                                <p>Enter your name, date of birth and time to analyze the numbers related to you</p>
-                            </figcaption>
-                           <span class="myImages" id="mi-2"></span>
-                        </figure> <hr class="breakLine" >
-                        <figure class="inseideFigure">
-                            <figcaption onclick="ascendant()">
-                                <h3>Ascendant report</h3>
-                                <h4>Ranked by users: <span class="material-symbols-outlined">
-                                    star
-                                    </span>99%</h4>
-                                <p>Ascendant which records the basic principles of one's life is a sign that rises in the east at the time of birth. </p>
-                            </figcaption>
-                           <span class="myImages" id="mi-3"></span>
-                        </figure> <hr class="breakLine" >
-                    </div>
-                </section>
-               </div>
-        
-                <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
-                    <div class="widget-area">
-                        <div class="sidebar-widget widget-latest-posts mb-30 wow fadeIn animated">
-                            <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Kandlus</span>
-                            </h6>
-                            ads
-                        </div>
-                        <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
-                            <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Related Articles</span>
-                            </h6>
-                            <div id="liForRight" class="post-block-list post-module-1 post-module-5">
-                            
-                            </div>
-                        </div>
-                        Ads
-                        <div id="moreData" class="sidebar-widget widget-latest-comments mb-30 wow fadeIn  animated">
-    
-                        </div>
-                        <div class="sidebar-widget widget_newsletter mb-50 wow fadeIn animated">
-                            <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Newsletter</span>
-                            </h6>
-                            <div class="newsletter">
-                                <p class="">Continue reading uninterrupted with a subscription</p>
-                                <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
-                                    <div class="form-newsletter-cover">
-                                        <div class="form-newsletter">
-                                            <input type="email" name="EMAIL" placeholder="Email address" required="">
-                                            <button type="submit">
-                                                <span class="long-arrow long-arrow-right"></span>
-                                            </button>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="time"> Your birth timr:</label>
+                                        <input name="time" type="time" id="timeBirth" required class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="countries"> Your birth Country:</label>
+                                        <select id="countries" name="countries">
+                                            <option value="34.5553,69.2075">Afghanistan</option>
+                                            <option value="41.3275,19.8189">Albania</option>
+                                            <option value="36.7372,3.0868">Algeria</option>
+                                            <option value="42.5063,1.5218">Andorra</option>
+                                            <option value="-8.7832,-55.4915">Angola</option>
+                                            <option value="17.1175,-61.8456">Antigua and Barbuda</option>
+                                            <option value="-34.6037,-58.3816">Argentina</option>
+                                            <option value="40.1792,44.4991">Armenia</option>
+                                            <option value="-35.282,149.1287">Australia</option>
+                                            <option value="48.2082,16.3738">Austria</option>
+                                            <option value="40.4093,49.8671">Azerbaijan</option>
+                                            <option value="25.0343,-77.3963">Bahamas</option>
+                                            <option value="26.0667,50.5577">Bahrain</option>
+                                            <option value="23.685,90.3563">Bangladesh</option>
+                                            <option value="13.1939,-59.5432">Barbados</option>
+                                            <option value="53.9045,27.5615">Belarus</option>
+                                            <option value="50.8503,4.3517">Belgium</option>
+                                            <option value="17.1899,-88.4976">Belize</option>
+                                            <option value="9.3077,2.3158">Benin</option>
+                                            <option value="32.3078,-64.7505">Bermuda</option>
+                                            <option value="27.5142,90.4336">Bhutan</option>
+                                            <option value="-16.5000,-68.1500">Bolivia</option>
+                                            <option value="43.8563,18.4131">Bosnia and Herzegovina</option>
+                                            <option value="-24.6583,25.9080">Botswana</option>
+                                            <option value="-15.7939,-47.8828">Brazil</option>
+                                            <option value="18.4207,-64.6399">British Virgin Islands</option>
+                                            <option value="4.6110,-74.0817">Brunei</option>
+                                            <option value="42.6977,23.3219">Bulgaria</option>
+                                            <option value="12.3714,-1.5197">Burkina Faso</option>
+                                            <option value="-3.3731,29.9189">Burundi</option>
+                                            <option value="-3.3704,-64.7146">Cabo Verde</option>
+                                            <option value="11.5500,104.9167">Cambodia</option>
+                                            <option value="3.8480,11.5021">Cameroon</option>
+                                            <option value="45.4215,-75.6972">Canada</option>
+                                            <option value="-11.2027,17.8739">Central African Republic</option>
+                                            <option value="12.1206,-14.9799">Chad</option>
+                                            <option value="-33.4489,-70.6693">Chile</option>
+                                            <option value="39.9042,116.4074">China</option>
+                                            <option value="4.6097,-74.0817">Colombia</option>
+                                            <option value="-11.6558,43.3333">Comoros</option>
+                                            <option value="-4.3224,15.3070">Congo</option>
+                                            <option value="9.7489,-83.7534">Costa Rica</option>
+                                            <option value="45.2671,19.8335">Croatia</option>
+                                            <option value="23.1333,-82.3830">Cuba</option>
+                                            <option value="35.1667,33.3667">Cyprus</option>
+                                            <option value="50.0755,14.4378">Czech Republic</option>
+                                            <option value="55.6761,12.5683">Denmark</option>
+                                            <option value="11.8251,42.5903">Djibouti</option>
+                                            <option value="15.3126,-61.3794">Dominica</option>
+                                            <option value="18.4861,-69.9312">Dominican Republic</option>
+                                            <option value="-0.1807,-78.4678">Ecuador</option>
+                                            <option value="30.0444,31.2357">Egypt</option>
+                                            <option value="13.7367,100.5231">El Salvador</option>
+                                            <option value="1.3733,32.2903">Equatorial Guinea</option>
+                                            <option value="15.1794,39.7823">Eritrea</option>
+                                            <option value="59.4370,24.7535">Estonia</option>
+                                            <option value="9.1450,40.4897">Ethiopia</option>
+                                            <option value="62.3908,17.3069">Faroe Islands</option>
+                                            <option value="-17.7134,178.0650">Fiji</option>
+                                            <option value="60.1699,24.9384">Finland</option>
+                                            <option value="48.8566,2.3522">France</option>
+                                            <option value="-0.8037,11.6094">Gabon</option>
+                                            <option value="13.4443,144.7937">Gambia</option>
+                                            <option value="41.7151,44.8271">Georgia</option>
+                                            <option value="52.5200,13.4050">Germany</option>
+                                            <option value="5.6037,-0.1870">Ghana</option>
+                                            <option value="37.9838,23.7275">Greece</option>
+                                            <option value="64.1830,-51.7216">Greenland</option>
+                                            <option value="12.1165,-61.6790">Grenada</option>
+                                            <option value="15.7835,-90.2308">Guatemala</option>
+                                            <option value="11.5512,-85.6981">Guinea</option>
+                                            <option value="9.9456,-9.6966">Guinea-Bissau</option>
+                                            <option value="4.8604,-58.9302">Guyana</option>
+                                            <option value="18.9712,-72.2852">Haiti</option>
+                                            <option value="14.6349,-90.5069">Honduras</option>
+                                            <option value="47.1625,19.5033">Hungary</option>
+                                            <option value="64.1355,-21.8954">Iceland</option>
+                                            <option value="28.6139,77.2090">India</option>
+                                            <option value="-6.2088,106.8456">Indonesia</option>
+                                            <option value="35.6895,51.3890">Iran</option>
+                                            <option value="33.3152,44.3661">Iraq</option>
+                                            <option value="53.3498,-6.2603">Ireland</option>
+                                            <option value="31.7683,35.2137">Israel</option>
+                                            <option value="41.9028,12.4964">Italy</option>
+                                            <option value="18.1096,-77.2975">Jamaica</option>
+                                            <option value="36.2048,138.2529">Japan</option>
+                                            <option value="31.9454,35.9284">Jordan</option>
+                                            <option value="51.1694,71.4491">Kazakhstan</option>
+                                            <option value="-1.2864,36.8172">Kenya</option>
+                                            <option value="-29.3456,27.4240">Lesotho</option>
+                                            <option value="6.4281,-9.4295">Liberia</option>
+                                            <option value="32.7940,13.0878">Libya</option>
+                                            <option value="47.1625,19.5033">Hungary</option>
+                                            <option value="64.1355,-21.8954">Iceland</option>
+                                            <option value="28.6139,77.2090">India</option>
+                                            <option value="-6.2088,106.8456">Indonesia</option>
+                                            <option value="35.6895,51.3890">Iran</option>
+                                            <option value="33.3152,44.3661">Iraq</option>
+                                            <option value="53.3498,-6.2603">Ireland</option>
+                                            <option value="31.7683,35.2137">Israel</option>
+                                            <option value="41.9028,12.4964">Italy</option>
+                                            <option value="18.1096,-77.2975">Jamaica</option>
+                                            <option value="36.2048,138.2529">Japan</option>
+                                            <option value="31.9454,35.9284">Jordan</option>
+                                            <option value="51.1694,71.4491">Kazakhstan</option>
+                                            <option value="-1.2864,36.8172">Kenya</option>
+                                            <option value="42.3601,-71.0589">USA</option>
+                                            <option value="35.9078,127.7669">South Korea</option>
+                                            <option value="37.5665,126.9780">North Korea</option>
+                                            <option value="25.0343,-77.3963">Bahamas</option>
+                                            <option value="39.9334,32.8597">Turkey</option>
+                                            <option value="41.9028,12.4964">Italy</option>
+                                            <option value="52.3676,4.9041">Netherlands</option>
+                                            <option value="40.7128,-74.0060">USA</option>
+                                            <option value="55.7558,37.6173">Russia</option>
+                                            <option value="35.6895,139.6917">Japan</option>
+                                            <option value="48.8566,2.3522">France</option>
+                                            <option value="51.5074,-0.1278">United Kingdom</option>
+                                            <option value="35.9078,127.7669">South Korea</option>
+                                            <option value="40.7128,-74.0060">New York</option>
+                                            <option value="34.0522,-118.2437">Los Angeles</option>
+                                        </select> 
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="timezone">Select Time Zone:</label>
+                                    <select id="timezone" name="timezone">
+                                        <option value="-11">(UTC-11:00) Midway Island</option>
+                                        <option value="-11">(UTC-11:00) Pago Pago</option>
+                                        <option value="-10">(UTC-10:00) Hawaii</option>
+                                        <option value="-9">(UTC-09:00) Alaska</option>
+                                        <option value="-8">(UTC-08:00) Pacific Time (US & Canada)</option>
+                                        <option value="-8">(UTC-08:00) Tijuana</option>
+                                        <option value="-7">(UTC-07:00) Mountain Time (US & Canada)</option>
+                                        <option value="-7">(UTC-07:00) Chihuahua</option>
+                                        <option value="-7">(UTC-07:00) Mazatlan</option>
+                                        <option value="-7">(UTC-07:00) Arizona</option>
+                                        <option value="-6">(UTC-06:00) Central Time (US & Canada)</option>
+                                        <option value="-6">(UTC-06:00) Saskatchewan</option>
+                                        <option value="-6">(UTC-06:00) Mexico City</option>
+                                        <option value="-6">(UTC-06:00) Monterrey</option>
+                                        <option value="-6">(UTC-06:00) Central America</option>
+                                        <option value="-5">(UTC-05:00) Eastern Time (US & Canada)</option>
+                                        <option value="-5">(UTC-05:00) Indiana (East)</option>
+                                        <option value="-5">(UTC-05:00) Bogota</option>
+                                        <option value="-5">(UTC-05:00) Lima</option>
+                                        <option value="-4">(UTC-04:00) Atlantic Time (Canada)</option>
+                                        <option value="-4">(UTC-04:30) Caracas</option>
+                                        <option value="-4">(UTC-04:00) La Paz</option>
+                                        <option value="-4">(UTC-04:00) Santiago</option>
+                                        <option value="-3">(UTC-03:30) Newfoundland</option>
+                                        <option value="-3">(UTC-03:00) Brasilia</option>
+                                        <option value="-3">(UTC-03:00) Buenos Aires</option>
+                                        <option value="-3">(UTC-03:00) Greenland</option>
+                                        <option value="-3">(UTC-03:00) Montevideo</option>
+                                        <option value="-2">(UTC-02:00) Mid-Atlantic</option>
+                                        <option value="-1">(UTC-01:00) Azores</option>
+                                        <option value="-1">(UTC-01:00) Cape Verde Is.</option>
+                                        <option value="0">(UTC+00:00) Dublin</option>
+                                        <option value="0">(UTC+00:00) Lisbon</option>
+                                        <option value="0">(UTC+00:00) London</option>
+                                        <option value="0">(UTC+00:00) Monrovia</option>
+                                        <option value="0">(UTC+00:00) Reykjavik</option>
+                                        <option value="0">(UTC+00:00) Casablanca</option>
+                                        <option value="+1">(UTC+01:00) Belgrade</option>
+                                        <option value="+1">(UTC+01:00) Bratislava</option>
+                                        <option value="+1">(UTC+01:00) Budapest</option>
+                                        <option value="+1">(UTC+01:00) Ljubljana</option>
+                                        <option value="+1">(UTC+01:00) Prague</option>
+                                        <option value="+1">(UTC+01:00) Sarajevo</option>
+                                        <option value="+1">(UTC+01:00) Skopje</option>
+                                        <option value="+1">(UTC+01:00) Warsaw</option>
+                                        <option value="+1">(UTC+01:00) Zagreb</option>
+                                        <option value="+1">(UTC+01:00) Brussels</option>
+                                        <option value="+1">(UTC+01:00) Copenhagen</option>
+                                        <option value="+1">(UTC+01:00) Madrid</option>
+                                        <option value="+1">(UTC+01:00) Paris</option>
+                                        <option value="+1">(UTC+01:00) Amsterdam</option>
+                                        <option value="+1">(UTC+01:00) Berlin</option>
+                                        <option value="+1">(UTC+01:00) Rome</option>
+                                        <option value="+1">(UTC+01:00) Stockholm</option>
+                                        <option value="+1">(UTC+01:00) Vienna</option>
+                                        <option value="+1">(UTC+01:00) West Central Africa</option>
+                                        <option value="+2">(UTC+02:00) Bucharest</option>
+                                        <option value="+2">(UTC+02:00) Cairo</option>
+                                        <option value="+2">(UTC+02:00) Helsinki</option>
+                                        <option value="+2">(UTC+02:00) Kyiv</option>
+                                        <option value="+2">(UTC+02:00) Riga</option>
+                                        <option value="+2">(UTC+02:00) Sofia</option>
+                                        <option value="+2">(UTC+02:00) Tallinn</option>
+                                        <option value="+2">(UTC+02:00) Vilnius</option>
+                                        <option value="+2">(UTC+02:00) Athens</option>
+                                        <option value="+2">(UTC+02:00) Istanbul</option>
+                                        <option value="+2">(UTC+02:00) Jerusalem</option>
+                                        <option value="+2">(UTC+02:00) Amman</option>
+                                        <option value="+2">(UTC+02:00) Beirut</option>
+                                        <option value="+2">(UTC+02:00) Windhoek</option>
+                                        <option value="+2">(UTC+02:00) Harare</option>
+                                        <option value="+3">(UTC+03:00) Kuwait</option>
+                                        <option value="+3">(UTC+03:00) Riyadh</option>
+                                        <option value="+3">(UTC+03:00) Baghdad</option>
+                                        <option value="+3">(UTC+03:00) Nairobi</option>
+                                        <option value="+3">(UTC+03:00) Tbilisi</option>
+                                        <option value="+3">(UTC+03:00) Moscow</option>
+                                        <option value="+3">(UTC+03:00) Volgograd</option>
+                                        <option value="+3">(UTC+03:30) Tehran</option>
+                                        <option value="+4">(UTC+04:00) Abu Dhabi</option>
+                                        <option value="+4">(UTC+04:00) Baku</option>
+                                        <option value="+4">(UTC+04:00) Yerevan</option>
+                                        <option value="+4">(UTC+04:30) Kabul</option>
+                                        <option value="+5">(UTC+05:00) Yekaterinburg</option>
+                                        <option value="+5">(UTC+05:00) Islamabad</option>
+                                        <option value="+5">(UTC+05:00) Tashkent</option>
+                                        <option value="+5">(UTC+05:30) Chennai</option>
+                                        <option value="+5">(UTC+05:30) Kolkata</option>
+                                        <option value="+5">(UTC+05:30) Mumbai</option>
+                                        <option value="+5">(UTC+05:30) New Delhi</option>
+                                        <option value="+5">(UTC+05:30) Sri Jayawardenepura</option>
+                                        <option value="+5">(UTC+05:45) Kathmandu</option>
+                                        <option value="+6">(GMT+06:00) Almaty</option>
+                                        <option value="+6">(GMT+06:00) Dhaka</option>
+                                        <option value="+6">(GMT+06:00) Novosibirsk</option>
+                                        <option value="+6">(GMT+06:30) Yangon (Rangoon)</option>
+                                        <option value="+7">(GMT+07:00) Bangkok</option>
+                                        <option value="+7">(GMT+07:00) Hanoi</option>
+                                        <option value="+7">(GMT+07:00) Jakarta</option>
+                                        <option value="+7">(GMT+07:00) Krasnoyarsk</option>
+                                        <option value="+8">(GMT+08:00) Beijing</option>
+                                        <option value="+8">(GMT+08:00) Chongqing</option>
+                                        <option value="+8">(GMT+08:00) Hong Kong</option>
+                                        <option value="+8">(GMT+08:00) Urumqi</option>
+                                        <option value="+8">(GMT+08:00) Kuala Lumpur</option>
+                                        <option value="+8">(GMT+08:00) Singapore</option>
+                                        <option value="+8">(GMT+08:00) Taipei</option>
+                                        <option value="+8">(GMT+08:00) Perth</option>
+                                        <option value="+8">(GMT+08:00) Irkutsk</option>
+                                        <option value="+8">(GMT+08:00) Ulaan Bataar</option>
+                                        <option value="+9">(GMT+09:00) Seoul</option>
+                                        <option value="+9">(GMT+09:00) Tokyo</option>
+                                        <option value="+9">(GMT+09:00) Yakutsk</option>
+                                        <option value="+10">(GMT+09:30) Darwin</option>
+                                        <option value="+10">(GMT+09:30) Adelaide</option>
+                                        <option value="+10">(GMT+10:00) Sydney</option>
+                                        <option value="+10">(GMT+10:00) Brisbane</option>
+                                        <option value="+10">(GMT+10:00) Hobart</option>
+                                        <option value="+10">(GMT+10:00) Vladivostok</option>
+                                        <option value="+10">(GMT+10:00) Guam</option>
+                                        <option value="+10">(GMT+10:00) Port Moresby</option>
+                                        <option value="+11">(GMT+11:00) Magadan</option>
+                                        <option value="+11">(GMT+11:00) New Caledonia</option>
+                                        <option value="+12">(GMT+12:00) Fiji</option>
+                                        <option value="+12">(GMT+12:00) Kamchatka</option>
+                                        <option value="+12">(GMT+12:00) Marshall Is.</option>
+                                        <option value="+12">(GMT+12:00) Auckland</option>
+                                        <option value="+13">(GMT+13:00) Nuku'alofa</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-dark btn-block" >Continue</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+
+
+                       <section id="dispNum">
+                           <span id="NumberResault">
+                           </span>
+                       </section>
+                       <div id="for-tests">
+                    </div>
+
+                    <!-- Three card start -->
+                    <section class="card">
+                        <div id="MantraCard" class="card-hover">
+                            <div class="card-hover__content">
+                            <h3 class="card-hover__title">
+                                Horoscope <span>Daily, Weekly, Yearly</span> 
+                            </h3>
+                            <p class="card-hover__text">Pick your zodiac sign to know about your future</p>
+                            <a id="listen" href="#" class="card-hover__link">
+                                <span onclick="goHoroscope()">Try now</span>
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>        
+                            </a>
+                            </div>
+                            <div class="card-hover__extra">
+                            <!-- <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4> -->
+                            </div>
+                            <img src="../assets/images/Astrology/cards/Horoscope.jpg" alt="Daily horoscope, weekly horoscope, yearly horoscope">
+                        </div>
+
+                        <div id="SolfegCard" class="card-hover">
+                            <div class="card-hover__content">
+                            <h3 class="card-hover__title">
+                                Biorythm <span>+ Biochart</span>
+                            </h3>
+                            <p class="card-hover__text">Let calculate your birth day and time to know your biorythm circle</p>
+                            <a id="listen-1" href="#" class="card-hover__link">
+                                <span>Try now</span>
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>        
+                            </a>
+                            </div>
+                            <div class="card-hover__extra">
+                            </div>
+                            <img src="../assets/images/Astrology/cards/Biorythm.jpg" alt="biorythm, astrology biorythm">
+                        </div>
+                        <div class="card-hover">
+                            <div class="card-hover__content">
+                            <h3 class="card-hover__title">
+                                Biorythm <span>+ Biochart</span> 
+                            </h3>
+                            <p class="card-hover__text">Let calculate your birth day and time to know your biorythm circle</p>
+                            <a id="listen-2" href="#" class="card-hover__link">
+                                <span onclick="goBiorythm()" >Try now</span>
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>        
+                            </a>
+                            </div>
+                            <div class="card-hover__extra">
+                            <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4>
+                            </div>
+                            <img src="../assets/images/Astrology/cards/Biorythm.jpg" alt="">
+                        </div>
+                        <div class="card-hover">
+                            <div class="card-hover__content">
+                            <h3 class="card-hover__title">
+                                Personal <span>Characteris</span> 
+                            </h3>
+                            <p class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
+                            <a id="listen-3" href="#" class="card-hover__link">
+                                <span onclick="goPersonal()">Try now</span>
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>        
+                            </a>
+                            </div>
+                            <div class="card-hover__extra">
+                            </div>
+                            <img src="../assets/images/Astrology/cards/Personality.jpeg" alt="Personality">
+                        </div>
+                       
+                    </section>
+                    <!-- End three car -->
                 </div>
-            </section>
-    </main>
+            
+            <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
+                <div class="widget-area">
+                    <div class="sidebar-widget widget-latest-posts mb-30 wow fadeIn animated">
+                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
+                            <span>Kandlus</span>
+                        </h6>
+                        <span id="adsCube" >
+                        </span>
+                    </div>
+                    <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
+                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
+                            <span>Related Articles</span>
+                        </h6>
+                        <div id="liForRight" class="post-block-list post-module-1 post-module-5">
+                        
+                        </div>
+                    </div>
+                    <span id="cubeSec" >
+                    </span>
+                    <div id="moreData" class="sidebar-widget widget-latest-comments mb-30 wow fadeIn  animated">
+
+                    </div>
+                    <div class="sidebar-widget widget_newsletter mb-50 wow fadeIn animated">
+                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
+                            <span>Newsletter</span>
+                        </h6>
+                        <div class="newsletter">
+                            <p class="">Continue reading uninterrupted with a subscription</p>
+                            <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
+                                <div class="form-newsletter-cover">
+                                    <div class="form-newsletter">
+                                        <input type="email" name="EMAIL" placeholder="Email address" required="">
+                                        <button type="submit">
+                                            <span class="long-arrow long-arrow-right"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
     <footer>
         <div class="footer-area">
             <div class="container">
@@ -789,7 +760,7 @@
                     <div class="row d-flex align-items-center justify-content-between">
                         <div class="col-12">
                             <div class="footer-copy-right">
-                                <p class="font-small text-muted"><span id="getYear">© 2024 </span>  All Rights Reserved - Kandlus</span></p>
+                                <p class="font-small text-muted"><span id="getYear">© 2024 </span>  All Rights Reserved - Kandlus </p>
                             </div>
                         </div>
                     </div>
@@ -820,14 +791,15 @@
     <!-- NewsBoard JS -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/MyScript.js"></script>
-   <script src="../assets/js/script.js"></script>
-   <script src="../assets/js/landingNav.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/landingNav.js"></script>
     <script src="../assets/js/articles/HomeArticle.js"></script>
     <script src="../assets/js/articles/blogAstro.js"></script>
     <script src="../assets/js/yoga.js"></script>
     <script src="../assets/js/planet.js"></script>
     <script src="../assets/js/cookie.js"></script>
     <script src="../assets/js/checkon.js"></script>
+    <script type="module" src="../assets/js/timeCount.js"></script>
 </body>
 
 </html>
