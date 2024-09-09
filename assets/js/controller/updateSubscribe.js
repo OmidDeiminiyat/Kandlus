@@ -26,8 +26,12 @@ async function updateSubscribeTable(Code, updatedData) {
     if (responseText) {
       const data = JSON.parse(responseText); // Parse text to JSON if not empty
       console.log('Update successful:', data);
+      // Redirect to a new URL
+      window.location.href = 'welcomeuser.html';
+
     } else {
       console.log('Update successful: No content returned');
+      window.location.href = 'welcomeuser.html';
     }
   } catch (error) {
     console.error('Error updating subscribe table:', error.message);

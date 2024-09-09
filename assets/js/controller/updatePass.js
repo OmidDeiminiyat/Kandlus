@@ -2,9 +2,9 @@
 const SUPABASE_URL = 'https://bfrnndgsghbkfrbbzuuk.supabase.co';
 const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU';
 
-async function changeSubscription(seo, subData) {
-   
-  const endpoint = `${SUPABASE_URL}/rest/v1/Subscribe?Code=eq.${seo}`;
+async function updateuserPass(Code, updatedData) {
+    console.log('Code is:' + Code);
+  const endpoint = `${SUPABASE_URL}/rest/v1/Subscribe?email=eq.${Code}`;
 
   try {
     const response = await fetch(endpoint, {
@@ -14,7 +14,7 @@ async function changeSubscription(seo, subData) {
         'apikey': API_KEY,
         'Authorization': `Bearer ${API_KEY}`,
       },
-      body: JSON.stringify(subData),
+      body: JSON.stringify(updatedData),
     });
 
     if (!response.ok) {
@@ -34,5 +34,4 @@ async function changeSubscription(seo, subData) {
   }
 }
 
-export default changeSubscription;
-
+export default updateuserPass;

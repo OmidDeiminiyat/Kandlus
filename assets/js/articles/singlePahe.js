@@ -15,7 +15,8 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?seo=eq.${id}`, {
 })
 .then(response => response.json())
 .then(data => {
-
+  sessionStorage.setItem('ArtId', data[0].id);
+  
 singlePageArticle(data)
 
 })
@@ -24,8 +25,6 @@ singlePageArticle(data)
 });
 
   }
-
-
 
   function singlePageArticle(showVideo) {
     const cateTwo = document.getElementById('categor');
@@ -41,14 +40,7 @@ singlePageArticle(data)
 
 showVideo.forEach((getData, index) => {
 
-  let artIds = sessionStorage.getItem("ArtId");
-  if (artIds) {
-    sessionStorage.removeItem("ArtId");
-    sessionStorage.setItem("ArtId", getData.id);
-  } else {
-    sessionStorage.setItem("ArtId", getData.id);
-  }
-  
+
   let teoCat = `<a href="category.html"><span class="post-cat position-relative"># ${getData.categoryOne}</span></a>
                 <a href="category.html"><span class="post-cat position-relative"># ${getData.categoryTwo}</span></a>`
       cateTwo.innerHTML= teoCat;           

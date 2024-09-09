@@ -1,8 +1,8 @@
-const test1 = document.getElementById('checkChange');
+const videoCa = document.getElementById('callsaveVideo');
 
 
 const UserCode = getCookie('Kandlus-users');
-test1.addEventListener("click", () => {
+videoCa.addEventListener("click", () => {
   const SendErlog = document.getElementById('changeSaves');
   const articleId = sessionStorage.getItem("ArtId");
   if (UserCode) {
@@ -34,17 +34,17 @@ function callForUpdate(tests, articleId) {
     }
    
     function makeChane(RecivedData, ArtCode) {
-         let currentArticleIds = RecivedData[0].savedArticle || []
+         let currentvidos = RecivedData[0].savedVideos || []
        
 
-        console.log(currentArticleIds);
+        console.log(currentvidos);
         const newId = ArtCode;
         console.log(ArtCode);
         let testId = '0';
-        if (currentArticleIds == '') {
+        if (currentvidos == '') {
              testId = newId;
         } else {
-            testId = currentArticleIds + ', ' + newId;
+            testId = currentvidos + ', ' + newId;
         }
   
         // currentArticleIds.push(newId);
@@ -53,7 +53,7 @@ function callForUpdate(tests, articleId) {
             const userCode = items.Code;
 
             
-            const updatedData = {savedArticle: testId};
+            const updatedData = {savedVideos: testId};
             if (testId != '') {
             callDatabase(userCode, updatedData)
             }
