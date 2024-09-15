@@ -3900,10 +3900,23 @@ spinner6
   background-color: rgb(45, 45, 58);
   padding: 21px 0 21px 0;
 }
+@media (max-width: 600px) {
+  #zodiacForm {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 #zodiacForm label {
   color: gray;
 }
 #zodiacForm h3, #zodiacForm #navigation hgroup h5, #navigation hgroup #zodiacForm h5, #zodiacForm #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #zodiacForm p {
+  color: white;
+}
+#zodiacForm input {
+  width: 60%;
+  margin-left: 20%;
+  border: 0.5px solid gray;
+  background-color: transparent;
   color: white;
 }
 #zodiacForm select {
@@ -3914,7 +3927,7 @@ spinner6
   color: white;
 }
 #zodiacForm div {
-  margin-top: 30px;
+  margin-top: 21px;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -3925,4 +3938,10 @@ spinner6
   margin-top: 30px;
   color: white;
   cursor: pointer;
+}
+#zodiacForm button.submit {
+  margin-left: 0;
+}
+#zodiacForm #secondForm {
+  display: none;
 }/*# sourceMappingURL=myStyle.css.map */
