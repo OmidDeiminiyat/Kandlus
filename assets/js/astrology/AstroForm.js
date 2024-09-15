@@ -2,26 +2,31 @@ function submitForm(event) {
     // Prevent the form from refreshing the page
     event.preventDefault();
     
-    // Get the selected zodiac sign
+ 
    
     const Bname = document.getElementById("bName");
-    const dateB = document.getElementById("bDate");
+    const dateB = document.getElementById("bDate").value;
     const tiB = document.getElementById("bTime");
     const CounB = document.getElementById("bCountry");
     const ZoneB = document.getElementById("bZone");
     const NGit = document.getElementById("girlName");
-    const datGir = document.getElementById("girlDate");
+    const datGir = document.getElementById("girlDate").value;
     const tiG = document.getElementById("girlTime");
     const CounG = document.getElementById("girlCountry");
     const ZonG = document.getElementById("girlZone");
     
+
+    const [year, month, day] = dateB.split('-');
+    const Bdate = `${day}/${month}/${year}`;
+
+    const [yearGirl, monthGirl, dayGirl] = datGir.split('-');
+    const Girldate = `${dayGirl}/${monthGirl}/${yearGirl}`;
+
   const name = Bname.value;
-  const Bdate = dateB.value;
   const Btime = tiB.value;
   const Bcountry = CounB.value;
   const Bzone = ZoneB.value;
   const Girlname = NGit.value;
-  const Girldate = datGir.value;
   const Girltime = tiG.value;
   const Girlcountry = CounG.value;
   const Girlzone = ZonG.value
@@ -51,6 +56,8 @@ function submitForm(event) {
 
 
 async function fetchTwoHoroscopeData(boyN, boyD, boyT, LangB, LongB, boyZone, girlN, girlDate, girlT, LangGirl, LongGirl, girlZ) {
+  console.log(boyD);
+  
   const charUrl1 = 'https://api.vedicastroapi.com/v3-json/extended-horoscope/numero-table';
   const MyParams1 = new URLSearchParams({
     "api_key": "0714ae51-feee-55ff-8a10-4541c525cf0c",
