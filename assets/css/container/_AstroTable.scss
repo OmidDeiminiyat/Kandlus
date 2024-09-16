@@ -54,3 +54,18 @@
         display: none;
     }
 }
+
+#typenswer {
+    width: 60%;
+    margin-left: 20%;
+    min-height: 400px;
+    @media(max-width:600px) {
+        width: 90%;
+        margin-left: 5%;
+    }
+    h5 {
+        span{
+            color: green;
+        }
+    }
+}

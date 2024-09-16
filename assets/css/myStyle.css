@@ -3944,4 +3944,19 @@ spinner6
 }
 #zodiacForm #secondForm {
   display: none;
+}
+
+#typenswer {
+  width: 60%;
+  margin-left: 20%;
+  min-height: 400px;
+}
+@media (max-width: 600px) {
+  #typenswer {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+#typenswer h5 span {
+  color: green;
 }/*# sourceMappingURL=myStyle.css.map */
