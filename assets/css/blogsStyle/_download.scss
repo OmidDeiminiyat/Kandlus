@@ -1,0 +1,39 @@
+.pdf {
+   display: flex;
+   flex-direction: row;
+   gap: 3rem;
+   @media(max-width:600px) {
+    display: grid;
+    grid-template-columns: 1fr;
+   }
+    figure{
+        display: grid;
+        grid-template-columns: 1fr;
+        img{
+            height: 600px;
+            min-width: 330px;
+            @media(max-width:600px) {
+                width: 80%;
+                margin-left: 10%;
+            }
+        }
+        a{ 
+            button {
+                min-width: 210px;
+                height: 30px;
+                margin-top: 30px;
+                margin-left: 60px;
+                cursor: pointer;
+                @media(max-width:600px) {
+                    min-width: 30%;
+                    margin-left: 35%;
+                }
+            }
+            
+        }
+    }
+    h3{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+}

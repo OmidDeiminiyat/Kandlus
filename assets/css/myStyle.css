@@ -3959,4 +3959,47 @@ spinner6
 }
 #typenswer h5 span {
   color: green;
+}
+/* pdf style */
+.pdf {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+@media (max-width: 600px) {
+  .pdf {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.pdf figure {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.pdf figure img {
+  height: 600px;
+  min-width: 330px;
+}
+@media (max-width: 600px) {
+  .pdf figure img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+.pdf figure a button {
+  min-width: 210px;
+  height: 30px;
+  margin-top: 30px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .pdf figure a button {
+    min-width: 30%;
+    margin-left: 35%;
+  }
+}
+.pdf h3, .pdf #navigation hgroup h5, #navigation hgroup .pdf h5, .pdf #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption .pdf p {
+  text-align: center;
+  padding-bottom: 30px;
 }/*# sourceMappingURL=myStyle.css.map */
