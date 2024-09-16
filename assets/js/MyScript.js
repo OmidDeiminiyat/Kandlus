@@ -84,6 +84,8 @@ var tabLink = document.getElementById('listen-7');
 var Radic = document.getElementById('RadTex');
 var RLink = document.getElementById('listen-8');
 var tarotLink = document.getelementById('listenTarot');
+var matchLink = document.getElementById('listenMatch');
+var textDat = document.getElementById('dateText');
 
 
 if (!sessionName || sessionName == '99etB637s') {
@@ -111,6 +113,8 @@ TablN.innerText = 'This service is available for plan Pro'
 tabLink.style.display = 'none';
 Radic.innerText = 'This service is available for plan Pro'
 RLink.style.display = 'none';
+textDat.innerText = 'This service is available for plan Pro';
+matchLink.style.display = 'none';
 } else {
 Person.innerText = 'This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location'
 PersonLink.style.display = 'block';
@@ -120,6 +124,8 @@ TablN.innerText = 'A numerology chart is created using specific numbers derived 
 tabLink.style.display = 'block';
 Radic.innerText = 'The radical number or root number, also known as the life path number, is derived from the date of birth. By having your root number, you can be aware of your life path'
 RLink.style.display = 'block';
+textDat.innerText = 'This service helps you find out if you are compatible with someone you want to marry';
+matchLink.style.display = 'block';
 }
 
 
