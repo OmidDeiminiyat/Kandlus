@@ -72,3 +72,89 @@
         }
     }
 }
+// Form design for kundalini level
+
+#KundaliniForm {
+    width: 40%;
+    margin-left: 30%;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgb(45, 45, 58);
+    padding: 21px 0 21px 0;
+    text-align: center;
+    @media(max-width:600px) {
+        width: 100%;
+        margin-left: 0;
+    }
+    h3{
+        color: white;
+    }
+    section {
+        label{
+            color: gray;
+
+        }
+        div{
+            hr{
+                width: 60%;
+                border: dotted;
+                margin-left: 20%;
+                color: rgba(69, 138, 115, 0.485);
+            }
+            .singleInput{
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                gap: 1rem;
+            
+                input {
+                    margin-left: 10px;
+                    border: 0.5px solid gray;
+                    background-color: transparent;
+                    color: white;
+
+            
+                }
+            }
+        }
+    }
+  
+  
+   
+    
+    select {
+        width: 60%;
+        margin-left: 20%;
+        border: 0.5px solid gray;
+        background-color: transparent;
+        color: white;
+        min-height: 30px;
+        max-height: 30px;
+    }
+    div {
+        margin-top: 21px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    button {
+        width: 60%;
+        margin-left: 20%;
+        background-color: rgb(89, 184, 152);
+        margin-top: 30px;
+        color: white;
+        cursor: pointer;
+        &.submit{
+            margin-left: 0;
+        }
+    }
+    #secondForm {
+        display: none;
+    }
+    #thirdForm{
+        display: none;
+    }
+    #forthForm {
+        display: none;
+    }
+}
+
