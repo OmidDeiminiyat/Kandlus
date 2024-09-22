@@ -89,7 +89,7 @@ input[type=number]:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus{outline:none!important;box-shadow:none;}
-input:focus::-moz-placeholder{opacity:0;-webkit-transition:.4s;-o-transition:.4s;transition:.4s}
+input:focus::-moz-placeholder{opacity:0;-webkit-transition:.4s;-o-transition:.4s;transition:.4s} 
 h1 a,
 h2 a,
 h3 a,
