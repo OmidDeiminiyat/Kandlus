@@ -3986,6 +3986,9 @@ spinner6
 #KundaliniForm section label {
   color: gray;
 }
+#KundaliniForm section div {
+  text-align: left;
+}
 #KundaliniForm section div hr {
   width: 60%;
   border: dotted;
@@ -4036,6 +4039,33 @@ spinner6
   display: none;
 }
 #KundaliniForm #forthForm {
+  display: none;
+}
+#KundaliniForm #fifthForm {
+  display: none;
+}
+#KundaliniForm #sixthForm {
+  display: none;
+}
+#KundaliniForm #seventhForm {
+  display: none;
+}
+#KundaliniForm #eighthForm {
+  display: none;
+}
+#KundaliniForm #ninthForm {
+  display: none;
+}
+#KundaliniForm #tenthform {
+  display: none;
+}
+#KundaliniForm #eleventhForm {
+  display: none;
+}
+#KundaliniForm #tewelvForm {
+  display: none;
+}
+#KundaliniForm #thirtheenForm {
   display: none;
 }
 
