@@ -4075,6 +4075,9 @@ spinner6
 #KundaliniForm #fiftheenForm {
   display: none;
 }
+#KundaliniForm #sixteenForm {
+  display: none;
+}
 
 .pdf {
   display: flex;

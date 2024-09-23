@@ -292,32 +292,15 @@
                                 <button onclick="BackPage('no3')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
-
-
                         <section id="thirdForm">
                             <div>
-                                <h4>Which of the following options describes your relationship with Earth? </h4>
+                                <h4>Do you live in an apartment or in a house? </h4>
                                 <hr>
-                                    <div class="singleInput">
-                                        <input type="radio" id="T1" name="T6" value="3">
-                                        <label for="Name"> I go to nature more than once a week</label><br>
-                                    </div>
-                                    <div class="singleInput">
-                                        <input type="radio" id="T1" name="T6" value="-1">
-                                        <label for="Name"> I go to nature less than once a week, maybe once a month</label><br>
-                                    </div>
                                     <div class="singleInput">
                                         <input type="radio" id="T1" name="T6" value="1">
                                         <label for="Name"> I live in a house and water the garden every day  </label><br>
                                     </div>
-                                    <div class="singleInput">
-                                        <input type="radio" id="T1" name="T6" value="6">
-                                        <label for="Name"> I walk on the ground barefoot for more than an hour every day</label><br>
-                                    </div>
-                                    <div class="singleInput">
-                                        <input type="radio" id="T1" name="T6" value="1">
-                                        <label for="Name"> I walk barefoot less than 3 hours a week </label><br>
-                                    </div>
+                                    
                                     <div class="singleInput">
                                     <input type="radio" id="T1" name="T6" value="0">
                                     <label for="Name"> I live in an apartment </label><br>
@@ -651,6 +634,24 @@
                         </section>
                         <section id="fiftheenForm">
                             <div>
+                                <h4>What is your relationship with nature?  </h4>
+                                <hr>
+                                    <div class="singleInput">
+                                        <input type="radio" id="SpentTime" name="SpentTime" value="3">
+                                        <label for="Name"> I spent time in nature more than once a week </label><br>
+                                    </div>
+                                    <div class="singleInput">
+                                        <input type="radio" id="SpentTime" name="SpentTime" value="-1">
+                                        <label for="Name"> I spent time in nature less than once a week. maybe once a month  </label><br>
+                                    </div> 
+                            </div>
+                            <div class="form-group">
+                                <button onclick="nexPage('fifteen')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button onclick="BackPage('no16')" type="button" class="btn btn-dark btn-block" > Back </button>
+                            </div>
+                        </section>
+                        <section id="sixteenForm">
+                            <div>
                                 <h4>Which photo caught your eye? </h4>
                                 <hr>
                                 <img src="./../assets/images/Enlightenment/width/ChooseImage.jpeg"> <br>
@@ -672,7 +673,7 @@
                                     </div> 
                             </div>
                             <div class="form-group">
-                                <button onclick="BackPage('no16')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button onclick="BackPage('no17')" type="button" class="btn btn-dark btn-block" > Back </button>
                                 <button type="button" id="submitBtn">Submit</button> 
                             </div>
                         </section>
@@ -682,14 +683,20 @@
    
                     <section id="typenswer" style="display: none;">
                         <h5 id="WhatZ" ></h5>
-                        <p id="paraf" > Loading .....!</p>
-                        <p id="LifePath"> </p>
-                        <p id="FriendTyper"></p>
-                        <p id="Hollycheck"></p>
-                        <p id="result" ></p>
+                        <p id="paraf" > Wait please...!</p>
+                        <p id="LifePath">Wait please...! </p>
+                        <p id="FriendTyper">Wait please...!</p>
+                        <p id="Hollycheck">Wait please...!</p>
+                        <p id="result">Wait please...!</p>
+                        <p id="numberseven" ></p>
+                        <p id="numberEight" ></p>
+                        <p id="numberNine" ></p>
+                        <p id="numberTen" ></p>
                     </section>
                  </div>
-
+                 <div id="for-tests">
+            
+                 </div>
                  <section class="card">
                     <div id="MantraCard" class="card-hover">
                         <div class="card-hover__content">
@@ -764,6 +771,9 @@
                     </div>
                    
                 </section>
+                <div id="for-tests">
+            
+                </div>
             </div>
         </div>
     </main>
@@ -933,7 +943,7 @@
    <script src="../assets/js/landingNav.js"></script>
     <script src="../assets/js/planet.js"></script>
     <script src="../assets/js/cookie.js"></script>
-      <!-- <script type="module" src="../assets/js/checkon.js"></script>   -->
+    <script src="../assets/js/adsUser.js"></script>
     <script type="module" src="./assets/js/timeCount.js.js"></script>
     <script src="./../assets/js/Enlightenment/KundaliniLevel.js"></script>
 </body>

@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const thertww = form.elements['breath'];
         const forthww = form.elements['dream'];
         const fifthww = form.elements['Nature'];
+        const sixThw = form.elements['SpentTime'];
+        const letType = document.getElementById('typenswer');
 
         let selectedLanguage = null;
         let secondResult = null;
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let thirtheenResault = null;
         let fortheenResault = null;
         let fiftheenResault = null;
+        let sixtheenResault = null;
 
         // Loop through radio buttons to find the checked one
         for (const radio of first) {
@@ -139,8 +142,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
             }
         }
+        for(const sixthwwwn of sixThw) {
+            if (sixthwwwn.checked) {
+                sixtheenResault = sixthwwwn.value;
+                break;
+            }
+        }
         if (selectedLanguage) {
-            const calculatorResault = Number(selectedLanguage) + Number(secondResult) + Number(thirdResult) + Number(forthResult) + Number(fifthResult) + Number(sixResault) + Number(sevenResaulet) + Number(eightResault) + Number(nineResault) + Number(tenResault) + Number(elevenResault) + Number(twelResault) + Number(thirtheenResault) + Number(forthResult) + Number(fifthResult);
+            form.style.display = 'none';
+
+            const calculatorResault = Number(selectedLanguage) + Number(secondResult) + Number(thirdResult) + Number(forthResult) + Number(fifthResult) + Number(sixResault) + Number(sevenResaulet) + Number(eightResault) + Number(nineResault) + Number(tenResault) + Number(elevenResault) + Number(twelResault) + Number(thirtheenResault) + Number(forthResult) + Number(fifthResult) + Number(sixtheenResault);
             console.log(selectedLanguage);
             console.log(secondResult);
             console.log(thirdResult);
@@ -162,44 +173,138 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log(thirtheenResault);
             console.log(forthResult);
             console.log(fifthResult);
+            console.log(sixtheenResault);
+            
             console.log(calculatorResault);
             
             let SubTotal = null;
             if (calculatorResault <= '5') {
-                SubTotal = 'Enlightenment path Level 1';
+                SubTotal = 'The level of your spiritual path is 1';
             } else if (calculatorResault >= '6' && calculatorResault <= '10') {
-                SubTotal = 'Enlightenment path Level 2';
+                SubTotal = 'The level of your spiritual path is 2';
             } else if (calculatorResault >= '11' && calculatorResault <= '15') {
-                SubTotal = 'Enlightenment path Level 3';
+                SubTotal = 'The level of your spiritual path is 3';
             }	else if (calculatorResault >= '16' && calculatorResault <= '20') {
-                SubTotal = 'Enlightenment path Level 4';
+                SubTotal = 'The level of your spiritual path is 4';
             }	else if (calculatorResault >= '21' && calculatorResault <= '30') {
-                SubTotal = 'Enlightenment path Level 5';
+                SubTotal = 'The level of your spiritual path is 5';
             }	else if (calculatorResault >= '31' && calculatorResault <= '40') {
-                SubTotal = 'Enlightenment path Level 6';
+                SubTotal = 'The level of your spiritual path is 6';
             }	else if (calculatorResault >= '41' && calculatorResault <= '50') {
-                SubTotal = 'Enlightenment path Level 7';
+                SubTotal = 'The level of your spiritual path is 7';
             }	else if (calculatorResault >= '51' && calculatorResault <= '60') {
-                SubTotal = 'Enlightenment path Level 8';
+                SubTotal = 'The level of your spiritual path is 8';
             }	else if (calculatorResault >= '61' && calculatorResault <= '70') {
-                SubTotal = 'Enlightenment path Level 9';
+                SubTotal = 'The level of your spiritual path is 9';
             }	else {
                 SubTotal = 'Error';
             }
             console.log(SubTotal);
+            typewriter(SubTotal, 13);
             
             let firstMessage = null;
             if (selectedLanguage === '1' || selectedLanguage === '0') {
                 firstMessage = 'Those who are on the spiritual path and thinking of kundalini awakening should meditate everysingle day. But if for some reason you can not meditate every day, we suggest that you try to meditate more than 3 days a week for 1 hour at a time. Although your journey will be long, you will finally arrive.';
             } else if (selectedLanguage === '2' || selectedLanguage === '3' ) {
                 firstMessage = 'Those who are on the spiritual path and thinking of kundalini awakening should meditate every single day. We know that you meditate more than 3 days a week and that is very good. But you will have a long way to go to reach consciousness. Therefore, we suggest that you try and meditate every day. Do not forget to walk in nature';
+            } 
+            let secondMessage = null;
+            if (secondResult <= '1') {
+                secondMessage = 'It is true that with the onset of kundalini awakening meditation, your desire to eat healthier foods will increase. But from now on, try and replace healthy foods with healthy ones. Because another important thing for spiritual awakening is to cleanse the body of negative energies. When you eat meat, the negative energies in the meat cells inadvertently enter your body and eventually form your cells. In this case, the process of your spiritual awakening will be extremely slow. Therefore, we suggest that you reduce meat consumption to a minimum from now on';
+            } else if (secondResult >= '2') {
+                secondMessage = 'As you know, when you eat meat, the negative energies of the meat cells inadvertently enter your body and eventually form your cells. But you avoid these negative energies because you avoid eating meat, so the only thing that can affect your frequency and energy is other people, as well as your own actions. In general, you are on the right path and kundalini meditation will help you more';
             }
-            if (selectedLanguage != null) {
+            let thirdMesssage = null;
+            if (thirdResult === '0') {
+                thirdMesssage = 'You live in an apartment. This means that you have less chance of connecting to the earth. So you should go to nature more than once a week. Just walking is not enough. Sit on the floor. Caress the flowers and hold the soil in your fist.'
+            } 
+            let forthMessage = null;
+            if (forthResult === '4') {
+                forthMessage = 'You have to keep in mind that when others show a strong desire to communicate with you, it means that your true self is more awake than others, and this is what their consciousness receives and they are drawn to you like a magnet. They get your energy and it makes them feel good. In this case, you should show a greater desire to be in the crowd.';
+            }
+            let fifthMessage = null;
+            if (fifthResult >= '3') {
+                fifthMessage = 'You see repeating numbers. This is a strong sign that your consciousness is at a higher level than an ordinary human being. So do more meditation to be able to control your mind. Carefully monitor recurring numbers and use their guidance in your life and spiritual awakening process. By searching these numbers on our website you can understand the meaning of repeating numbers.';
+            } else if (fifthResult === '2') {
+                fifthMessage = 'You see the number 0606 over and over again, it is a strong sign that your awareness is at a higher level than an ordinary human being. But it shows that you are too dependent on someone or something. And this is while you are ignoring the force within you. Now you have to balance your life again. The number 0606 indicates that you are overly concerned about material things right now, while you need to think more about your path to consciousness. In this case, your material needs will be met. The number 0606 here also tells you that if you let go of everything and know yourself and love others, all paths will be smooth for you. This is where your bad habits go away. We suggest that you practice Focus Meditations more than any other meditation. ';
+            }
+            let sixthMessage = null;
+            if (sixResault >= '3') {
+                sixthMessage = 'We believe that man is stuck in this life cycle, and comes back to life again and again. So the question is, can a person remember his past life? The fact is that if you move towards spiritual awakening, the domination of the material world and the material body over you will become less and less. And far more and more your true power grows. So in simple terms, the dreams you have are not ordinary and are somehow tied to your past. The past that may tell the future. So focus more on your spiritual practice so you can get the message clearer. Meditating and listening to pleasant music before going to bed will help you a lot';
+            }
+            let seventhMessage = null;
+            if (sevenResaulet === '-2') {
+                seventhMessage = 'We suggest that you wake up early in the morning (Brahma Muhurta time) and do a few minutes of meditation before starting your daily routine. This is the best time to meditate, learn and understand.';
+            } else if (sevenResaulet === '2') {
+                seventhMessage = 'We realized that you are very interested in the material world, and we also realized that you are more awake than you think. Now is the time to make a change in your life. Do not forget to wake up early in the morning and focus more on the Sacral Chakra while meditating.';
+            }
+            let tenMessage = null;
+            if (tenResault <= '0') {
+                tenMessage ='Another thing you are weak at is controlling your mind. So you need to do more meditation on mind control and focus. focused attention meditation(FAM) may be a good starting point for you.';
+            }
+            let twelvMessage = null;
+            if (twelResault >= '0') {
+                twelvMessage = 'We also suggest that you do Courage Meditation for 3 weeks, every day because it trains the mind to let go of fear and gives you the power to pursue things that are important to you.';
+            }
+            let sixtheenMessage = null;
+            if (sixtheenResault === '-1') {
+                sixtheenMessage = 'We noticed that you spend little time in nature. This means that you have less chance of connecting to the earth. The natural environment is rich in prana, or the primordial life force that sustains all life. And this life force is one of our most important weapons for spiritual awakening. So you should go to nature more than once a week. Just walking is not enough. Sit on the floor. Caress the flowers and hold the soil in your fist.';
+            }
+            
+            letType.style.display = 'block';
+
+
+            if (firstMessage != null) {
                 console.log(firstMessage);
-                
+                typeWriteTwo(firstMessage, 20);
+            } else {
+                typeWriteTwo('...', 3);
+            }
+            if (secondMessage != null) {
+                console.log(secondMessage);
+                typewriteThree(secondMessage, 20);
+            } else {
+                typewriteThree('.', 2);
+            }
+            if (thirdMesssage != null) {
+                console.log(thirdMesssage);
+                typeFour(thirdMesssage, 21);
+            } else{
+                typeFour('.', 2);
+            }
+            if (forthMessage != null) {
+                console.log(forthMessage);
+                typeFive(forthMessage, 21);
+            } else {
+                typeFive('.', 2);
+            }
+            if (fifthMessage != null) {
+                console.log(fifthMessage);
+                typeSix(fifthMessage);
+            } else{
+                typeSix('.', 2);
+            }
+            if (seventhMessage =! null) {
+                console.log(seventhMessage);
+                typeSeven(seventhMessage, 21);
+            } else {
+                typeSeven('.', 2);
+            }
+            if (tenMessage =! null) {
+                console.log(tenMessage);
+                typeEight(tenMessage, 21);
+            } 
+             if (twelvMessage != null) {
+                console.log(twelvMessage);
+                typeNine(twelvMessage, 21);
+            }
+            if (sixtheenMessage != null) {
+                console.log(sixtheenMessage);
+                typeTenth(sixtheenMessage, 21);
             }
             
         } else {
+            typewriter('You missing some answers. You must answer all the questions');
             console.log('Ooops');
             
         }
@@ -226,6 +331,7 @@ function nexPage(one) {
     const formThirteen = document.getElementById('thirtheenForm');
     const formFortheen = document.getElementById('fortheenForm');
     const formFiftheen = document.getElementById('fiftheenForm');
+    const formSixteen = document.getElementById('sixteenForm');
 
     if (one === 'first') {
         formOne.style.display = 'none';
@@ -269,10 +375,10 @@ function nexPage(one) {
     } else if (one === 'forteee') {
         formFortheen.style.display = 'none';
         formFiftheen.style.display = 'block';
-    } else if (one === 'fitheee') {
-        formFortheen.style.display = 'none';
-        formFiftheen.style.display = 'block';
-    }
+    } else if (one === 'fifteen') {
+        formFiftheen.style.display = 'none';
+        formSixteen.style.display = 'block';
+    } 
   
    
   }
@@ -292,6 +398,8 @@ function nexPage(one) {
     const formThirteen = document.getElementById('thirtheenForm');
     const formFortheen = document.getElementById('fortheenForm');
     const formFiftheen = document.getElementById('fiftheenForm');
+    const formSixteen = document.getElementById('sixteenForm');
+
   console.log(back);
   
     if (back === 'no2') {
@@ -338,6 +446,163 @@ function nexPage(one) {
     } else if (back === 'no16') {
         formFortheen.style.display = 'block';
         formFiftheen.style.display = 'none';
+    } else if (back === 'no17') {
+        formFiftheen.style.display = 'block';
+        formSixteen.style.display = 'none';
     } 
   }
   
+
+  function typewriter(text, speed) {
+    let index = 0; 
+    const header = document.getElementById('WhatZ');
+    header.innerText = '';
+    function type() {
+        if (index < text.length) {
+            header.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+function typeWriteTwo(text, speed) {
+    let index = 0; 
+    const paraf1 = document.getElementById('paraf');
+    paraf1.innerText = '';
+    function type() {
+        if (index < text.length) {
+            paraf1.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+
+function typewriteThree(text, speed) {
+    let index = 0; 
+    const life = document.getElementById('LifePath');
+    life.innerText = '';
+    function type() {
+        if (index < text.length) {
+            life.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+
+
+function typeFour(text, speed) {
+    let index = 0; 
+    const firnd = document.getElementById('FriendTyper');
+    firnd.innerText = '';
+    function type() {
+        if (index < text.length) {
+            firnd.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+
+function typeFive(text, speed) {
+    let index = 0; 
+    const Holly = document.getElementById('Hollycheck');
+    Holly.innerText = '';
+    function type() {
+        if (index < text.length) {
+            Holly.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+
+function typeSix(text, speed) {
+    let index = 0; 
+    const TypResault = document.getElementById('result');
+    TypResault.innerText = '';
+    function type() {
+        if (index < text.length) {
+            TypResault.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+
+
+function typeSeven(text, speed) {
+    let index = 0; 
+    const Seve = document.getElementById('numberseven');
+    Seve.innerText = '';
+    function type() {
+        if (index < text.length) {
+            Seve.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+
+
+function typeEight(text, speed) {
+    let index = 0; 
+    const EightTyp = document.getElementById('numberEight');
+    EightTyp.innerText = '';
+    function type() {
+        if (index < text.length) {
+            EightTyp.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+
+
+function typeNine(text, speed) {
+    let index = 0; 
+    const NineNumb = document.getElementById('numberNine');
+    NineNumb.innerText = '';
+    function type() {
+        if (index < text.length) {
+            NineNumb.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+
+
+function typeTenth(text, speed) {
+    let index = 0; 
+    const TenthNum = document.getElementById('numberTen');
+    TenthNum.innerText = '';
+    function type() {
+        if (index < text.length) {
+            TenthNum.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
