@@ -86,8 +86,9 @@
         width: 100%;
         margin-left: 0;
     }
-    h3{
+    h4{
         color: white;
+        text-align: center;
     }
     section {
         label{
@@ -182,6 +183,12 @@
         display: none;
     }
     #thirtheenForm {
+        display: none;
+    }
+    #fortheenForm {
+        display: none;
+    }
+    #fiftheenForm{
         display: none;
     }
 }

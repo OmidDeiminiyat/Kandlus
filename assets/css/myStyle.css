@@ -3980,8 +3980,9 @@ spinner6
     margin-left: 0;
   }
 }
-#KundaliniForm h3, #KundaliniForm #navigation hgroup h5, #navigation hgroup #KundaliniForm h5, #KundaliniForm #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #KundaliniForm p {
+#KundaliniForm h4 {
   color: white;
+  text-align: center;
 }
 #KundaliniForm section label {
   color: gray;
@@ -4066,6 +4067,12 @@ spinner6
   display: none;
 }
 #KundaliniForm #thirtheenForm {
+  display: none;
+}
+#KundaliniForm #fortheenForm {
+  display: none;
+}
+#KundaliniForm #fiftheenForm {
   display: none;
 }
 
