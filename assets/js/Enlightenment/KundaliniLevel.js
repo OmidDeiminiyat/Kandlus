@@ -178,20 +178,28 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log(calculatorResault);
             
             let SubTotal = null;
+            let calueFirst = null;
             if (calculatorResault <= '5') {
                 SubTotal = 'The level of your spiritual path is 1';
+                calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the first level of spiritual awakening. So you should do meditations that prepare you for kundalini awakening practice. We suggest meditations such as "breathing meditation and  mindfulness meditations" that are suitable for the first level. But make sure that before you start meditating and on the path of your spiritual awakening, you observe the following tips. If you do the said meditations every day, do our test again after a month, and If the level changes, we will give you new tips. Do the breathing meditation as follows: Breathe gently through the hole in the right side of the nose, then close it with your ring finger. Take a moment and then exhale through the left nostril. Repeat this 5 to 10 times in each nostril. Research shows that 15 to 18 minutes of intermittent breathing through the nostrils is ideal. If you wish, we suggest that you do relaxation meditation in addition to the essential meditations mentioned earlier. This meditation is a relaxation technique that helps you release the tension in your body and feel more relaxed. Do this meditation like this: Work through the body, contract one muscle group at a time, and then release the tension and notice the opposite feeling of relaxation.';
             } else if (calculatorResault >= '6' && calculatorResault <= '10') {
                 SubTotal = 'The level of your spiritual path is 2';
+                calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the second level of spiritual awakening. So you have to do meditations that prepare you for kundalini awakening exercises. We suggest you meditations such as "Movement Meditation or Walking Meditations, Breathing Meditations and Focus Meditations ”  that are suitable for the second level. But make sure that before you start meditating and on the path of your spiritual awakening, you observe the following tips. If you do the said meditations every day, do our test again after a month, and If the level changes, we will give you new tips. Do the breathing meditation as follows: Breathe gently through the hole in the right side of the nose, then close it with your ring finger. Take a moment and then exhale through the left nostril. Repeat this 5 to 10 times in each nostril. Research shows that 15 to 18 minutes of intermittent breathing through the nostrils is ideal. If you wish, we suggest that you do relaxation meditation in addition to the essential meditations mentioned earlier. This meditation is a relaxation technique that helps you release the tension in your body and feel more relaxed. Do this meditation like this: Work through the body, contract one muscle group at a time, and then release the tension and notice the opposite feeling of relaxation.';
             } else if (calculatorResault >= '11' && calculatorResault <= '15') {
+                calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the third level of spiritual awakening. So you are not ready to do kundalini meditation yet, and you have to do meditations that prepare you for kundalini awakening exercises. We suggest you meditations such as " Mantra Meditations, Breathing Meditations and Focus Meditations ”  that are suitable for the third level. But make sure that before you start meditating and on the path of your spiritual awakening, you observe the following tips. If you do the said meditations every day, you can do our test again after a month and we will give you new tips if your level changes. If you wish, we suggest that you do relaxation meditation in addition to the essential meditations mentioned earlier. This meditation is a relaxation technique that helps you release the tension in your body and feel more relaxed. Do this meditation like this: Work through the body, contract one muscle group at a time, and then release the tension and notice the opposite feeling of relaxation.';
                 SubTotal = 'The level of your spiritual path is 3';
             }	else if (calculatorResault >= '16' && calculatorResault <= '20') {
                 SubTotal = 'The level of your spiritual path is 4';
+                calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the forth level of spiritual awakening. So you are not ready to do kundalini meditation yet, and you have to do meditations that prepare you for kundalini awakening exercises. We suggest you meditations such as " Buddhist Meditations such as Loving Kindness , Mantra Meditations and Breathing Meditations ”  that are suitable for the forth level. Please hold your breath for 30 seconds. If you can not do this, we suggest that you do Breathing Meditations twice a day.  But make sure that before you start meditating and on the path of your spiritual awakening, you observe the following tips. If you do the said meditations every day, you can do our test again after a month and we will give you new tips if your level changes.';
             }	else if (calculatorResault >= '21' && calculatorResault <= '30') {
                 SubTotal = 'The level of your spiritual path is 5';
+                calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the fifth level of spiritual awakening. So you are not ready to do kundalini meditation yet, and you have to do meditations that prepare you for kundalini awakening exercises. We suggest you meditations such as " Transcendental Meditations and Breathing Meditations(Shamatha Meditation) ”  that are suitable for the fifth level. Transcendental Meditations promotes a state of calm awareness, stress relief, and access to higher states of consciousness as well as physiological benefits such as reduced risk of heart disease and high blood pressure. Please hold your breath for 90 seconds. If you can not do this, we suggest that you do Breathing Meditations twice a day.  But make sure that before you start meditating and on the path of your spiritual awakening, you observe the following tips. If you do the said meditations every day, you can do our test again after three month and we will give you new tips if your level changes. ';
             }	else if (calculatorResault >= '31' && calculatorResault <= '40') {
                 SubTotal = 'The level of your spiritual path is 6';
+                calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the sixth level of spiritual awakening. So you are ready to do kundalini meditation. Please read our article called Kundalini Awakening for more information';
             }	else if (calculatorResault >= '41' && calculatorResault <= '50') {
                 SubTotal = 'The level of your spiritual path is 7';
+                calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the seventh  level of spiritual awakening. So you are ready to do kundalini meditation. Please read our article called Kundalini Awakening for more information';
             }	else if (calculatorResault >= '51' && calculatorResault <= '60') {
                 SubTotal = 'The level of your spiritual path is 8';
             }	else if (calculatorResault >= '61' && calculatorResault <= '70') {
@@ -201,18 +209,19 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             console.log(SubTotal);
             typewriter(SubTotal, 13);
+            typWritCalcu(calueFirst, 30);
             
             let firstMessage = null;
             if (selectedLanguage === '1' || selectedLanguage === '0') {
                 firstMessage = 'Those who are on the spiritual path and thinking of kundalini awakening should meditate everysingle day. But if for some reason you can not meditate every day, we suggest that you try to meditate more than 3 days a week for 1 hour at a time. Although your journey will be long, you will finally arrive.';
             } else if (selectedLanguage === '2' || selectedLanguage === '3' ) {
-                firstMessage = 'Those who are on the spiritual path and thinking of kundalini awakening should meditate every single day. We know that you meditate more than 3 days a week and that is very good. But you will have a long way to go to reach consciousness. Therefore, we suggest that you try and meditate every day. Do not forget to walk in nature';
+                firstMessage = 'Those who are on the spiritual path and thinking of kundalini awakening should meditate every single day. We know that you meditate more than 3 days a week and that is very good. But you will have a long way to go to reach consciousness. Therefore, we suggest that you try and meditate every day. Do not forget to walk in nature.';
             } 
             let secondMessage = null;
             if (secondResult <= '1') {
-                secondMessage = 'It is true that with the onset of kundalini awakening meditation, your desire to eat healthier foods will increase. But from now on, try and replace healthy foods with healthy ones. Because another important thing for spiritual awakening is to cleanse the body of negative energies. When you eat meat, the negative energies in the meat cells inadvertently enter your body and eventually form your cells. In this case, the process of your spiritual awakening will be extremely slow. Therefore, we suggest that you reduce meat consumption to a minimum from now on';
+                secondMessage = 'It is true that with the onset of kundalini awakening meditation, your desire to eat healthier foods will increase. But from now on, try and replace healthy foods with healthy ones. Because another important thing for spiritual awakening is to cleanse the body of negative energies. When you eat meat, the negative energies in the meat cells inadvertently enter your body and eventually form your cells. In this case, the process of your spiritual awakening will be extremely slow. Therefore, we suggest that you reduce meat consumption to a minimum from now on.';
             } else if (secondResult >= '2') {
-                secondMessage = 'As you know, when you eat meat, the negative energies of the meat cells inadvertently enter your body and eventually form your cells. But you avoid these negative energies because you avoid eating meat, so the only thing that can affect your frequency and energy is other people, as well as your own actions. In general, you are on the right path and kundalini meditation will help you more';
+                secondMessage = 'As you know, when you eat meat, the negative energies of the meat cells inadvertently enter your body and eventually form your cells. But you avoid these negative energies because you avoid eating meat, so the only thing that can affect your frequency and energy is other people, as well as your own actions. In general, you are on the right path and kundalini meditation will help you more.';
             }
             let thirdMesssage = null;
             if (thirdResult === '0') {
@@ -230,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             let sixthMessage = null;
             if (sixResault >= '3') {
-                sixthMessage = 'We believe that man is stuck in this life cycle, and comes back to life again and again. So the question is, can a person remember his past life? The fact is that if you move towards spiritual awakening, the domination of the material world and the material body over you will become less and less. And far more and more your true power grows. So in simple terms, the dreams you have are not ordinary and are somehow tied to your past. The past that may tell the future. So focus more on your spiritual practice so you can get the message clearer. Meditating and listening to pleasant music before going to bed will help you a lot';
+                sixthMessage = 'We believe that man is stuck in this life cycle, and comes back to life again and again. So the question is, can a person remember his past life? The fact is that if you move towards spiritual awakening, the domination of the material world and the material body over you will become less and less. And far more and more your true power grows. So in simple terms, the dreams you have are not ordinary and are somehow tied to your past. The past that may tell the future. So focus more on your spiritual practice so you can get the message clearer. Meditating and listening to pleasant music before going to bed will help you a lot.';
             }
             let seventhMessage = null;
             if (sevenResaulet === '-2') {
@@ -467,6 +476,23 @@ function nexPage(one) {
 
     type(); // Start typing
 }
+
+function typWritCalcu(text, speed) {
+    let index = 0; 
+    const level = document.getElementById('calcuTypLev');
+    level.innerText = '';
+    function type() {
+        if (index < text.length) {
+            level.textContent += text.charAt(index); 
+            index++; 
+            setTimeout(type, speed); 
+        }
+    }
+
+    type(); // Start typing
+}
+
+
 function typeWriteTwo(text, speed) {
     let index = 0; 
     const paraf1 = document.getElementById('paraf');
