@@ -29,7 +29,7 @@ function insertIntoSubscribeTable(newData) {
   })
   .then(data => {
     console.log('Insert successful:', data);
-    window.location.href = 'price.html';
+    window.location.href = 'prisList.html';
   })
   .catch(error => {
     console.error('Error inserting into subscribe table:', error.message);

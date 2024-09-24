@@ -1,5 +1,4 @@
 
-
   // Function to get a cookie by name
 function getCookie(Name) {
     const nameEQ = Name + "=";
@@ -39,9 +38,7 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
   .catch(error => {
    // console.error('Error fetching data:', error);
   });
-    } else {
-     secondList()
-    }
+    } 
   }
   const checkLogins = document.getElementById('checkLogin');
   const readPrices = document.getElementById('readPrice');
@@ -104,8 +101,6 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
 
 
 
-
-
   function letCookie(name, value, days) {
     const date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -145,14 +140,6 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
     // window.location.href = '../index.html';
   }
 
-
-  function secondList(){
-    const OffUse = document.getElementById('Ofuser');
-    const onlUs = document.getElementById('OnUser');
-    OffUse.style.display = 'block';
-    onlUs.style.display = 'none';
-  }
-  
   
 
   

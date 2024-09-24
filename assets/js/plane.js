@@ -35,16 +35,15 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/Subscribe?Code=eq.${auth
      } else {
         // Token is invalid, delete the cookie
         setCookie('Kandlus-users', '', -1);
-        secondList()
       }
   })
   .catch(error => {
     console.error('Error fetching data:', error);
   });
-    }
+    } 
   }
 
-  import updateSubscribeTable from './controller/updateSubscribe.js';
+  import updateSubscribeTable from './controller/primaryUpdate.js';
 
   function callForUpdate(UserData){
 
@@ -61,7 +60,4 @@ const fulDate = day + '. ' + month + '. ' + year;
   updateSubscribeTable(Code, updatedData);
 
   }
-  
-
-
   
