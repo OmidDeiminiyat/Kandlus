@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Translation using MyMemory API</title>
+  <script>
+    async function translateForm() {
+      // Get the selected language
+      const targetLanguage = document.getElementById('languageSelect').value;
+
+      // List of elements to translate (labels and placeholders)
+      const elementsToTranslate = [
+        { id: 'labelName', text: 'Name' },
+        { id: 'labelEmail', text: 'Email' },
+        { id: 'labelPhone', text: 'Phone' },
+        { id: 'labelAddress', text: 'Address' },
+        { id: 'labelCity', text: 'City' },
+        { id: 'labelCountry', text: 'Country' }
+      ];
+
+      // Loop through each element to fetch and update the translation
+      for (let element of elementsToTranslate) {
+        const response = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(element.text)}&langpair=en|${targetLanguage}`);
+        const data = await response.json();
+        const translatedText = data.responseData.translatedText;
+        
+        // Update the label and placeholder dynamically
+        document.getElementById(element.id).innerText = translatedText;
+        const inputElement = document.querySelector(`input[aria-labelledby=${element.id}]`);
+        if (inputElement) {
+          inputElement.setAttribute('placeholder', translatedText);
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Translate Form to Multiple Languages</h1>
+
+  <!-- Language selection dropdown -->
+  <select id="languageSelect">
+    <option value="da">Danish (da)</option>
+    <option value="es">Spanish (es)</option>
+    <option value="fa">Persian (fa)</option>
+  </select>
+  
+  <!-- Button to trigger translation -->
+  <button onclick="translateForm()">Translate Form</button>
+
+  <!-- Form to translate -->
+  <form>
+    <label id="labelName" for="name">Name</label>
+    <input type="text" id="name" aria-labelledby="labelName" placeholder="Name">
+    <br>
+
+    <label id="labelEmail" for="email">Email</label>
+    <input type="email" id="email" aria-labelledby="labelEmail" placeholder="Email">
+    <br>
+
+    <label id="labelPhone" for="phone">Phone</label>
+    <input type="tel" id="phone" aria-labelledby="labelPhone" placeholder="Phone">
+    <br>
+
+    <label id="labelAddress" for="address">Address</label>
+    <input type="text" id="address" aria-labelledby="labelAddress" placeholder="Address">
+    <br>
+
+    <label id="labelCity" for="city">City</label>
+    <input type="text" id="city" aria-labelledby="labelCity" placeholder="City">
+    <br>
+
+    <label id="labelCountry" for="country">Country</label>
+    <input type="text" id="country" aria-labelledby="labelCountry" placeholder="Country">
+    <br>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

@@ -189,73 +189,74 @@
             <div class="divider-2"></div>
         </div>
     </header>
-
     <main id="forSearchBar" class="mt-30">
         <div class="container single-content">
             <div class="row vertical-divider mb-50">
                 <div class="col-lg-12 col-md-12">
+                    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                    <div class="elfsight-app-dbadbc99-4e8e-45ae-a9d4-3d7484e3d050" data-elfsight-app-lazy></div>
                     <form id="KundaliniForm">
                         <section id="firstForm">
-                            <h4> How many days a week do you meditate? </h4>
+                            <h4 id="b1"> How many days a week do you meditate? </h4>
                         <div>
                             
                             <hr>
                                 <div class="singleInput">
                                     <input type="radio" id="vehicle1" name="Q3" value="0">
-                                    <label for="Name"> I have never meditated </label><br>
+                                    <label id="b2" for="Name"> I have never meditated </label><br>
                                 </div>
                                
                                 <div class="singleInput">
                                     <input type="radio" id="vehicle1" name="Q3" value="-30">
-                                    <label for="Name"> 1 to 3 days a week </label><br>
+                                    <label id="b3" for="Name"> 1 to 3 days a week </label><br>
                                 </div>
                                 <div class="singleInput">
                                     <input type="radio" id="vehicle1" name="Q3" value="-3"> 
-                                    <label for="Name"> More than 3 days a week</label><br>
+                                    <label id="b4" for="Name"> More than 3 days a week</label><br>
                                 </div>
                                 <div class="singleInput">
                                     <input type="radio" id="vehicle1" name="Q3" value="2">
-                                    <label for="Name"> More than 3 days a week and 2 times a day</label><br>
+                                    <label id="b5" for="Name"> More than 3 days a week and 2 times a day</label><br>
                                 </div>
                                 <div class="singleInput">
                                     <input type="radio" id="vehicle1" name="Q3" value="3">
-                                    <label for="Name"> I meditate every day </label><br>
+                                    <label id="b6" for="Name"> I meditate every day </label><br>
                                 </div>
                         </div>
                         <div class="form-group">
-                            <button onclick="nexPage('first')" type="button" class="btn btn-dark btn-block" > Next</button>
+                            <button id="b7" onclick="nexPage('first')" type="button" class="btn btn-dark btn-block" > Next</button>
                         </div>
                         </section>
 
                         <section id="secondForm">
                             <div>
-                                <h4> How is your daily diet? </h4>
+                                <h4 id="a1"> How is your daily diet? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="tes" value="-7">
-                                        <label for="Name"> I have a great desire to eat  </label><br>
+                                        <label id="a2" for="Name"> I have a great desire to eat  </label><br>
                                     </div>
                                    
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="tes" value="-1">
-                                        <label for="Name"> I usually eat one-time full meal a day, but I never feel hungry </label><br>
+                                        <label id="a3" for="Name"> I usually eat one-time full meal a day, but I never feel hungry </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="tes" value="-3">
-                                        <label for="Name"> I am both a carnivore and a vegetarian </label><br>
+                                        <label id="a4" for="Name"> I am both a carnivore and a vegetarian </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="tes" value="3">
-                                        <label for="Name"> I am vegetarian </label><br>
+                                        <label id="a5" for="Name"> I am vegetarian </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="tes" value="6">
-                                        <label for="Name"> I never eat, but I drink water  </label><br>
+                                        <label id="a6" for="Name"> I never eat, but I drink water  </label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('second')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no2')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="a7" onclick="nexPage('second')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="a8" onclick="BackPage('no2')" type="button" class="btn btn-dark btn-block" > Back </button>
                                 
                                 
                             </div>
@@ -263,418 +264,418 @@
 
                         <section id="secondForm">
                             <div>
-                                <h4> How is your daily diet? </h4>
+                                <h4 id="c1"> How is your daily diet? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="O1" value="-7">
-                                        <label for="Name"> I have a great desire to eat  </label><br>
+                                        <label id="c2" for="Name"> I have a great desire to eat  </label><br>
                                     </div>
                                    
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="O1" value="-1">
-                                        <label for="Name"> I usually eat one-time full meal a day, but I never feel hungry </label><br>
+                                        <label id="c3" for="Name"> I usually eat one-time full meal a day, but I never feel hungry </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="O1" value="-3">
-                                        <label for="Name"> I am both a carnivore and a vegetarian </label><br>
+                                        <label id="c4" for="Name"> I am both a carnivore and a vegetarian </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="O1" value="3">
-                                        <label for="Name"> I am vegetarian </label><br>
+                                        <label id="c5" for="Name"> I am vegetarian </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="O2" name="O1" value="6">
-                                        <label for="Name"> I never eat, but I drink water  </label><br>
+                                        <label id="c6" for="Name"> I never eat, but I drink water  </label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('second')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no3')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="c7" onclick="nexPage('second')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="c8" onclick="BackPage('no3')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
                         <section id="thirdForm">
                             <div>
-                                <h4>Do you live in an apartment or in a house? </h4>
+                                <h4 id="d1">Do you live in an apartment or in a house? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="T1" name="T6" value="1">
-                                        <label for="Name"> I live in a house and water the garden every day  </label><br>
+                                        <label id="d2" for="Name"> I live in a house and water the garden every day  </label><br>
                                     </div>
                                     
                                     <div class="singleInput">
                                     <input type="radio" id="T1" name="T6" value="0">
-                                    <label for="Name"> I live in an apartment </label><br>
+                                    <label id="d3" for="Name"> I live in an apartment </label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('third')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no4')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="d4" onclick="nexPage('third')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="d5" onclick="BackPage('no4')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
 
 
                         <section id="forthForm">
                             <div>
-                                <h4>Which of the following describes your relationship with others? </h4>
+                                <h4 id="e1">Which of the following describes your relationship with others? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="M1" name="M1" value="-3">
-                                        <label for="Name"> I am a social person and I have many friends </label><br>
+                                        <label id="e2" for="Name"> I am a social person and I have many friends </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="M1" name="M1" value="-1">
-                                        <label for="Name"> I only hang out with close friends </label><br>
+                                        <label id="e3" for="Name"> I only hang out with close friends </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="M1" name="M1" value="3">
-                                        <label for="Name"> I do not have many friends because I feel that others do not understand me </label><br>
+                                        <label id="e4" for="Name"> I do not have many friends because I feel that others do not understand me </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="M1" name="M1" value="3">
-                                        <label for="Name"> I feel tired of being among others and prefer to be alone </label><br>
+                                        <label id="e5" for="Name"> I feel tired of being among others and prefer to be alone </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="M1" name="M1" value="2">
-                                        <label for="Name"> People are scary </label><br>
+                                        <label id="e6" for="Name"> People are scary </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="M1" name="M1" value="4">
-                                        <label for="Name"> Contrary to my wishes, there are many people around me</label><br>
+                                        <label id="e7" for="Name"> Contrary to my wishes, there are many people around me</label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('forth')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no5')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="e8" onclick="nexPage('forth')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="e9" onclick="BackPage('no5')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
 
                         <section id="fifthForm">
                             <div>
-                                <h4>Seeing Repeating Numbers? </h4>
+                                <h4 id="text1" >Seeing Repeating Numbers? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="N1" name="N1" value="6">
-                                        <label for="Name"> I see repetitive numbers more than once a day</label><br>
+                                        <label id="text2" for="Name"> I see repetitive numbers more than once a day</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="N1" name="N1" value="3">
-                                        <label for="Name"> Sometimes I see these numbers</label><br>
+                                        <label id="text3" for="Name"> Sometimes I see these numbers</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="N1" name="N1" value="4">
-                                        <label for="Name"> I dream these numbers</label><br>
+                                        <label id="text4" for="Name"> I dream these numbers</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="N1" name="N1" value="1">
-                                        <label for="Name"> I see these numbers and most of all I see the number 1111</label><br>
+                                        <label id="text5" for="Name"> I see these numbers and most of all I see the number 1111</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="N1" name="N1" value="2">
-                                        <label for="Name"> I see these numbers and most of all I see the number 0606</label><br>
+                                        <label id="text6" for="Name"> I see these numbers and most of all I see the number 0606</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="N1" name="N1" value="-3">
-                                        <label for="Name"> I do not understand what you mean</label><br>
+                                        <label id="text7" for="Name"> I do not understand what you mean</label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('fifth')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no6')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text8" onclick="nexPage('fifth')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text9" onclick="BackPage('no6')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
 
                         <section id="sixthForm">
                             <div>
-                                <h4>What kind of dreams do you usually have? </h4>
+                                <h4 id="text11">What kind of dreams do you usually have? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="D1" name="D1" value="6">
-                                        <label for="Name"> I always dream that I am helping people</label><br>
+                                        <label id="text12" for="Name"> I always dream that I am helping people</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="D1" name="D1" value="3">
-                                        <label for="Name"> I always dream that I am in an unknown place. It is not like the earth</label><br>
+                                        <label id="text13" for="Name"> I always dream that I am in an unknown place. It is not like the earth</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="D1" name="D1" value="3">
-                                        <label for="Name"> I always dream of repeating numbers</label><br>
+                                        <label id="text14" for="Name"> I always dream of repeating numbers</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="D1" name="D1" value="1">
-                                        <label for="Name"> I always have nightmares that people in black are looking for me</label><br>
+                                        <label id="text15" for="Name"> I always have nightmares that people in black are looking for me</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="D1" name="D1" value="-1">
-                                        <label for="Name"> I have scattered dreams</label><br>
+                                        <label id="text16" for="Name"> I have scattered dreams</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="D1" name="D1" value="0">
-                                        <label for="Name"> I never dream</label><br>
+                                        <label id="text17" for="Name"> I never dream</label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('sixth')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no7')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text18" onclick="nexPage('sixth')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text19" onclick="BackPage('no7')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
 
                         <section id="seventhForm">
                             <div>
-                                <h4>Which of the following describes your daily feelings? </h4>
+                                <h4 id="text21">Which of the following describes your daily feelings? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="W1" name="W6" value="1">
-                                        <label for="Name"> I always feel fresh and lively</label><br>
+                                        <label id="text22" for="Name"> I always feel fresh and lively</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="W1" name="W6" value="-3">
-                                        <label for="Name"> I always feel tired but I am physically healthy</label><br>
+                                        <label id="text23" for="Name"> I always feel tired but I am physically healthy</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="W1" name="W6" value="6">
-                                        <label for="Name"> I start my day with music and meditation</label><br>
+                                        <label id="text24" for="Name"> I start my day with music and meditation</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="W1" name="W6" value="3">
-                                        <label for="Name"> My day is tied to loving others</label><br>
+                                        <label id="text25" for="Name"> My day is tied to loving others</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="W1" name="W6" value="-2">
-                                        <label for="Name"> I usually sleep until the middle of the day and then do my daily chores</label><br>
+                                        <label id="text26" for="Name"> I usually sleep until the middle of the day and then do my daily chores</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="W1" name="W6" value="2">
-                                        <label for="Name"> I usually get up early and then do my daily chores</label><br>
+                                        <label id="text27" for="Name"> I usually get up early and then do my daily chores</label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('seventh')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no8')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text28" onclick="nexPage('seventh')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text29" onclick="BackPage('no8')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
 
                         <section id="eighthForm">
                             <div>
-                                <h4>Which of the following describes you? </h4>
+                                <h4 id="text31">Which of the following describes you? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="E1" name="E6" value="3">
-                                        <label for="Name"> I am sad when I see oppressed people</label><br>
+                                        <label id="text32" for="Name"> I am sad when I see oppressed people</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="E1" name="E6" value="-6">
-                                        <label for="Name"> I am too dependent on other people to find my own path</label><br>
+                                        <label id="text33" for="Name"> I am too dependent on other people to find my own path</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="E1" name="E6" value="-3">
-                                        <label for="Name"> I always feel frustrated and disappointed</label><br>
+                                        <label id="text34" for="Name"> I always feel frustrated and disappointed</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="E1" name="E6" value="3">
-                                        <label for="Name"> I feel lost in life and alone</label><br>
+                                        <label id="text35" for="Name"> I feel lost in life and alone</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="E1" name="E6" value="4">
-                                        <label for="Name"> I am always looking for answers to my questions</label><br>
+                                        <label id="text36" for="Name"> I am always looking for answers to my questions</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="E1" name="E6" value="6">
-                                        <label for="Name"> It is as if the world looks upside down and nothing is in place</label><br>
+                                        <label id="text37" for="Name"> It is as if the world looks upside down and nothing is in place</label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('Eighth')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no9')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text38" onclick="nexPage('Eighth')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text39" onclick="BackPage('no9')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
 
                         <section id="ninthForm">
                             <div>
-                                <h4>Someone close to you hurt you, how do you feel at the end of the day? </h4>
+                                <h4 id="text41">Someone close to you hurt you, how do you feel at the end of the day? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="R1" name="R1" value="-3">
-                                        <label for="Name"> I amm looking to hurt him/her</label><br>
+                                        <label id="text42" for="Name"> I amm looking to hurt him/her</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="R1" name="R1" value="3">
-                                        <label for="Name"> I am trying to understand why he/she did this</label><br>
+                                        <label id="text43" for="Name"> I am trying to understand why he/she did this</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="R1" name="R1" value="-4">
-                                        <label for="Name"> Sad and depressed that humanity is dead, I go to bed</label><br>
+                                        <label id="text44" for="Name"> Sad and depressed that humanity is dead, I go to bed</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="R1" name="R1" value="1">
-                                        <label for="Name"> I call him/her</label><br>
+                                        <label id="text45" for="Name"> I call him/her</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="R1" name="R1" value="-6">
-                                        <label for="Name"> I will never forgive him/her</label><br>
+                                        <label id="text46" for="Name"> I will never forgive him/her</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="R1" name="R1" value="6">
-                                        <label for="Name"> I forgive him/her and forget everything</label><br>
+                                        <label id="text47" for="Name"> I forgive him/her and forget everything</label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('ninth')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no10')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text48" onclick="nexPage('ninth')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text49" onclick="BackPage('no10')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
 
                         <section id="tenthform">
                             <div>
-                                <h4>Sit for ten minutes and do not think at all. What happened? </h4>
+                                <h4 id="text51">Sit for ten minutes and do not think at all. What happened? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="Sit1" name="Sit1" value="-9">
-                                        <label for="Name"> Different thoughts come to my mind</label><br>
+                                        <label id="text52" for="Name"> Different thoughts come to my mind</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="Sit1" name="Sit1" value="3">
-                                        <label for="Name"> I did this successfully</label><br>
+                                        <label id="text53" for="Name"> I did this successfully</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="Sit1" name="Sit1" value="-6">
-                                        <label for="Name"> It makes me feel drowsy</label><br>
+                                        <label id="text54" for="Name"> It makes me feel drowsy</label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('thenth')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no11')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text55" onclick="nexPage('thenth')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text56" onclick="BackPage('no11')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
 
                         <section id="eleventhForm">
                             <div>
-                                <h4>I question everything and do not accept anything easily </h4>
+                                <h4 id="text61">I question everything and do not accept anything easily </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="Ask1" name="Ask1" value="-6">
-                                        <label for="Name"> Yes, I agree</label><br>
+                                        <label id="text62" for="Name"> Yes, I agree</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="Ask1" name="Ask1" value="3">
-                                        <label for="Name"> No I do not agree</label><br>
+                                        <label id="text63" for="Name"> No I do not agree</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="Ask1" name="Ask1" value="-3">
-                                        <label for="Name"> To some extent </label><br>
+                                        <label id="text64" for="Name"> To some extent </label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('eleventh')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no12')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text65" onclick="nexPage('eleventh')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text66" onclick="BackPage('no12')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
 
                         <section id="tewelvForm">
                             <div>
-                                <h4>Have you ever given up on your goal out of fear </h4>
+                                <h4 id="text71">Have you ever given up on your goal out of fear </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="fear" name="fear" value="-6">
-                                        <label for="Name"> Yes </label><br>
+                                        <label id="text72" for="Name"> Yes </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="fear" name="fear" value="0">
-                                        <label for="Name"> No </label><br>
+                                        <label id="text73" for="Name"> No </label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('twelv')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no13')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text74" onclick="nexPage('twelv')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text75" onclick="BackPage('no13')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
                         <!-- Until here -->
                         <section id="thirtheenForm">
                             <div>
-                                <h4>Take a deep breath and hold it. How many seconds can you hold your breath? </h4>
+                                <h4 id="text81">Take a deep breath and hold it. How many seconds can you hold your breath? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="breath" name="breath" value="-9">
-                                        <label for="Name"> Less than 30 seconds </label><br>
+                                        <label id="text82" for="Name"> Less than 30 seconds </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="breath" name="breath" value="0">
-                                        <label for="Name"> Between 30 and 60 seconds </label><br>
+                                        <label id="text83" for="Name"> Between 30 and 60 seconds </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="breath" name="breath" value="0">
-                                        <label for="Name"> Between 60 and 90 seconds </label><br>
+                                        <label id="text84" for="Name"> Between 60 and 90 seconds </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="breath" name="breath" value="0">
-                                        <label for="Name"> Between 90 and 120 seconds </label><br>
+                                        <label id="text85" for="Name"> Between 90 and 120 seconds </label><br>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('theree')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no14')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text86" onclick="nexPage('theree')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text87" onclick="BackPage('no14')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
                         <section id="fortheenForm">
                             <div>
-                                <h4>Do you experience lucid dream? </h4>
+                                <h4 id="text91">Do you experience lucid dream? </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="vehicle1" name="dream" value="0">
-                                        <label for="Name"> Yes </label><br>
+                                        <label id="text92" for="Name"> Yes </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="vehicle1" name="dream" value="-3">
-                                        <label for="Name"> No </label><br>
+                                        <label id="text93" for="Name"> No </label><br>
                                     </div> 
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('forteee')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no15')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text94" onclick="nexPage('forteee')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text95" onclick="BackPage('no15')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
                         <section id="fiftheenForm">
                             <div>
-                                <h4>What is your relationship with nature?  </h4>
+                                <h4 id="text111">What is your relationship with nature?  </h4>
                                 <hr>
                                     <div class="singleInput">
                                         <input type="radio" id="SpentTime" name="SpentTime" value="3">
-                                        <label for="Name"> I spent time in nature more than once a week </label><br>
+                                        <label id="text112" for="Name"> I spent time in nature more than once a week </label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="SpentTime" name="SpentTime" value="-1">
-                                        <label for="Name"> I spent time in nature less than once a week. maybe once a month  </label><br>
+                                        <label id="text113" for="Name"> I spent time in nature less than once a week. maybe once a month  </label><br>
                                     </div> 
                             </div>
                             <div class="form-group">
-                                <button onclick="nexPage('fifteen')" type="button" class="btn btn-dark btn-block" > Next</button>
-                                <button onclick="BackPage('no16')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text114" onclick="nexPage('fifteen')" type="button" class="btn btn-dark btn-block" > Next</button>
+                                <button id="text115" onclick="BackPage('no16')" type="button" class="btn btn-dark btn-block" > Back </button>
                             </div>
                         </section>
                         <section id="sixteenForm">
                             <div>
-                                <h4>Which photo caught your eye? </h4>
+                                <h4 id="text121">Which photo caught your eye? </h4>
                                 <hr>
                                 <img src="./../assets/images/Enlightenment/width/ChooseImage.jpeg"> <br>
                                     <div class="singleInput">
                                         <input type="radio" id="Nature" name="Nature" value="0">
-                                        <label for="Name"> Photo No. 1</label><br>
+                                        <label id="text122" for="Name"> Photo No. 1</label><br>
                                     </div>
                                     <div class="singleInput">
                                         <input type="radio" id="Nature" name="Nature" value="-6">
-                                        <label for="Name"> Photo No. 2</label><br>
+                                        <label id="text123" for="Name"> Photo No. 2</label><br>
                                     </div> 
                                     <div class="singleInput">
                                         <input type="radio" id="Nature" name="Nature" value="0">
-                                        <label for="Name"> Photo No. 3</label><br>
+                                        <label id="text124" for="Name"> Photo No. 3</label><br>
                                     </div> 
                                     <div class="singleInput">
                                         <input type="radio" id="Nature" name="Nature" value="-3">
-                                        <label for="Name"> Photo No. 4</label><br>
+                                        <label id="text125" for="Name"> Photo No. 4</label><br>
                                     </div> 
                             </div>
                             <div class="form-group">
-                                <button onclick="BackPage('no17')" type="button" class="btn btn-dark btn-block" > Back </button>
-                                <button type="button" id="submitBtn">Submit</button> 
+                                <button id="text126" onclick="BackPage('no17')" type="button" class="btn btn-dark btn-block" > Back </button>
+                                <button id="text127" type="button" id="submitBtn">Submit</button> 
                             </div>
                         </section>
 
