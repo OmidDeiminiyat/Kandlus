@@ -179,11 +179,14 @@ document.addEventListener("DOMContentLoaded", function() {
             
             let SubTotal = null;
             let calueFirst = null;
+            let MedsuggestOne = null;
+            let MedsuggestTwo = null;
+            
             if (calculatorResault <= '5') {
-                SubTotal = 'The level of your spiritual path is 1';
-                calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the first level of spiritual awakening. So you should do meditations that prepare you for kundalini awakening practice. We suggest meditations such as "breathing meditation and  mindfulness meditations" that are suitable for the first level. But make sure that before you start meditating and on the path of your spiritual awakening, you observe the following tips. If you do the said meditations every day, do our test again after a month, and If the level changes, we will give you new tips. Do the breathing meditation as follows: Breathe gently through the hole in the right side of the nose, then close it with your ring finger. Take a moment and then exhale through the left nostril. Repeat this 5 to 10 times in each nostril. Research shows that 15 to 18 minutes of intermittent breathing through the nostrils is ideal. If you wish, we suggest that you do relaxation meditation in addition to the essential meditations mentioned earlier. This meditation is a relaxation technique that helps you release the tension in your body and feel more relaxed. Do this meditation like this: Work through the body, contract one muscle group at a time, and then release the tension and notice the opposite feeling of relaxation.';
+                document.getElementById('WhatZ').innerHTML = `<h5> The level of your spiritual path is 1 </h5>`;
+                document.getElementById('calcuTypLev').innerHTML = `<p> Kandlus after analysing your answers to the questions concluded that you are in the first level of spiritual awakening. So you should do meditations that prepare you for kundalini awakening practice. We suggest meditations such as "belly breathing meditation and  mindfulness meditations" that are suitable for the first level. But make sure that before you start meditating and on the path of your spiritual awakening, you observe the following tips. If you do the said meditations every day, do our test again after a month, and If the level changes, we will give you new tips. Do the belly breathing meditation as follows: Breathe gently through the hole in the right side of the nose, then close it with your ring finger. Take a moment and then exhale through the left nostril. Repeat this 5 to 10 times in each nostril. Research shows that 15 to 18 minutes of intermittent breathing through the nostrils is ideal. If you wish, we suggest that you do relaxation meditation in addition to the essential meditations mentioned earlier. This meditation is a relaxation technique that helps you release the tension in your body and feel more relaxed. Do this meditation like this: Work through the body, contract one muscle group at a time, and then release the tension and notice the opposite feeling of relaxation. </p>`;
             } else if (calculatorResault >= '6' && calculatorResault <= '10') {
-                SubTotal = 'The level of your spiritual path is 2';
+                 document.getElementById('WhatZ').innerHTML = '<h5>The level of your spiritual path is 2 </h5>';
                 calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the second level of spiritual awakening. So you have to do meditations that prepare you for kundalini awakening exercises. We suggest you meditations such as "Movement Meditation or Walking Meditations, Breathing Meditations and Focus Meditations ”  that are suitable for the second level. But make sure that before you start meditating and on the path of your spiritual awakening, you observe the following tips. If you do the said meditations every day, do our test again after a month, and If the level changes, we will give you new tips. Do the breathing meditation as follows: Breathe gently through the hole in the right side of the nose, then close it with your ring finger. Take a moment and then exhale through the left nostril. Repeat this 5 to 10 times in each nostril. Research shows that 15 to 18 minutes of intermittent breathing through the nostrils is ideal. If you wish, we suggest that you do relaxation meditation in addition to the essential meditations mentioned earlier. This meditation is a relaxation technique that helps you release the tension in your body and feel more relaxed. Do this meditation like this: Work through the body, contract one muscle group at a time, and then release the tension and notice the opposite feeling of relaxation.';
             } else if (calculatorResault >= '11' && calculatorResault <= '15') {
                 calueFirst = 'Kandlus after analysing your answers to the questions concluded that you are in the third level of spiritual awakening. So you are not ready to do kundalini meditation yet, and you have to do meditations that prepare you for kundalini awakening exercises. We suggest you meditations such as " Mantra Meditations, Breathing Meditations and Focus Meditations ”  that are suitable for the third level. But make sure that before you start meditating and on the path of your spiritual awakening, you observe the following tips. If you do the said meditations every day, you can do our test again after a month and we will give you new tips if your level changes. If you wish, we suggest that you do relaxation meditation in addition to the essential meditations mentioned earlier. This meditation is a relaxation technique that helps you release the tension in your body and feel more relaxed. Do this meditation like this: Work through the body, contract one muscle group at a time, and then release the tension and notice the opposite feeling of relaxation.';
@@ -207,13 +210,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }	else {
                 SubTotal = 'Error';
             }
+            const suggestLink = document.getElementById('bell');
+            suggestLink.innerHTML = `<a href="${MedsuggestOne}" > Belly meditation practice </a> , <a href="${MedsuggestTwo}" > Bell meditation practice </a>`;
             console.log(SubTotal);
             typewriter(SubTotal, 13);
-            typWritCalcu(calueFirst, 30);
+           // typWritCalcu(calueFirst, 30);
+            
             
             let firstMessage = null;
             if (selectedLanguage === '1' || selectedLanguage === '0') {
-                firstMessage = 'Those who are on the spiritual path and thinking of kundalini awakening should meditate everysingle day. But if for some reason you can not meditate every day, we suggest that you try to meditate more than 3 days a week for 1 hour at a time. Although your journey will be long, you will finally arrive.';
+                firstMessage = 'Those who are on the spiritual path and thinking of kundalini awakening should meditate every single day. But if for some reason you can not meditate every day, we suggest that you try to meditate more than 3 days a week for 1 hour. Although your journey will be long, you will finally arrive. I suggest that you listen to the solfeggio 258 for more than an hour during the day';
             } else if (selectedLanguage === '2' || selectedLanguage === '3' ) {
                 firstMessage = 'Those who are on the spiritual path and thinking of kundalini awakening should meditate every single day. We know that you meditate more than 3 days a week and that is very good. But you will have a long way to go to reach consciousness. Therefore, we suggest that you try and meditate every day. Do not forget to walk in nature.';
             } 
@@ -225,25 +231,25 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             let thirdMesssage = null;
             if (thirdResult === '0') {
-                thirdMesssage = 'You live in an apartment. This means that you have less chance of connecting to the earth. So you should go to nature more than once a week. Just walking is not enough. Sit on the floor. Caress the flowers and hold the soil in your fist.'
+                thirdMesssage = 'You live in an apartment. This means that you have less chance of connecting to the earth. So you should go to nature more than once a week. Just walking is not enough. Sit on the floor. Caress the flowers and hold the soil in your fist. I suggest that you listen to the solfeggios 174 and 963 for more than an hour during the day';
             } 
             let forthMessage = null;
             if (forthResult === '4') {
-                forthMessage = 'You have to keep in mind that when others show a strong desire to communicate with you, it means that your true self is more awake than others, and this is what their consciousness receives and they are drawn to you like a magnet. They get your energy and it makes them feel good. In this case, you should show a greater desire to be in the crowd.';
+                forthMessage = 'You have to keep in mind that when others show a strong desire to communicate with you, it means that your true self is more awake than others, and this is what their consciousness receives and they are drawn to you like a magnet. They get your energy and it makes them feel good. In this case, you should show a greater desire to be in the crowd. I suggest that you listen to the solfeggios 417 for more than an hour during the day';
             }
             let fifthMessage = null;
             if (fifthResult >= '3') {
-                fifthMessage = 'You see repeating numbers. This is a strong sign that your consciousness is at a higher level than an ordinary human being. So do more meditation to be able to control your mind. Carefully monitor recurring numbers and use their guidance in your life and spiritual awakening process. By searching these numbers on our website you can understand the meaning of repeating numbers.';
+                fifthMessage = 'You see repeating numbers. This is a strong sign that your consciousness is at a higher level than an ordinary human being. So do more meditation to be able to control your mind. Carefully monitor recurring numbers and use their guidance in your life and spiritual awakening process. By searching these numbers on our website you can understand the meaning of repeating numbers. I suggest that you listen to the solfeggios 963 and 528 for more than an hour during the day';
             } else if (fifthResult === '2') {
                 fifthMessage = 'You see the number 0606 over and over again, it is a strong sign that your awareness is at a higher level than an ordinary human being. But it shows that you are too dependent on someone or something. And this is while you are ignoring the force within you. Now you have to balance your life again. The number 0606 indicates that you are overly concerned about material things right now, while you need to think more about your path to consciousness. In this case, your material needs will be met. The number 0606 here also tells you that if you let go of everything and know yourself and love others, all paths will be smooth for you. This is where your bad habits go away. We suggest that you practice Focus Meditations more than any other meditation. ';
             }
             let sixthMessage = null;
             if (sixResault >= '3') {
-                sixthMessage = 'We believe that man is stuck in this life cycle, and comes back to life again and again. So the question is, can a person remember his past life? The fact is that if you move towards spiritual awakening, the domination of the material world and the material body over you will become less and less. And far more and more your true power grows. So in simple terms, the dreams you have are not ordinary and are somehow tied to your past. The past that may tell the future. So focus more on your spiritual practice so you can get the message clearer. Meditating and listening to pleasant music before going to bed will help you a lot.';
+                sixthMessage = 'We believe that man is stuck in this life cycle, and comes back to life again and again. So the question is, can a person remember his past life? The fact is that if you move towards spiritual awakening, the domination of the material world and the material body over you will become less and less. And far more and more your true power grows. So in simple terms, the dreams you have are not ordinary and are somehow tied to your past. The past that may tell the future. So focus more on your spiritual practice so you can get the message clearer. Meditating and listening to pleasant music before going to bed will help you a lot. I suggest that you listen to the solfeggio 741 for more than an hour during the day';
             }
             let seventhMessage = null;
             if (sevenResaulet === '-2') {
-                seventhMessage = 'We suggest that you wake up early in the morning (Brahma Muhurta time) and do a few minutes of meditation before starting your daily routine. This is the best time to meditate, learn and understand.';
+                seventhMessage = 'We suggest that you wake up early in the morning (Brahma Muhurta time) and do a few minutes of meditation before starting your daily routine. This is the best time to meditate, learn and understand. I suggest you to play solfeggio 852 durring Brahma Muhurta';
             } else if (sevenResaulet === '2') {
                 seventhMessage = 'We realized that you are very interested in the material world, and we also realized that you are more awake than you think. Now is the time to make a change in your life. Do not forget to wake up early in the morning and focus more on the Sacral Chakra while meditating.';
             }
@@ -257,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             let sixtheenMessage = null;
             if (sixtheenResault === '-1') {
-                sixtheenMessage = 'We noticed that you spend little time in nature. This means that you have less chance of connecting to the earth. The natural environment is rich in prana, or the primordial life force that sustains all life. And this life force is one of our most important weapons for spiritual awakening. So you should go to nature more than once a week. Just walking is not enough. Sit on the floor. Caress the flowers and hold the soil in your fist.';
+                sixtheenMessage = 'We noticed that you spend little time in nature. This means that you have less chance of connecting to the earth. The natural environment is rich in prana, or the primordial life force that sustains all life. And this life force is one of our most important weapons for spiritual awakening. So you should go to nature more than once a week. Do not forget: just walking is not enough. Sit on the floor. Caress the flowers and hold the soil in your fist.';
             }
             
             letType.style.display = 'block';
@@ -265,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (firstMessage != null) {
                 console.log(firstMessage);
+
                 typeWriteTwo(firstMessage, 20);
             } else {
                 typeWriteTwo('...', 3);
@@ -465,31 +472,31 @@ function nexPage(one) {
   function typewriter(text, speed) {
     let index = 0; 
     const header = document.getElementById('WhatZ');
-    header.innerText = '';
-    function type() {
-        if (index < text.length) {
-            header.textContent += text.charAt(index); 
-            index++; 
-            setTimeout(type, speed); 
-        }
-    }
+    header.innerText = text;
+    // function type() {
+    //     if (index < text.length) {
+    //         header.textContent += text.charAt(index); 
+    //         index++; 
+    //         setTimeout(type, speed); 
+    //     }
+    // }
 
-    type(); // Start typing
+   // type(); // Start typing
 }
 
 function typWritCalcu(text, speed) {
     let index = 0; 
     const level = document.getElementById('calcuTypLev');
-    level.innerText = '';
-    function type() {
-        if (index < text.length) {
-            level.textContent += text.charAt(index); 
-            index++; 
-            setTimeout(type, speed); 
-        }
-    }
+    level.innerText = text;
+    // function type() {
+    //     if (index < text.length) {
+    //         level.textContent += text.charAt(index); 
+    //         index++; 
+    //         setTimeout(type, speed); 
+    //     }
+    // }
 
-    type(); // Start typing
+    // type(); // Start typing
 }
 
 
