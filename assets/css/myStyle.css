@@ -4033,6 +4033,9 @@ spinner6
 #KundaliniForm button.submit {
   margin-left: 0;
 }
+#KundaliniForm .goBack {
+  background-color: rgb(226, 58, 92);
+}
 #KundaliniForm #secondForm {
   display: none;
 }
