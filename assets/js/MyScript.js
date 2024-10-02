@@ -68,7 +68,7 @@ for (i = 0; i < coll.length; i++) {
 */
 
 var sessionName = sessionStorage.getItem('Plan');
-console.log(sessionName);
+
 var Bios = document.getElementById('BioFirst');
 var bioLinks =document.getElementById('listen-2');
 var HoroFir = document.getElementById('HorosForst');

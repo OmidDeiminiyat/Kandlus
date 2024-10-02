@@ -3964,6 +3964,21 @@ spinner6
 #typenswer h5 span {
   color: green;
 }
+#typenswer ul li {
+  list-style: disc;
+  margin-top: 3px;
+}
+
+#ForType {
+  width: 60%;
+  margin-left: 20%;
+}
+@media (max-width: 600px) {
+  #ForType {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 
 #KundaliniForm {
   width: 40%;
@@ -4129,4 +4144,4 @@ spinner6
 .pdf h3, .pdf #navigation hgroup h5, #navigation hgroup .pdf h5, .pdf #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption .pdf p {
   text-align: center;
   padding-bottom: 30px;
-}
+}/*# sourceMappingURL=myStyle.css.map */

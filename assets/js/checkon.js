@@ -9,7 +9,7 @@ if (KCcoins) {
 } else if (!userOn || sessionOn == '99etB637s') {
     window.location.href = '../price.html';
 } else {
-    console.log('All is ok'); }
+    console.log(''); }
 
 
 
