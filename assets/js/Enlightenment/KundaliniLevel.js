@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const forthww = form.elements['dream'];
         const fifthww = form.elements['Nature'];
         const sixThw = form.elements['SpentTime'];
+        const CheckSleep = form.elements['Sleep'];
+        const checkDurSleep = form.elements['DurSlee'];
         const letType = document.getElementById('typenswer');
 
         let selectedLanguage = null;
@@ -40,8 +42,22 @@ document.addEventListener("DOMContentLoaded", function() {
         let fortheenResault = null;
         let fiftheenResault = null;
         let sixtheenResault = null;
+        let sleppResault = null;
+        let DurSleppResault = null;
 
         // Loop through radio buttons to find the checked one
+        for (const ChSle of CheckSleep) {
+            if (ChSle.checked) {
+                sleppResault = ChSle.value;
+                break;
+            }
+        }
+        for (const DurSlee of checkDurSleep) {
+            if (DurSlee.checked) {
+                DurSleppResault = DurSlee.value;
+                break;
+            }
+        }
         for (const radio of first) {
             if (radio.checked) {
                 selectedLanguage = radio.value;
@@ -183,53 +199,60 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById('WhatZ').innerHTML = `<h5>Error`;
             }
                        
-            let firstMessage = null;
+
             if (selectedLanguage === '1' || selectedLanguage === '0') {
                document.getElementById('paraf').innerHtml =`<p>Those who are on the spiritual path and thinking of kundalini awakening should meditate every single day. I suggest that you listen to the solfeggio 258 for more than an hour specially during the meditation</p>`;
             } else if (selectedLanguage === '2' || selectedLanguage === '3' ) {
                 document.getElementById('paraf').innerHtml =`<p>Those who are on the spiritual path and thinking of kundalini awakening should meditate every single day. We know that you meditate more than 3 days a week and that is very good. But you will have a long way to go to reach consciousness. Therefore, we suggest that you try and meditate every day. Do not forget to walk in nature.</p>`;
             } 
-            let secondMessage = null;
+
             if (secondResult <= '1') {
                 document.getElementById('LifePath').innerHtml = `<p>It is true that with the onset of kundalini awakening meditation, your desire to eat healthier foods will increase. But from now on, try and replace healthy foods with healthy ones. Because another important thing for spiritual awakening is to cleanse the body of negative energies. When you eat meat, the negative energies in the meat cells inadvertently enter your body and eventually form your cells. In this case, the process of your spiritual awakening will be extremely slow. Therefore, we suggest that you reduce meat consumption to a minimum from now on.</p>`;
             } else if (secondResult >= '2') {
                 document.getElementById('LifePath').innerHtml = `<p>As you know, when you eat meat, the negative energies of the meat cells inadvertently enter your body and eventually form your cells. But you avoid these negative energies because you avoid eating meat, so the only thing that can affect your frequency and energy is other people, as well as your own actions. In general, you are on the right path and kundalini meditation will help you more.</p>`;
             }
-            let thirdMesssage = null;
+
             if (thirdResult === '0') {
                 document.getElementById('FriendTyper').innerHtml = `<p> You live in an apartment. This means that you have less chance of connecting to the earth. So you should go to nature more than once a week. Just walking is not enough. Sit on the floor. Caress the flowers and hold the soil in your fist. I suggest that you listen to the solfeggios 174 and 963 for more than an hour during the day<p>`;
             } 
-            let forthMessage = null;
+   
             if (forthResult === '4') {
                 document.getElementById('Hollycheck').innerHTML = `<p>You have to keep in mind that when others show a strong desire to communicate with you, it means that your true self is more awake than others, and this is what their consciousness receives and they are drawn to you like a magnet. They get your energy and it makes them feel good. In this case, you should show a greater desire to be in the crowd. I suggest that you listen to the solfeggios 417 for more than an hour during the day </p>`;
             }
-            let fifthMessage = null;
+
             if (fifthResult >= '3') {
                 document.getElementById('result').innerHTML = `<p>You see repeating numbers. This is a strong sign that your consciousness is at a higher level than an ordinary human being. So do more meditation to be able to control your mind. Carefully monitor recurring numbers and use their guidance in your life and spiritual awakening process. By searching these numbers on our website you can understand the meaning of repeating numbers. I suggest that you listen to the solfeggios 963 and 528 for more than an hour during the day</p>`;
             } else if (fifthResult === '2') {
                 document.getElementById('result').innerHTML = `<p>You see the number 0606 over and over again, it is a strong sign that your awareness is at a higher level than an ordinary human being. But it shows that you are too dependent on someone or something. And this is while you are ignoring the force within you. Now you have to balance your life again. The number 0606 indicates that you are overly concerned about material things right now, while you need to think more about your path to consciousness. In this case, your material needs will be met. The number 0606 here also tells you that if you let go of everything and know yourself and love others, all paths will be smooth for you. This is where your bad habits go away. We suggest that you practice Focus Meditations more than any other meditation.</p>`;
             }
-            let sixthMessage = null;
+
             if (sixResault >= '3') {
                 document.getElementById('sexTh').innerHTML = `<p>We believe that man is stuck in this life cycle, and comes back to life again and again. So the question is, can a person remember his past life? The fact is that if you move towards spiritual awakening, the domination of the material world and the material body over you will become less and less. And far more and more your true power grows. So in simple terms, the dreams you have are not ordinary and are somehow tied to your past. The past that may tell the future. So focus more on your spiritual practice so you can get the message clearer. Meditating and listening to pleasant music before going to bed will help you a lot. I suggest that you listen to the solfeggio 741 for more than an hour during the day</p>`;
             }
-            let seventhMessage = null;
+
             if (sevenResaulet === '-2') {
                 document.getElementById('numberseven').innerHTML = `<p>We suggest that you wake up early in the morning (Brahma Muhurta time) and do a few minutes of meditation before starting your daily routine. This is the best time to meditate, learn and understand. I suggest you to play solfeggio 852 durring Brahma Muhurta</p>`;
             } else if (sevenResaulet === '2') {
                 document.getElementById('numberseven').innerHTML = `<p>We realized that you are very interested in the material world, and we also realized that you are more awake than you think. Now is the time to make a change in your life. Do not forget to wake up early in the morning and focus more on the Sacral Chakra while meditating.</p>`;
             }
-            let tenMessage = null;
+
             if (tenResault <= '0') {
                 document.getElementById('numberEight').innerHTML = `<p>Another thing you are weak at is controlling your mind. So you need to do more meditation on mind control and focus. focused attention meditation(FAM) may be a good starting point for you.</p>`;
             }
-            let twelvMessage = null;
+    
             if (twelResault >= '0') {
                 document.getElementById('numberNine').innerHTML = `<p>We also suggest that you do Courage Meditation for 3 weeks, every day because it trains the mind to let go of fear and gives you the power to pursue things that are important to you.</p>`;
             }
-            let sixtheenMessage = null;
+      
             if (sixtheenResault === '-1') {
                 document.getElementById('numberTen').innerHTML = `<p>We noticed that you spend little time in nature. This means that you have less chance of connecting to the earth. The natural environment is rich in prana, or the primordial life force that sustains all life. And this life force is one of our most important weapons for spiritual awakening. So you should go to nature more than once a week. Do not forget: just walking is not enough. Sit on the floor. Caress the flowers and hold the soil in your fist.</p>`;
+            }
+            if (sleppResault === '0' && DurSleppResault === '-2') {
+                document.getElementById('forSleep').innerHTML = `<p> Kandlus noticed that you have poor sleep quality or sleep disorders. It could be a sign of insomnia or anxiety. I suggest that you try the Kandlus Sleep Quality Test. So that I can give you more tips. <a href="./astrology/SleepQualityTest.html">Click here </a> </p>`
+            } else if (sleppResault === '0' && DurSleppResault === '1') {
+                document.getElementById('forSleep').innerHTML = `<p> Kandlus noticed that you have sleep disorders. It could be a sign of anxiety. I suggest that you listen to solfeggio 432HZ at least 1 hour a day, You can also try the Kandlus Sleep Quality Test. So that I can give you more tips. <a href="./astrology/SleepQualityTest.html"> Click here </a> </p>`
+            } else if (sleppResault === '-3') {
+                document.getElementById('forSleep').innerHTML = `<p> Kandlus noticed that you sleep more than 8 hours a day, it could be a sign of an underlying health issue. Potential consequences of excessive sleep include: Increased risk of health problems, poor mood, sleep apnea and difficulty concentrating. I suggest that you try the Kandlus Sleep Quality Test. So that I can give you more tips. <a href="./astrology/SleepQualityTest.html">Click here </a>   </p>`
             }
             
             letType.style.display = 'block';
@@ -261,6 +284,10 @@ function nexPage(one) {
     const formFortheen = document.getElementById('fortheenForm');
     const formFiftheen = document.getElementById('fiftheenForm');
     const formSixteen = document.getElementById('sixteenForm');
+    const formSeventh = document.getElementById('sevtheenForm');
+    const formEighteen = document.getElementById('EighteenForm');
+
+console.log(one);
 
     if (one === 'first') {
         formOne.style.display = 'none';
@@ -307,6 +334,12 @@ function nexPage(one) {
     } else if (one === 'fifteen') {
         formFiftheen.style.display = 'none';
         formSixteen.style.display = 'block';
+    } else if (one === 'sixTheen') {
+        formSixteen.style.display = 'none';
+        formSeventh.style.display = 'block';
+    } else if (one === 'seventeen') {
+        formSeventh.style.display = 'none';
+        formEighteen.style.display = 'block';
     } 
   
    
@@ -328,6 +361,8 @@ function nexPage(one) {
     const formFortheen = document.getElementById('fortheenForm');
     const formFiftheen = document.getElementById('fiftheenForm');
     const formSixteen = document.getElementById('sixteenForm');
+    const formSeventh = document.getElementById('sevtheenForm');
+    const formEighteen = document.getElementById('EighteenForm');
 
   
     if (back === 'no2') {
@@ -377,6 +412,12 @@ function nexPage(one) {
     } else if (back === 'no17') {
         formFiftheen.style.display = 'block';
         formSixteen.style.display = 'none';
+    } else if (back === 'no18') {
+        formSixteen.style.display = 'block';
+        formSeventh.style.display = 'none';
+    } else if (back === 'no19') {
+        formEighteen.style.display = 'none';
+        formSeventh.style.display = 'block';
     } 
   }
   

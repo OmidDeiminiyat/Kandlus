@@ -4081,6 +4081,12 @@ spinner6
 #KundaliniForm #sixteenForm {
   display: none;
 }
+#KundaliniForm #sevtheenForm {
+  display: none;
+}
+#KundaliniForm #EighteenForm {
+  display: none;
+}
 
 .pdf {
   display: flex;
@@ -4123,4 +4129,4 @@ spinner6
 .pdf h3, .pdf #navigation hgroup h5, #navigation hgroup .pdf h5, .pdf #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption .pdf p {
   text-align: center;
   padding-bottom: 30px;
-}/*# sourceMappingURL=myStyle.css.map */
+}
