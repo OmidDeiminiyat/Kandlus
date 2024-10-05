@@ -1,3 +1,4 @@
+@import './../helper/animation';
 $color_white: #fff;
 $color_prime: #5ad67d;
 $color_grey: #e2e2e2;
@@ -194,3 +195,85 @@ $color_grey_dark: #a2a2a2;
     }
   }
 }
+#YogaCards {
+  p{
+    width: 60%;
+    margin-left: 20%;
+  }
+  .blog-card {
+    &:nth-child(1){
+      animation: YogaCards 4s ease-in-out;
+    } 
+    &:nth-child(2){
+      animation: YogaCards 5s ease-in-out;
+    }
+    &:nth-child(3){
+      animation: YogaCards 6s ease-in-out;
+    }
+    &:nth-child(4){
+      animation: YogaCards 7s ease-in-out;
+    }
+    &:nth-child(5){
+      animation: YogaCards 8s ease-in-out;
+    }
+    &:nth-child(6){
+      animation: YogaCards 9s ease-in-out;
+    }
+    &:nth-child(7){
+      animation: YogaCards 10s ease-in-out;
+    }
+    opacity: 1;
+  }
+  .meta {
+    @media(max-width:600px) {
+      display: none;
+    }
+  }
+}
+#paraf {
+  width: 70%;
+  margin-left: 15%;
+  @media(max-width:600px){
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+  @keyframes YogaCards {
+    0% { opacity: 0; }
+    70% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  .section {
+    display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  box-shadow: 0 3px 7px -1px rgba(#000, .1);
+  margin-bottom: 1.6%;
+  background: $color_white;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+  width: 60%;
+  margin-left: 20%;
+  a {
+    color: inherit;
+    &:hover {
+      color: $color_prime;
+    }
+  }
+    padding: 9px 0 21px 0;
+    h4{
+      width: 90%;
+      margin-left: 5%;
+    } p{
+      width: 90%;
+      margin-left: 5%;
+    }
+    @media(max-width:600px){
+      width: 90%;
+      margin-left: 5%;
+    }
+  }
