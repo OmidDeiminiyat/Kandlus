@@ -188,7 +188,7 @@ function ViewFunc(Datas, textor, Signs) {
                           <h4>Why ${item.name} works for ${Signs}:</h4>
                           <p>${item.GoodFor}</p>
                           <p class="read-more">
-                              <a href="#">Watch video</a>
+                              <a href="Yogas.html?id=${item.name}">Start ${item.name} now </a>
                           </p>
                       </div>`;
   });
@@ -222,7 +222,11 @@ function ViewFunc(Datas, textor, Signs) {
       }
     });
   });
-}
+  }
+  
+
+
+
 
 
 

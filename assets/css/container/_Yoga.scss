@@ -201,6 +201,7 @@ $color_grey_dark: #a2a2a2;
     margin-left: 20%;
   }
   .blog-card {
+    opacity: 1;
     &:nth-child(1){
       animation: YogaCards 4s ease-in-out;
     } 
@@ -213,16 +214,15 @@ $color_grey_dark: #a2a2a2;
     &:nth-child(4){
       animation: YogaCards 7s ease-in-out;
     }
-    &:nth-child(5){
+    &:nth-child(n+4){
       animation: YogaCards 8s ease-in-out;
     }
-    &:nth-child(6){
-      animation: YogaCards 9s ease-in-out;
+    .description {
+      a{
+        cursor: pointer;
+      }
     }
-    &:nth-child(7){
-      animation: YogaCards 10s ease-in-out;
-    }
-    opacity: 1;
+   
   }
   .meta {
     @media(max-width:600px) {
@@ -260,6 +260,7 @@ $color_grey_dark: #a2a2a2;
   margin-left: 20%;
   a {
     color: inherit;
+    cursor: pointer;
     &:hover {
       color: $color_prime;
     }
