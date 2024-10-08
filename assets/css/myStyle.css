@@ -4404,14 +4404,11 @@ spinner6
 #YogaCards .blog-card:nth-child(4) {
   animation: YogaCards 7s ease-in-out;
 }
-#YogaCards .blog-card:nth-child(5) {
+#YogaCards .blog-card:nth-child(n+4) {
   animation: YogaCards 8s ease-in-out;
 }
-#YogaCards .blog-card:nth-child(6) {
-  animation: YogaCards 9s ease-in-out;
-}
-#YogaCards .blog-card:nth-child(7) {
-  animation: YogaCards 10s ease-in-out;
+#YogaCards .blog-card .description a {
+  cursor: pointer;
 }
 @media (max-width: 600px) {
   #YogaCards .meta {
@@ -4459,6 +4456,7 @@ spinner6
 }
 .section a {
   color: inherit;
+  cursor: pointer;
 }
 .section a:hover {
   color: #5ad67d;
@@ -4476,4 +4474,67 @@ spinner6
     width: 90%;
     margin-left: 5%;
   }
-}/*# sourceMappingURL=myStyle.css.map */
+}
+
+.cta-background {
+  background-size: cover;
+  background-position: center center;
+  bottom: 0;
+  filter: blur(50px);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.bioCard {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.cta {
+  background: #333;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+}
+.cta:hover img {
+  top: -10%;
+  filter: brightness(70%);
+}
+.cta:hover .text {
+  bottom: 0;
+}
+.cta img {
+  bottom: 0;
+  filter: brightness(100%);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.5s ease-in-out;
+  width: 115%;
+}
+.cta .text {
+  bottom: -40%;
+  padding: 15px;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.cta .text h2 {
+  color: #fff;
+  display: inline-block;
+  font-weight: 300;
+  margin-bottom: 5px;
+  position: relative;
+}
+.cta .text p {
+  color: #fff;
+  font-weight: 300;
+}

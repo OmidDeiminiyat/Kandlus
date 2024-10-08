@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Understanding Your Ascendant: The Key to Your Rising Sign in Astrology</title>
+    <meta name="description" content="Unlock the secrets of your Ascendant, or Rising Sign, in astrology. Learn how it influences your personality, appearance, and first impressions, and discover its impact on your astrological chart and life path." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/Kandlus.png">
+    <!-- NewsBoard CSS  -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/widgets.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/myStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144883160-1"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body id="bodys">
+    <div class="scroll-progress bg-dark"></div>
+    <!-- Start Preloader -->
+    <!--Offcanvas sidebar-->
+    <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
+        <button class="off-canvas-close"><i class="ti-close"></i></button>
+        <div class="sidebar-inner">
+            <!--Latest-->
+            <div class="sidebar-widget widget-latest-posts mb-30">
+                <div class="widget-header position-relative mb-30">
+                    <h5 class="widget-title mt-5 mb-30" id="username" > To use this service, you must have an account and choose a plan </h5>
+                    <div class="widget_nav_menu">
+                        <ul id="readPrice" class="menu">
+                            <li class="cat-item"><a href="../price.html">Read more</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--Categories-->
+            <div id="profiles" class="sidebar-widget widget_categories mb-50" style="display: none;">
+                <div class="widget-header position-relative mb-20">
+                </div>
+                
+                <div class="widget_nav_menu">
+                    <ul class="menu">
+                        <li class="cat-item"><a>Your plan is: <span id="Wplan">Free</span></a></li>
+                        <li class="cat-item"><a id="currentP">Current Point: 00</a></li>
+                        <li class="cat-item"><a onclick="LogOut()" style="cursor: pointer;">Log out</a></li>
+                        <li class="cat-item"><a></a></li>
+
+                        <li class="cat-item cat-item-2 menu-item-has-children">
+                            <a>Library</a>
+                            <ul class="sub-menu">
+                                <li class="cat-item"><a href="../videos/users.html">Videos</a></li>
+                                <li class="cat-item"><a href="../blog/usersArticle.html">Articles</a></li>
+                            </ul>
+                        </li>
+                        <li id="subscriptionPlan" class="cat-item cat-item-2 menu-item-has-children">
+                            <a style="cursor: pointer;">Cancel subscription</a>
+                            <ul class="sub-menu">
+                                <p>You are about to cancel the subscription, Are you sure? </p>
+                                <li style="cursor: pointer;" class="cat-item"><a onclick="cancelSub()" >Yes, cancel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><br>
+               
+            </div>
+            <!--Ads-->
+        </div>
+    </aside>
+    <!-- Start Header -->
+    <div class="top-bar pt-15 pb-5 d-none d-lg-block">
+        <div class="container">
+            <ul class="list-inline font-small text-right">
+                <li id="checkLogin" class="list-inline-item mr-15"><a href="../login.html"><i class="ti-user font-x-small mr-5"></i>Login / Register</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Start Header -->
+    <header class="main-header header-style-1 font-heading header-sticky">
+        <div class="mobile_menu d-lg-none d-block"></div>
+        <div class="container">
+            <div class="main-nav d-none d-lg-block float-left">
+                <nav class="text-uppercase">
+                    <!--Desktop menu-->
+                    <ul class="main-menu d-none d-lg-inline">
+                        <li class="menu-item-has-children">
+                            <a href="#">Main categories</a>
+                            <ul class="sub-menu text-muted font-small">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../blog/articles.html">Articles</a></li>
+                                <li><a href="astrology_service.html">Astrology</a></li>
+                                <li><a href="../Podcast/Solfeggio_frequency.html">Solfeggio</a></li>
+                                <li><a href="../Videos/video.html">Videos</a></li>
+                            </ul>
+                        </li>
+                        <li class="mega-menu-item">
+                            <a href="#">Layouts</a>
+                            <div class="sub-mega-menu sub-menu-list text-muted font-small">
+                                <div class="container">
+                                    <div class="row bg-white">
+                                        <ul class="col-md-2">
+                                            <li><strong>Sprituality</strong></li>
+                                            <li><a href="../blog/QuizEgo.php?id=Ego-Vs-Yourself">Ego and Your True Self</a></li>
+                                            <li><a href="../blog/SinglePageEn.php?id=The-Path-of-Enlightenment">Spirituality levels</a></li>
+                                            <li><a href="../Angel-numbers/Angel-numbers.php">Angel Numbers</a></li>
+                                        </ul>
+                                        <ul class="col-md-2">
+                                            <li><strong>Astrology</strong></li>
+                                            <li><a href="Horoscope.html">Horoscope</a></li>
+                                            <li><a href="Numerology.html">Numerology</a></li>
+                                            <li><a href="Biorythm.html">Biorythm</a></li>
+                                            <li><a href="ascendant.html">Ascendant</a></li>
+                                            <li><a href="list-of-Yoga.html">List of Yoga</a></li>
+                                        </ul>
+                                        <ul class="col-md-2">
+                                            <li><strong>Sound library</strong></li>
+                                            <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
+                                            <li><a href="../Podcast/Solfeggio_frequency.html">Mantra</a></li>
+                                        </ul>
+                                        <ul class="col-md-2">
+                                            <li><strong>Most searched tags</strong></li>
+                                            <li><a href="../blog/tags.html?id=Ancient Civilization">Ancient Civilization</a></li>
+                                            <li><a href="../blog/tags.html?id=Ancient aliens">Ancient aliens</a></li>
+                                            <li><a href="../blog/tags.html?id=Decoding">Decoding</a></li>
+                                            <li><a href="../blog/tags.html?id=Wisdom">Wisdom</a></li>
+                                        </ul>
+                                        <ul class="col-md-2">
+                                            <li><strong>Pages</strong></li>
+                                            <li><a href="../privacyPolicy.html">Privacy police</a></li>
+                                            <li><a href="../CookiePolicy.html">Cookie policy</a></li>
+                                            <li><a href="../TermsOfService.html">Terms</a></li>
+                                            <li><a href="../contact.html">Contact us</a></li>
+                                        </ul>
+                                        <div class="col-md-2 text-center">
+                                            <a target="_blank" href="../index.html"><img src="../assets/images/Kandlus.png" alt="Kandlus, Kandlus network, kandlus services, kandlus astrology, Kandlus articles"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                    <!--Mobile menu-->
+                    <ul id="mobile-menu" class="d-block d-lg-none">
+                        <li>
+                            <a href="../login.html">Log in / Sign up</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Main categories</a>
+                            <ul class="sub-menu text-muted font-small">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../articles.html">Articles</a></li>
+                                <li><a href="astrology_service.html">Astrology</a></li>
+                                <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
+                                <li><a href="../Videos/video.html">Videos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../index.html">Pages</a>
+                            <ul class="sub-menu text-muted font-small">
+                                <li><a href="../privacyPolicy.html">Privacy police</a></li>
+                                <li><a href="../CookiePolicy.html">Cookie policy</a></li>
+                                <li><a href="../TermsOfService.html">Terms</a></li>
+                                <li><a href="../contact.html">Contact us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <h1 class="logo text-uppercase d-md-inline d-none"><a href="../index.html">Kandlus</a></h1>
+            <h1 class="logo logo-mobile text-uppercase d-inline d-md-none"><a href="../index.html">Kandlus</a></h1>
+            <div class="float-right header-tools">
+                <ul class="header-social-network d-inline-block list-inline mr-10">
+                    <li class="list-inline-item"><a class="social-icon facebook-icon text-xs-center color-grey" target="_blank" href="https://www.facebook.com/Kandlus1"><i class="ti-facebook"></i></a></li>
+                    <li class="list-inline-item"><a class="social-icon twitter-icon text-xs-center color-grey" target="_blank" href="https://www.youtube.com/c/Kandlus"><i class="ti-youtube"></i></a></li>
+                </ul>
+                
+                <div class="off-canvas-toggle-cover d-inline-block">
+                    <div class="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle">
+                        <span></span>
+                        <p class="font-small d-none d-lg-inline font-weight-bold offcanvas-more-text">MORE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="divider-2"></div>
+        </div>
+    </header>
+
+    <main id="forSearchBar" class="mt-30">
+        <div class="container single-content">
+            <div class="row vertical-divider mb-50">
+                <div class="col-lg-12 col-md-12">
+                    <form id="zodiacForm" onsubmit="submitForm(event)"  >
+                        <h3> Please fill out the form below </h3>
+                        <section id="firstForm">
+                        <div>
+                            <label for="name"> Boy birth name:</label>
+                            <input name="name" type="text" id="bName" required onblur="keepFocus()">
+                        </div>
+                        <div class="form-group">
+                            <label for="date"> Boy birth date:</label>
+                            <input name="date" type="date" id="dob" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time"> Boy birth time:</label>
+                            <input name="time" type="time" id="bTime" required class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="countries"> Boy birth Country:</label>
+                            <select id="bCountry" name="countries">
+                                <option value="34.5553,69.2075">Afghanistan</option>
+                                <option value="41.3275,19.8189">Albania</option>
+                                <option value="36.7372,3.0868">Algeria</option>
+                                <option value="42.5063,1.5218">Andorra</option>
+                                <option value="-8.7832,-55.4915">Angola</option>
+                                <option value="17.1175,-61.8456">Antigua and Barbuda</option>
+                                <option value="-34.6037,-58.3816">Argentina</option>
+                                <option value="40.1792,44.4991">Armenia</option>
+                                <option value="-35.282,149.1287">Australia</option>
+                                <option value="48.2082,16.3738">Austria</option>
+                                <option value="40.4093,49.8671">Azerbaijan</option>
+                                <option value="25.0343,-77.3963">Bahamas</option>
+                                <option value="26.0667,50.5577">Bahrain</option>
+                                <option value="23.685,90.3563">Bangladesh</option>
+                                <option value="13.1939,-59.5432">Barbados</option>
+                                <option value="53.9045,27.5615">Belarus</option>
+                                <option value="50.8503,4.3517">Belgium</option>
+                                <option value="17.1899,-88.4976">Belize</option>
+                                <option value="9.3077,2.3158">Benin</option>
+                                <option value="32.3078,-64.7505">Bermuda</option>
+                                <option value="27.5142,90.4336">Bhutan</option>
+                                <option value="-16.5000,-68.1500">Bolivia</option>
+                                <option value="43.8563,18.4131">Bosnia and Herzegovina</option>
+                                <option value="-24.6583,25.9080">Botswana</option>
+                                <option value="-15.7939,-47.8828">Brazil</option>
+                                <option value="18.4207,-64.6399">British Virgin Islands</option>
+                                <option value="4.6110,-74.0817">Brunei</option>
+                                <option value="42.6977,23.3219">Bulgaria</option>
+                                <option value="12.3714,-1.5197">Burkina Faso</option>
+                                <option value="-3.3731,29.9189">Burundi</option>
+                                <option value="-3.3704,-64.7146">Cabo Verde</option>
+                                <option value="11.5500,104.9167">Cambodia</option>
+                                <option value="3.8480,11.5021">Cameroon</option>
+                                <option value="45.4215,-75.6972">Canada</option>
+                                <option value="-11.2027,17.8739">Central African Republic</option>
+                                <option value="12.1206,-14.9799">Chad</option>
+                                <option value="-33.4489,-70.6693">Chile</option>
+                                <option value="39.9042,116.4074">China</option>
+                                <option value="4.6097,-74.0817">Colombia</option>
+                                <option value="-11.6558,43.3333">Comoros</option>
+                                <option value="-4.3224,15.3070">Congo</option>
+                                <option value="9.7489,-83.7534">Costa Rica</option>
+                                <option value="45.2671,19.8335">Croatia</option>
+                                <option value="23.1333,-82.3830">Cuba</option>
+                                <option value="35.1667,33.3667">Cyprus</option>
+                                <option value="50.0755,14.4378">Czech Republic</option>
+                                <option value="55.6761,12.5683">Denmark</option>
+                                <option value="11.8251,42.5903">Djibouti</option>
+                                <option value="15.3126,-61.3794">Dominica</option>
+                                <option value="18.4861,-69.9312">Dominican Republic</option>
+                                <option value="-0.1807,-78.4678">Ecuador</option>
+                                <option value="30.0444,31.2357">Egypt</option>
+                                <option value="13.7367,100.5231">El Salvador</option>
+                                <option value="1.3733,32.2903">Equatorial Guinea</option>
+                                <option value="15.1794,39.7823">Eritrea</option>
+                                <option value="59.4370,24.7535">Estonia</option>
+                                <option value="9.1450,40.4897">Ethiopia</option>
+                                <option value="62.3908,17.3069">Faroe Islands</option>
+                                <option value="-17.7134,178.0650">Fiji</option>
+                                <option value="60.1699,24.9384">Finland</option>
+                                <option value="48.8566,2.3522">France</option>
+                                <option value="-0.8037,11.6094">Gabon</option>
+                                <option value="13.4443,144.7937">Gambia</option>
+                                <option value="41.7151,44.8271">Georgia</option>
+                                <option value="52.5200,13.4050">Germany</option>
+                                <option value="5.6037,-0.1870">Ghana</option>
+                                <option value="37.9838,23.7275">Greece</option>
+                                <option value="64.1830,-51.7216">Greenland</option>
+                                <option value="12.1165,-61.6790">Grenada</option>
+                                <option value="15.7835,-90.2308">Guatemala</option>
+                                <option value="11.5512,-85.6981">Guinea</option>
+                                <option value="9.9456,-9.6966">Guinea-Bissau</option>
+                                <option value="4.8604,-58.9302">Guyana</option>
+                                <option value="18.9712,-72.2852">Haiti</option>
+                                <option value="14.6349,-90.5069">Honduras</option>
+                                <option value="47.1625,19.5033">Hungary</option>
+                                <option value="64.1355,-21.8954">Iceland</option>
+                                <option value="28.6139,77.2090">India</option>
+                                <option value="-6.2088,106.8456">Indonesia</option>
+                                <option value="35.6895,51.3890">Iran</option>
+                                <option value="33.3152,44.3661">Iraq</option>
+                                <option value="53.3498,-6.2603">Ireland</option>
+                                <option value="31.7683,35.2137">Israel</option>
+                                <option value="41.9028,12.4964">Italy</option>
+                                <option value="18.1096,-77.2975">Jamaica</option>
+                                <option value="36.2048,138.2529">Japan</option>
+                                <option value="31.9454,35.9284">Jordan</option>
+                                <option value="51.1694,71.4491">Kazakhstan</option>
+                                <option value="-1.2864,36.8172">Kenya</option>
+                                <option value="-29.3456,27.4240">Lesotho</option>
+                                <option value="6.4281,-9.4295">Liberia</option>
+                                <option value="32.7940,13.0878">Libya</option>
+                                <option value="47.1625,19.5033">Hungary</option>
+                                <option value="64.1355,-21.8954">Iceland</option>
+                                <option value="28.6139,77.2090">India</option>
+                                <option value="-6.2088,106.8456">Indonesia</option>
+                                <option value="35.6895,51.3890">Iran</option>
+                                <option value="33.3152,44.3661">Iraq</option>
+                                <option value="53.3498,-6.2603">Ireland</option>
+                                <option value="31.7683,35.2137">Israel</option>
+                                <option value="41.9028,12.4964">Italy</option>
+                                <option value="18.1096,-77.2975">Jamaica</option>
+                                <option value="36.2048,138.2529">Japan</option>
+                                <option value="31.9454,35.9284">Jordan</option>
+                                <option value="51.1694,71.4491">Kazakhstan</option>
+                                <option value="-1.2864,36.8172">Kenya</option>
+                                <option value="42.3601,-71.0589">USA</option>
+                                <option value="35.9078,127.7669">South Korea</option>
+                                <option value="37.5665,126.9780">North Korea</option>
+                                <option value="25.0343,-77.3963">Bahamas</option>
+                                <option value="39.9334,32.8597">Turkey</option>
+                                <option value="41.9028,12.4964">Italy</option>
+                                <option value="52.3676,4.9041">Netherlands</option>
+                                <option value="40.7128,-74.0060">USA</option>
+                                <option value="55.7558,37.6173">Russia</option>
+                                <option value="35.6895,139.6917">Japan</option>
+                                <option value="48.8566,2.3522">France</option>
+                                <option value="51.5074,-0.1278">United Kingdom</option>
+                                <option value="35.9078,127.7669">South Korea</option>
+                                <option value="40.7128,-74.0060">New York</option>
+                                <option value="34.0522,-118.2437">Los Angeles</option>
+                            </select> 
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timezone">Boy Time Zone:</label>
+                        <select id="bZone" name="timezone">
+                            <option value="-11">(UTC-11:00) Midway Island</option>
+                            <option value="-11">(UTC-11:00) Pago Pago</option>
+                            <option value="-10">(UTC-10:00) Hawaii</option>
+                            <option value="-9">(UTC-09:00) Alaska</option>
+                            <option value="-8">(UTC-08:00) Pacific Time (US & Canada)</option>
+                            <option value="-8">(UTC-08:00) Tijuana</option>
+                            <option value="-7">(UTC-07:00) Mountain Time (US & Canada)</option>
+                            <option value="-7">(UTC-07:00) Chihuahua</option>
+                            <option value="-7">(UTC-07:00) Mazatlan</option>
+                            <option value="-7">(UTC-07:00) Arizona</option>
+                            <option value="-6">(UTC-06:00) Central Time (US & Canada)</option>
+                            <option value="-6">(UTC-06:00) Saskatchewan</option>
+                            <option value="-6">(UTC-06:00) Mexico City</option>
+                            <option value="-6">(UTC-06:00) Monterrey</option>
+                            <option value="-6">(UTC-06:00) Central America</option>
+                            <option value="-5">(UTC-05:00) Eastern Time (US & Canada)</option>
+                            <option value="-5">(UTC-05:00) Indiana (East)</option>
+                            <option value="-5">(UTC-05:00) Bogota</option>
+                            <option value="-5">(UTC-05:00) Lima</option>
+                            <option value="-4">(UTC-04:00) Atlantic Time (Canada)</option>
+                            <option value="-4">(UTC-04:30) Caracas</option>
+                            <option value="-4">(UTC-04:00) La Paz</option>
+                            <option value="-4">(UTC-04:00) Santiago</option>
+                            <option value="-3">(UTC-03:30) Newfoundland</option>
+                            <option value="-3">(UTC-03:00) Brasilia</option>
+                            <option value="-3">(UTC-03:00) Buenos Aires</option>
+                            <option value="-3">(UTC-03:00) Greenland</option>
+                            <option value="-3">(UTC-03:00) Montevideo</option>
+                            <option value="-2">(UTC-02:00) Mid-Atlantic</option>
+                            <option value="-1">(UTC-01:00) Azores</option>
+                            <option value="-1">(UTC-01:00) Cape Verde Is.</option>
+                            <option value="0">(UTC+00:00) Dublin</option>
+                            <option value="0">(UTC+00:00) Lisbon</option>
+                            <option value="0">(UTC+00:00) London</option>
+                            <option value="0">(UTC+00:00) Monrovia</option>
+                            <option value="0">(UTC+00:00) Reykjavik</option>
+                            <option value="0">(UTC+00:00) Casablanca</option>
+                            <option value="+1">(UTC+01:00) Belgrade</option>
+                            <option value="+1">(UTC+01:00) Bratislava</option>
+                            <option value="+1">(UTC+01:00) Budapest</option>
+                            <option value="+1">(UTC+01:00) Ljubljana</option>
+                            <option value="+1">(UTC+01:00) Prague</option>
+                            <option value="+1">(UTC+01:00) Sarajevo</option>
+                            <option value="+1">(UTC+01:00) Skopje</option>
+                            <option value="+1">(UTC+01:00) Warsaw</option>
+                            <option value="+1">(UTC+01:00) Zagreb</option>
+                            <option value="+1">(UTC+01:00) Brussels</option>
+                            <option value="+1">(UTC+01:00) Copenhagen</option>
+                            <option value="+1">(UTC+01:00) Madrid</option>
+                            <option value="+1">(UTC+01:00) Paris</option>
+                            <option value="+1">(UTC+01:00) Amsterdam</option>
+                            <option value="+1">(UTC+01:00) Berlin</option>
+                            <option value="+1">(UTC+01:00) Rome</option>
+                            <option value="+1">(UTC+01:00) Stockholm</option>
+                            <option value="+1">(UTC+01:00) Vienna</option>
+                            <option value="+1">(UTC+01:00) West Central Africa</option>
+                            <option value="+2">(UTC+02:00) Bucharest</option>
+                            <option value="+2">(UTC+02:00) Cairo</option>
+                            <option value="+2">(UTC+02:00) Helsinki</option>
+                            <option value="+2">(UTC+02:00) Kyiv</option>
+                            <option value="+2">(UTC+02:00) Riga</option>
+                            <option value="+2">(UTC+02:00) Sofia</option>
+                            <option value="+2">(UTC+02:00) Tallinn</option>
+                            <option value="+2">(UTC+02:00) Vilnius</option>
+                            <option value="+2">(UTC+02:00) Athens</option>
+                            <option value="+2">(UTC+02:00) Istanbul</option>
+                            <option value="+2">(UTC+02:00) Jerusalem</option>
+                            <option value="+2">(UTC+02:00) Amman</option>
+                            <option value="+2">(UTC+02:00) Beirut</option>
+                            <option value="+2">(UTC+02:00) Windhoek</option>
+                            <option value="+2">(UTC+02:00) Harare</option>
+                            <option value="+3">(UTC+03:00) Kuwait</option>
+                            <option value="+3">(UTC+03:00) Riyadh</option>
+                            <option value="+3">(UTC+03:00) Baghdad</option>
+                            <option value="+3">(UTC+03:00) Nairobi</option>
+                            <option value="+3">(UTC+03:00) Tbilisi</option>
+                            <option value="+3">(UTC+03:00) Moscow</option>
+                            <option value="+3">(UTC+03:00) Volgograd</option>
+                            <option value="+3">(UTC+03:30) Tehran</option>
+                            <option value="+4">(UTC+04:00) Abu Dhabi</option>
+                            <option value="+4">(UTC+04:00) Baku</option>
+                            <option value="+4">(UTC+04:00) Yerevan</option>
+                            <option value="+4">(UTC+04:30) Kabul</option>
+                            <option value="+5">(UTC+05:00) Yekaterinburg</option>
+                            <option value="+5">(UTC+05:00) Islamabad</option>
+                            <option value="+5">(UTC+05:00) Tashkent</option>
+                            <option value="+5">(UTC+05:30) Chennai</option>
+                            <option value="+5">(UTC+05:30) Kolkata</option>
+                            <option value="+5">(UTC+05:30) Mumbai</option>
+                            <option value="+5">(UTC+05:30) New Delhi</option>
+                            <option value="+5">(UTC+05:30) Sri Jayawardenepura</option>
+                            <option value="+5">(UTC+05:45) Kathmandu</option>
+                            <option value="+6">(GMT+06:00) Almaty</option>
+                            <option value="+6">(GMT+06:00) Dhaka</option>
+                            <option value="+6">(GMT+06:00) Novosibirsk</option>
+                            <option value="+6">(GMT+06:30) Yangon (Rangoon)</option>
+                            <option value="+7">(GMT+07:00) Bangkok</option>
+                            <option value="+7">(GMT+07:00) Hanoi</option>
+                            <option value="+7">(GMT+07:00) Jakarta</option>
+                            <option value="+7">(GMT+07:00) Krasnoyarsk</option>
+                            <option value="+8">(GMT+08:00) Beijing</option>
+                            <option value="+8">(GMT+08:00) Chongqing</option>
+                            <option value="+8">(GMT+08:00) Hong Kong</option>
+                            <option value="+8">(GMT+08:00) Urumqi</option>
+                            <option value="+8">(GMT+08:00) Kuala Lumpur</option>
+                            <option value="+8">(GMT+08:00) Singapore</option>
+                            <option value="+8">(GMT+08:00) Taipei</option>
+                            <option value="+8">(GMT+08:00) Perth</option>
+                            <option value="+8">(GMT+08:00) Irkutsk</option>
+                            <option value="+8">(GMT+08:00) Ulaan Bataar</option>
+                            <option value="+9">(GMT+09:00) Seoul</option>
+                            <option value="+9">(GMT+09:00) Tokyo</option>
+                            <option value="+9">(GMT+09:00) Yakutsk</option>
+                            <option value="+10">(GMT+09:30) Darwin</option>
+                            <option value="+10">(GMT+09:30) Adelaide</option>
+                            <option value="+10">(GMT+10:00) Sydney</option>
+                            <option value="+10">(GMT+10:00) Brisbane</option>
+                            <option value="+10">(GMT+10:00) Hobart</option>
+                            <option value="+10">(GMT+10:00) Vladivostok</option>
+                            <option value="+10">(GMT+10:00) Guam</option>
+                            <option value="+10">(GMT+10:00) Port Moresby</option>
+                            <option value="+11">(GMT+11:00) Magadan</option>
+                            <option value="+11">(GMT+11:00) New Caledonia</option>
+                            <option value="+12">(GMT+12:00) Fiji</option>
+                            <option value="+12">(GMT+12:00) Kamchatka</option>
+                            <option value="+12">(GMT+12:00) Marshall Is.</option>
+                            <option value="+12">(GMT+12:00) Auckland</option>
+                            <option value="+13">(GMT+13:00) Nuku'alofa</option>
+                        </select>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit"> Submit </button>
+                        </div>
+                        </section>
+                            
+                    </form>
+
+                    <p id="result" ></p>
+
+                    <div class="bioCard">
+                        <div class="cta">
+                           <img src="https://images.pexels.com/photos/705425/pexels-photo-705425.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                           <div class="text">
+                              <h2>The Title</h2>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit accusamus temporibus voluptates exercitationem, ipsa officiis a animi esse explicabo repudiandae in, blanditiis cum quam magni? Voluptates illum earum praesentium veniam.</p>
+                           </div>
+                        </div>
+                     </div>
+                    <section id="YogaCards" style="display: none;">
+                       Wait please ...!
+                    </section>
+                    
+                    <div id="content"></div>
+                 <section class="card">
+                    <div id="MantraCard" class="card-hover">
+                        <div class="card-hover__content">
+                        <h3 class="card-hover__title">
+                            Horoscope <span>Daily, Weekly, Yearly</span> 
+                        </h3>
+                        <p class="card-hover__text">Pick your zodiac sign to know about your future</p>
+                        <a id="listen" href="#" class="card-hover__link">
+                            <span onclick="goHoroscope()">Try now</span>
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>        
+                        </a>
+                        </div>
+                        <div class="card-hover__extra">
+                        <!-- <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4> -->
+                        </div>
+                        <img src="../assets/images/Astrology/cards/Horoscope.jpg" alt="Daily horoscope, weekly horoscope, yearly horoscope">
+                    </div>
+
+                    <div id="SolfegCard" class="card-hover">
+                        <div class="card-hover__content">
+                        <h3 class="card-hover__title">
+                            Biorythm <span>+ Biochart</span>
+                        </h3>
+                        <p class="card-hover__text">Let calculate your birth day and time to know your biorythm circle</p>
+                        <a id="listen-1" href="#" class="card-hover__link">
+                            <span>Try now</span>
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>        
+                        </a>
+                        </div>
+                        <div class="card-hover__extra">
+                        </div>
+                        <img src="../assets/images/Astrology/cards/Biorythm.jpg" alt="biorythm, astrology biorythm">
+                    </div>
+                    <div class="card-hover">
+                        <div class="card-hover__content">
+                        <h3 class="card-hover__title">
+                            Biorythm <span>+ Biochart</span> 
+                        </h3>
+                        <p class="card-hover__text">Let calculate your birth day and time to know your biorythm circle</p>
+                        <a id="listen-2" href="#" class="card-hover__link">
+                            <span onclick="goBiorythm()" >Try now</span>
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>        
+                        </a>
+                        </div>
+                        <div class="card-hover__extra">
+                        <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4>
+                        </div>
+                        <img src="../assets/images/Astrology/cards/Biorythm.jpg" alt="">
+                    </div>
+                    <div class="card-hover">
+                        <div class="card-hover__content">
+                        <h3 class="card-hover__title">
+                            Personal <span>Characteris</span> 
+                        </h3>
+                        <p class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
+                        <a id="listen-3" href="#" class="card-hover__link">
+                            <span onclick="goPersonal()">Try now</span>
+                            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>        
+                        </a>
+                        </div>
+                        <div class="card-hover__extra">
+                        </div>
+                        <img src="../assets/images/Astrology/cards/Personality.jpeg" alt="Personality">
+                    </div>
+                   
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-area">
+            <div class="container">
+                <div class="row pb-30">
+                    <div class="col-12">
+                        <div class="divider-2 mb-30"></div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-md-4 mb-sm-4">
+                        <div class="sidebar-widget widget-latest-posts pr-50">
+                            <h4 class="widget-header text-uppercase font-weight-bold color-black">
+                                <span>Kandlus</span>
+                            </h4>
+                            <div class="textwidget">
+                                <p>
+                                    Are you looking for the realities of this unknown world?
+                                    Or you want to spend a few minutes reading entertaining topics? We are here for you.
+                                </p>
+                                <p><strong class="color-black">Address</strong><br>
+                                    123 STRØGET<br> 
+                                    2300 COPENHAGEN
+                                    DENMARK</p>
+                                <p><strong class="color-black">Contact Us</strong><br>
+                                    Phone: +45 716 28564 <br>
+                                    Email: kandlusnetwork@gmail.com <br>
+                                            Support@kandlus.net    </p>
+                                <ul class="header-social-network d-inline-block list-inline font-small">
+                                    <li class="list-inline-item"><span class="text-uppercase "><strong class="color-black">Follow us:</strong></span></li>
+                                   <li class="list-inline-item"><a class="social-icon facebook-icon text-xs-center" target="_blank" href="https://www.facebook.com/Kandlus1"><i class="ti-facebook"></i></a></li>
+                                        <li class="list-inline-item"><a class="social-icon twitter-icon text-xs-center" target="_blank" href="https://twitter.com/kandelus2"><i class="ti-twitter-alt"></i></a></li>
+                                        <li class="list-inline-item"><a class="social-icon pinterest-icon text-xs-center" target="_blank" href="#"><i class="ti-pinterest"></i></a></li>
+                                        <li class="list-inline-item"><a class="social-icon youtube-icon text-xs-center" target="_blank" href="https://www.youtube.com/c/Kandlus"><i class="ti-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-md-4 mb-sm-4">
+                        <h5 class="mb-20">Top Authors</h5>
+                        <ul class="list-post">
+                             <li class="mb-15">
+                                <div class="d-flex">
+                                    <div class="post-thumb post-thumb-50 d-flex mr-15 border-radius-5 img-hover-scale">
+                                        <a class="color-white" href="#">
+                                            <img class="img-circle" src="../assets/images/Omid.PNG" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-content media-body">
+                                        <h6 class="post-title mb-0 font-weight-bold color-black"><a href="#">Omid</a></h6>
+                                        <p class="mb-0">
+                                            <i class="ti-star font-x-small mr-5"></i>Elite author <br> 320 articles / 67k follow
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-15">Terms and Policy</h5>
+                        <ul class="float-left mr-30 font-small">
+                            <li class="cat-item cat-item-2"><a href="../privacyPolicy.html">Privacy policy</a></li>
+                            <li class="cat-item cat-item-3"><a href="../CookiePolicy.html">Cookie policy</a></li>
+                            <li class="cat-item cat-item-4"><a href="../termsOfService.html">Terms of service</a></li>
+                            <li class="cat-item cat-item-5"><a href="../contact.html">Contact us</a></li>
+                            <li class="cat-item cat-item-5"><a href="../#">About us</a></li>
+                            <li class="cat-item cat-item-5"><a href="../login.php">Log in</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-15">Archive Layouts</h5>
+                        <ul class="float-left mr-30 font-small">
+                            <li class="cat-item cat-item-2"><a href="../blog/category.html?id=All">Default</a></li>
+                            <li class="cat-item cat-item-2"><a href="../blog/category.html?id=Ancient-Civilazation">Ancient Civilazation</a></li>
+                            <li class="cat-item cat-item-3"><a href="../blog/category.html?id=Extraterrestrials-Life">Extraterrestrials Life</a></li>
+                            <li class="cat-item cat-item-4"><a href="../blog/category.html?id=Historical">Historical</a></li>
+                            <li class="cat-item cat-item-5"><a href="../blog/category.html?id=Ancient">Ancient discoveries</a></li>
+                            <li class="cat-item cat-item-6"><a href="../blog/category.html?id=Tourist-Attraction">Tourist Attraction</a></li>
+                            <li class="cat-item cat-item-7"><a href="../blog/category.html?id=Mysterical">Mysterious topics</a></li>
+                            <li class="cat-item cat-item-8"><a href="../blog/category.html?id=top-10">Top 10</a></li>
+                            <li class="cat-item cat-item-9"><a href="../videos/video.html">Videos</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-15">Most Search</h5>
+                        <ul class="float-left mr-30 font-small">
+                            <li class="cat-item cat-item-2"><a href="../blog/Tags.html?id=Leonardo-daVinci">Leonardo daVinci</a></li>
+                            <li class="cat-item cat-item-3"><a href="../blog/Tags.html?id=Ancient-civilization">Ancient civilization</a></li>
+                            <li class="cat-item cat-item-4"><a href="../blog/Tags.html?id=Egyptian-pyramids">Egyptian pyramids</a></li>
+                            <li class="cat-item cat-item-5"><a href="../blog/Tags.html?id=Mysterious">Mysterious</a></li>
+                            <li class="cat-item cat-item-6"><a href="../blog/Tags.html?id=Extraterrestrials">Extraterrestrials Life</a></li>
+                            <li class="cat-item cat-item-7"><a href="../blog/Tags.html?id=Historical">Historical</a></li>
+                            <li class="cat-item cat-item-8"><a href="../blog/Tags.html?id=Hidden-secrets">Hidden secrets</a></li>
+                            <li class="cat-item cat-item-9"><a href="../blog/Tags.html?id=Ufo-sighting">Ufo sighting</a></li>
+                            <li class="cat-item cat-item-10"><a href="../blog/Tags.html?id=Providence-Eye">Providence Eye</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom aera -->
+        <div class="footer-bottom-area text-center text-muted">
+            <div class="container">
+                <div class="footer-border pt-20 pb-20">
+                    <div class="row d-flex mb-15">
+                        <div class="col-12">
+                            <ul class="list-inline font-small text-uppercase">
+                                <li class="list-inline-item"><a href="../blog/category.html?id=Ancient-Civilazation">Ancient Civilazation</a></li>
+                                <li class="list-inline-item"><a href="../blog/category.html?id=Extraterrestrials Life">Extraterrestrials Life</a></li>
+                                <li class="list-inline-item"><a href="../blog/category.html?id=Ancient-discoveries">Ancient discoveries</a></li>
+                                <li class="list-inline-item"><a href="../blog/category.html?id=Mysterious-opics">Mysterious topics</a></li>
+                                <li class="list-inline-item"><a href="../blog/category.html?id=Tourist-Attraction">Tourist Attraction</a></li>
+                                <li class="list-inline-item"><a href="../indexVide.html">Kandlus Videos</a></li>
+                                <li class="list-inline-item"><a href="../blog/Tags.html?id=Historical">Historical</a></li>
+                                <li class="list-inline-item"><a href="../blog/category.html?id=top-0">Top 10</a></li>
+                                <li class="list-inline-item"><a href="../blog/Tags.html?id=Entertainment">Entertainment</a></li>
+                                <li class="list-inline-item"><a href="../blog/Tags.html?id=Horror">Horror</a></li>
+                                <li class="list-inline-item"><a href="../blog/Tags.html?id=Arts">Arts</a></li>
+                                <li class="list-inline-item"><a href="../blog/Tags.html?id=Discovery">Discovery</a></li>
+                                <li class="list-inline-item"><a href="../blog/Tags.html?id=Technology">Technology</a></li>
+                                <li class="list-inline-item"><a href="../blog/Tags.html?id=Food">Food</a></li>
+                                <li class="list-inline-item"><a href="../blog/category.html?id=Tourist-Attraction">Travel</a></li>
+                                <li class="list-inline-item"><a href="../blog/category.html?id=Education">Education</a></li>
+                                <li class="list-inline-item"><a href="../blog/category.html?id=Lifestyle">Lifestyle</a></li>
+                                <li class="list-inline-item"><a href="../blog/category.html?id=True-story">Real Estate</a></li>
+                                <li class="list-inline-item"><a href="../indexVide.html">Video</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-12">
+                            <div class="footer-copy-right">
+                                <p class="font-small text-muted"><span id="getYear">© 2024 </span>  All Rights Reserved - Kandlus </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- End Footer -->
+    <div class="dark-mark"></div>
+    <!-- Vendor JS-->
+    <script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/vendor/popper.min.js"></script>
+    <script src="../assets/js/vendor/bootstrap.min.js"></script>
+    <script src="../assets/js/vendor/jquery.slicknav.js"></script>
+    <script src="../assets/js/vendor/slick.min.js"></script>
+    <script src="../assets/js/vendor/wow.min.js"></script>
+    <script src="../assets/js/vendor/jquery.ticker.js"></script>
+    <script src="../assets/js/vendor/jquery.vticker-min.js"></script>
+    <script src="../assets/js/vendor/jquery.scrollUp.min.js"></script>
+    <!-- <script src="../assets/js/vendor/jquery.nice-select.min.js"></script> -->
+    <script src="../assets/js/vendor/jquery.magnific-popup.js"></script>
+    <script src="../assets/js/vendor/jquery.sticky.js"></script>
+    <script src="../assets/js/vendor/perfect-scrollbar.js"></script>
+    <script src="../assets/js/vendor/waypoints.min.js"></script>
+    <script src="../assets/js/vendor/jquery.theia.sticky.js"></script>
+    <!-- NewsBoard JS -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/MyScript.js"></script>
+   <script src="../assets/js/script.js"></script>
+   <script src="../assets/js/landingNav.js"></script>
+    <script src="../assets/js/planet.js"></script>
+    <script src="../assets/js/cookie.js"></script>
+      <!-- <script type="module" src="../assets/js/checkon.js"></script>   -->
+    <script type="module" src="./assets/js/timeCount.js.js"></script>
+    <script src="../assets/js/astrology/Biorhythm.js"></script>
+</body>
+
+</html>
