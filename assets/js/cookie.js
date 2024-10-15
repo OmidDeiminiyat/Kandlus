@@ -1,5 +1,29 @@
+async function fetchSubscribeData() {
+  try {
+      const response = await fetch('./../../backend/data.php');  // Call the PHP file
+      const data = await response.json();      
+      const filteredData = data.filter(item => item.Code === 'Omid938xd');
+      if (Array.isArray(filteredData)) {
+          filteredData.forEach(item => {
+             console.log('php data:' + item);
+             
+          });
+      } else {
+          dataContainer.innerHTML = '<p>No data found or unexpected data format.</p>';
+      }
+  } catch (error) {
+      console.error('Error fetching subscribe data:', error);
+  }
+}
 
-  // Function to get a cookie by name
+// Fetch the data on page load
+fetchSubscribeData();
+
+
+
+
+ 
+ // Function to get a cookie by name
 function getCookie(Name) {
     const nameEQ = Name + "=";
     const cookiesArray = document.cookie.split(';');
