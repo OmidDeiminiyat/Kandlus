@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase Subscribe Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .data-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .data-item {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Supabase Subscribe Data</h1>
+    <div class="data-container" id="data-container"></div>
+
+    <script>
+        // Fetch data from the PHP script
+        const authToken = 'Omid938xd';
+        if (authToken) {
+        async function fetchSubscribeData() {
+            try {
+                const response = await fetch('backend/data.php');  // Call the PHP file
+                const data = await response.json();
+
+                const dataContainer = document.getElementById('data-container');
+                const filteredData = data.filter(item => item.Code === authToken);
+                if (Array.isArray(filteredData)) {
+                    data.forEach(item => {
+                        const dataItem = document.createElement('div');
+                        dataItem.classList.add('data-item');
+
+                        dataItem.innerHTML = `
+                            <p>Email: ${item.email}</p>
+                            <p>Date Subscribed: ${item.subscribed_date}</p>
+                        `;
+
+                        dataContainer.appendChild(dataItem);
+                    });
+                } else {
+                    dataContainer.innerHTML = '<p>No data found or unexpected data format.</p>';
+                }
+            } catch (error) {
+                console.error('Error fetching subscribe data:', error);
+            }
+        }
+    }
+        // Fetch the data on page load
+        // fetchSubscribeData();
+    </script>
+</body>
+</html>
