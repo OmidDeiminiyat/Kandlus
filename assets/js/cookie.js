@@ -36,7 +36,7 @@ function setCookie(name, value, days) {
 
 async function fetchSubscribeData() {
   try {
-      const response = await fetch('backend/data.php');  // Call the PHP file
+      const response = await fetch('../backend/data.php');  // Call the PHP file
       const data = await response.json();
 
       const dataContainer = document.getElementById('data-container');
