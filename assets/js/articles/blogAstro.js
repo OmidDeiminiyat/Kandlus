@@ -1,26 +1,27 @@
-const firstCategory = 'Decoding';
-fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?categoryOne=eq.${firstCategory}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU' // Replace 'your-api-key' with your actual Supabase API key
-    }
-  })
-  .then(response => response.json())
-  .then(dataAst => {
-     //console.log(NewReciData); // Do something with the fetched data
-    astroRightSide(dataAst)
+async function fetchSubscriptionData() {
+  try {
+      const response = await fetch('../backend/blog.php');  
+      const data = await response.json(); 
+      data.forEach(item => {
+        astroRightSide(data)
+      });
+  } catch (error) {
+      console.error('Error fetching data:', error);
+  }
+}
 
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
+fetchSubscriptionData();
+
 
   function astroRightSide(datarigh){
+    
+    const historyBlogs = datarigh.filter(blog => blog.categoryOne === 'Decoding');
+    historyBlogs.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+
     const liForR = document.getElementById('liForRight');
     liForR.innerHTML = ''
     let insideliForR = `<ul class="list-post">`
-    datarigh.slice(0,3).forEach((elements, index) => {
+    historyBlogs.slice(0,3).forEach((elements, index) => {
         insideliForR += `<li id="liForRight" class="mb-15">
                                         <div class="d-flex">
                                             <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
@@ -43,24 +44,25 @@ fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?categoryOne=eq.${fi
   }
   
 
-  const myCategories = 'Spiritual Awakening';
-  fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/SingleVide?category=eq.${myCategories}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU' // Replace 'your-api-key' with your actual Supabase API key
+  async function fectVideoData() {
+    try {
+        const response = await fetch('../backend/video.php');  
+        const data = await response.json(); 
+        moreBlogs(data)
+
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
-  })
-  .then(response => response.json())
-  .then(byCate => {
-    moreBlogs(byCate)
-  
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
+  }
+  fectVideoData();
+
 
 function moreBlogs(moreData){
+
+  
+  const videoAstrology = moreData.filter(blog => blog.category === 'Spiritual Awakening');
+  videoAstrology.sort((a, b) => new Date(a.zaman) - new Date(b.zaman));
+
     const moreDaras = document.getElementById('moreData');
     moreDaras.innerHTML = ''
     let insideMoreData = `<h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
@@ -68,8 +70,8 @@ function moreBlogs(moreData){
                             </h6>
                             <div class="post-block-list post-module-6 mt-50">`
 
-     moreData.forEach((moreDa, index) => {
-        console.log(moreDa);
+       videoAstrology.forEach((moreDa, index) => {
+
         insideMoreData += `<div class="post-module-6-item d-flex wow fadeIn">
                                     <span class="item-count vertical-align"><i class="ti-write"></i></span>
                                     <div class="alith_post_title_small">

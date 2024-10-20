@@ -1,44 +1,41 @@
 
-fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU' // Replace 'your-api-key' with your actual Supabase API key
-    }
-  })
-  .then(response => response.json())
-  .then(NewReciData => {
-     //console.log(NewReciData); // Do something with the fetched data
+async function fetchSubscriptionData() {
+  try {
+      const response = await fetch('backend/blog.php');  
+      const data = await response.json(); 
+      data.forEach(item => {
+        homeSingle(data)
+        homeThree(data)
+        MobileData(data)
+        
+      });
+  } catch (error) {
+      console.error('Error fetching data:', error);
+  }
+}
 
-    homeSingle(NewReciData)
-    homeThree(NewReciData)
-    MobileData(NewReciData)
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
-  
+fetchSubscriptionData();
 
-  //   data for Home page articles
 function homeSingle(HomeData){
-    //console.log(HomeData);
-    const homeSingleright = document.getElementById('Centers');
+  const sortedArticles = HomeData.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+  const homeSingleright = document.getElementById('Centers');
     homeSingleright.innerHTML=''
-    let singleHome = ` <a href="blog/single.html?id=${HomeData[0].seo}"><figure>
-                    <img src="../assets/images/Articles/height/${HomeData[0].image}"  alt="${HomeData[0].categoryOne}, ${HomeData[0].categoryTwo}, ${HomeData[0].tagOne}, ${HomeData[0].tagTwo}, ${HomeData[0].tagThree}">
-                    <p>${HomeData[0].title}</p>
+    let singleHome = ` <a href="blog/single.html?id=${sortedArticles[0].seo}"><figure>
+                    <img src="../assets/images/Articles/height/${sortedArticles[0].image}"  alt="${sortedArticles[0].categoryOne}, ${sortedArticles[0].categoryTwo}, ${sortedArticles[0].tagOne}, ${sortedArticles[0].tagTwo}, ${sortedArticles[0].tagThree}">
+                    <p>${sortedArticles[0].title}</p>
                 </figure></a>`
       homeSingleright.innerHTML = singleHome;
 }
 
 
-
 function homeThree(HomeandenData){
+  const threeSort = HomeandenData.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
     const rightsideArticles = document.getElementById('rightSides');
     rightsideArticles.innerHTML = ''
 
 let rightSideHome = `<div>`;
-HomeandenData.slice(0,3).forEach((Threeitems, index) => {
+threeSort.slice(0,3).forEach((Threeitems, index) => {
     //console.log(Threeitems.title);
     const limitDescribe = limitTextTo50Words(Threeitems.describtion);
 rightSideHome += `<a href="blog/single.html?id=${Threeitems.seo}"> <figure>
@@ -52,8 +49,6 @@ rightSideHome += `<a href="blog/single.html?id=${Threeitems.seo}"> <figure>
 rightSideHome += `</div>`
 rightsideArticles.innerHTML = rightSideHome;
   }
-
-
 
 
 function limitTextTo50Words(text) {
@@ -70,18 +65,15 @@ function limitTextTo50Words(text) {
 
 
   function MobileData(mobileD) {
+    const MobileSort = mobileD.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
     const MobileArt = document.getElementById('slider');
     MobileArt.innerHTML = ''
 
     let MobileView = `<div class="slides">`
-    mobileD.slice(0, 3).forEach((mobileData, index) => {
+    MobileSort.slice(0, 3).forEach((mobileData, index) => {
         MobileView += `<img src="../assets/images/Articles/height/${mobileData.image}" class="slide" alt="Image 1">`
     })
     MobileView += `</div>`
     MobileArt.innerHTML = MobileView;
 
   }
-
-
-//   <img src="assets/images/Articles/Aquarius-new.png" class="slide" alt="Image 2">
-//             <img src="assets/images/Articles/girl-in-the-woods-2023-11-27-05-13-29-utc.jpg" class="slide" alt="Image 3">

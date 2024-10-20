@@ -15,60 +15,25 @@ function closeSearch() {
     searchBox.style.display = 'none';
 }
 
+async function checkUserLog() {
+  try {
+      const response = await fetch('../backend/users.php');  // Call the PHP file
+      const data = await response.json();
+      newPlan(data)
+      // data.forEach(item => {
+      //     newPlan(data)
 
-/*
- function openLayouts() {
-     const layousBar = document.getElementById('layoutBar');
-     layousBar.style.display = 'flex';
- }
-*/
-/*
-const searchInput = document.getElementById('searchInput');
-const searchResults = document.getElementById('searchResults');
-const data = [  // Replace with your actual data array
-  { name: "Item 1 just fior the test how it works" },
-  { name: "Item 2 with p just fior the test how it works" },
-  { name: "Item 3, just fior the test how it works" },
-];
-
-searchInput.addEventListener('input', (event) => {
-  const searchTerm = event.target.value.toLowerCase();
-  const filteredResults = data.filter(item => item.name.toLowerCase().includes(searchTerm));
-
-  searchResults.innerHTML = ''; // Clear previous results
-  if (filteredResults.length > 0) {
-    // Display search results
-    let resultsHtml = '';
-    filteredResults.forEach(item => {
-      resultsHtml += `<a href=""><p>${item.name}</p></a>`;
-    });
-    searchResults.innerHTML = resultsHtml;
-  } else {
-    searchResults.innerHTML = '<p>No results found.</p>';
+      // });
+             
+  } catch (error) {
+      console.error('Error fetching subscribe data:', error);
   }
-});
-
-
-
-var coll = document.getElementsByClassName("collapsible");
-var layoutsBar = document.getElementById("layoutBar");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = layoutsBar;
-    if (content.style.display === "flex") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "flex";
-    }
-  });
 }
-*/
+checkUserLog()
 
-var sessionName = sessionStorage.getItem('Plan');
 
+function newPlan(PhDatas){
+  var sessionName = sessionStorage.getItem('Plan');
 var Bios = document.getElementById('BioFirst');
 var bioLinks =document.getElementById('listen-2');
 var HoroFir = document.getElementById('HorosForst');
@@ -83,12 +48,14 @@ var TablN = document.getElementById('NumTab');
 var tabLink = document.getElementById('listen-7');
 var Radic = document.getElementById('RadTex');
 var RLink = document.getElementById('listen-8');
-var tarotLink = document.getelementById('listenTarot');
+// var tarotLink = document.getelementById('listenTarot');
 var matchLink = document.getElementById('listenMatch');
 var textDat = document.getElementById('dateText');
 
 
-if (!sessionName || sessionName == '99etB637s') {
+    console.log(PhDatas[2].Basic);
+
+if (!sessionName || sessionName === PhDatas[2].Basic) {
   Bios.innerText =  'This service is available for Standard and Pro plans';
   HoroFir.innerHTML = 'This service is available for Standard and Pro plans'
   assenD.innerHTML = 'This service is available for Standard and Pro plans'
@@ -104,7 +71,7 @@ if (!sessionName || sessionName == '99etB637s') {
   AssLin.style.display = 'block';
 }
 
-if(!sessionName || sessionName == '99etB637s' || sessionName == '663idsmS98pR') {
+if(!sessionName || sessionName === PhDatas[2].Basic || sessionName === PhDatas[1].Standard) {
 Person.innerText = 'This service is available for plan Pro'
 PersonLink.style.display = 'none';
 Yogik.innerText = 'This service is available for plan Pro'
@@ -127,6 +94,10 @@ RLink.style.display = 'block';
 textDat.innerText = 'This service helps you find out if you are compatible with someone you want to marry';
 matchLink.style.display = 'block';
 }
+}
+
+
+
 
 
 
