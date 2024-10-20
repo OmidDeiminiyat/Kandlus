@@ -32,59 +32,86 @@ async function checkUserLog() {
 checkUserLog()
 
 
-function newPlan(PhDatas){
-  var sessionName = sessionStorage.getItem('Plan');
+async function newPlan(PhDatas){
+  const sessionName = sessionStorage.getItem('Plan');
 var Bios = document.getElementById('BioFirst');
 var bioLinks =document.getElementById('listen-2');
 var HoroFir = document.getElementById('HorosForst');
 var HorLink = document.getElementById('listen');
-var Person = document.getElementById('PersonTex');
+var Tartots = document.getElementById('TarotCards');
 var PersonLink =document.getElementById('listen-3');
 var assenD = document.getElementById('assenTex');
 var AssLin = document.getElementById('listen-4');
 var Yogik = document.getElementById('YogaD');
-var yogiLink = document.getElementById('listen-5');
+var yogiLink = document.getElementById('listen5');
+var phisicalText = document.getElementById('phisicalYogaText');
+var phisicaLink = document.getElementById('physicalYogaLin');
 var TablN = document.getElementById('NumTab');
 var tabLink = document.getElementById('listen-7');
 var Radic = document.getElementById('RadTex');
 var RLink = document.getElementById('listen-8');
+var personalLinks = document.getElementById('personNewLink');
+var PersonNewText = document.getElementById('persoTx');
+var numerologyLink = document.getElementById('IdNumerology');
 // var tarotLink = document.getelementById('listenTarot');
 var matchLink = document.getElementById('listenMatch');
 var textDat = document.getElementById('dateText');
 
 
-    console.log(PhDatas[2].Basic);
 
-if (!sessionName || sessionName === PhDatas[2].Basic) {
+    console.log(PhDatas[1].Standard);
+    console.log(sessionName);
+    
+
+    if (!sessionName) {
+      Bios.innerText = 'To use astrology services, you must log in and select one of the plans';
+      HoroFir.innerHTML = 'To use astrology services, you must log in and select one of the plans';
+      assenD.innerHTML = 'To use astrology services, you must log in and select one of the plans';
+      Tartots.innerText = 'To use astrology services, you must log in and select one of the plans';
+      Yogik.innerText = 'To use astrology services, you must log in and select one of the plans';
+      phisicalText.innerText = 'To use astrology services, you must log in and select one of the plans';
+      numerologyLink.innerHTML = 'To use astrology services, you must log in and select one of the plans';
+      TablN.innerText = 'To use astrology services, you must log in and select one of the plans';
+      Radic.innerText = 'To use astrology services, you must log in and select one of the plans';
+      textDat.innerText = 'To use astrology services, you must log in and select one of the plans';
+      PersonNewText.innerText = 'To use astrology services, you must log in and select one of the plans';
+    } else if (sessionName === PhDatas[2].Basic) {
+      Bios.innerText = 'This service is available for plans: Standard and Pro';
+      HoroFir.innerHTML = 'This service is available for plans: Standard and Pro';
+      assenD.innerHTML = 'This service is available for plans: Standard and Pro';
+      Tartots.innerText = 'This service is available for plan: Pro';
+      Yogik.innerText = 'This service is available for plans: Standard and Pro';
+      phisicalText.innerText = 'This service is available for plan: Pro';
+      numerologyLink.innerHTML = 'This service is available for plans: Standard and Pro';
+      TablN.innerText = 'This service is available for plan: Pro';
+      Radic.innerText = 'This service is available for plan: Pro';
+      textDat.innerText = 'This service is available for plan: Pro';
+      PersonNewText.innerText = 'This service is available for plan: Pro';
+    }
+    
+    else if (sessionName === PhDatas[2].Basic) {
   Bios.innerText =  'This service is available for Standard and Pro plans';
-  HoroFir.innerHTML = 'This service is available for Standard and Pro plans'
-  assenD.innerHTML = 'This service is available for Standard and Pro plans'
-  bioLinks.style.display = 'none';
-  HorLink.style.display = 'none';
-  AssLin.style.display = 'none';
-} else {
+  HoroFir.innerHTML = 'This service is available for Standard and Pro plans';
+  assenD.innerHTML = 'This service is available for Standard and Pro plans';
+} else if(sessionName != PhDatas[2].Basic) {
   Bios.innerHTML = 'Let calculate your birth day and time to know your biorythm circle';
   bioLinks.style.display = 'block';
   HoroFir.innerHTML = 'Daily, Weekly, Monthly Horoscopes. Annual Forecasts, Transits, Progressions, Relationship, Compatibility and more';
   HorLink.style.display = 'block';
   assenD.innerHTML = 'Know your Personality, Appearance, Behavior, Attitudes, Life Path, Identity and more';
   AssLin.style.display = 'block';
-}
-
-if(!sessionName || sessionName === PhDatas[2].Basic || sessionName === PhDatas[1].Standard) {
-Person.innerText = 'This service is available for plan Pro'
-PersonLink.style.display = 'none';
+} else if(sessionName === PhDatas[2].Basic || sessionName === PhDatas[1].Standard) {
+  Tartots.innerText = 'This service is available for plan Pro'
 Yogik.innerText = 'This service is available for plan Pro'
-yogiLink.style.display = 'none';
 TablN.innerText = 'This service is available for plan Pro'
-tabLink.style.display = 'none';
 Radic.innerText = 'This service is available for plan Pro'
-RLink.style.display = 'none';
 textDat.innerText = 'This service is available for plan Pro';
-matchLink.style.display = 'none';
-} else {
-Person.innerText = 'This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location'
+phisicalText.innerText = 'This service is available for plan Pro';
+PersonNewText.innerText = 'This service is available for plan Pro';
+} else if(sessionName != PhDatas[2].Basic || sessionName != PhDatas[1].Standard){
+  Tartots.innerText = 'This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location'
 PersonLink.style.display = 'block';
+personalNew.style.display = 'block';
 Yogik.innerText = 'These yogas are formed based on the placement of planets in relation to each other and to certain houses in the natal chart'
 yogiLink.style.display = 'block';
 TablN.innerText = 'A numerology chart is created using specific numbers derived from a person’s birth date and full name. The chart provides insights into various aspects of their life.'
@@ -93,9 +120,21 @@ Radic.innerText = 'The radical number or root number, also known as the life pat
 RLink.style.display = 'block';
 textDat.innerText = 'This service helps you find out if you are compatible with someone you want to marry';
 matchLink.style.display = 'block';
-}
+phisicalText.innerText = 'This service tells you the most suitable yoga exercises according to the position of the planets at the time of your birth and can teach you yoga at the same time';
+phisicaLink.style.display = 'block';
+PersonNewText.innerText = 'This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location';
+personalLinks.style.display = 'block';
+} 
+
+if(!sessionName || sessionName === PhDatas[2].Basic || sessionName === PhDatas[1].Standard) {
+  console.log('its empty');
+} else {
+  console.log('it is');
+  
 }
 
+
+}
 
 
 

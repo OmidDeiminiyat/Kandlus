@@ -4538,3 +4538,37 @@ spinner6
   color: #fff;
   font-weight: 300;
 }
+
+.card #listen-3 {
+  display: none;
+}
+.card #listen {
+  display: none;
+}
+.card #listen-2 {
+  display: none;
+}
+.card #personNewLink {
+  display: none;
+}
+.card #listen-4 {
+  display: none;
+}
+.card #listen5 {
+  display: none;
+}
+.card #physicalYogaLin {
+  display: none;
+}
+.card #IdNumerology {
+  display: none;
+}
+.card #listen-7 {
+  display: none;
+}
+.card #listen-8 {
+  display: none;
+}
+.card #listenMatch {
+  display: none;
+}
