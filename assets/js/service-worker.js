@@ -67,3 +67,11 @@ self.addEventListener('activate', function(event) {
     );
     return self.clients.claim(); // Ensure that the active service worker takes control of all pages
 });
+
+
+// Listen for the 'skipWaiting' message from the main script
+self.addEventListener('message', function(event) {
+    if (event.data.action === 'skipWaiting') {
+        self.skipWaiting(); // Activate the new service worker immediately
+    }
+});
