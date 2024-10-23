@@ -15,14 +15,7 @@
     <link rel="stylesheet" href="../assets/css/myStyle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144883160-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-144883160-1');
-      </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144883160-1"></script>
 </head>
 
 <body>
@@ -110,7 +103,7 @@
                                 <li><a href="../index.html">Home</a></li>
                                 <li><a href="../blog/articles.html">Articles</a></li>
                                 <li><a href="astrology_service.html">Astrology</a></li>
-                                <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
+                                <li><a href="../Podcast/Solfeggio_frequency.html">Solfeggio</a></li>
                                 <li><a href="../Videos/video.html">Videos</a></li>
                             </ul>
                         </li>
@@ -136,6 +129,7 @@
                                         <ul class="col-md-2">
                                             <li><strong>Sound library</strong></li>
                                             <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
+                                            <li><a href="../Podcast/Solfeggio_frequency.html">Mantra</a></li>
                                         </ul>
                                         <ul class="col-md-2">
                                             <li><strong>Most searched tags</strong></li>
@@ -206,237 +200,27 @@
             <div class="divider-2"></div>
         </div>
     </header>
+
     <!-- Start Main content -->
+
     <main id="forSearchBar" class="mt-30">
         <div class="container single-content">
             <div class="row vertical-divider mb-50">
                 <div class="col-lg-9 col-md-12">
 
                         <!-- Three card start -->
-                        <section class="card">
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Tarot card <span>Reading</span> 
-                                </h3>
-                                <p id="TarotCards" class="card-hover__text"> Get your tarot reading now to explore the hidden depths of your soul. </p>
-                                <a id="listen-3" href="#" class="card-hover__link">
-                                    <span onclick="pages4('tarot_reading.html')">Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/TarotCards.jpg" alt="Tarot card reading">
-                            </div>
-                            
-                            <div id="MantraCard" class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Horoscope <span>Daily, Weekly, Yearly</span> 
-                                </h3>
-                                <p id="HorosForst" class="card-hover__text">Pick your zodiac sign to know about your future</p>
-                                <a id="listen" href="#" class="card-hover__link" style="display: none;">
-                                    <span onclick="pages2('Horoscope.html')">Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                </div>
-                                <div class="card-hover__extra">
-                                <!-- <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4> -->
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Horoscope.jpg" alt="Daily horoscope, weekly horoscope, yearly horoscope">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Biorythm <span>+ Biochart</span> 
-                                </h3>
-                                <p id="BioFirst" class="card-hover__text">Let calculate your birth day and time to know your biorythm circle</p>
-                                <a id="listen-2" href="Biorythm.html" class="card-hover__link">
-                                    <span>Try now</span>
-                                    <svg id="BioSvg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                <a href="AstrologyTeach.html?id=53T936Bio33">
-                                    <span>How it works?</span>
-                                </a>
-                                </div>
-                                <div class="card-hover__extra">
-                                <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4>
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Biorythm.jpg" alt="">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Personal <span> Characteris</span> 
-                                </h3>
-                                <p id="persoTx" class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
-                                <a id="personNewLink" href="Characteris.html" class="card-hover__link">
-                                    <span>Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                <a href="AstrologyTeach.html?id=Per65eS432">
-                                    <span>How it works?</span>
-                                </a>
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Personality.jpeg" alt="Personality">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    <span>Ascendant</span> 
-                                </h3>
-                                <p id="assenTex" class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
-                                <a id="listen-4" href="#" class="card-hover__link">
-                                    <span onclick="pages3('ascendant.html')">Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Ascendant.jpg" alt="Ascendant">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Type of spiritual <span>Yogas</span> 
-                                </h3>
-                                <p id="YogaD" class="card-hover__text">There are many types of Yogas in astrology, where each Yoga can result in different effects on a person's life, such as prosperity, success, hardships, relationships, or spiritual growth.  </p>
-                                <a id="listen5" href="#" class="card-hover__link">
-                                    <span  onclick="pages5('list-of-Yoga.html')">Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Type-of-Astrology-Yogas.jpg" alt="Type of yoga, personal yoga">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Physical Yoga & <span>exercise</span> 
-                                </h3>
-                                <p id="phisicalYogaText" class="card-hover__text">This service tells you the most suitable yoga exercises according to the position of the planets at the time of your birth and can teach you yoga at the same time. </p>
-                                <a id="physicalYogaLin" href="PhysicalYoga.html" class="card-hover__link">
-                                    <span>Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                <a href="AstrologyTeach.html?id=372821Dy">
-                                    <span>How it works?</span>
-                                </a>
-                                
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Type-of-yoga.jpg" alt="Type of yoga, personal yoga">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                     <span>Numerology</span> 
-                                </h3>
-                                <p id="numerologyText" class="card-hover__text">Get your personal day number and meaning of your personal number. </p>
-                                <a id="IdNumerology" href="#" class="card-hover__link">
-                                    <span onclick="pages6('Numerology.html')">Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Numerology.png" alt="Numerology">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Numerology <span>Table</span> 
-                                </h3>
-                                <p id="NumTab" class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
-                                <a id="listen-7" href="#" class="card-hover__link">
-                                    <span onclick="pages7('NumerologyTable.html')">Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Numerology-table.jpg" alt="Numerology table">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Radical <span>Number</span> 
-                                </h3>
-                                <p id="RadTex" class="card-hover__text">This service tells you your traits by considering the position of the planets and constellations at the time of your birth in that geographical location. </p>
-                                <a id="listen-8" href="#" class="card-hover__link">
-                                    <span onclick="pages8('Radical_number.html')">Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a>
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Aquarius-new-1 copy.png" alt="Radical number">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Kundali <span>matching</span> 
-                                </h3>
-                                <p id="dateText" class="card-hover__text">This service helps you find out if you are compatible with someone you want to marry </p>
-                                 <a id="listenMatch" href="#" class="card-hover__link">
-                                    <span onclick="pages8('KundaliMatch.html')" >Try now</span>
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a> 
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Kundali-matching.jpg" alt="kundali matching">
-                            </div>
-                            <div class="card-hover">
-                                <div class="card-hover__content">
-                                <h3 class="card-hover__title">
-                                    Angel <span>numbers</span> 
-                                </h3>
-                                <p class="card-hover__text">Coming Soon. </p>
-                                 <a id="listen-3" href="#" class="card-hover__link">
-                                    
-                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                    </svg>        
-                                </a> 
-                                </div>
-                                <div class="card-hover__extra">
-                                </div>
-                                <img src="../assets/images/Astrology/cards/Angel-numbers.jpg" alt="kundali matching">
-                            </div>
-                           
-                           
-                        </section>
+                     <section class="cards" >
+                        <h3 style="text-align: center;"> Welcome to astrology service</h3>
+                        <article id="paraf">
+
+                        </article>
+                        <div id="link" style="text-align: center;" > <p> To use this service, you must be sign up and subscribe to the plan: Pro. <a href="../price.html"> Signup now </a> </p> </div>
+                        <section>
+                        <div id="VideoToturial"></div>
+                     </section>
                         <!-- End carts -->
                         <div id="for-tests">
-            
+
                         </div>
 
                 </div>
@@ -651,13 +435,13 @@
     <script src="../assets/js/vendor/jquery.theia.sticky.js"></script>
     <!-- NewsBoard JS -->
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/MyScript.js"></script>
    <script src="../assets/js/script.js"></script>
    <script src="../assets/js/landingNav.js"></script>
    <script src="../assets/js/articles/blogAstro.js"></script>
    <script src="../assets/js/cookie.js"></script>
    <script src="../assets/js/adsUser.js"></script>
    <script type="module" src="../assets/js/timeCount.js"></script>
+    <script src="../assets/js/astrology/HowToDo.js"></script>
 </body>
 
 </html>

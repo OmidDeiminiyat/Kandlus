@@ -4476,69 +4476,108 @@ spinner6
   }
 }
 
-.cta-background {
-  background-size: cover;
-  background-position: center center;
-  bottom: 0;
-  filter: blur(50px);
-  left: 0;
+@keyframes fadeIn {
+  from {
+    margin-left: -300px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: -300px;
+  }
+}
+@keyframes changeImage {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes videoImage {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes boxShadow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 1px -1px 16px 2px rgba(109, 108, 108, 0.75);
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: #9A5C23;
+  }
+  100% {
+    color: #CAC3BC;
+  }
+}
+@keyframes hiddenParaf {
+  0% {
+    color: red;
+    opacity: 0;
+  }
+  100% {
+    color: #23201D;
+    opacity: 1;
+  }
+}
+#BioCards {
+  width: 90%;
+  margin-left: 5%;
+}
+#BioCards div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  #BioCards div {
+    grid-template-columns: 1fr;
+  }
+}
+#BioCards div article {
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: rgb(198, 193, 193);
+  min-height: 450px;
+  position: relative;
+}
+@media (max-width: 600px) {
+  #BioCards div article {
+    height: 500px;
+  }
+}
+#BioCards div article:nth-child(1) {
+  background-image: url("../../../assets/images/Astrology/Biorhythm/Biorhythm-cards.png");
+}
+#BioCards div article:nth-child(2) {
+  background-image: url("../../../assets/images/Astrology/Biorhythm/Biorhythm-cards3.png");
+}
+#BioCards div article:nth-child(3) {
+  background-image: url("../../../assets/images/Astrology/Biorhythm/Biorhythm-card2.jpg");
+}
+#BioCards div article h3, #BioCards div article #navigation hgroup h5, #navigation hgroup #BioCards div article h5, #BioCards div article #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #BioCards div article p {
+  font-size: 24px;
+}
+#BioCards div article .card-footer {
   position: absolute;
-  right: 0;
-  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
-  z-index: -1;
 }
-
-.bioCard {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-}
-
-.cta {
-  background: #333;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
-  height: 450px;
-  overflow: hidden;
-  position: relative;
-  width: 300px;
-}
-.cta:hover img {
-  top: -10%;
-  filter: brightness(70%);
-}
-.cta:hover .text {
-  bottom: 0;
-}
-.cta img {
-  bottom: 0;
-  filter: brightness(100%);
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 0.5s ease-in-out;
-  width: 115%;
-}
-.cta .text {
-  bottom: -40%;
-  padding: 15px;
-  position: absolute;
-  transition: 0.5s ease-in-out;
-}
-.cta .text h2 {
-  color: #fff;
-  display: inline-block;
-  font-weight: 300;
-  margin-bottom: 5px;
-  position: relative;
-}
-.cta .text p {
-  color: #fff;
-  font-weight: 300;
-}
-
 .card #listen-3 {
   display: none;
 }
@@ -4594,4 +4633,10 @@ table {
 
 canvas {
   border: 1px solid #fff;
+}
+
+.PersonalResault {
+  width: 80%;
+  margin-left: 10%;
+  background-color: red;
 }
