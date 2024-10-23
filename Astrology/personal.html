@@ -196,13 +196,10 @@
         </div>
     </header>
 
-
-
-
     <main id="forSearchBar" class="mt-30">
         <div class="container single-content">
             <div class="row vertical-divider mb-50">
-                <div class="col-lg-9 col-md-12">
+                <div class="col-lg-12 col-md-12">
                     <div id="myCaption" class="col-xl-9 col-md-10">
                         <div  class="login_wrap widget-taber-content p-30 background-white border-radius-5">
                             <div class="padding_eight_all bg-white">
@@ -367,6 +364,34 @@
                         </div>
                     </div>
 
+                    <div class="app">
+                        <h1>Solar System Simulation</h1>
+                        <table>
+                            <tr>
+                                <td>Enter your Birth Date:</td>
+                                <td><input type="date" id="birthDate"></td>
+                                <td><button onclick="calculateInfo()">Get Info</button></td>
+                            </tr>
+                        </table>
+                
+                        <div id="results">
+                            <h2>Planetary Positions</h2>
+                            <ul id="planetPositions"></ul>
+                
+                            <h2>Zodiac Sign</h2>
+                            <div id="zodiacSign"></div>
+                
+                            <h2>Solar System Visualization</h2>
+                            <div id="solarSystem">
+                                <canvas id="solarCanvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
                         <figure id="dispNum">
                             <span id="NumberResault">
                             </span>
@@ -456,48 +481,7 @@
                         <!-- End three car -->
                 </div>
                 
-                <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
-                    <div class="widget-area">
-                        <div class="sidebar-widget widget-latest-posts mb-30 wow fadeIn animated">
-                            <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Kandlus</span>
-                            </h6>
-                            <span id="adsCube" >
-                            </span>
-                        </div>
-                        <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
-                            <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Related Articles</span>
-                            </h6>
-                            <div id="liForRight" class="post-block-list post-module-1 post-module-5">
-                            
-                            </div>
-                        </div>
-                        <span id="cubeSec" >
-                        </span>
-                        <div id="moreData" class="sidebar-widget widget-latest-comments mb-30 wow fadeIn  animated">
-    
-                        </div>
-                        <div class="sidebar-widget widget_newsletter mb-50 wow fadeIn animated">
-                            <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
-                                <span>Newsletter</span>
-                            </h6>
-                            <div class="newsletter">
-                                <p class="">Continue reading uninterrupted with a subscription</p>
-                                <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
-                                    <div class="form-newsletter-cover">
-                                        <div class="form-newsletter">
-                                            <input type="email" name="EMAIL" placeholder="Email address" required="">
-                                            <button type="submit">
-                                                <span class="long-arrow long-arrow-right"></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              
             </div>
         </div>
     </main>

@@ -58,12 +58,6 @@ var TextNumerology = document.getElementById('numerologyText');
 var matchLink = document.getElementById('listenMatch');
 var textDat = document.getElementById('dateText');
 
-
-
-    console.log(PhDatas[0].Pro);
-    console.log(sessionName);
-    
-
     if (!sessionName) {
       Bios.innerText = 'To use astrology services, you must log in and select one of the plans';
       HoroFir.innerHTML = 'To use astrology services, you must log in and select one of the plans';
@@ -137,13 +131,6 @@ var textDat = document.getElementById('dateText');
         Yogik.innerText = 'There are many types of Yogas in astrology, where each Yoga can result in different effects on a person life, such as prosperity, success, hardships, relationships, or spiritual growth.';
         yogiLink.style.display = 'block';
       } 
-
-if(!sessionName || sessionName === PhDatas[2].Basic || sessionName === PhDatas[1].Standard) {
-  console.log('its empty');
-} else {
-  console.log('it is');
-  
-}
 
 
 }

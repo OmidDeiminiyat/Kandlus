@@ -8,12 +8,12 @@ const rightsidSecond = document.getElementById('cubeSec');
 
 async function fetchSubscribeData() {
     try {
-        const response = await fetch('backend/data.php');  // Call the PHP file
+        const response = await fetch('../backend/data.php');  // Call the PHP file
         const data = await response.json();
         const ExisCooki = getCookie('Kandlus-users');
         const filteredData = data.filter(item => item.Code === ExisCooki);
         if (filteredData != null || filteredData != '') {
-               fetchPlans(filteredData);
+               fetchPlans(filteredData);               
         } else {
           console.log('No data found or unexpected data format.');
         }  
@@ -27,15 +27,16 @@ async function fetchSubscribeData() {
 
 async function fetchPlans(datas) {
     const subscriptionPlan = datas[0].Plan;    
+    
     try {
-        const response = await fetch('backend/users.php');  // PHP file that returns the JSON array
+        const response = await fetch('../backend/users.php');  // PHP file that returns the JSON array
         const data = await response.json();  // Parse the JSON into JavaScript array
         data.forEach(item => {
-           console.log(item.Standard);
-           if (subscriptionPlan != '' && subscriptionPlan == item.Pro || subscriptionPlan == item.Standard) {
-            console.log('Exist');
-        } else {
+           
+           if (subscriptionPlan === 'Basic') {
             callForAds()
+        } else {
+            console.log('Waiting');
         }
         });
     } catch (error) {
