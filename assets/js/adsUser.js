@@ -26,7 +26,7 @@ async function fetchSubscribeData() {
 
 
 async function fetchPlans(datas) {
-    const subscriptionPlan = datas[0].Plan;    
+    const subscriptionPlan = datas.Plan;    
     
     try {
         const response = await fetch('../backend/users.php');  // PHP file that returns the JSON array
@@ -35,8 +35,13 @@ async function fetchPlans(datas) {
            
            if (subscriptionPlan === 'Basic') {
             callForAds()
-        } else {
+            console.log('basic active');
+            
+        } else if(subscriptionPlan === 'Pro' || subscriptionPlan === 'Standard'){
             console.log('Waiting');
+        } else {
+            callForAds()
+            console.log('Guest user active');
         }
         });
     } catch (error) {
