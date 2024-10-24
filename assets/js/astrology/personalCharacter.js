@@ -71,48 +71,54 @@ document.getElementById("zodiacForm").addEventListener("submit", async function 
   console.log(result);
   CharacterDataSend(result)
   if (result.success) {
-    alert("Data submitted successfully!");
+    //console.log('');
+    
   } else {
-    alert("There was an error submitting the data.");
+    
   }
 });
 
 
 function CharacterDataSend(resivedCharacter) {
-  const caption = document.getElementById('myCaption');
-  const displaycap = document.getElementById('dispNum');
-  const leadData = document.getElementById('NumberResault');
-
-  caption.style.display = 'none';
-  displaycap.style.display = 'flex';
-  const letArray = resivedCharacter.response;
-  console.log(letArray);
-
-leadData.innerHTML=''
-let insideCountiner = `<span><h4>Resault for your personal characteristics</h4><br>`
-
-letArray.forEach((element, index) => {
-  console.log(element.current_house);
-
-   insideCountiner += `
-<figcaption class="newStyle">
-<div class="dividedInside">
-<div> <h5>Current house is: <span class="newColor" >${element.current_house} </span> </h5> </div> 
-<div><h5>Current zodiac is: <span class="newColor" >${element.current_zodiac} </span> </h5></div>
-<div><h5>Location of the lord's house: <span class="newColor" >${element.lord_house_location} </span> </div>
-<div><h5>Lord of the zodiac: <span class="newColor" >${element.lord_of_zodiac} </span>  </div>
-<div><h5>The strength of lord: <span class="newColor" >${element.lord_strength} </span>  </div>
-<div><h5>Lord zodiac location: <span class="newColor" >${element.lord_zodiac_location} </span>  </div>
-<div><h5>Verbal location: <span class="newColor" >${element.verbal_location} </span>  </div>
-</div>
-<div class="predeicted"><h5>Personalised prediction: <span class="newColor" >${element.personalised_prediction} </span>  </div>
-</figcaption><hr class="brLine">`
-});
-insideCountiner += `</span>`
-leadData.innerHTML = insideCountiner;
-
+  console.log(resivedCharacter.characterData.response);
   
+  const DataL = resivedCharacter.characterData.response;
+  console.log(DataL);
+  
+  pPP.style.display = 'block';
+  const displayForm = document.getElementById('zodiacForm');
+  displayForm.style.display = 'none';
+  const AllLords = document.getElementById('Lords');
+  AllLords.innerHTML = '';
+  let insideLords = `<ul>`
+  DataL.forEach((Lord, index) => {
+    insideLords += `<li>The zodiac sign ${Lord.current_zodiac } is currently in your ${Lord.current_house}st house. The "lord" of the ${Lord.current_house}st house (which is ${Lord.current_zodiac } ) is located in the ${Lord.lord_house_location} house. 
+                        The ${Lord.lord_of_zodiac} is the "lord" or ruler of the zodiac sign ${Lord.current_zodiac } in this context.
+                        The lord of the zodiac (${Lord.lord_of_zodiac}) is located in ${Lord.current_zodiac }, meaning the ${Lord.lord_of_zodiac} is reinforcing its presence in the sign of ${Lord.current_zodiac }. <p> Notice: the lord trength id: <span class='lordPower'> ${Lord.lord_strength} </span>.</p> <span class='LordParaf'> So lets read your personalised prediction according to ${Lord.current_house}st house. </span>
+                        <p>${Lord.personalised_prediction} </p> </li>`
+    
+  });
+  insideLords += `</ul>`
+  AllLords.innerHTML = insideLords;
+
+  typewriter('First, remember that at the time and place of your birth, each of the planets was in the house of one of the zodiac signs. And since these have a direct impact on human personality, there are between 7 and 12 possibilities that together form your overall personality. In some cases, a person may have two personalities. Here are all the possibilities in order according to the presence of each planet in each house. Notice that:The most important issue in every house is the lord strength. Because it determines the degree of formation of a person personality compared to other 11 houses.', 12); 
 
 }
 
 
+
+
+function typewriter(text, speed) {
+  let index = 0; 
+  const IntroText = document.getElementById('introPer');
+  IntroText.innerText = '';
+  function type() {
+      if (index < text.length) {
+        IntroText.textContent += text.charAt(index); 
+          index++; 
+          setTimeout(type, speed); 
+      }
+  }
+
+  type(); // Start typing
+}
