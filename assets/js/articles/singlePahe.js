@@ -36,10 +36,17 @@ singlePageArticle(data)
  const maintextTwo = document.getElementById('mainTextTwo');
  const maintextThree = document.getElementById('mainTextThree');
  const AllTags = document.getElementById('Article_tags');
+ const socialTitle = document.getElementById('metaTitle');
+ const socialDesrib = document.getElementById('metaDescrib');
+ const socialImage = document.getElementById('metaImage');
+ const SocialURL = document.getElementById('MetaURL');
    
 
 showVideo.forEach((getData, index) => {
-
+  socialTitle.innerHTML = `property="og:title" content=${getData.title}`;
+  socialDesrib.innerHTML = `property="og:description" content="${getData.describtion}"`;
+  socialImage.innerHTML = `property="og:image" content="<img src="../assets/images/Articles/megaW/${getData.image}">"`;
+  SocialURL.innerHTML = `property="og:url" content="https://kandlus.net/blog/single.html?id=${getData.seo}"`;
 
   let teoCat = `<a href="category.html"><span class="post-cat position-relative"># ${getData.categoryOne}</span></a>
                 <a href="category.html"><span class="post-cat position-relative"># ${getData.categoryTwo}</span></a>`

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App with Email Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .quiz, .thank-you {
+            margin-bottom: 20px;
+        }
+        .thank-you {
+            display: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz">
+        <h2 id="question"></h2>
+        <div id="answers"></div>
+    </div>
+
+    <div class="thank-you">
+        <h3>Thank you for completing the quiz!</h3>
+    </div>
+
+    <script>
+        // Questions array
+        const questions = [
+            {
+                question: "In which category you see error?",
+                answers: ["Articles", "Videos", "Astrology", "Frequency table"],
+            },
+            {
+                question: "Which planet is closest to the sun?",
+                answers: ["Mercury", "Venus", "Earth", "Mars"],
+            },
+            {
+                question: "Which element has the chemical symbol 'O'?",
+                answers: ["Oxygen", "Gold", "Silver", "Iron"],
+            }
+        ];
+
+        // Keep track of current question and user's answers
+        let currentQuestion = 0;
+        const userAnswers = [];
+
+        // Elements for interaction
+        const questionElement = document.getElementById('question');
+        const answersElement = document.getElementById('answers');
+        const thankYouElement = document.querySelector('.thank-you');
+
+        // Function to load the current question
+        function loadQuestion() {
+            // Clear previous answers
+            answersElement.innerHTML = '';
+            
+            // Display current question
+            const q = questions[currentQuestion];
+            questionElement.textContent = q.question;
+
+            // Display the answer choices
+            q.answers.forEach((answer, index) => {
+                const button = document.createElement('button');
+                button.textContent = answer;
+                button.onclick = () => handleAnswer(answer);
+                answersElement.appendChild(button);
+            });
+        }
+
+        // Function to handle the answer selection
+        function handleAnswer(selectedAnswer) {
+            userAnswers.push({
+                question: questions[currentQuestion].question,
+                answer: selectedAnswer
+            });
+
+            // Move to the next question or show thank you message
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                showThankYou();
+                sendAnswersByEmail();
+            }
+        }
+
+        // Function to display "Thank You" message
+        function showThankYou() {
+            // Hide the quiz
+            document.querySelector('.quiz').style.display = 'none';
+
+            // Show the thank you message
+            thankYouElement.style.display = 'block';
+        }
+
+        // Function to send answers to server (PHP)
+        function sendAnswersByEmail() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'backend/mail.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log('Email sent successfully!');
+                }
+            };
+
+            // Send user answers as JSON to the PHP backend
+            xhr.send(JSON.stringify(userAnswers));
+        }
+
+        // Load the first question when the page loads
+        loadQuestion();
+    </script>
+
+</body>
+</html>
