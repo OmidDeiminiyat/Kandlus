@@ -4710,12 +4710,7 @@ canvas {
   flex-direction: column;
   z-index: 1000;
 }
-
-.hidden {
-  display: none;
-}
-
-#chat-header {
+#chat-container #chat-header {
   background-color: #0078d7;
   color: white;
   padding: 10px;
@@ -4724,22 +4719,23 @@ canvas {
   align-items: center;
   border-radius: 8px 8px 0 0;
 }
-
-#chat-body {
+#chat-container #chat-body {
   padding: 10px;
   max-height: 300px;
   overflow-y: auto;
 }
-
-.message {
+#chat-container #chat-body .message {
   padding: 8px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
-
-.bot {
+#chat-container #chat-body .bot {
   background-color: #d9f7be;
   align-self: flex-start;
+}
+
+.hidden {
+  display: none;
 }
 
 .user {
