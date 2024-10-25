@@ -12,10 +12,13 @@ async function fetchSubscribeData() {
         const data = await response.json();
         const ExisCooki = getCookie('Kandlus-users');
         const filteredData = data.filter(item => item.Code === ExisCooki);
-        if (filteredData != null || filteredData != '') {
-               fetchPlans(filteredData);               
+        if (ExisCooki) {
+               fetchPlans(filteredData);    
+                          
         } else {
           console.log('No data found or unexpected data format.');
+          callForAds()
+          
         }  
     } catch (error) {
         console.error('Error fetching subscribe data:', error);
@@ -26,23 +29,23 @@ async function fetchSubscribeData() {
 
 
 async function fetchPlans(datas) {
-    const subscriptionPlan = datas.Plan;    
+    const subscriptionPlan = datas[0].Plan;    
+    console.log(subscriptionPlan);
+    
     
     try {
         const response = await fetch('../backend/users.php');  // PHP file that returns the JSON array
         const data = await response.json();  // Parse the JSON into JavaScript array
         data.forEach(item => {
            
-           if (subscriptionPlan === 'Basic') {
+           
+           
+           if (subscriptionPlan === item.Basic) {
             callForAds()
-            console.log('basic active');
             
-        } else if(subscriptionPlan === 'Pro' || subscriptionPlan === 'Standard'){
-            console.log('Waiting');
         } else {
-            callForAds()
-            console.log('Guest user active');
-        }
+            console.log('Waiting');
+        } 
         });
     } catch (error) {
         console.error('Error fetching data:', error);
