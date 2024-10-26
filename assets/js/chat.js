@@ -27,34 +27,56 @@ const sendBtn = document.getElementById("send-btn");
 const responses = {
   "hello": "Hi there! How can I assist you?",
   "hi": "Hi there! How can I assist you?",
-  "omid": "I'm sorry, Omid is not available now.",
-  "talk admin": "Oops, wait, connecting you with an admin.",
-  "test": "Why for test?",
+  "omid": "I'm sorry, Omid is not here now.",
+  "talk omid": "Oops, wait, connecting you with an admin.",
   "help": "Sure, I'm here to help. What do you need assistance with?",
-  "contact": "You can contact us via email at support@example.com.",
-  "i need a free trial": "free trial not exist.",
+  "not loading": "Tell me pleas in which category you have problem with loading?",
+  "in astrology error": "test error",
+  "in astrology loading": "test loading",
+  "in solfeggio frequency": "",
+  "in article": "",
+  "in video": "",
+  
+  "not working": "Tell me pleas which section not working, or in which category you have problem?",
+  "not loading": "",
+  "contact": "You can contact us via email at contact@kandlus.net.",
+  "free trial": "sorry we dont have trial or free trial.",
+  "trial": "sorry we dont have trial or free trial.",
+  "free": "sorry we dont have trial or free trial.",
   "pricing": "Our pricing starts at $10 per month. Let us know if you'd like more details!"
 };
 
 // Array to store conversation history
 let conversationHistory = [];
 
-// Function to normalize the user's input and check if a phrase matches responses
 function getResponse(userMessage) {
-  // Normalize input: remove words like "to", "the", etc., for simpler matching
-  const normalizedMessage = userMessage.toLowerCase()
-    .replace(/\b(to|the|a)\b/g, '') // Remove common words
-    .replace(/\s+/g, ' ') // Remove extra spaces
-    .trim(); // Trim leading/trailing spaces
+  // Normalize input by converting to lowercase and removing extra spaces
+  const normalizedMessage = userMessage.toLowerCase().replace(/\s+/g, ' ').trim();
+  
+  const words = normalizedMessage.split(" ");
+  
+  const phrases = [];
+  for (let i = 0; i < words.length - 1; i++) {
+    phrases.push(words[i] + " " + words[i + 1]);
+  }
 
-  // Check if the simplified phrase matches any key in responses
-  for (let key in responses) {
-    if (normalizedMessage.includes(key)) {
-      return responses[key];
+  for (let phrase of phrases) {
+    if (responses[phrase]) {
+      return responses[phrase];
     }
   }
+
+  // Check individual words as fallback
+  for (let word of words) {
+    if (responses[word]) {
+      return responses[word];
+    }
+  }
+  
   return "I'm sorry, I didn't understand that. Can you please clarify?";
+
 }
+
 
 // Function to send messages and store in conversationHistory
 function sendMessage(message, sender) {
