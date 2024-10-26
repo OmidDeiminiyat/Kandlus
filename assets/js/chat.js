@@ -28,22 +28,29 @@ const responses = {
   "hello": "Hi there! How can I assist you?",
   "hi": "Hi there! How can I assist you?",
   "omid": "I'm sorry, Omid is not available now.",
-  "talk omid": "Oops, wait",
+  "talk admin": "Oops, wait, connecting you with an admin.",
   "test": "Why for test?",
   "help": "Sure, I'm here to help. What do you need assistance with?",
   "contact": "You can contact us via email at support@example.com.",
+  "i need a free trial": "free trial not exist.",
   "pricing": "Our pricing starts at $10 per month. Let us know if you'd like more details!"
 };
 
 // Array to store conversation history
 let conversationHistory = [];
 
-// Function to check if a word is in the responses
+// Function to normalize the user's input and check if a phrase matches responses
 function getResponse(userMessage) {
-  const words = userMessage.toLowerCase().split(" ");
-  for (let word of words) {
-    if (responses[word]) {
-      return responses[word]; // Return response if word matches
+  // Normalize input: remove words like "to", "the", etc., for simpler matching
+  const normalizedMessage = userMessage.toLowerCase()
+    .replace(/\b(to|the|a)\b/g, '') // Remove common words
+    .replace(/\s+/g, ' ') // Remove extra spaces
+    .trim(); // Trim leading/trailing spaces
+
+  // Check if the simplified phrase matches any key in responses
+  for (let key in responses) {
+    if (normalizedMessage.includes(key)) {
+      return responses[key];
     }
   }
   return "I'm sorry, I didn't understand that. Can you please clarify?";
