@@ -429,10 +429,23 @@
            </div>
    </main>
 </span>
-
-
-<!-- Search page -->
     <!-- End Main content -->
+           <!--Live chat Start-->
+    <div onclick="openChatter()" id="chat-icon">💬</div>
+
+    <!-- Chat Container -->
+    <div id="chat-container" class="hidden">
+      <div id="chat-header">
+        <span>Report an error</span>
+        <button id="close-chat">✖️</button>
+      </div>
+      <div id="chat-body">
+        <div class="message bot">Hello! How can I help you?</div>
+      </div>
+      <input type="text" id="user-input" placeholder="Type your message here...">
+      <button id="send-btn">Send</button>
+    </div>
+  <!--Live chat End-->
     <!-- Footer Start-->
     <footer>
         <div class="footer-area">
@@ -603,6 +616,7 @@
     <script src="assets/js/linkCheck.js"></script>
     <script src="./assets/js/homeCookie.js"></script>
     <script src="./assets/js/notification.js"></script>
+    <script src="./assets/js/chat.js"></script>
 </body>
 
 </html>
