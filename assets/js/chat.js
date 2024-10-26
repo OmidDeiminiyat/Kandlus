@@ -25,7 +25,7 @@ const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
 
 const responses = {
-  "hello": "Hi there! How can I assist you?",
+  "hello": "Hi there! you can use this chat in case have any error, or problem using website. So how can I assist you?",
   "hi": "Hi there! How can I assist you?",
   "omid": "I'm sorry, Omid is not here now.",
   "talk omid": "Oops, wait, connecting you with an admin.",
