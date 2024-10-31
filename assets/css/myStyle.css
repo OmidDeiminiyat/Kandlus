@@ -4695,6 +4695,7 @@ canvas {
   border-radius: 50%;
   cursor: pointer;
   z-index: 1000;
+  display: none;
 }
 
 #chat-container {
