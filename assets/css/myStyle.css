@@ -2660,201 +2660,47 @@ body {
   max-width: 100%;
 }
 
-.spinner-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
-  padding: 10px;
-}
-
-.spinner-container > div {
-  width: 100%;
-  aspect-ratio: 1/1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.spinner {
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(90deg, #009fff, #ec2f4b);
-}
-
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-/*
-spinner1 
-*/
-#spinner1 {
-  border-radius: 50%;
-  position: relative;
-  animation: rotate 2s linear infinite;
-}
-
-#spinner1::before {
-  content: "";
-  width: 85px;
-  height: 85px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 15px solid black;
-  border-top: 15px solid transparent;
-}
-
-#spinner1::after {
-  content: "";
-  transform: translate(-50%, -50%);
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  background: black;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 5px black;
-}
-
-/*
-spinner2 
-*/
-#spinner2 {
-  border-radius: 50%;
-  position: relative;
-  animation: rotate 2s linear infinite;
-}
-
-#spinner2::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: black;
-  width: 80%;
-  height: 90%;
-  border-radius: 50%;
-  box-shadow: 0 0 5px 5px black;
-}
-
-/*
-spinner3 
-*/
-#spinner3 {
-  border-radius: 50%;
-  position: relative;
-  animation: rotate 2s linear infinite;
-}
-
-#spinner3::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-  animation: shadow 2s linear infinite;
-}
-
-@keyframes shadow {
-  0% {
-    box-shadow: inset 0 0 15px 15px black, 0 0 25px 25px black;
-  }
-  50% {
-    box-shadow: inset 0 0 25px 25px black;
-  }
-  100% {
-    box-shadow: inset 0 0 15px 15px black, 0 0 25px 25px black;
-  }
-}
-/*
-spinner4 
-*/
-#spinner4 {
-  border-radius: 50%;
-  position: relative;
-  animation: rotate 2s linear infinite;
-}
-
-#spinner4::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-  background: black;
-}
-
-/*
-spinner5 
-*/
-#spinner5 {
-  position: relative;
-  animation: deform 2s linear infinite;
-}
-
-@keyframes deform {
-  0% {
-    border-radius: 0%;
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    border-radius: 100%;
-    transform: rotate(180deg) scale(0.8);
-  }
-  100% {
-    border-radius: 0%;
-    transform: rotate(360deg) scale(1);
-  }
-}
-/*
-spinner6 
-*/
-#spinner6 {
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-}
-
-#spinner6::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: black;
-  width: 90px;
-  height: 90px;
-  z-index: 2;
-}
-
-#spinner6::after {
-  content: "";
-  background: linear-gradient(90deg, #009fff, #ec2f4b);
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  filter: blur(10px);
-  animation: rotate 2s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
+/* Bouncing dots animation */
+.dot {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  background-color: #333;
+  border-radius: 50%;
+  display: inline-block;
+  animation: bounce 0.6s infinite alternate;
+}
+
+/* Delays for each dot */
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
 #main_article {
   margin-top: 30px;
 }
@@ -4756,4 +4602,60 @@ canvas {
   color: white;
   cursor: pointer;
   border-radius: 0 0 8px 8px;
+}
+
+#newAscendant {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  margin-left: 5%;
+  overflow: hidden;
+  border: 1px solid black;
+}
+#newAscendant .AsFiDiv {
+  width: 50%;
+}
+#newAscendant .AsFiDiv img {
+  width: 100%;
+  margin-left: -50%;
+}
+#newAscendant .AsSecDiv {
+  width: 140%;
+  margin-left: -40%;
+}
+#newAscendant .inAsSecDiv {
+  display: flex;
+  flex-direction: row;
+}
+#newAscendant .inAsSecDiv div:nth-child(1) {
+  width: 125%;
+}
+#newAscendant .inAsSecDiv div:nth-child(2) {
+  width: 70%;
+}
+
+.wheel-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+/* Spinning wheel image */
+.wheel-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
