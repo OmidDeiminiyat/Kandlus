@@ -53,8 +53,6 @@ document.getElementById("zodiacForm").addEventListener("submit", async function 
     Dates: Dates,
     time: time,
     latitude: latitude,
-    longitude: longitude
-
   };
 
   // Send the JSON data to the backend (e.g., to control.php)

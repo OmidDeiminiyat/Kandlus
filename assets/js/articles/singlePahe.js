@@ -1,32 +1,37 @@
 
-var url = window.location.search.substring(1);
-var vars = url.split("=");
-const id = vars[1];
-if (!id) {
-    console.error("ID is null or empty. Make sure the 'id' parameter is provided in the URL.");
-    // Optionally, you can add code here to handle this case, such as displaying an error message to the user
-  } else {
-fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?seo=eq.${id}`, {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json',
-    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU' // Replace 'your-api-key' with your actual Supabase API key
+  async function fetchSubscriptionData() {
+    try {
+        const response = await fetch('../backend/blog.php');  
+        const data = await response.json(); 
+        
+          sessionStorage.setItem('ArtId', data[0].id);
+          var url = window.location.search.substring(1);
+          var vars = url.split("=");
+          const id = vars[1];
+          const myArticle = data.filter(item => item.seo === id);
+          singlePageArticle(myArticle)
+          console.log(myArticle);
+          const dataForRelat = data.filter(item => item.categoryOne === myArticle[0].categoryOne);
+          relatedArticle(dataForRelat)
+          forArticlesD(data)
+          randomArt(data)
+          Decod(data)
+          
+      
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
   }
-})
-.then(response => response.json())
-.then(data => {
-  sessionStorage.setItem('ArtId', data[0].id);
   
-singlePageArticle(data)
+  fetchSubscriptionData();
 
-})
-.catch(error => {
-  console.error('Error fetching data:', error);
-});
 
-  }
+  
+
 
   function singlePageArticle(showVideo) {
+    console.log(showVideo);
+    
     const cateTwo = document.getElementById('categor');
     const tit = document.getElementById('titleArt');
     const informs = document.getElementById('inform');
@@ -42,42 +47,39 @@ singlePageArticle(data)
  const SocialURL = document.getElementById('MetaURL');
    
 
-showVideo.forEach((getData, index) => {
-  socialTitle.innerHTML = `property="og:title" content=${getData.title}`;
-  socialDesrib.innerHTML = `property="og:description" content="${getData.describtion}"`;
-  socialImage.innerHTML = `property="og:image" content="<img src="../assets/images/Articles/megaW/${getData.image}">"`;
-  SocialURL.innerHTML = `property="og:url" content="https://kandlus.net/blog/single.html?id=${getData.seo}"`;
 
-  let teoCat = `<a href="category.html"><span class="post-cat position-relative"># ${getData.categoryOne}</span></a>
-                <a href="category.html"><span class="post-cat position-relative"># ${getData.categoryTwo}</span></a>`
+  socialTitle.innerHTML = `property="og:title" content=${showVideo[0].title}`;
+  socialDesrib.innerHTML = `property="og:description" content="${showVideo[0].describtion}"`;
+  socialImage.innerHTML = `property="og:image" content="<img src="../assets/images/Articles/megaW/${showVideo[0].image}">"`;
+  SocialURL.innerHTML = `property="og:url" content="https://kandlus.net/blog/single.html?id=${showVideo[0].seo}"`;
+
+  let teoCat = `<a href="category.html"><span class="post-cat position-relative"># ${showVideo[0].categoryOne}</span></a>
+                <a href="category.html"><span class="post-cat position-relative"># ${showVideo[0].categoryTwo}</span></a>`
       cateTwo.innerHTML= teoCat;           
-      tit.innerHTML=getData.title;
+      tit.innerHTML=showVideo[0].title;
       let insideInforms = `<div class="entry-meta align-items-center meta-2 font-small color-muted">
                                     <p class="mb-5">
                                         <a class="author-avatar" href="#"><img class="img-circle" src="../assets/images/kandlus.png" alt=""></a>
-                                        By <a href="#"><span class="author-name font-weight-bold color-black">${getData.channel}</span></a>
+                                        By <a href="#"><span class="author-name font-weight-bold color-black">${showVideo[0].channel}</span></a>
                                     </p>
-                                    <span class="mr-10"> ${getData.created_at}</span>
-                                    <span class="has-dot"> ${getData.score} views</span>
+                                    <span class="mr-10"> ${showVideo[0].created_at}</span>
+                                    <span class="has-dot"> ${showVideo[0].score} views</span>
                                 </div>`
        informs.innerHTML = insideInforms;
-       imageArt.innerHTML = `<img src="../assets/images/Articles/megaW/${getData.image}" alt="${getData.categoryOne}, ${getData.categoryTwo}, ${getData.tagOne}, ${getData.tagTwo}, ${getData.tagThree}">`       
-       Describ.innerHTML = getData.describtion;                  
-                maintextOne.innerHTML = getData.maintextOne;
-                maintextTwo.innerHTML = getData.maintextTwo;
-                maintextThree.innerHTML = getData.maintextThree;
-                let tagList = `<a href="Tag.html?id=${getData.tagOne}" rel="tag">${getData.tagOne}</a>
-                                <a href="Tag.html?id=${getData.tagTwo}" rel="tag">${getData.tagTwo}</a>
-                                <a href="Tag.html?id=${getData.tagThree}" rel="tag">${getData.tagThree}</a>`
+       imageArt.innerHTML = `<img src="../assets/images/Articles/megaW/${showVideo[0].image}" alt="${showVideo[0].categoryOne}, ${showVideo[0].categoryTwo}, ${showVideo[0].tagOne}, ${showVideo[0].tagTwo}, ${showVideo[0].tagThree}">`       
+       Describ.innerHTML = showVideo[0].describtion;                  
+                maintextOne.innerHTML = showVideo[0].maintextOne;
+                maintextTwo.innerHTML = showVideo[0].maintextTwo;
+                maintextThree.innerHTML = showVideo[0].maintextThree;
+                let tagList = `<a href="Tag.html?id=${showVideo[0].tagOne}" rel="tag">${showVideo[0].tagOne}</a>
+                                <a href="Tag.html?id=${showVideo[0].tagTwo}" rel="tag">${showVideo[0].tagTwo}</a>
+                                <a href="Tag.html?id=${showVideo[0].tagThree}" rel="tag">${showVideo[0].tagThree}</a>`
                 AllTags.innerHTML = tagList;
                 const forTitlt = document.getElementById('ArtTitle');
                 const blogDescrib = document.getElementById('bloDescr');
-                blogDescrib.innerHTML = `<meta name="description" content="${getData.describtion}">`
-                forTitlt.innerText = getData.title;
+                blogDescrib.innerHTML = `<meta name="description" content="${showVideo[0].describtion}">`
+                forTitlt.innerText = showVideo[0].title;
 
-                relatedArticle(getData.categoryOne)
-               
-})
 }
 
 
@@ -87,40 +89,14 @@ function justTest(artItems) {
   // forTitlt.innerText = items[0].title;
 }
 
-
-function onScrollTo1200px() {
-  // console.log('You have scrolled to the point!');
-  relatedArticle();
-}
-
-
-function relatedArticle(recivDatp) {
-    const myRecivedCat = recivDatp;
-  
-    fetch(`https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog?categoryOne=eq.${myRecivedCat}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU' // Replace 'your-api-key' with your actual Supabase API key
-    }
-  })
-  .then(response => response.json())
-  .then(newData => {
-    relatedArticleByCategory(newData)
-   // rightSideThree(newData)
-  
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
-  
-  }
-  function relatedArticleByCategory(relatedData){
+  function relatedArticle(allData){
+    console.log(allData);    
+    
     const realtedPost = document.getElementById('related-posts');
     realtedPost.innerHTML = ''
     let relatedinside = ` <h3 class="mb-30">Related articles</h3>
                             <div class="loop-list">`
-    relatedData.slice(0, 3).forEach((itemsRelat, index) => {
+    allData.slice(0, 3).forEach((itemsRelat, index) => {
     const limiteddescrib = limitWords(itemsRelat.describtion); 
     relatedinside += `<article class="row mb-30 wow fadeIn animated">
                                     <div class="col-md-4">
@@ -146,62 +122,7 @@ function relatedArticle(recivDatp) {
       realtedPost.innerHTML = relatedinside;
   }
 
-  /*
-function rightSideThree(firstData) {
-  const rightSideTh = document.getElementById('articles');
-  rightSideTh.innerHTML = ''
-  let firstThr = `<h3>Related articles</h3><hr class="break"> <span>`
-  firstData.forEach((threeIt, index) => {
-    const descThre = Limitosho(threeIt.describtion);
-    firstThr += `<a href="singlePage.html?id=${threeIt.seo}">
-                        <article class="dataArticle">
-                            <h5>${threeIt.title}</h5>
-                            <p>${descThre} ...</p>
-                            <div>
-                                <span><i class="material-symbols-outlined">visibility</i> ${threeIt.tagOne} </span> 
-                                <span><i class="material-symbols-outlined"> edit_note </i> ${threeIt.channel} </span>
-                            </div>
-                        </article>
-                    </a>`
-  })
-  firstThr += `</span>`
-  rightSideTh.innerHTML = firstThr;
-}
 
-*/
-fetchAndSortData()
-// you might be intrested
-  async function fetchAndSortData() {
-    const supabaseUrl = 'https://bfrnndgsghbkfrbbzuuk.supabase.co';
-    const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU';
-    
-    try {
-      const response = await fetch(`${supabaseUrl}/rest/v1/blog`, {
-        method: 'GET',
-        headers: {
-          'apikey': apiKey,
-          'Authorization': `Bearer ${apiKey}`,
-          'Content-Type': 'application/json'
-        }
-      });
-  
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-  
-      const data = await response.json();
-      
-      // Sort data by score in descending order
-      data.sort((a, b) => b.score - a.score);
-      // Output sorted data
-      // console.log('New test:' +  data);
-      forArticlesD(data)
-      randomArt(data)
-      Decod(data)
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  }
   
   function forArticlesD(forItemsD) {
     
@@ -343,6 +264,10 @@ function Decod(dataDecod) {
     insidDecoder += `</ul>`
     DecoCate.innerHTML = insidDecoder;
 }
+
+
+
+
 
   function limitWords(shortText) {
     const splitWord = shortText.split(/\s+/);

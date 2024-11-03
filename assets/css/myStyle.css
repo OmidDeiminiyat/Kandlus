@@ -3448,6 +3448,8 @@ spinner6
 }
 #searchPage .search-container #results {
   color: #CAC3BC;
+  max-height: 480px;
+  overflow: auto;
 }
 #searchPage .search-container #results ul {
   margin: 0;

@@ -31,6 +31,8 @@
         }
         #results{
             color: $main-paraf;
+            max-height: 480px;
+            overflow: auto;
             ul{
                 margin: 0;
                 padding: 0;

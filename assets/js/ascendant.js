@@ -75,34 +75,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log(letArray);
 
 insiPut.innerHTML=''
-let insideCountiner = `<span><h4>Your ascendant:</h4><br>`
+
 
 letArray.forEach((element, index) => {
     console.log(element.ascendant);
 
-     insideCountiner += `
-<figcaption class="newStyle">
-<div class="dividedInside">
-<div> <h5>Ascendant: <span class="newColor" >${element.ascendant} </span> </h5> </div> 
-<div><h5>Ascendant lord: <span class="newColor" >${element.ascendant_lord} </span> </h5></div>
-<div><h5>Ascendant lord house location: <span class="newColor" >${element.ascendant_lord_house_location} </span> </div>
-<div><h5>Ascendant lord location: <span class="newColor" >${element.ascendant_lord_location} </span>  </div>
-<div><h5>Ascendant lord astrength: <span class="newColor" >${element.ascendant_lord_strength} </span>  </div>
-<div><h5>Bad qualities: <span class="newColor" >${element.bad_qualities} </span>  </div>
-<div><h5>Day for fasting: <span class="newColor" >${element.day_for_fasting} </span>  </div>
-<div><h5>Lucky gem: <span class="newColor" >${element.lucky_gem} </span>  </div>
-<div><h5>Symbol: <span class="newColor" >${element.symbol} </span>  </div>
-<div><h5>Zodiac characteristics: <span class="newColor" >${element.zodiac_characteristics} </span>  </div>
-</div>
-<div class="Verbal location"><h5>Verbal location: <span class="newColor" >${element.verbal_location} </span>  </div>
-<div class="Flagship qualities"><h5>Flagship qualities: <span class="newColor" >${element.flagship_qualities} </span>  </div>
-<div class="gayatri_mantra"><h5>Gayatri mantra: <span class="newColor" >${element.gayatri_mantra} </span>  </div>
-<div class="General prediction"><h5>General prediction: <span class="newColor" >${element.general_prediction} </span>  </div>
-<div class="personalised_prediction"><h5>Personalised prediction: <span class="newColor" >${element.personalised_prediction} </span>  </div>
-<div class="spirituality_advice"><h5>Spirituality advice: <span class="newColor" >${element.spirituality_advice} </span>  </div>
-</figcaption><hr>`
+
+
 });
-insideCountiner += `</span>`
+
 insiPut.innerHTML = insideCountiner;
 
   }

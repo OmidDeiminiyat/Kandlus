@@ -1,35 +1,30 @@
-
-fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcm5uZGdzZ2hia2ZyYmJ6dXVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ0MjA0NzcsImV4cCI6MjAyOTk5NjQ3N30.2fBDWPexcBP6OfB0pY11Me1N5xzioXkc4agte3buhUU' // Replace 'your-api-key' with your actual Supabase API key
+async function fetchSubscriptionData() {
+    try {
+        const response = await fetch('../backend/blog.php');  
+        const data = await response.json(); 
+        data.forEach(item => {
+            
+            LatestArticles(data)
+            latestNew(data)
+            ThreeArticles(data)
+            singleItem(data)
+            JustTwo(data)
+            AncientAliens(data)
+            Decoding(data)
+            DecodingSec(data)
+            DecodingThird(data)
+            mostArticles(data)
+            MostVisited(data)
+            SingleFigure(data)
+            trendingToday(data)
+          
+        });
+    } catch (error) {
+        console.error('Error fetching data:', error);
     }
-  })
-  .then(response => response.json())
-  .then(NewReciData => {
-     //console.log(NewReciData); // Do something with the fetched data
+  }
   
-    LatestArticles(NewReciData)
-    latestNew(NewReciData)
-    ThreeArticles(NewReciData)
-    singleItem(NewReciData)
-    JustTwo(NewReciData)
-    AncientAliens(NewReciData)
-    Decoding(NewReciData)
-    DecodingSec(NewReciData)
-    DecodingThird(NewReciData)
-    mostArticles(NewReciData)
-    MostVisited(NewReciData)
-    SingleFigure(NewReciData)
-    trendingToday(NewReciData)
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
-  
-
-
+  fetchSubscriptionData();
 
   function LatestArticles(threeData){
     const firstArticle = document.getElementById('firsthigh');
@@ -183,7 +178,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
       }
       return 0;
     });
-    console.log(Spirituality[0]);
+
 
     const CreatSingle = document.getElementById('singleOne');
     CreatSingle.innerHTML = ''
@@ -230,7 +225,7 @@ fetch('https://bfrnndgsghbkfrbbzuuk.supabase.co/rest/v1/blog', {
     horry.innerHTML = ''
     let insideHorry = `<div class="row vertical-divider">`
     SpiritualityTo.slice(1, 5).forEach((horryitem, index)=>{
-      console.log(horryitem);
+ 
       const Descibi = limit33Words(horryitem.describtion);
       insideHorry += `<article class="col-md-6 wow fadeIn animated">
                                 <figure class="mb-15">

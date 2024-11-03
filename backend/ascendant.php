@@ -9,7 +9,7 @@ if (isset($data['Dates']) && isset($data['time']) && isset($data['latitude']) &&
     $time = $data['time'];
     $latitude = $data['latitude'];
     $longitude = $data['longitude'];
-    $api_url = "https://api.vedicastroapi.com/v3-json/horoscope/personal-characteristics";
+    $api_url = "https://api.vedicastroapi.com/v3-json/horoscope/ascendant-report";
     
     // Add API parameters
     $params = [
