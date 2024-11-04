@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @keyframes fadeIn {
   from {
     margin-left: -300px;
@@ -2662,7 +2663,7 @@ body {
 
 #loading {
   position: fixed;
-  top: 0;
+  top: -100px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -2701,6 +2702,7 @@ body {
     transform: translateY(-20px);
   }
 }
+
 #main_article {
   margin-top: 30px;
 }
@@ -4605,33 +4607,143 @@ canvas {
 }
 
 #newAscendant {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: none;
+  flex-direction: row;
+  gap: 1rem;
   width: 90%;
   margin-left: 5%;
   overflow: hidden;
-  border: 1px solid black;
+  min-height: 400px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+  padding-bottom: 6px;
+  border-top: 1px solid rgba(0, 0, 0, 0.229);
+}
+@media (max-width: 600px) {
+  #newAscendant {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+#newAscendant p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
 }
 #newAscendant .AsFiDiv {
   width: 50%;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
+}
+#newAscendant .AsFiDiv h3, #newAscendant .AsFiDiv #navigation hgroup h5, #navigation hgroup #newAscendant .AsFiDiv h5, #newAscendant .AsFiDiv #All_sec .right-s .DivFig figure figcaption p, #All_sec .right-s .DivFig figure figcaption #newAscendant .AsFiDiv p {
+  text-align: center;
+}
+#newAscendant .AsFiDiv p {
+  width: 90%;
+  margin-left: 5%;
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  #newAscendant .AsFiDiv {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #newAscendant .AsFiDiv {
+    width: 100%;
+    order: 2;
+  }
 }
 #newAscendant .AsFiDiv img {
   width: 100%;
   margin-left: -50%;
 }
+@media (max-width: 600px) {
+  #newAscendant .AsFiDiv img {
+    margin-left: 0;
+  }
+}
 #newAscendant .AsSecDiv {
-  width: 140%;
-  margin-left: -40%;
+  width: 145%;
+}
+@media (max-width: 600px) {
+  #newAscendant .AsSecDiv {
+    width: 100%;
+  }
 }
 #newAscendant .inAsSecDiv {
   display: flex;
   flex-direction: row;
+  gap: 1rem;
 }
-#newAscendant .inAsSecDiv div:nth-child(1) {
+@media (max-width: 600px) {
+  #newAscendant .inAsSecDiv {
+    flex-direction: column;
+  }
+}
+#newAscendant .inAsSecDiv figure {
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
+}
+#newAscendant .inAsSecDiv figure img {
+  width: 60%;
+}
+@media (max-width: 600px) {
+  #newAscendant .inAsSecDiv figure img {
+    width: 30%;
+  }
+}
+#newAscendant .inAsSecDiv .firstInD {
   width: 125%;
 }
-#newAscendant .inAsSecDiv div:nth-child(2) {
+@media (max-width: 600px) {
+  #newAscendant .inAsSecDiv .firstInD {
+    width: 100%;
+  }
+}
+#newAscendant .inAsSecDiv .firstInD .ThreeLowerColum {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.3rem;
+}
+#newAscendant .inAsSecDiv .firstInD .ThreeLowerColum p span {
+  color: rgb(156, 117, 18);
+}
+#newAscendant .inAsSecDiv .firstInD article {
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  padding: 3px;
+}
+#newAscendant .inAsSecDiv .secondInD {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.3rem;
+  margin-top: 6px;
+}
+#newAscendant .inAsSecDiv .secondInD p span {
+  color: rgb(156, 117, 18);
+}
+#newAscendant .inAsSecDiv .secondInD article {
+  border-radius: 12px;
+  padding: 3px;
+}
+#newAscendant .inAsSecDiv .secondDivBig {
   width: 70%;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+}
+#newAscendant .inAsSecDiv .secondDivBig figure {
+  border: none;
+}
+#newAscendant .inAsSecDiv .secondDivBig article {
+  width: 90%;
+  margin-left: 5%;
+}
+#newAscendant .inAsSecDiv .secondDivBig article h4 {
+  text-align: center;
+}
+#newAscendant .inAsSecDiv .secondDivBig article h5 {
+  color: rgb(156, 117, 18);
 }
 
 .wheel-container {

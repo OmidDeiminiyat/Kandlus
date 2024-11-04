@@ -12,7 +12,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
   document.getElementById("zodiacForm").addEventListener("submit", async function (event) {
     event.preventDefault(); // Prevent form from submitting the traditional way
-  
+    const AscenForm = document.getElementById('zodiacForm');
+    AscenForm.style.display = 'none';
+    const loadDote = document.getElementById('loading');
+    loadDote.style.display= 'flex';
+    const mainCard = document.getElementById('newAscendant');
+    mainCard.style.display = 'flex';
+   
+
     const PersonBirthday = document.getElementById('pBirth').value;
     const time = document.getElementById('timeBirth').value;
     const countries = document.getElementById('countries').value;
@@ -58,10 +65,74 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
   function CharacterDataSend(recivedAscendant) {
     
+    const mainCard = document.getElementById('newAscendant');
+
+    const asseLoading = document.getElementById('loading');
+    asseLoading.style.display = 'none';
+
+    mainCard.innerHTML = '';
     const DataL = recivedAscendant.characterData.response;
     console.log(DataL);
+    asseLoading.style.display = 'none';
+    let insideMainCard = `<div class="AsFiDiv">
+                            <h3>Zodiac Signs</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, amet sapiente a qui, eius consequuntur atque doloremque dignissimos tempore, deleniti corrupti distinctio aliquid tempora quis at vero. Consequuntur, minus perspiciatis.</p>
+                            <div class="wheel-container">
+                                <img src="./../assets/images/Astrology/Ascendant/Zodiac-Wheel.png" alt="Zodiac Wheel" class="wheel-image">
+                            </div>
+                        </div>
+                        <div class="AsSecDiv" >
+                            <h1>${DataL[0].ascendant}</h1>
+                            <section class="inAsSecDiv">
+                                <div class="firstInD" >
+                                    <figure>
+                                        <img src="./../assets/images/Astrology/ZodiacSigns/${DataL[0].ascendant}.png" alt="">
+                                    </figure>
+                                    <div class="ThreeLowerColum">
+                                        <article>
+                                            <span class="material-symbols-outlined"> sentiment_satisfied </span>
+                                            <p><span> Good qualities: </span> ${DataL[0].good_qualities}</p>
+                                        </article>
+                                        <article>
+                                            <span class="material-symbols-outlined"> sentiment_dissatisfied </span>
+                                            <p><span> Bad qualities: </span>${DataL[0].bad_qualities}</p>
+                                        </article>
+                                        <article>
+                                            <span class="material-symbols-outlined"> comedy_mask </span>
+                                            <p><span> Zodiac characteristics </span> ${DataL[0].zodiac_characteristics}</p>
+                                        </article>
+                                    </div>
+                                    <div class="secondInD">
+                                        <article>
+                                        <span class="material-symbols-outlined"> emoji_people </span>
+                                            <p><span> Flagship qualities </span> ${DataL[0].flagship_qualities} </p>
+                                        </article>
+                                        <article>
+                                            <span class="material-symbols-outlined"> self_improvement </span>
+                                            <p><span> Your mantra: </span> ${DataL[0].gayatri_mantra} </p>
+                                        </article>
+                                    </div>
+                                </div>
     
-  
+                                <div class="secondDivBig">
+                                    <figure>
+                                        <div class="mars"></div>
+                                        <img src="./../assets/images/Astrology/planets/Mars.png" alt="">
+                                    </figure>
+                                    <article>
+                                        <h4>Ascendant lord: Mars</h4>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut inventore est ducimus autem laudantium optio provident aliquid, unde porro alias quia eius similique labore ratione at explicabo dolores enim iure.</p>
+                                    </article>
+                                    <article>
+                                        <h5>what?</h5>
+                                        <p>bla bla bla</p>
+                                    </article>
+                                </div>
+                            </section>
+                          
+                        </div>`
+      
+  mainCard.innerHTML = insideMainCard;
     typewriter('First, remember that at the time and place of your birth, each of the planets was in the house of one of the zodiac signs. And since these have a direct impact on human personality, there are between 7 and 12 possibilities that together form your overall personality. In some cases, a person may have two personalities. Here are all the possibilities in order according to the presence of each planet in each house. Notice that:The most important issue in every house is the lord strength. Because it determines the degree of formation of a person personality compared to other 11 houses.', 12); 
   
   }
