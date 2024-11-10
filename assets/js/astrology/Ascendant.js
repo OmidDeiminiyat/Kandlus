@@ -75,8 +75,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log(DataL);
     asseLoading.style.display = 'none';
     let insideMainCard = `<div class="AsFiDiv">
-                            <h3>Zodiac Signs</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, amet sapiente a qui, eius consequuntur atque doloremque dignissimos tempore, deleniti corrupti distinctio aliquid tempora quis at vero. Consequuntur, minus perspiciatis.</p>
+                            <h3>General Prediction</h3>
+                            <p>${DataL[0].general_prediction}</p>
+                            <h3>Personalised Prediction</h3>
+                            <p>${DataL[0].personalised_prediction}</p>
                             <div class="wheel-container">
                                 <img src="./../assets/images/Astrology/Ascendant/Zodiac-Wheel.png" alt="Zodiac Wheel" class="wheel-image">
                             </div>
@@ -117,15 +119,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
                                 <div class="secondDivBig">
                                     <figure>
                                         <div class="mars"></div>
-                                        <img src="./../assets/images/Astrology/planets/Mars.png" alt="">
+                                        <img src="./../assets/images/Astrology/planets/${DataL[0].ascendant_lord}.png" alt="">
                                     </figure>
                                     <article>
-                                        <h4>Ascendant lord: Mars</h4>
-                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut inventore est ducimus autem laudantium optio provident aliquid, unde porro alias quia eius similique labore ratione at explicabo dolores enim iure.</p>
+                                        <h4>Ascendant lord: ${DataL[0].ascendant_lord} </h4>
+                                        <p>The ruling planet (${DataL[0].ascendant_lord}), lord of the Ascendant is located in the ${DataL[0].ascendant_lord_house_location} house (${DataL[0].ascendant_lord_location}) in this particular chart. </p>
                                     </article>
                                     <article>
-                                        <h5>what?</h5>
-                                        <p>bla bla bla</p>
+                                        <h5>Ascendant lord strength:</h5>
+                                        <p>${DataL[0].ascendant_lord_strength}</p>
+                                         <h5>Lucky gem: </h5>
+                                        <p>${DataL[0].lucky_gem}</p>
+                                        <h5>Day for fasting: </h5>
+                                        <p>${DataL[0].day_for_fasting}</p>
                                     </article>
                                 </div>
                             </section>
