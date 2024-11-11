@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3825145502473153",
+            enable_page_level_ads: true
+        });
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Numerology - Kandlus</title>
-    <meta name="description" content="Discover the ancient art of numerology, a mystical practice that explores the significance of numbers in your life. Uncover insights about your personality, destiny, and life's purpose through numerological readings and interpretations. Whether you're a curious beginner or a seasoned practitioner, our comprehensive guides and tools will help you delve into the world of numbers and their profound meanings." />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover the significance of the Radical Number in Astrology</title>
+    <meta name="description" content="Everything in this world has a certain vibration and frequency, and this vibration and frequency creates a magnetic field around that object, which can be changed depending on the amount of vibration and frequency">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/Kandlus.png">
     <!-- NewsBoard CSS  -->
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -15,13 +23,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144883160-1"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
-
-<body id="bodys">
+<style>
+    #search-results {
+        border: 1px solid #ccc;
+        max-height: 150px;
+        overflow-y: auto;
+        display: none;
+    }
+    .search-result-item {
+        padding: 8px;
+        cursor: pointer;
+    }
+    .search-result-item:hover {
+        background-color: #f0f0f0;
+    }
+ 
+    .form-group {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .Amount {
+        width: 30%;
+    }
+</style>
+<body>
     <div class="scroll-progress bg-dark"></div>
     <!-- Start Preloader -->
     <!--Offcanvas sidebar-->
-      <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
+    <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
         <button class="off-canvas-close"><i class="ti-close"></i></button>
         <div class="sidebar-inner">
             <!--Latest-->
@@ -30,7 +61,7 @@
                     <h5 class="widget-title mt-5 mb-30" id="username" > To use this service, you must have an account and choose a plan </h5>
                     <div class="widget_nav_menu">
                         <ul id="readPrice" class="menu">
-                            <li class="cat-item"><a href="price.html">Read more</a></li>
+                            <li class="cat-item"><a href="../price.html">Read more</a></li>
                         </ul>
                     </div>
                 </div>
@@ -44,7 +75,7 @@
                 <div class="widget_nav_menu">
                     <ul class="menu">
                         <li class="cat-item"><a>Your plan is: <span id="Wplan">Free</span></a></li>
-                        <li class="cat-item" id="currentP" style="display: none;">Renew plan on:</li>
+                        <li class="cat-item"><a>Current Point: 00</a></li>
                         <li class="cat-item"><a></a></li>
 
                         <li class="cat-item cat-item-2 menu-item-has-children">
@@ -54,20 +85,51 @@
                                 <li class="cat-item"><a href="../blog/usersArticle.html">Articles</a></li>
                             </ul>
                         </li>
-                        <li id="subscriptionPlan" class="cat-item cat-item-2 menu-item-has-children">
-                            <a style="cursor: pointer;">Cancel subscription</a>
-                            <ul class="sub-menu">
-                                <p>You are about to cancel the subscription, Are you sure? </p>
-                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="cancelSub" > Yes </a> </li>
-                                <li style="cursor: pointer;" class="cat-item planCancel"><a id="follow" > No </a> </li>
+                        <li class="cat-item cat-item-2 menu-item-has-children">
+                            <a>What is points</a>
+                            <ul class="sub-menu"><br>
+                                <p>You recived points automatically based on the time you spending in my website to: reading articles and watching videos. </p>
                             </ul>
                         </li>
-                        <li class="cat-item"><a onclick="LogOut()" style="cursor: pointer;">Log out</a></li>
                     </ul>
                 </div><br>
-              
+                <div class="post-block-list post-module-1 post-module-5">
+                    <ul class="list-post" style="opacity: 0.4;">
+                        <li class="mb-15">
+                            <div class="d-flex">
+                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
+                                    <a class="color-white" href="#">
+                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-content media-body">
+                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
+                                    <div class="entry-meta meta-1 font-x-small color-grey">
+                                        <span class="post-on">Use Horoscope for 9 points</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mb-15">
+                            <div class="d-flex">
+                                <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale">
+                                    <a class="color-white" href="#">
+                                        <img src="../assets/images/Astrology/Aquarius-new.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="post-content media-body">
+                                    <h6 class="post-title mb-10 text-limit-2-row"><a href="Astrology/astrology_service.html">Celestial Insights Astrology</a></h6>
+                                    <div class="entry-meta meta-1 font-x-small color-grey">
+                                        <span class="post-on">use biorythm for 12 points</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!--Ads-->
+            
         </div>
     </aside>
     <!-- Start Header -->
@@ -75,7 +137,13 @@
         <div class="container">
             <ul class="list-inline font-small text-right">
                 <li id="checkLogin" class="list-inline-item mr-15"><a href="../login.html"><i class="ti-user font-x-small mr-5"></i>Login / Register</a></li>
-                
+                <li class="list-inline-item dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="ti-world font-x-small mr-5"></i>Lang
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-language dropdown-menu-right border-0 font-small text-right">
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -119,7 +187,8 @@
                                         <ul class="col-md-2">
                                             <li><strong>Sound library</strong></li>
                                             <li><a href="../podcast/Solfeggio_frequency.html">Solfeggio</a></li>
-                                            <li><a href="../Podcast/Solfeggio_frequency.html">Mantra</a></li>
+                                            <li><a href="../Podcast/mantra.html">Mantra</a></li>
+                                            <li><a href="../podcast/Podcast.html">Podcast</a></li>
                                         </ul>
                                         <ul class="col-md-2">
                                             <li><strong>Most searched tags</strong></li>
@@ -160,6 +229,13 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="#">Library</a>
+                            <ul class="col-md-2">
+                                <li><a href="../blog/category.html">Video</a></li>
+                                <li><a href="../blog/category-grid.html">Article</a></li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="../index.html">Pages</a>
                             <ul class="sub-menu text-muted font-small">
                                 <li><a href="../privacyPolicy.html">Privacy police</a></li>
@@ -191,221 +267,107 @@
         </div>
     </header>
 
-<style>
-input:focus > form {
-    background-color: red;
-    transform: scale(1.3); /* Adjust the scale value as needed */
-    outline: none; /* Optionally remove the default focus outline */
-  }
-
-
-
-</style>
 
     <main id="forSearchBar" class="mt-30">
         <div class="container single-content">
             <div class="row vertical-divider mb-50">
-                <div class="col-lg-12 col-md-12">
-                    <form id="zodiacForm" onsubmit="submitForm(event)" >
-                        <h3> Fill out the<span style="color: red" > Personal number </span>form </h3>
-                        <section id="firstForm">
-                        <div class="form-group">
-                            <label for="date"> Birth date:</label>
-                            <input name="date" type="date" id="pBirth" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="time"> Birth time:</label>
-                            <input name="time" type="time" id="timeBirth" required class="form-control">
-                        </div>
+                <div class="col-lg-9 col-md-12">
+                    <div id="displayNumber" class="col-xl-9 col-md-10">
+                        <div  class="login_wrap widget-taber-content p-30 background-white border-radius-5">
+                            <div class="padding_eight_all bg-white">
+                                <h2 id="myText" class="mb-50 text-center position-relative divider-wave" onclick="firstHideParaf()" >How does existential frequency work? <br> <span id="first-arrow" class="material-symbols-outlined"> arrow_right </span> 
+                                    <span id="second-arrow" class="material-symbols-outlined" style="display: none;" >arrow_drop_down </span> </h2>
+                                <p id="hidden_p" class="text-muted" style="text-align: center; display: none;" >* Everything in this world has a certain vibration and frequency, and this vibration and frequency creates a magnetic field around that object, which can be changed depending on the amount of vibration and frequency. The frequency of a human being in its lowest state is about 7.5 Hz per second. But this frequency can change based on what you eat and the emotions you experience. Click on the food button and enter everything you eat in a day based on grams. Then enter the feelings you had based on how long you experienced that feeling in minutes.
+                                </p>
+                                <span class="TreeBut">
+                                    <button style="color: white;" class="btn button button-contactForm" onclick="foodOpems()"> Food </button> 
+                                    <button style="color: white;" class="btn button button-contactForm" onclick="emotionOpen()"> Emotional </button><br><br>
+                                    <button style="color: white;" class="btn button button-contactForm" onclick="deleteFromLocalStorage()" > Reset </button> <br><br>
+                                </span>
+                                <form id="foodForm" style="display: none;">
+                                            <div class="form-group">
+                                                <label for="search">Search for food:</label>
+                                                <input type="text" id="search" name="search" placeholder="Type to search..." onkeyup="filterFoods()">
+                                                <div id="search-results"></div>
+                                            </div>
+                                            <!-- Amount Input -->
+                                            <div class="form-group Amount">
+                                                <label for="amount">Amount in grams:</label>
+                                                <input type="number" id="amount" name="amount" min="1" placeholder="Enter amount in grams">
+                                            </div>
+                                        
+                                        <br><br>
+                                        
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-dark btn-block" >Continue</button>
+                                        </div>
+                                    </form>
+                                    <!-- Emotional table -->
+                                    <form id="EmotionTable" style="display: none;" >
+                                        <div class="form-group">
+                                            <label for="Emotions"> Celect your emotion:</label>
+                                            <select name="Emotions" id="Emotions" name="countries">
+                                                <option value="600">Happy</option>
+                                                <option value="30">Sad</option>
+                                                <option value="20">Angr</option>
+                                                <option value="20">Shame</option>
+                                                <option value="30">Guilt</option>
+                                                <option value="50">Apathy</option>
+                                                <option value="75">Grief</option>
+                                                <option value="100">Fear</option>
+                                                <option value="125">Desire</option>
+                                                <option value="145">Pride</option>
+                                                <option value="150">Courage</option>
+                                                <option value="200">Neutrality</option>
+                                                <option value="240">Willingness</option>
+                                                <option value="300">Acceptance</option>
+                                                <option value="400">Reason</option>
+                                                <option value="500">Love</option>
+                                                <option value="540">Joy</option>
+                                                <option value="600">Peace</option>
+                                                <option value="700">Enlightenment</option>
+                                            </select>
+                                            </div>
+                                        <!-- Amount Input -->
+                                        <div class="form-group Amount">
+                                            <label for="Duration">How long in minutes</label>
+                                            <input type="number" id="Duration" name="Duration" min="1" placeholder="Enter amount in grams">
+                                        </div>
+                                    
+                                    <br><br>
+                                    
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-dark btn-block" >Continue</button>
+                                    </div>
+                                </form>
+                                <section id="MyCharts" >
+                                    <div id="piechart" style="width: 100%; height: 100%; margin: 0; padding: 0;"></div>   
+                                    <div id="EmotionChart" style="width: 100%; height: 100%; margin: 0; padding: 0;"></div>
+                                    <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+                                </section>
+                                 
+                                
 
-                        <div class="form-group">
-                            <label for="countries"> Birth Country:</label>
-                            <select id="countries" name="countries">
-                                <option value="34.5553,69.2075">Afghanistan</option>
-                                <option value="41.3275,19.8189">Albania</option>
-                                <option value="36.7372,3.0868">Algeria</option>
-                                <option value="42.5063,1.5218">Andorra</option>
-                                <option value="-8.7832,-55.4915">Angola</option>
-                                <option value="17.1175,-61.8456">Antigua and Barbuda</option>
-                                <option value="-34.6037,-58.3816">Argentina</option>
-                                <option value="40.1792,44.4991">Armenia</option>
-                                <option value="-35.282,149.1287">Australia</option>
-                                <option value="48.2082,16.3738">Austria</option>
-                                <option value="40.4093,49.8671">Azerbaijan</option>
-                                <option value="25.0343,-77.3963">Bahamas</option>
-                                <option value="26.0667,50.5577">Bahrain</option>
-                                <option value="23.685,90.3563">Bangladesh</option>
-                                <option value="13.1939,-59.5432">Barbados</option>
-                                <option value="53.9045,27.5615">Belarus</option>
-                                <option value="50.8503,4.3517">Belgium</option>
-                                <option value="17.1899,-88.4976">Belize</option>
-                                <option value="9.3077,2.3158">Benin</option>
-                                <option value="32.3078,-64.7505">Bermuda</option>
-                                <option value="27.5142,90.4336">Bhutan</option>
-                                <option value="-16.5000,-68.1500">Bolivia</option>
-                                <option value="43.8563,18.4131">Bosnia and Herzegovina</option>
-                                <option value="-24.6583,25.9080">Botswana</option>
-                                <option value="-15.7939,-47.8828">Brazil</option>
-                                <option value="18.4207,-64.6399">British Virgin Islands</option>
-                                <option value="4.6110,-74.0817">Brunei</option>
-                                <option value="42.6977,23.3219">Bulgaria</option>
-                                <option value="12.3714,-1.5197">Burkina Faso</option>
-                                <option value="-3.3731,29.9189">Burundi</option>
-                                <option value="-3.3704,-64.7146">Cabo Verde</option>
-                                <option value="11.5500,104.9167">Cambodia</option>
-                                <option value="3.8480,11.5021">Cameroon</option>
-                                <option value="45.4215,-75.6972">Canada</option>
-                                <option value="-11.2027,17.8739">Central African Republic</option>
-                                <option value="12.1206,-14.9799">Chad</option>
-                                <option value="-33.4489,-70.6693">Chile</option>
-                                <option value="39.9042,116.4074">China</option>
-                                <option value="4.6097,-74.0817">Colombia</option>
-                                <option value="-11.6558,43.3333">Comoros</option>
-                                <option value="-4.3224,15.3070">Congo</option>
-                                <option value="9.7489,-83.7534">Costa Rica</option>
-                                <option value="45.2671,19.8335">Croatia</option>
-                                <option value="23.1333,-82.3830">Cuba</option>
-                                <option value="35.1667,33.3667">Cyprus</option>
-                                <option value="50.0755,14.4378">Czech Republic</option>
-                                <option value="55.6761,12.5683">Denmark</option>
-                                <option value="11.8251,42.5903">Djibouti</option>
-                                <option value="15.3126,-61.3794">Dominica</option>
-                                <option value="18.4861,-69.9312">Dominican Republic</option>
-                                <option value="-0.1807,-78.4678">Ecuador</option>
-                                <option value="30.0444,31.2357">Egypt</option>
-                                <option value="13.7367,100.5231">El Salvador</option>
-                                <option value="1.3733,32.2903">Equatorial Guinea</option>
-                                <option value="15.1794,39.7823">Eritrea</option>
-                                <option value="59.4370,24.7535">Estonia</option>
-                                <option value="9.1450,40.4897">Ethiopia</option>
-                                <option value="62.3908,17.3069">Faroe Islands</option>
-                                <option value="-17.7134,178.0650">Fiji</option>
-                                <option value="60.1699,24.9384">Finland</option>
-                                <option value="48.8566,2.3522">France</option>
-                                <option value="-0.8037,11.6094">Gabon</option>
-                                <option value="13.4443,144.7937">Gambia</option>
-                                <option value="41.7151,44.8271">Georgia</option>
-                                <option value="52.5200,13.4050">Germany</option>
-                                <option value="5.6037,-0.1870">Ghana</option>
-                                <option value="37.9838,23.7275">Greece</option>
-                                <option value="64.1830,-51.7216">Greenland</option>
-                                <option value="12.1165,-61.6790">Grenada</option>
-                                <option value="15.7835,-90.2308">Guatemala</option>
-                                <option value="11.5512,-85.6981">Guinea</option>
-                                <option value="9.9456,-9.6966">Guinea-Bissau</option>
-                                <option value="4.8604,-58.9302">Guyana</option>
-                                <option value="18.9712,-72.2852">Haiti</option>
-                                <option value="14.6349,-90.5069">Honduras</option>
-                                <option value="47.1625,19.5033">Hungary</option>
-                                <option value="64.1355,-21.8954">Iceland</option>
-                                <option value="28.6139,77.2090">India</option>
-                                <option value="-6.2088,106.8456">Indonesia</option>
-                                <option value="35.6895,51.3890">Iran</option>
-                                <option value="33.3152,44.3661">Iraq</option>
-                                <option value="53.3498,-6.2603">Ireland</option>
-                                <option value="31.7683,35.2137">Israel</option>
-                                <option value="41.9028,12.4964">Italy</option>
-                                <option value="18.1096,-77.2975">Jamaica</option>
-                                <option value="36.2048,138.2529">Japan</option>
-                                <option value="31.9454,35.9284">Jordan</option>
-                                <option value="51.1694,71.4491">Kazakhstan</option>
-                                <option value="-1.2864,36.8172">Kenya</option>
-                                <option value="-29.3456,27.4240">Lesotho</option>
-                                <option value="6.4281,-9.4295">Liberia</option>
-                                <option value="32.7940,13.0878">Libya</option>
-                                <option value="47.1625,19.5033">Hungary</option>
-                                <option value="64.1355,-21.8954">Iceland</option>
-                                <option value="28.6139,77.2090">India</option>
-                                <option value="-6.2088,106.8456">Indonesia</option>
-                                <option value="35.6895,51.3890">Iran</option>
-                                <option value="33.3152,44.3661">Iraq</option>
-                                <option value="53.3498,-6.2603">Ireland</option>
-                                <option value="31.7683,35.2137">Israel</option>
-                                <option value="41.9028,12.4964">Italy</option>
-                                <option value="18.1096,-77.2975">Jamaica</option>
-                                <option value="36.2048,138.2529">Japan</option>
-                                <option value="31.9454,35.9284">Jordan</option>
-                                <option value="51.1694,71.4491">Kazakhstan</option>
-                                <option value="-1.2864,36.8172">Kenya</option>
-                                <option value="42.3601,-71.0589">USA</option>
-                                <option value="35.9078,127.7669">South Korea</option>
-                                <option value="37.5665,126.9780">North Korea</option>
-                                <option value="25.0343,-77.3963">Bahamas</option>
-                                <option value="39.9334,32.8597">Turkey</option>
-                                <option value="41.9028,12.4964">Italy</option>
-                                <option value="52.3676,4.9041">Netherlands</option>
-                                <option value="40.7128,-74.0060">USA</option>
-                                <option value="55.7558,37.6173">Russia</option>
-                                <option value="35.6895,139.6917">Japan</option>
-                                <option value="48.8566,2.3522">France</option>
-                                <option value="51.5074,-0.1278">United Kingdom</option>
-                                <option value="35.9078,127.7669">South Korea</option>
-                                <option value="40.7128,-74.0060">New York</option>
-                                <option value="34.0522,-118.2437">Los Angeles</option>
-                            </select> 
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <button type="submit"> Submit </button>
-                        </div>
-                        </section>
-                            
-                    </form>
-
-                    <div id="loading" style="display: none;">
-                        <div class="loadDot"></div>
-                        <div class="loadDot"></div>
-                        <div class="loadDot"></div>
                     </div>
-<div id="forLoead" >
-<section id="personalCard">
-    <div id="myNumber">
-        <div class="hexagon-container">
-            <!-- Hexagon shape -->
-            <div class="hexagon"></div>
-            
-            <!-- Center number -->
-            <div id="ineerNum" class="center-number">2</div>
-        
-            <!-- Animated surrounding numbers -->
-            <div class="number number1">1</div>
-            <div class="number number2">2</div>
-            <div class="number number3">4</div>
-            <div class="number number4">6</div>
-            <div class="number number5">8</div>
-            <div class="number number6">7</div>
-            <div class="number number7">5</div>
-            <div class="number number8">9</div>
-            
-            <!-- Dots on each side -->
-            <div class="dot dot1"></div>
-            <div class="dot dot2"></div>
-            <div class="dot dot3"></div>
-            <div class="dot dot4"></div>
-        </div>
-        <h3 id="persDatText" >Your personal number of today is: Loading...!</h3>
-    </div>
-        
-        <article id="secondColumn">
-            
-         </article>
-         <article id="thirdColumn">
-            
-        </article>
-        <article id="forthColumn">
-            <figure>
-                <img src="../assets/images/Astrology/Meditation/13.png" alt="Learn meditation, Meditation for personal number">
-            </figure>
-            <div id="MeditationSection">
-                
-            </div>
-            
-        </article>
+                       <figure id="dispNum">
+                           <span id="NumberResault">
+                           </span>
+                       </figure>
 
-</section>
-</div>
-                    <div id="for-tests">
-                    </div>
+                  
+                       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3825145502473153"
+                    crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-3825145502473153"
+                        data-ad-slot="4661065121"
+                        data-ad-format="auto"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+
                     <!-- Three card start -->
                     <section class="card">
                         <div id="MantraCard" class="card-hover">
@@ -484,6 +446,60 @@ input:focus > form {
                     <!-- End three car -->
             </div>
             
+            <div class="col-lg-3 col-md-12 primary-sidebar sticky-sidebar">
+                <div class="widget-area">
+                    <div class="sidebar-widget widget-latest-posts mb-30 wow fadeIn animated">
+                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
+                            <span>Kandlus</span>
+                        </h6>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>     
+                             <ins class="adsbygoogle"
+                             style="display:inline-block;width:300px;height:300px"
+                              data-ad-client="ca-pub-3825145502473153"
+                             data-ad-slot="4661065121"></ins>
+                            <script>
+                               (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                    </div>
+                    <div class="sidebar-widget widget-latest-posts mb-30 mt-15 wow fadeIn animated">
+                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
+                            <span>Related Articles</span>
+                        </h6>
+                        <div id="liForRight" class="post-block-list post-module-1 post-module-5">
+                        
+                        </div>
+                    </div>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>     
+                             <ins class="adsbygoogle"
+                             style="display:inline-block;width:300px;height:300px"
+                              data-ad-client="ca-pub-3825145502473153"
+                             data-ad-slot="4661065121"></ins>
+                            <script>
+                               (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                    <div id="moreData" class="sidebar-widget widget-latest-comments mb-30 wow fadeIn  animated">
+
+                    </div>
+                    <div class="sidebar-widget widget_newsletter mb-50 wow fadeIn animated">
+                        <h6 class="widget-header widget-header-style-4 mb-20 text-center text-uppercase border-top-1 border-bottom-1 pt-5 pb-5">
+                            <span>Newsletter</span>
+                        </h6>
+                        <div class="newsletter">
+                            <p class="">Continue reading uninterrupted with a subscription</p>
+                            <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
+                                <div class="form-newsletter-cover">
+                                    <div class="form-newsletter">
+                                        <input type="email" name="EMAIL" placeholder="Email address" required="">
+                                        <button type="submit">
+                                            <span class="long-arrow long-arrow-right"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>
@@ -654,9 +670,9 @@ input:focus > form {
     <script src="../assets/js/articles/blogAstro.js"></script>
     <script src="../assets/js/planet.js"></script>
     <script src="../assets/js/cookie.js"></script>
-    <script type="module" src="../assets/js/checkon.js"></script>
-    <script type="module" src="../assets/js/timeCount.js"></script>
-    <script src="./../assets/js/astrology/TodayNumber.js"></script>
+    <script src="../assets/js/checkon.js"></script>
+    <script src="../assets/js/sprituality/humanFrequency.js"></script>
+    <script src="../assets/js/sprituality/humanEmotion.js"></script>
 </body>
 
 </html>

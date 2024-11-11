@@ -55,6 +55,9 @@ if (id === '372821Dy') {
 } else if (id === 'A74Se0093nK3') {
   typewriter('The Ascendant, also known as the "rising sign," is a fundamental concept in astrology that plays a key role in shaping an individual personality and approach to life. While the Sun sign in astrology often takes the spotlight, the Ascendant provides unique insight into how a person presents themselves to the world, their initial reactions, and the way others perceive them. To learn how Ascendant works whatch video below.', 12);
   document.getElementById('VideoToturial').innerHTML = '';
+} else if (id === 'Nu993boe4') {
+  typewriter('In astrology, the concept of a "Personal Day Number" is more commonly associated with numerology than traditional astrology. Numerology assigns a number to each day of the month to give insight into the day’s energy and how it might influence you personally. This "Personal Day Number" is calculated by summing specific numbers from your birth date, current month, and year.', 12);
+  document.getElementById('VideoToturial').innerHTML = '';
 }
 function directUser(item) {
     console.log(item[0].Plan);
@@ -67,6 +70,8 @@ function directUser(item) {
       document.getElementById('link').innerHTML = `<div class="col-md-3 mt-2"> <button type="submit" class="btn btn-info btn-block"><a href="Characteris.html"> Try Personal Characteristics </a></button> </div>`;
     } else if (id === 'A74Se0093nK3' && item[0].Plan === '9dyhf3Ds' || item[0].Plan === '663idsmS98pR') {
       document.getElementById('link').innerHTML = `<div class="col-md-3 mt-2"> <button type="submit" class="btn btn-info btn-block"><a href="ascendant.html"> Try Ascendant </a></button> </div>`;
+    } else if (id === 'Nu993boe4' && item[0].Plan === '9dyhf3Ds' || item[0].Plan === '663idsmS98pR') {
+      document.getElementById('link').innerHTML = `<div class="col-md-3 mt-2"> <button type="submit" class="btn btn-info btn-block"><a href="Numerology.html"> Try Personal Day Number </a></button> </div>`;
     }  else {
       document.getElementById('link').innerHTML = `<p> To use this service, you must be sign up and subscribe to the plan: Pro or Standard. <a href="../price.html"> Sign up now </a> </p>`;
   }

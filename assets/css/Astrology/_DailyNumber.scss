@@ -1,0 +1,215 @@
+// Numerology
+#forLoead{
+    display: none;
+    min-height: 400px;
+}
+#personalCard {
+    min-width: 100%;
+    display: none;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 400px;
+    @media(max-width:600px) {
+        grid-template-columns: 1fr;
+    }
+    @media (min-width: 600px) and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+    #forthColumn{
+        width: 200%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media(max-width:600px) {
+            width: 100%;
+            grid-template-columns: 1fr;
+        }
+            #MeditationSection{
+                ul{
+                    width: 90%;
+                    margin-left: 5%;
+                    li{
+                        list-style: disc;
+                        font-family: "Cormorant Garamond", serif;
+                        font-weight: 300;
+                        font-style: normal;
+                    }
+                }
+            }
+        img{
+            width: 100%;
+            @media(max-width:600px) {
+
+            }
+        }
+    }
+    article{
+        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25);
+        padding: 30px 9px 6px 9px;
+        border-radius: 12px;
+        hgroup{
+            ul{
+                width: 90%;
+                margin-left: 5%;
+                li{
+                    text-align: left;
+                    font-family: "Cormorant Garamond", serif;
+                    font-weight: 300;
+                    font-style: normal;
+                    list-style: disc;
+                }
+            }
+        }
+        h5{
+            color: rgb(156, 117, 18);
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+        
+        }
+        p{
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+        #ForC{
+            color: #9E0062;
+        }
+    }
+}
+    #myNumber {
+        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25);
+        border-radius: 12px;
+
+    h3{
+        font-size: 21px;
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-style: normal;
+        color: rgb(156, 117, 18);
+    }
+  }
+  .hexagon-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3B0060;
+
+  }
+
+  .hexagon {
+    position: relative;
+    width: 200px;
+    height: 115px;
+    background-color: transparent;
+    border-left: solid 2px #3B0060;
+    border-right: solid 2px #9E0062;
+
+
+  }
+
+  .hexagon::before,
+  .hexagon::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+  }
+
+  .hexagon::before {
+    bottom: 100%;
+    border-bottom: 58px solid #9E0062;
+  }
+
+  .hexagon::after {
+    top: 100%;
+    border-top: 58px solid #3B0060;
+  }
+
+  .center-number {
+    position: absolute;
+    font-size: 48px;
+    font-weight: bold;
+    z-index: 1;
+  }
+  .number {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .number1{
+      animation: orbit 10s infinite linear;
+    transform-origin: 150px 150px;
+  }
+  .number2 {
+    animation: orbit 20s infinite linear;
+    transform-origin: 120px 120px;
+  }
+  .number3 {
+    animation: orbit 30s infinite linear;
+    transform-origin: 130px 130px;
+  }
+  .number4 {
+    animation: orbit 13s infinite linear;
+    transform-origin: 160px 160px;
+  }
+  .number5 {
+    animation: orbit 17s infinite linear;
+    transform-origin: 170px 170px;
+  }
+  .number6 {
+    animation: orbit 9s infinite linear;
+    transform-origin: 90px 90px;
+  }
+  .number7 {
+    animation: orbit 22s infinite linear;
+    transform-origin: 220px 2200px;
+  }
+  .number8 {
+    animation: orbit 17s infinite linear;
+    transform-origin: 140px 140px;
+  }
+  .number9 {
+    animation: orbit 14.5s infinite linear;
+    transform-origin: 95px 95px;
+  }
+  
+  
+  
+
+
+  /* Starting positions for each number */
+  .number1 { transform: rotate(0deg) translateX(150px); }
+  .number2 { transform: rotate(45deg) translateX(150px); }
+  .number3 { transform: rotate(90deg) translateX(150px); }
+  .number4 { transform: rotate(135deg) translateX(150px); }
+  .number5 { transform: rotate(180deg) translateX(150px); }
+  .number6 { transform: rotate(225deg) translateX(150px); }
+  .number7 { transform: rotate(270deg) translateX(150px); }
+  .number8 { transform: rotate(315deg) translateX(150px); }
+
+  @keyframes orbit {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+
+  .dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #9E0062;
+    border-radius: 50%;
+  }
+  
+  .dot1 { top: 0; left: 50%; transform: translateX(-50%); }
+  .dot2 { right: 0; top: 50%; transform: translateY(-50%); }
+  .dot3 { bottom: 0; left: 50%; transform: translateX(-50%); }
+  .dot4 { left: 0; top: 50%; transform: translateY(-50%); }
